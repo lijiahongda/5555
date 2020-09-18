@@ -1,0 +1,66 @@
+<view class="h-box">
+  <view class="order-tab bgw">
+    <view class="tab-list" wx:for="{{tabData}}" bindtap="handleTabMy" wx:key="{{item.id}}" data-id="{{item.id}}">
+      <view class="{{tabDataIndex == item.id?'active':''}}">{{item.name}}</view>
+      <view wx:if="{{tabDataIndex == item.id}}" class="border-active"></view>
+    </view>
+  </view>
+  <view class="time-box bgw">
+    <block wx:if="{{tabDataIndex == 0 || tabDataIndex == 1}}">
+      <view class="time-box-list">
+        <view class="time-fl" wx:if="{{tabDataIndex == 0}}">{{sevenObj.t2}}</view>
+        <view class="time-fl" wx:if="{{tabDataIndex == 1}}">{{thirdObj.t2}}</view>
+      </view>
+    </block>
+    <block wx:if="{{tabDataIndex == 2}}">
+      <picker style="width:100%" mode="date" value="{{date}}" start="2000-09-01" end="2080-09-01" bindchange="bindStartDateChange">
+        <view class="time-box-list">
+          <view class="time-fl">{{defautChooseDate.t1 || '开始时间'}}</view>
+          <image class="under-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-17/14/yuelvhuid2NyTsLWfL1597646305.png"></image>
+        </view>
+      </picker>
+    </block>
+    <view class="time-box-label">到</view>
+    <block wx:if="{{tabDataIndex == 0 ||tabDataIndex == 1 }}">
+      <view class="time-box-list">
+        <view class="time-fl" wx:if="{{tabDataIndex == 0}}">{{sevenObj.t1}}</view>
+        <view class="time-fl" wx:if="{{tabDataIndex == 1}}">{{thirdObj.t1}}</view>
+      </view>
+    </block>
+    <block wx:if="{{tabDataIndex == 2}}">
+      <picker style="width:100%" mode="date" value="{{date}}" start="2000-09-01" end="2080-09-01" bindchange="bindEndDateChange">
+        <view class="time-box-list">
+          <view class="time-fl">{{defautChooseDate.t2 || '结束时间'}}</view>
+          <image class="under-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-17/14/yuelvhuid2NyTsLWfL1597646305.png"></image>
+        </view>
+      </picker>
+    </block>
+    <view class="search-box" bindtap="handleSerach" wx:if="{{tabDataIndex == 2}}">
+      <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-17/14/yuelvhuie4SXoebmNJ1597646860.png" />
+    </view>
+  </view>
+  <view class="all-sy-box bgw">
+    <view class="">{{typename}}</view>
+    <view class="active">￥{{allData.sumCommission}}</view>
+  </view>
+  <view class="defa-ec-canvas bgw" wx:if="{{profitList.length}}">
+    <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+  </view>
+  <view class="data-box bgw" wx:if="{{profitList.length}}">
+    <view class="list">
+      <view class="fl">日期</view>
+      <view class="fl">订单</view>
+      <view class="fl">日预估总收益</view>
+    </view>
+    <block>
+      <view class="list" wx:for="{{profitList}}" wx:key="{{index}}">
+        <view class="fl">{{item.create_time}}</view>
+        <view class="fl">{{item.num}}</view>
+        <view class="fl active">￥{{item.sumCommission}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="empty-box" wx:if="{{!profitList.length}}">
+      暂无数据
+  </view>
+</view>

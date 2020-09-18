@@ -1,0 +1,199 @@
+<wxs module="Fix" src="../../utils/tofixed.wxs"></wxs>
+<view class="content" style="background: url(http://image.zhiding365.com/2020/8/28/818f356b-8df3-4d1f-a911-9e1f83b20ee3.png);">
+	<custom titleText="直订" background="" color="#000" backIcon="{{status==1?'':icon}}" homeIcon="" postion="" closeIcon=""></custom>
+
+	<view class="top" wx:if="{{member}}">
+		<image class="pic" src="{{userinfostr.headImg}}"></image>
+		<view class="info">
+			<view class="row1">
+				<view>{{userinfostr.nickName}}</view>
+				<view class="user_identity">
+					<image src="http://image.zhiding365.com/2020/8/31/9654eba2-9938-45b0-9315-2db2c0b19bb2.png"></image>
+					<view>{{levelName}}</view>
+				</view>
+			</view>
+			<view class="row2">{{mobile_first}}****{{mobile_last}}</view>
+			<view class="row3" data-text="{{userinfostr.inviteCode}}" bindtap="copy">
+				<view>{{userinfostr.inviteCode}}</view>
+				<view class="copy">复制邀请码</view>
+			</view>
+		</view>
+		<view class="hotel-reg" data-url="/hotel/pages/hotelCheck/hotelCheck" bindtap="toPaths">
+			<image class="icon" src="http://image.zhiding365.com/2020/8/28/0dd49e54-fb79-4555-9406-e568a6033540.png"></image>
+			<text>酒店入驻</text>
+		</view>
+	</view>
+	<view class="top" wx:if="{{!member}}" bindtap="userlogin">
+		<image class="pic" src="http://image.zhiding365.com/2020/8/31/0cc176d9-60db-4d18-a1c0-f778e5d35256.png"></image>
+		<view class="info" style="justify-content:center">
+			<view class="row1">登录</view>
+		</view>
+		<image class="ri" src="/images/icon-right.png"></image>
+		<view class="card" bindtap="goCard">
+			<view class="card_list">
+				<image src="http://image.zhiding365.com/2020/8/24/2cfe2183-d92e-4d9c-9e07-83d73b8e3649.png"></image>
+				<view>直订联名会员</view>
+			</view>
+			<view class="card_btn">立即开通</view>
+		</view>
+	</view>
+	<view class="boxes">
+		<view class="box" data-url="/my/pages/circleFriends/index" bindtap="toPaths">
+			<view class="handle">{{friendCircle?friendCircle:0}}</view>
+			<view>朋友圈</view>
+		</view>
+		<view class="box">
+			<view class="handle">{{Fix.twoFix(saveMoney/100)}}</view>
+			<view>当前累计省钱(元)</view>
+		</view>
+		<view class="box" data-url="/my/pages/commissionIncome/index" bindtap="toPaths">
+			<view class="handle">{{Fix.twoFix(commission/100)}}</view>
+			<view>我的钱包(元)</view>
+		</view>
+		<view class="box" data-url="/my/pages/integral/integral" bindtap="toPaths">
+			<view class="handle">{{point?point:0}}</view>
+			<view>我的悦豆</view>
+		</view>
+	</view>
+	<view class="card">
+		<image class="bg" src="http://image.zhiding365.com/2020/8/29/77f25a17-c4d0-4aae-9a7d-20343537b2d2.png"></image>
+		<view class="txt">{{interests.title}}</view>
+		<view class="card-btn" data-url="{{isLevelState==0?'/hotel/pages/pmsList/pmsList':'/equityCard/pages/equityCard/equityCard'}}" bindtap="toPaths">{{interests.desc}}</view>
+	</view>
+</view>
+<view wx:if="{{false}}">
+	<view class="indexTip" style="top:{{navH+13}}rpx" hidden="{{iShidden}}">
+		<view class="tip acea-row row-between-wrapper">
+			<view class="text">点击“
+				<image src="http://image.zhiding365.com/2020/7/23/b9eb7a30-3bb7-4a5c-8117-45a8a3164b3e.png"></image>”添加到我的小程序
+				<view class="text">微信首页下拉即可访问直订本地生活</view>
+			</view>
+			<view class="iconfont icon-guanbi1" bindtap="closeTip">
+				<image src="http://image.zhiding365.com/2020/7/23/1f44b76e-6983-44c4-83ea-3c1ea9bfe5bf.png" style="width:23rpx;height:23rpx"></image>
+			</view>
+		</view>
+	</view>
+	<view class="content">
+		<view class="userInfo" wx:if='{{member}}'>
+			<image src="{{userinfostr.headImg}}" class="userHeader"></image>
+			<view>
+				<view class="name">{{userinfostr.nickName}}</view>
+				<view class="mobile">{{mobile_first}}****{{mobile_last}}</view>
+				<view class="copy" bindtap="copy" data-text="{{userinfostr.inviteCode}}">点击复制邀请码：<text>{{userinfostr.inviteCode}}</text></view>
+			</view>
+		</view>
+		<view class="userInfo" wx:else bindtap="userlogin">
+			<image src="http://image.zhiding365.com/2020/7/24/a2cdc30b-3395-4c9d-a5e5-0ef555f3cc15.png" class="userHeader"></image>
+			<view>
+				<view class="name">未登录</view>
+			</view>
+		</view>
+		<view class="cardling">
+			<view data-url="/equityCard/pages/equityCard/equityCard" catchtap="toPaths">
+				<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-31/16/yuelvhuis1YsmNAlhT1596184829.png"></image>
+				<text>联名卡权益</text>
+			</view>
+		</view>
+		<view class="earnings">
+			<view class="pyq" data-url="/my/pages/circleFriends/index" bindtap="toPaths">
+				<view><text class="pyq-title">{{friendCircle?friendCircle:0}}</text></view>
+				<view><text class="pyq-cot">朋友圈</text></view>
+			</view>
+			<view class="lattice"></view>
+			<view class="ljsq">
+				<view> <text class="ljsq-title">{{Fix.twoFix(saveMoney/100)}}</text> </view>
+				<view><text class="ljsq-cot">当前累计省钱(元)</text></view>
+			</view>
+			<view class="lattice"></view>
+			<view class="ygsy" data-url="/my/pages/commissionIncome/index" bindtap="toPaths">
+				<view> <text class="ygsy-title">{{Fix.twoFix(commission/100)}}</text> </view>
+				<view><text class="ygsy-cot">我的钱包(元)</text></view>
+			</view>
+			<view class="ygsy">
+				<view> <text class="ygsy-title">{{point?point:0}}</text> </view>
+				<view><text class="ygsy-cot">  我的悦豆  </text></view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="content">
+
+	<view class="icon-box">
+		<view bindtap="toPath" wx:for="{{navList}}" wx:key="{{item}}" data-item="{{item}}">
+			<image class="ib" src="{{item.image}}"></image>
+			<view>{{item.title}}</view>
+		</view>
+	</view>
+
+	<image wx:if="{{isLevelState==0}}" style="width:750rpx;height:214rpx" bindtap="couponShow" src="http://image.zhiding365.com/2020/8/31/f13ea5ca-fddd-44bd-8610-bf47a5bd8966.gif"></image >
+
+	<view class="history">
+		<view> <text class="h-title">酒店浏览记录</text> </view>
+		<view wx:if='{{historyHotel.length > 0}}' data-url="/hotel/pages/hotelHistory/index" bindtap="toPaths" style="display:flex;align-items:center">
+			<text class="h-gd">查看全部</text>
+			<image style="margin-left:10rpx" class="gd" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-02/14/yuelvhui4StN3XtHVn1593670192.png"></image>
+		</view>
+	</view>
+	<view class="history-cot" wx:if='{{historyHotel.length > 0}}'>
+		<view class="history-cot-l" wx:for="{{historyHotel}}" wx:key="index" bindtap="to_history" data-dealerid="{{item.dealerId}}">
+			<image wx:if="{{item.image}}" src="{{item.image}}"></image>
+			<image wx:else src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-03/17/yuelvhuiX5ekDLD4kk1593769597.png"></image>
+			<view class="history-cot-title"> <text class="history-cot-title-cot">{{item.dealerName}}</text></view>
+		</view>
+	</view>
+	<view class="no-data" wx:if='{{historyHotel.length == 0}}'>
+		<image class="ig" src="/images/no-data.png"></image>
+		<view class="ts">暂无数据</view>
+	</view>
+	<view class="recommend">
+		<view>
+			<text class="h-title">推荐酒店</text>
+		</view>
+		<view style="display:flex;align-items:center" data-url="/hotel/pages/hotelList/hotelList" bindtap="toPaths" wx:if="{{TuijHotel.length > 0}}">
+			<text class="h-gd">更多酒店</text>
+			<image class="gd" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-02/14/yuelvhui4StN3XtHVn1593670192.png"></image>
+		</view>
+	</view>
+	<view wx:if="{{TuijHotel.length > 0}}" class="recommend-cot" wx:for="{{TuijHotel}}" wx:key="index" bindtap="to_tuijian" data-dealerid="{{item.dealerId}}">
+		<view class="hotel-pic">
+			<image wx:if="{{item.imgUrl}}" src="{{item.imgUrl}}"></image>
+			<image wx:else src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-03/15/yuelvhuisPsDaedxF41593760583.png"></image>
+		</view>
+		<view class="hotel-cot">
+			<view class="hotel-cot-title"> <text class="cot-title">{{item.dealerName}}</text></view>
+			<view class="hotel-cot-pic">
+
+			</view>
+			<view class="hotel-cot-adderss">
+				<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/15/yuelvhuigr2GaqOoow1594970403.png"></image>
+				<text>{{item.city}}</text>
+			</view>
+			<view>
+				<view class="hotel-cot-zdbt">
+					<text>直订补贴</text>
+				</view>
+			</view>
+			<view class="hotel-cot-bottom">
+				<view class="min-price"> <text>￥{{item.bazaarAmount/100}}</text> </view>
+				<view class="price"> <text class="price-fh">￥</text><text class="price-num">{{item.minPrice/100}} <text class="qi">起</text> </text>
+				</view>
+			</view>
+			<view class="btm-hyzj" wx:if="{{item.minPrice<item.bazaarAmount}}">
+				<text>	↓会员直降￥{{(item.bazaarAmount-item.minPrice)/100}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- <HotelHomeList  isHotelList="{{isTuijHotel}}" HotelList="{{TuijHotel}}" ismap="{{ismap}}" gnCity="{{gnCity}}"></HotelHomeList> -->
+	<view class="no-data" wx:if="{{TuijHotel.length==0}}">
+		<image class="ig" src="/images/no-data.png"></image>
+		<view class="ts">暂无数据</view>
+	</view>
+	<!-- <view class="history-zw" wx:if="{{TuijHotel.length==0}}">
+		<image class="history-zw-pic" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-06/09/yuelvhuiPKWzfJ8zNF1594000680.png"></image>
+	</view> -->
+</view>
+
+
+
+<couponBox coupons="{{coupons}}" states="{{states}}" buy="0" btn="立即开通" tips="您不是直订联名会员，开通后领取"></couponBox>

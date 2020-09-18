@@ -1,0 +1,84 @@
+<!--equityCard/pages/TrainTickets/selectCity/index.wxml-->
+<my-component my-property='{{aa}}' /> 
+
+<view class='backgroundView'>
+  <!--滚动视图  -->
+  <scroll-view scroll-y style="height: 100%" scroll-into-view="{{alpha}}"scroll-with-animation="true">
+    <view class="alphabet">
+      <!--搜索  -->
+      <view class='searchView'>
+        <view class='searchBackgroundVIew'>
+          <image class='searchViewImage' src='https://image.yuelvhui.com/pubfile/2019/11/25/line_1574665036_86334.png'></image>
+          <input class='searchViewInput' name='keyInput' placeholder="请输入城市" placeholder-style="font-size: 24rpx;color: #afafaf; text-align:left" value='{{searchValue}}' bindinput="bindinput" bindfocus="bindfocus" bindblur="bindblur" bindconfirm="bindconfirm"
+            confirm-type="搜索" auto-focus='true' focus='true' maxlength='10'></input>
+        </view>
+      </view>
+      
+    
+      <!-- 历史记录  -->
+       <view class='historyCityVIew' wx:if="{{lineDepartCityArr != ''}}" style="display:{{searchKey==0?'none':''}}">
+        <view class='historyCityVIewTitle'>历史记录</view>
+        <view class='cityTabVIew'>
+          <block wx:for="{{lineDepartCityArr}}" wx:key="lineDepartCityArr" wx:for-item="items">
+            <view class='cityTabVIewCell' data-city='{{items.name}}' data-id='{{items.id}}' data-item='{{items}}' data-isgat="{{cell.city.isGat}}" bindtap='cityBindtap'>{{items.name}}</view>
+          </block>
+        </view>
+      </view>
+
+      <!--热门城市  -->
+      <view class='hotCityVIew' style="display:{{searchKey==0?'none':''}}">
+        <view class='hotCityVIewTitle'>热门城市</view>
+        <view class='cityTabVIew'>
+          <block wx:for="{{samHotelCity}}" wx:key="hotCityCell" wx:for-item="items">
+            <view class='cityTabVIewCell' data-isgat="{{items.isGat != 1?0:1}}" data-city='{{items.name}}' data-item='{{items}}' bindtap='cityBindtap'>{{items.name}}</view>
+          </block>
+        </view>
+      </view> 
+
+      <view class="alphabet-list" style="display:{{searchKey==0?'none':''}}">
+        <view wx:for="{{list}}" wx:key="unique" id="{{item.letter}}" class="section-item" data-index="{{index}}">
+          <view class="section-item-header" >
+            {{item.letter}}
+          </view>
+          <block wx:if="{{tabNum == 0}}">
+            <view wx:for="{{item.list}}" wx:key="item.list" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells" data-city='{{cell.name}}' data-id='{{cell.id}}' bindtap='cityBindtap' data-item='{{cell}}'>
+              <view class="section-item-cell {{cellIndex != (item.list.length-1) ? ' border-bottom ':' '}}">
+                <text>{{cell.name}}</text>
+              </view>
+            </view>
+          </block>
+          <block wx:else>
+            <view wx:for="{{item.list}}" wx:key="item.list" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells" data-city='{{cell.name}}' data-id='{{cell.id}}' bindtap='cityBindtap' data-item='{{cell}}'>
+              <view class="section-item-cell {{cellIndex != (item.list.length-1) ? ' border-bottom ':' '}}">
+                <text>{{cell.name}}</text>
+              </view>
+            </view>
+          </block>
+        </view>
+      </view>
+      <view class="searchCityList" wx:for="{{searchCity}}" wx:key="searchCity" wx:for-item="cell" wx:for-index="id" data-id='{{id}}'  bindtap='hotelBIndtap' data-isgat="{{cell.city.isGat}}" style="display:{{searchKey==0?'block':'none'}}"
+        data-item='{{cell.name}}'>
+        <view class="section-item-cell-hotel">
+          <view class="image">
+          </view>
+          <view class="QueryInformation">
+            <view class="scoreName">
+              <view class="name">
+                <text>{{cell.name}}</text>
+              </view>
+              <view class="score" wx:if="{{cell.regionType == 4}}"></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view data-id="selector" catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" class="alphanet-selector">
+    <view class="selector-one">热门</view>
+    <view data-ap="{{item.letter}}" wx:for="{{list}}" wx:key="unique" class="selector-one">
+      {{item.letter}}
+    </view>
+  </view>
+
+</view>

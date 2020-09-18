@@ -1,0 +1,321 @@
+/* supermarket/mall/shopVR/detail.wxss */
+
+@import "../../../wxParse/wxParse.wxss";
+
+.content {
+  margin-top: -160rpx;
+}
+
+.content .banner {
+  width: 100%;
+  height: 750rpx;
+  /* background: red; */
+}
+
+.content .main-content {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 690rpx;
+  z-index: 1;
+  background: #F5F6F7;
+  border-radius: 40rpx 40rpx 0 0;
+  overflow: hidden;
+  padding-bottom: 88rpx;
+}
+
+.content .main-content .goods {
+  width: 100%;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 40rpx 32rpx;
+  margin-bottom: 16rpx;
+}
+
+.content .main-content .goods .title {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /*要显示的行数*/
+  -webkit-box-orient: vertical;
+  margin-bottom: 24rpx;
+  color: #10141A;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.content .main-content .goods .describe {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #666666;
+  font-weight: 500;
+  margin-bottom: 60rpx;
+}
+
+.content .main-content .goods .describe .icon {
+  width: 28rpx;
+  height: 25rpx;
+}
+
+.content .main-content .goods .tc {
+  font-size: 32rpx;
+  color: #10141A;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32rpx;
+}
+
+.content .main-content .goods .tc .handle {
+  color: #EC4543;
+  font-size: 26rpx;
+  margin-left: 5rpx;
+}
+
+.content .main-content .goods .coupon {
+  width: 100%;
+  /* height: 204rpx; */
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+  position: relative;
+  background: #F9F9F9;
+  border-radius: 16rpx;
+  margin-bottom: 20rpx;
+}
+
+.content .main-content .goods .coupon:last-child {
+  margin-bottom: 80rpx;
+}
+
+.content .main-content .goods .coupon .row1 {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  color: #000;
+  font-weight: 500;
+  margin-bottom: 20rpx;
+}
+
+.content .main-content .goods .coupon .row1 .status {
+  width: 80rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  color: #fff;
+  margin-right: 10rpx;
+  border-radius: 20rpx;
+}
+
+.content .main-content .goods .coupon .row1 .s1 {
+  background: #FF9301;
+}
+
+.content .main-content .goods .coupon .row1 .s2 {
+  background: #01B1FF;
+}
+
+.content .main-content .goods .coupon .row1 .s3 {
+  background: #FF4801;
+}
+
+.content .main-content .goods .coupon .row1 .s4 {
+  background: #D84AFF;
+}
+
+.content .main-content .goods .coupon .row2 {
+  font-size: 24rpx;
+  color: #999999;
+  margin-bottom: 24rpx;
+}
+
+.content .main-content .goods .coupon .row3 {
+  display: flex;
+  align-items: center;
+  color: #EC4543;
+  font-size: 34rpx;
+}
+
+.content .main-content .goods .coupon .row3 .handle {
+  color: #9F9F9F;
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  text-decoration: line-through;
+}
+
+.content .main-content .goods .coupon .counts {
+  font-size: 20rpx;
+  color: #EC4543;
+  font-weight: 600;
+  position: absolute;
+  right: 44rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10rpx;
+}
+
+.content .main-content .goods .coupon .counts .handle {
+  font-size: 32rpx;
+}
+
+.content .main-content .tabs {
+  width: 100%;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content .main-content .tabs .tab {
+  width: 250rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #10141A;
+  position: relative;
+}
+
+.content .main-content .tabs .active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 98rpx;
+  height: 4rpx;
+  background: #FF001C;
+}
+
+.content .main-content .details {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 52rpx 32rpx 80rpx 32rpx;
+  background: #fff;
+  margin-bottom: 16rpx;
+}
+
+.content .main-content .details .info {
+  margin-bottom: 40rpx;
+  font-size: 30rpx;
+  color: #10141A;
+  font-weight: 500;
+}
+
+.content .main-content .details .info .info-c {
+  text-align: center;
+}
+
+.content .main-content .details .info .info-e {
+  color: #DEDEDE;
+  font-size: 20rpx;
+  text-align: center;
+}
+
+.content .main-content .details .store-info {
+  width: 100%;
+  height: 288rpx;
+  border: 2rpx solid #E6E6E6;
+  position: relative;
+}
+
+.content .main-content .details .store-info .row1 {
+  width: 75%;
+  box-sizing: border-box;
+  padding-left: 24rpx;
+  margin-top: 32rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #333333;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content .main-content .details .store-info .row1 .icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 10rpx;
+}
+
+.content .main-content .details .store-info .row2 {
+  width: 75%;
+  box-sizing: border-box;
+  padding-left: 62rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /*要显示的行数*/
+  -webkit-box-orient: vertical;
+  margin-top: 20rpx;
+  color: #666;
+}
+
+.content .main-content .details .store-info .ri {
+  width: 132rpx;
+  height: 288rpx;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.content .main-content .details .store-info .ri .pic {
+  width: 100%;
+  height: 100%;
+}
+
+.content .main-content .details .store-info .ri .txt-box {
+  width: 90rpx;
+  height: 72rpx;
+  font-size: 26rpx;
+  color: #EC4543;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .main-content .details .store-info .ri .txt-box .txt {
+  width: 56rpx;
+  height: 72rpx;
+}
+
+.content .btm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.content .btm .le,
+.content .btm .ri {
+  width: 50%;
+  height: 88rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #fff;
+  background: #141414;
+}
+
+.content .btm .le .txt,
+.content .btm .ri .txt {
+  width: 100%;
+  text-align: center;
+}
+
+.content .btm .ri {
+  background: #F5273C;
+}

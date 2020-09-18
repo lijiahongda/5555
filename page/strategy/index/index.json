@@ -1,0 +1,15 @@
+{
+  "navigationBarTitleText": "攻略",
+  "navigationBarBackgroundColor": "#FFFFFF",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "default",
+
+
+  "usingComponents": {
+    "study": "/page/strategy/study/study",
+    "problem": "/page/strategy/problem/problem",
+    "my-bottom":"/components/bottom/index",
+    "posters": "/page/strategy/posters/posters"
+  }
+  
+}

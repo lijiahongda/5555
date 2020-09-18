@@ -1,0 +1,28 @@
+<view class="box_shadow"></view>
+<block wx:if="{{list.length}}">
+  <view class="total_title">已完成订单</view>
+  <view class="list" wx:for="{{list}}" wx:key="list" bindtap="detail" data-status="{{item.order_status}}" data-order="{{item.order_sn}}">
+    <view class="item">
+      <view class="title">
+        <view class="name">{{item.car_type}}</view>
+        <view class="state">
+          <view>{{item.order_status_name}}</view>
+          <image src="https://image.yuelvhui.com/pubfile/2019/11/20/line_1574233663_73824.png" bindtap="detailOrder"></image>
+        </view>
+      </view>
+      <view class="time">
+        <image src="https://image.yuelvhui.com/pubfile/2019/11/20/line_1574233750_36081.png"></image>
+        <view>{{item.call_time}}</view>
+      </view>
+      <view class="Boarding_Loc">
+        <view class="Boarding_radio"></view>
+        <view>{{item.start_name}}</view>
+      </view>
+      <view class="Boarding_Loc">
+        <view class="Boarding_radio"></view>
+        <view>{{item.end_name}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+<view wx:if='{{list.length==0}}' style="width:100%;margin-top:100rpx;text-align:center">暂无记录</view>

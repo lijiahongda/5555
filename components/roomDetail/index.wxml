@@ -1,0 +1,79 @@
+<!--components/roomDetail/index.wxml-->
+<view class="commodity_screen" wx:if="{{isShow}}" catchtap="close"></view>
+<view class="roomInfo" wx:if="{{isShow}}">
+	<view class="title">
+		<view>{{roomDetailInfo.roomName}}</view>
+		<image src="{{close}}" catchtap="close"></image>
+	</view>
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}">
+		<block wx:for="{{roomDetailInfo.listImage}}" wx:key="listImage" wx:for-index="index">
+			<swiper-item>
+				<view class="roomImage" data-cur="{{img}}" data-item="{{roomDetailInfo.listImage}}" catchtap="lookBagImage">
+					<image src="{{item}}" class="bannerimage"></image>
+          <view class="imageCurrent">
+            <image src="{{img}}"></image>
+              <view>{{index+1}}/{{roomDetailInfo.listImage.length}}</view>
+          </view>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+	
+
+	<view class="Facilities">
+		<view class="titles">房型设施</view>
+		<view class="f_icon">
+			<view class="f_list" wx:for="{{roomDetailInfo.Facilities}}" wx:for-item="notes" wx:for-index="index" wx:key="index">
+				<image src="{{notes.icon}}"></image>
+				<view>{{notes.title}}</view>
+			</view>
+		</view>
+		<view class="base">
+			<view class="baseItem">
+				<view>客房设施</view>
+				<view class="key">{{roomDetailInfo.more.facility}}</view>
+			</view>
+			<view class="baseItem">
+				<view>浴室</view>
+				<view class="key">{{roomDetailInfo.more.bath}}</view>
+			</view>
+			<view class="baseItem">
+				<view>饮食饮品</view>
+				<view class="key">{{roomDetailInfo.more.catering}}</view>
+			</view>
+			<view class="baseItem">
+				<view>媒体科技</view>
+				<view class="key">{{roomDetailInfo.more.media}}</view>
+			</view>
+		</view>
+	</view>
+
+
+	<view class="Facilities">
+		<view class="titles">预定须知</view>
+		<view class="CancellationPolicy" wx:for="{{roomDetailInfo.bookingNotes}}" wx:for-item="notes" wx:for-index="index" wx:key="index">
+			<view class="title1">{{notes.title}}</view>
+			<view>{{notes.content}}</view>
+		</view>
+	</view>
+
+	<view class="Facilities">
+		<view class="titles">取消规则</view>
+		<view class="CancellationPolicy" wx:for="{{roomDetailInfo.cancelRuleMsg}}" wx:for-item="notes" wx:for-index="index" wx:key="index">
+			<view class="title1">{{notes.title}}</view>
+			<view>{{notes.content}}</view>
+		</view>
+	</view>
+
+	<view class="bot">
+		<view class="bot_le">
+			<view class="price"> <text style="font-size:20rpx">¥</text> 302</view>
+			<view class="surplus">仅剩4{{room.currentAlloment}}间</view>
+			<!-- <view class="surplus" wx:if="{{room.currentAlloment==0 || room.currentAlloment>5}}">仅剩{{room.currentAlloment}}间</view> -->
+		</view>
+		<view class="bot_ri">立即预定</view>
+	</view>
+
+
+
+</view>

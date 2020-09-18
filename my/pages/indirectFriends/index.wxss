@@ -1,0 +1,69 @@
+/* my/pages/indirectFriends/index.wxss */
+page{
+  background: #f9f8f8;
+}
+.content .peopleNum{
+  text-align: center;
+  padding: 20rpx 0;
+  background-color: white;
+  color: #333333;
+  font-family: PingFang SC Medium;
+  font-size: 33rpx;
+}
+.content .details{
+  margin-top: 30rpx;
+  padding: 0 36rpx;
+}
+.content .details .item{
+  margin-bottom: 26rpx;
+  width: 100%;
+  background: white;
+  border-radius: 20rpx;
+}
+.content .details .item .img{
+  width: 100rpx;
+  height: 100rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 24rpx;
+  margin-left: 30rpx;
+  padding: 36rpx 0;
+}
+.content .details .item image{
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 50%;
+}
+.content .details .item .info{
+  display: inline-block;
+  vertical-align: middle;
+  width: 74%;
+}
+.content .details .item .info .name{
+  margin-bottom: 10rpx;
+}
+.content .details .item .info .name .left{
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #242424;  
+  float: left;
+}
+
+.content .details .item .info .num{
+  margin-bottom: 10rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+.content .details .item .info .time{
+  color: #666666;
+  font-size: 24rpx;
+}
+
+.indirect{
+  text-align: center;
+  margin-top: 180rpx;
+}
+.indirect image{
+  width: 347rpx;
+}

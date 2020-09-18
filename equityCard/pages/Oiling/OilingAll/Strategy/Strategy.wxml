@@ -1,0 +1,3 @@
+  <image class="bg" mode="widthFix"  src="{{bgImg}}"></image>
+  <image class="btn" mode="scaleToFill"  src="{{btnImg}}" bindtap="goOiling"></image>
+   <!-- mode="aspectFit" -->

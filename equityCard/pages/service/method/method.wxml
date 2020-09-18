@@ -1,0 +1,14 @@
+<!--equityCard/pages/service/method/method.wxml-->
+<!-- 使用方法 -->
+<view class="main">
+    <view class="box" wx:for="{{list}}" wx:for-item="item">
+        <view class="title">{{item.title}}</view>
+        <view class="txts" wx:for="{{item.content}}" wx:for-item="k" wx:key="index">{{k}}</view>
+    </view>
+    <view class="kefuBoxs">
+        <button class="kefu"  hover-class="none"  open-type="contact" bindcontact="handleContact">
+            <image src="http://image.zhiding365.com/2020/7/29/a0fdc3d5-dcb6-4d06-ba23-45be438f3d13.png"></image>
+            <text>联系客服</text>
+			  </button>
+    </view> 
+</view>

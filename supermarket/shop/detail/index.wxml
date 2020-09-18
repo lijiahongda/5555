@@ -1,0 +1,96 @@
+<!-- index.wxml -->
+<view class="container">
+    <view class="mask-mc" bindtap="handleHideMask" wx:if="{{maskStatus == 1}}"></view>
+    <view class="s-hea">
+        <view class="page-body" style="position:relative;">
+            <view class="page-section page-section-spacing swiper">
+                <swiper class="swiper-cls" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                    <block wx:for="{{shopDetailData.imageList}}" wx:key="{{item.id}}">
+                        <swiper-item>
+                            <image class="swiper-clis-img" src="{{item.path}}"></image>
+                        </swiper-item>
+                    </block>
+                </swiper>
+                  <!-- <view class="proactivity">
+                        <view>￥</view>
+                        <view class="price1">{{buyPrice}}</view>
+                    </view> -->
+            </view>
+        </view>
+    </view>
+    <view class="proname">{{shopDetailData.name}}</view>
+    <view class="price">
+        <view class="seckill">
+            <text>秒杀价</text>
+            <text>￥</text>
+            <text>{{buyPrice}}</text>
+        </view>
+        <view class="profastMailFee">运费:{{yfMoney}}</view>
+    </view>
+    <view>
+        <view class="layer-title">
+            <!-- <image class="layer-title-img" src="/images/v_red.png"></image> -->
+            <view class="title">商品详情</view>
+
+
+
+          
+        </view>
+        <view>
+              <import src="../../../components/wxParse/wxParse.wxml"/> 
+            <view class="wxParse">
+                <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+            </view>
+        </view>
+    </view>
+    <vie class="maincontent" wx:if="{{maskStatus == 1}}">
+        <view class="currproinfo" style="overflow:visible">
+            <view class="currproimg">
+                <image class="img-icon" src="{{tabImgSrc}}" />
+            </view>
+            <view class="propara">
+                <text class="name">会员价</text>
+                <view class="proprice">¥<text>{{buyPrice}}</text></view>
+                <view class="prostock">剩余<text>{{buyInventory}}</text>份</view>
+            </view>
+            <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/11/yuelvhuijzYtQ8tPkF1594956220.png" class="close" bindtap="handleHideMask" />
+        </view>
+        <view class="proskulist">
+            <view class="s-le">商品类型</view>
+            <view class="tab-box">
+                <view class="ul-li {{tabIndex == index ?'ul-li-active':''}}"  data-index="{{index}}" data-obj="{{item}}" bindtap="handleTab"  wx:for="{{shopDetailData['skuInfo'].skuList}}">{{item.product_sale_value_name}}</view>
+                <!-- <view class="ul-li">黑红:299;黑白:299;绚蓝色:299;分期:24</view>
+                <view class="ul-li">黑红:299;黑白:299;绚蓝色:299;分期:36</view> -->
+            </view>
+        </view>
+        <view class="pronumcon clearfix">
+            <view class="name">购买数量</view>
+            <view class="pronum">
+                <image class="add-icon" bindtap="reduceNum" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/11/yuelvhui5rVJHJKjUm1594957293.png" />
+                <text class="label">{{num}}</text>
+                <image class="add-icon"  bindtap="addNum"  src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/11/yuelvhuiWzm8vGQOCV1594957316.png" />
+            </view>
+        </view>
+    </vie>
+
+    <view style="height:100rpx">
+        
+    </view>
+    <view id="pronav">
+        <view class="ps">
+            总计：
+            <text class="symbol">¥</text>
+            <text class="proprice">{{buyPrice}}</text>
+        </view>
+        <view class="shareGain" wx:if="{{shareCommission}}">
+        <!-- <view class="shareGain"> -->
+            <button bindtap="handleShowSelect" style="background-color: transparent;margin-top:12rpx" class='contact' hover-class='none'>
+                <view>分享预估赚</view>
+                <view>¥{{shareCommission/100}}</view>
+            </button>
+        </view>
+        <view class="ps btnbuy" bindtap="handleBuy" >立即购买</view>
+    </view>
+    <poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+	<shareSelect fromtype="{{fromtype}}" goodObj="{{shopDetailData}}" bind:handleCloseDialog="handleCloseShareDialog" bind:handleShowPosterStatus="handleShowPosterStatus" status="{{shareSelectStatus}}"></shareSelect>
+</view>

@@ -1,0 +1,35 @@
+.poster-mask{
+  position: fixed;
+  z-index: 99999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #333;
+  opacity: 0.6;
+}
+.poster-wrapper{
+  position: fixed;
+  z-index: 100000;
+  width: 480rpx;
+  height:600rpx;
+  left: 135rpx;
+  right: 135rpx;
+  background: #fff;
+  top: 306rpx;
+  border-radius: 10rpx;
+  padding: 82rpx 0 50rpx 0;
+  box-sizing: border-box;
+}
+
+.poster-wrapper .header{
+  font-size: 30rpx;
+  text-align: center;
+  margin-bottom: 135rpx;
+
+}
+.img-down{
+  width:178rpx;
+  margin-top: 30rpx;
+  height:194rpx;
+}

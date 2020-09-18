@@ -1,0 +1,49 @@
+/* page/phonerecharge/list/index.wxss */
+.phoneOrder{
+    width: 690rpx;
+  height: 189rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16rpx;
+  margin-top: 16rpx;
+  
+  }
+  .phoneOrder_top{
+    display: flex;
+  padding: 24rpx;
+  justify-content: space-between;
+  align-items: center;
+  
+  }
+  .phoneOrder_top view{
+    display: flex;
+  align-items: center;
+  
+  }
+  .phoneOrder_top view image{
+    width: 24rpx;
+  height: 28rpx;
+  background: #ccc;
+  margin-right: 10rpx;
+  
+  }
+  .phoneOrder_cont{
+    padding: 0 24rpx;
+  
+  }
+  .phoneOrder_footer{
+    padding: 0 24rpx;
+    color: #999;
+    margin-top:10rpx;
+  }
+  .phone_active{
+  color:#999
+  }
+  .not{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 200rpx;
+  }
+  .not image{
+    width: 347rpx;
+  }

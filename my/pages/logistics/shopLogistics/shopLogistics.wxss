@@ -1,0 +1,92 @@
+page{
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+}
+.top{
+  width: 100%;
+  padding: 17rpx 28rpx;
+  box-sizing: border-box;
+  border-bottom: 16rpx solid #f5f7fa;
+}
+.goods{
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: 4rpx solid #eeeeee;
+  margin-bottom: 30rpx;
+}
+.goods > image{
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  margin-right: 24rpx;
+  border-radius: 8rpx;
+}
+.goods .title{
+  width: 450rpx;
+  line-height: 1;
+  line-height: 42rpx;
+  font-size: 30rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  color: #141414;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.goods .desc{
+  font-size: 26rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #999999;
+  line-height: 36rpx;
+  margin-top: 8rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.goods .price{
+  color: #ED2E2E;
+  font-size: 36rpx;
+  margin-top: 28rpx;
+}
+.top .list{
+  margin-bottom: 16rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFangSC, PingFangSC-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #141414;
+}
+.top .list .copy{
+  padding: 4rpx 8rpx;
+  background: #b3b3b3;
+  border-radius: 4rpx;
+  font-size: 24rpx;
+  color: #fff;
+  margin-left: 40rpx;
+  border-radius: 8rpx;
+}
+.logistics{
+  width: 100%;
+  padding: 32rpx 28rpx;
+  box-sizing: border-box;
+}
+.logistics .list{
+  font-size: 28rpx;
+  line-height: 44rpx;
+  margin-bottom: 60rpx;
+  color: #999999;
+}
+.logistics .list:first-child{
+  color: #141414;
+}
+.logistics .list .time{
+  font-size: 24rpx;
+  line-height: 34rpx;
+  margin-top: 8rpx;
+}
+

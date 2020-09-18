@@ -1,0 +1,254 @@
+/* equityCard/pages/TrainTickets/SubmitOrder/index.wxss */
+.submitorder{
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(0deg,rgba(255,86,84,1) 0%,rgba(252,68,71,1) 100%);
+}
+.submitorder_date{
+  height:64rpx;
+background:rgba(255,255,255,1);
+border-radius:5rpx;
+font-size: 28rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+padding:0 15rpx;
+color:#FF5553;
+}
+.Order_detail_date{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30rpx;
+  padding-top: 52rpx;
+}
+.Order_detail_date_model{
+  text-align: center;
+}
+.start_date{
+  font-size:60rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(1,1,1,1);
+}
+.start_total,.start_city{
+  font-size:26rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(1,1,1,1);
+}
+.Order_detail_date_model image{
+  width:241rpx;
+height:8rpx;
+}
+.Order_detail{
+  background:#fff;
+}
+.Order_detail_total{
+  padding: 0rpx 30rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Order_detail_total_one{
+  width:30rpx;
+background:rgba(52,159,45,1);
+border-radius:4rpx;
+font-size:24rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(255,255,255,1);
+display: flex;
+align-items: center;
+justify-content: center;
+margin:20rpx 0;
+}
+.ticket_sit{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:30rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  padding:25rpx 0;
+  flex-wrap: wrap
+}
+.ticket_sit_shang,.ticket_sit_one,.ticket_sit_two{
+  width: 30%;
+  padding-top: 20rpx;
+  text-align: center;
+}
+.actives{
+  background:rgba(255,85,83,1);
+border-radius:12rpx;
+color:#fff;
+}
+.OrderDetail_sitperson_top{
+  display: flex;
+  padding:35rpx 31rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size:30rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(51,51,51,1);
+border-bottom:1px solid rgba(244,244,244,1);
+}
+.OrderDetail_sitperson_image image{
+  width: 30rpx;
+  height: 35rpx;
+}
+.OrderDetail_sitperson{
+  background: #fff;
+  margin-top: 10rpx;
+}
+.OrderDetail_sitperson_center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:32rpx 0;
+}
+.OrderDetail_sitperson_center_image image{
+  width: 38rpx;
+  height: 38rpx;
+}
+.OrderDetail_sitperson_center_text{
+  padding-left: 16rpx;
+  font-size:34rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(235,156,55,1);
+}
+.OrderDetail_choose{
+  background:#fff;
+  margin-top:10rpx;
+  padding:15rpx 20rpx;
+}
+.OrderDetail_choose_top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:28rpx;
+font-family:PingFang SC;
+font-weight:300;
+}
+.OrderDetail_choose_top_text{
+  color:#EB9C37;
+}
+.OrderDetail_choose_top_right{
+  color:#FF8B8A;
+}
+.OrderDetail_choose_siter{
+  display: flex;
+  padding:42rpx 110rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size:28rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(51,51,51,1);
+}
+.OrderDetail_choose_siter_a,.OrderDetail_choose_siter_b,.OrderDetail_choose_siter_c,.OrderDetail_choose_siter_d,.OrderDetail_choose_siter_f{
+  width:52rpx;
+height:52rpx;
+border:1px solid #ccc;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.OrderDetail_choose_notice{
+  font-size:26rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(101,102,105,1);
+}
+.OrderDetail_notice{
+  padding:0 30rpx;
+  padding-top:144rpx;
+}
+.OrderDetail_notice_total{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.OrderDetail_notice_total_image image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.OrderDetail_notice_total_text{
+  padding-left:15rpx;
+  font-size:28rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(51,51,51,1);
+}
+.OrderDetail_notice_text{
+  height:147rpx;
+border:2rpx solid rgba(224,224,224,1);
+border-radius:10rpx;
+font-size:24rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(153,153,153,1);
+display: flex;
+justify-content: center;
+align-items: center;
+padding:0 24rpx;
+}
+.OrderDetail_btn{
+  width: 92%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88rpx;
+  font-size:30rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(255,253,253,1);
+margin: 65rpx auto;
+background:linear-gradient(0deg,rgba(255,86,84,1) 0%,rgba(247,48,55,1) 100%);
+border-radius:10rpx;
+}
+.black{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1
+}
+.filterpage{
+  width:100%;
+  height:100vh;
+  background:rgba(255,255,255,1);
+  border-radius:20rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+}
+.countTime{
+  font-size:30px;
+  text-align: center;
+}
+.filterpage_image image{
+  width: 113rpx;
+  height: 130rpx;
+  margin-top:336rpx;
+}
+.filterpage_image{
+  width: 113rpx;
+  margin:0 auto;
+}
+.filterpage_text{
+  display: flex;
+  justify-content: center;
+  padding: 28rpx 0
+}

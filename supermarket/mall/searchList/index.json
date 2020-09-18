@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "searchInput":"/components/searchInput/searchInput",
+    "shopItems": "/components/shopItems/shopItems"
+  },
+  "navigationBarTitleText": "搜索结果"
+}

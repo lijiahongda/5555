@@ -1,0 +1,129 @@
+/* components/roomNum/index.wxss */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 100;
+  color: #fff;
+}
+
+.selectRoomNum {
+  width: 100%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #fff;
+  height: 553rpx;
+  position: fixed;
+  bottom: 0;
+  z-index: 101;
+  border-top-left-radius: 24rpx;
+  border-top-right-radius: 24rpx;
+}
+
+.selectRoomNum .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 29rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(36, 36, 36, 1);
+  justify-content: space-between;
+  padding-left: 40%;
+  margin-bottom: 103rpx;
+}
+
+.selectRoomNum .title image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.selectRoomNum .CurrentSelection {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(36, 36, 36, 1);
+  margin-bottom: 35rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectRoomNum .OrderRoomNum {
+  width: 100%;
+  height: 78rpx;
+  background: rgba(249, 248, 248, 1);
+  border-radius: 12rpx;
+  padding-left: 4%;
+  padding-right: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 78rpx;
+}
+
+.selectRoomNum .OrderRoomNum .OrderRoomNumTitle {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-right: 11rpx;
+}
+
+.selectRoomNum .OrderRoomNum .maxNum {
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  margin-right: 12rpx;
+}
+
+.selectRoomNum .OrderRoomNum .Surplus {
+  font-size: 20rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(236, 69, 67, 1);
+  margin-right: 69rpx;
+}
+
+.selectRoomNum .OrderRoomNum .jian {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 3.2%;
+}
+
+.selectRoomNum .OrderRoomNum .jia {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.selectRoomNum .OrderRoomNum input {
+  width: 132rpx;
+  height: 52rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 12rpx;
+  text-align: center;
+  margin-right: 3.2%;
+
+}
+
+.selectRoomNum .sure {
+  width: 100%;
+  height: 66rpx;
+  background: rgba(236, 69, 67, 1);
+  border-radius: 33rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 66rpx;
+  text-align: center;
+}

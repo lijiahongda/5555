@@ -1,0 +1,8 @@
+<!-- 搜索 -->
+<searchInput type="black" bind:searchBind="searchBind"  default="{{keyword}}"></searchInput>
+
+<view wx:if="{{jdList.length}}" wx:for="{{jdList}}" class="explosive_goodinfo" data-item="{{item}}" bindtap="jdDetail" wx:for-index="index" wx:key="index">
+	<shopItems list="{{item}}"></shopItems>
+</view>
+<view wx:if="{{jdList.length==0}}" style="width:100%;margin-top:100rpx;text-align:center">暂无更多</view>
+

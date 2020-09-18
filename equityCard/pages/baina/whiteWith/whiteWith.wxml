@@ -1,0 +1,16 @@
+<view style="background:{{data.backgroundColor}}" class="content">
+  <image src="{{list.freeProductImg}}" class="backImage"></image>
+  <image src="{{list.titleImage}}" class="titleImage"></image>
+  <view class="list" wx:for='{{list.data}}'  wx:for-item="item"  wx:key="item.id">
+    <image src="{{item.path}}"></image>
+    <view class="right">
+      <view class="title">{{item.name}}</view>
+      <view class="desc">{{item.ware_qd}}</view>
+      <view class="price">
+        <text>￥</text>
+        <text>{{item.vipPrice}}</text>
+        <view bindtap="buy" data-id="{{item.id}}" data-skuid="{{item.skuId}}">抢先加购</view>
+      </view>
+    </view>
+  </view> 
+</view>

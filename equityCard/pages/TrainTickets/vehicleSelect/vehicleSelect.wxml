@@ -1,0 +1,77 @@
+<!--equityCard/pages/TrainTickets/vehicleSelect/vehicleSelect.wxml-->
+<my-component my-property='{{aa}}' /> 
+
+<view class="time">
+  <view bindtap="delday">前一天</view>
+  <view class="calender" bindtap="datechoose">
+    <view>{{selectedDay.month}}月{{selectedDay.day}}日{{selectedDay.monday}}</view>
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/24/line_1574589531_99504.png"></image>
+  </view>
+  <view bindtap="addday">后一天</view>
+</view>
+<view style="width:750rpx;height: 92rpx;"></view>
+
+<view class="list" wx:if="{{trainList!=''}}"wx:for="{{trainList}}" wx:key="trainList" bindtap="ordersub" data-traino="{{item.TrainNo}}" data-startcity="{{item.FromStationName}}" data-endcity="{{item.ToStationName}}" data-index="{{index}}">
+  <view class="list_itme">
+    <view>
+      <view class="train">
+        <view class="train_number">{{item.TrainNo}}</view>
+        <view class="start_city"> 
+          <image class="icon too" src="https://image.yuelvhui.com/pubfile/2019/11/25/line_1574651754_75802.png" wx:if="{{item.FromStationTypeName=='途经'}}"></image><!-- 过 -->
+          <view>{{item.FromStationName}}</view>
+        </view>
+        <view class="reach">
+          <image src="https://image.yuelvhui.com/pubfile/2019/11/24/line_1574590203_95043.png"></image>
+        </view>
+        <view class="end_city">
+          <image class="icon end" src="https://image.yuelvhui.com/pubfile/2019/11/25/line_1574651774_87687.png" wx:if="{{item.ToStationTypeName=='终点'}}"></image><!-- 终 -->
+          <image class="icon too" src="https://image.yuelvhui.com/pubfile/2019/11/25/line_1574651754_75802.png" wx:if="{{item.ToStationTypeName=='途经'}}"></image><!-- 过 -->
+          <view>{{item.ToStationName}}</view>
+        </view>
+      </view>
+      <view class="train">
+        <view class="train_number">
+          <image class="icon too" src="https://image.yuelvhui.com/pubfile/2019/11/25/line_1574651726_33932.png"></image><!-- 兑 -->
+        </view>
+        <view class="start_city"> 
+          <view class="end_time">{{item.StartTime}}</view>
+        </view>
+        <view class="reach">
+          <view>{{item.DurationMinutes}}</view>
+        </view>
+        <view class="end_city">
+          <view class="end_time">{{item.ArriveTime}}<text style="color:#000;font-size:12rpx;" wx:if="{{item.DayDiff!=0}}">{{item.DayDiff}}</text></view>
+        </view>
+      </view>
+    </view>
+    <image class="more" src="https://image.yuelvhui.com/pubfile/2019/11/25/line_1574646507_79030.png"   data-traino="{{item.TrainNo}}" data-index="{{index}}" catchtap="mores"></image>
+  </view>
+
+  <view class="list_seat">
+    <view wx:for="{{item.Seats}}" wx:for-item="items" wx:key="seats">
+      {{items.SeatName}}:<text style="color:#FA9C36">{{items.TicketLeft}}</text>
+    </view>
+  </view>
+
+  <view class="list_cont" wx:if="{{item.moreStatus}}">
+    <view class="list_con_head">
+      <view>站序</view>
+      <view>站名</view>
+      <view>到时</view>
+      <view>发时</view>
+      <view>时长</view>
+    </view>
+    <view class="list_cont_list" wx:for="{{stopStation}}" wx:key="stopStation">
+      <view>{{item.StationNo}}</view>
+      <view>{{item.StationName}}</view>
+      <view>{{item.ArrivalTime}}</view>
+      <view>{{item.StartTime}}</view>
+      <view>{{item.StopMinutes}}</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="listTitle" wx:if="{{trainList==''}}">
+  暂无数据
+</view>

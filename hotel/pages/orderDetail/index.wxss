@@ -1,0 +1,543 @@
+page{
+    background: #f0f2f6;
+}
+
+
+.item {
+    padding: 0 30rpx;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 20rpx;
+}
+.item .title {
+    padding-left: 17rpx;
+    border-left: 4rpx solid #33558d;
+    margin: 30rpx 0;
+}
+.item .content {
+    border-top: 1px solid #f2f2f2;
+    padding-top: 24rpx;
+}
+
+.item .content .li-list {
+    color: #999;
+    margin-bottom: 30rpx;
+    display: flex;
+}
+
+.footernav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 30rpx;
+    height: 98rpx;
+    background-color: #fff;
+}
+.pp-price{
+
+        color: #fc6931;
+
+        display: flex;
+        -ms-flex-align: baseline;
+        align-items: baseline;
+        font-size: 36rpx;
+
+}
+.btnpay {
+    width: 220rpx;
+    background-color: #33558d;
+    color: #f0f2f6;
+    text-align: center;
+    height: 98rpx;
+    line-height: 98rpx;
+}
+.pricecontainer{
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 22rpx;
+    color: #c7c7c7;
+}
+/* my/pages/orderDetail/shopOrderDetail/shopOrderDetail.wxss */
+page {
+    padding-bottom: 100rpx;
+    background:#f8f8f8
+  }
+  /* 平台客服 */
+  .Customer_Service {
+    width: 105rpx;
+    height: 110rpx;
+    position: fixed;
+    bottom: 100rpx;
+    right: 10rpx
+  }
+  .ordermsg{
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    font-size:30rpx;
+    font-family:PingFang SC;
+    font-weight:600;
+    color:rgba(202,37,25,1);
+    border-bottom: 1px solid #eeeeee
+  }
+  .ordermsg image{
+    width: 32rpx;
+    height: 32rpx;
+  }
+  /* 确认收货 */
+  
+  .Confirm_receipt {
+    width: 150rpx;
+    height: 58rpx;
+    border: 1px solid rgba(230, 0, 18, 1);
+    border-radius: 29rpx;
+    font-size: 26rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(249, 57, 62, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10rpx;
+  }
+  
+  .ConfirmReceipt {
+    width: 150rpx;
+    height: 58rpx;
+    border: 1px solid rgba(228, 49, 31, 1);
+    border-radius: 29rpx;
+    line-height: 58rpx;
+    text-align: center;
+    font-size: 26rpx;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(228, 49, 31, 1);
+    margin-left: 2%;
+  }
+  
+  .TopContent {
+    width: 750rpx;
+    height: 264rpx;
+    background: linear-gradient(0deg, rgba(255, 86, 84, 1) 0%, rgba(247, 48, 55, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    font-size: 37rpx;
+    font-family: PingFangSC-Regular; 
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+  overflow: hidden;
+  }
+  .TopContent .status{
+    padding:30rpx
+  }
+  
+  
+  .TopContent .status image {
+    width: 43rpx;
+    height: 43rpx;
+    margin-right: 25rpx;
+  }
+  .orderDetails{
+    position: absolute;
+  width: 750rpx;
+  top: 164rpx;
+  overflow-x: hidden;
+  }
+  
+  .userInfo {
+    background-color: #fff;
+    border-radius: 16rpx;
+    /* height: 216rpx; */
+    position: relative;
+    width: 690rpx;
+  margin: 0 auto;
+  padding-bottom: 20rpx;
+  }
+  .userinfo_text{
+    display: flex;
+    justify-content: space-between;
+    padding: 24rpx;
+    align-items: center;
+  }
+  .fei{
+    font-size: 26rpx;
+    color:#999999
+  }
+  
+  .userinfo_btn{
+    width: 642rpx;
+    height: 88rpx;
+    background: #e33f44;
+    margin: 0 auto;
+    border-radius: 50rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 32rpx;
+  }
+  .hotelinfo{
+    width: 690rpx;
+    background: #fff;
+    margin: 18rpx auto;
+    border-radius: 16rpx;
+  }
+  .hotelinfo_title{
+    margin: 0 13px;
+    padding: 32rpx 0 24rpx 0;
+    border-bottom: 1px solid #ebeef5;
+    
+  }
+  .hotel_etext{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    width: 100%; 
+  }
+  .hotel_save{
+    color: #999;
+    padding-top: 12rpx;
+    font-size: 24rpx;
+    
+  }
+  .hotel_details{
+    margin: 0 26rpx 28rpx;
+    display: flex;
+    justify-content: space-between;
+    color: #999;
+    font-size: 26rpx;
+    margin-top: 20rpx;
+  }
+  .userinfo_text text{
+    font-size: 46rpx;
+color: #e33f44;
+
+  }
+  .hotel_details_text{
+      color:#000
+  }
+  .hotel_details:first-child{
+    margin-top: 28rpx;
+
+  }
+  .hotel_details:last-child{
+      padding-bottom: 28rpx;
+  }
+  .addressinfo{
+    
+  width: 690rpx;
+height: 136rpx;
+background: #fff;
+margin: 0 auto;
+border-radius: 16rpx;
+
+  }
+  .address_back{
+    display: flex;
+  align-items: center;
+  margin-right: 16rpx;
+  
+  }
+  .address_detail{
+    display: flex;
+  align-items: center;
+  padding: 24rpx;
+
+  }
+  .address_detail image{
+    width: 24rpx;
+  height: 28rpx;
+  
+  }
+  .address_back image{
+    width: 40rpx;
+  height: 40rpx;
+  
+  }
+  .address_text{
+    font-size: 30rpx;
+  padding-left: 18rpx;
+  }
+  .address_pression{
+    font-size: 26rpx;
+  color: #9999;
+  padding-left: 64rpx;
+padding-bottom: 24rpx;
+
+  
+  }
+  /* 酒店商城信息 */
+  .hotelshop{
+    width: 690rpx;
+  background: #fff;
+  border-radius: 16rpx;
+  margin: 0 auto;
+  margin-top: 16rpx;
+  }
+  .hotelshop_title{
+    padding: 32rpx 0;
+    font-size: 30rpx;
+    font-family: PingFangSC, PingFangSC-Medium;
+    font-weight: 500;
+    color: #141f33;
+    margin: 0 24rpx;
+    border-bottom:1px solid #ebeef5 ;
+  }
+  .hotelshop_goodinfo{
+    margin: 0 24rpx;
+  display: flex;
+  padding: 32rpx 0;
+  border-bottom: 1px solid #ebeef5;
+  
+  }
+  .goodinfo_image image{
+    width: 120rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+  background: #ccc;
+  
+  }
+  .goodinfo_text{
+    margin-left: 16rpx;
+  
+  }
+  .goodinfo_name{
+    display: flex;
+  justify-content: space-between;
+  font-size: 28rpx;
+  
+  }
+  .goodinfo_price{
+    font-size: 30rpx;
+  }
+  .goodinfo_sku,.goodinfo_num{
+    font-size: 24rpx;
+  color: #9999;
+  margin-top: 8rpx;
+  
+  }
+  .fright{
+    margin: 0 24rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 34rpx;
+  font-size: 26rpx;
+  color: #9999;
+  
+  }
+  .fright_price{
+    color:#141F33;
+  }
+  
+  .total{
+    display: flex;
+  font-size: 32rpx;
+  padding: 30rpx 0;
+  margin: 0 24rpx;
+  justify-content: space-between;
+  border-top: 1px solid #ebeef5;
+  margin-top: 34rpx
+  }
+  .shoper{
+    width: 690rpx;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 44px;
+    margin-top: 16rpx;
+    background: #fff;
+    align-items: center;
+    border-radius: 16rpx;
+    
+  }
+  .shoper image{
+    width: 24rpx;
+    height: 32rpx;
+    
+  }
+  .shoptext{
+    margin-left: 10rpx;
+  
+  }
+  .orderdetail{
+    width: 690rpx;
+  margin: 0 auto;
+  background: #fff;
+  height: 310rpx;
+  margin-top: 16rpx;
+  border-radius: 16rpx;
+  }
+  .oDetail_title{
+    padding: 25rpx 0;
+  margin: 0 24rpx;
+  border-bottom: 1px solid #ebeef5;
+  
+  }
+  .oDetail_info{
+    display: flex;
+  justify-content: space-between;
+  padding: 0 24rpx;
+  font-size: 24rpx;
+  color: #9999;
+  margin-top: 32rpx;
+  }
+  .infos_clone{
+    display: flex;
+  }
+  .info1{
+    padding-top: 32rpx;
+  }
+  .info2{
+    padding: 24rpx 24rpx;
+  }
+  .info3{
+    padding-bottom: 25rpx;
+  }
+  .clones{
+    width: 60rpx;
+    height: 40rpx;
+    font-size: 20rpx;
+    background: #f5f7fa;
+    border-radius: 6rpx;
+    margin-right: 32rpx;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  .btns{
+    background: #fff;
+  height: 108rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
+  }
+  .cancles{
+    width: 184rpx;
+    height: 60rpx;
+    background: #f0f2f5;
+    border-radius: 30rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16rpx;
+  }
+  .pays{
+    width: 184rpx;
+    height: 60rpx;
+    background: #f5273c;
+    border-radius: 30rpx;
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30rpx;
+  }
+  .footerbtns{
+    display: flex;
+    width: 690rpx;
+    margin: 16rpx auto;
+    align-items: center;    
+  }
+  .footerbtns_hotel{
+    width: 338rpx;
+    height: 88rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .footerbtns_ditu{
+    width: 338rpx;
+    height: 88rpx;
+    background: #fff;
+    border-radius: 16rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17rpx;
+  }
+  .footerbtns image{
+      width: 24rpx;
+      height: 34rpx;
+      margin-right: 10rpx;
+  }
+  .rules{
+    width: 690rpx;
+    margin: 0 auto;
+    
+  }
+
+  .mengC {
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index:999;
+  }
+  
+  .meng {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+    border-top-left-radius: 16rpx;
+border-top-right-radius: 16rpx;
+
+  }
+  .linkds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 213rpx;
+    background: #211e1e;
+    color: #fff;
+    text-align: center;
+    padding: 0 30rpx;
+    font-size: 28rpx;
+  }
+  .hotelinfo_test{
+    padding-top: 24rpx;
+font-size: 32rpx;
+text-align: center;
+color: #e33f44;
+
+  }
+  .hotelred{
+    color: #e33f44;
+  }
+  .hotelinfo_footer{
+    padding:24rpx;
+padding-bottom: 36rpx;
+display: flex;
+justify-content: space-between;
+  }
+
+
+  .kefu{
+    width: 338rpx;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 16rpx;
+    background: #fff;
+    align-items: center;
+    margin-left: 17rpx;
+    justify-content: center;
+  }

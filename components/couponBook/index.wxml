@@ -1,0 +1,24 @@
+<!--components/couponBook/index.wxml-->
+<view class="commodity_screen" wx:if="{{isCoupon}}" bindtap="hideModal" catchtouchmove="disMove"></view>
+<view class="coupon" wx:if="{{isCoupon}}">
+  <view class="title">
+		<view>优惠券</view>
+		<image src="{{close}}" bindtap="closePopup"></image>
+	</view>
+  <scroll-view style="height:752rpx" scroll-y>
+    <view class="item" wx:for="{{coupon}}" wx:key="coupon" wx:for-index="index">
+      <view class='couponHeard'>
+        <view class="itemtitle">
+          <text>{{item.name}}</text>
+        </view>
+        <view>{{item.type_name}}</view>
+      </view>
+      <view class="couponInfo">
+        <view class="InfoTitle">{{item.coupon_des}}</view>
+        <view class="date">{{item.start_date}}- {{item.end_date}}</view>
+        <!-- <view>北京新云南皇冠假日酒店</view> -->
+      </view>
+      <image src="{{item.isSelect?SelectTrue:selectFalse}}" bindtap="selsctCoupon" data-id="{{item.id}}"></image>
+    </view>
+  </scroll-view>
+</view>

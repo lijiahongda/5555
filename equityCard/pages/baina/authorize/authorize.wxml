@@ -1,0 +1,46 @@
+<!--pages/authorize/authorize.wxml-->
+
+<!-- 用户登录方式 -->
+
+<view class='Popup' wx:if="{{isWxLogin}}">
+	<image class="title" src="{{title}}"></image>
+	<button class='wxLogin' open-type="getPhoneNumber" bindgetphonenumber="LoginImmediately">微信手机号快速登录</button>
+	<view class="codeLogin" bindtap="codeLogin">短信验证码登录</view>
+	<view class='noLogin' bindtap='noLogin'>
+		<view>暂不登录</view>
+	</view>
+</view>
+<view class="Popup" wx:else>
+	<image class="title" src="{{title}}"></image>
+	<view class="MobilePhone">
+		<view class="Areacode">+86</view>
+		<input placeholder="输入手机号" bindinput="phone" placeholder-style="color:#f2f2f2"></input>
+	</view>
+	<view class="VerificationCode">
+		<input placeholder="输入短信验证码" bindinput="Vscode" placeholder-style="color:#f2f2f2"></input>
+		<view bindtap='allow' class="code">{{ countdown != '60'?countdown:'获取验证码' }}</view>
+	</view>
+   <view class="LoginImmediately" bindtap="SignNow">立即登录</view>
+	<view class='tip'>未注册的手机号验证后即完成注册</view>
+   <view class='noLogin' bindtap='noLogin'>
+		<view>暂不登录</view>
+	</view>
+</view>
+<image class="bg" style="height:{{windowHeight}}px" src="{{isFill?bgBag:bgsmall}}"></image>
+<view class='mask' catchtouchmove="true"></view>
+
+<!-- 用户授权 -->
+ 
+<view class="commodity_screenlong" wx:if="{{isauthorization}}"></view>
+ 
+<view class="commodity_screenlong_authorization" wx:if="{{isauthorization}}">
+ 
+  <image src="{{logo_url}}"></image>
+ 
+  <view>直订申请获取您的公开信息</view>
+ 
+  <view>（包含头像、昵称等）</view>
+ 
+  <button open-type="getUserInfo" class="commodity_screenlong_authorization_bind" bindgetuserinfo="getPerson">授权</button>
+ 
+</view>

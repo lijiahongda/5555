@@ -1,0 +1,33 @@
+<view class="heard">
+  <view class="Loc">
+    <view class="place" bindtap="CityChoice"> 
+      <text>{{hotelDepartCity}}</text>
+    </view>
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/17/line_1573996458_37228.png"></image>
+  </view>
+  <input placeholder="请输入目的地" bindinput="retrieval"></input>
+  <view class="cancel" bindtap="cancel">取消</view>
+</view>
+<view class="list" bindtap="selectAddress" wx:if="{{caoHistory.length}}" wx:for="{{caoHistory}}" wx:for-index="index" wx:key="index" data-item="{{item}}">
+  <view>
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/21/line_1574327730_99217.png"></image>
+  </view>
+  <view class="item">
+    <view class="name">{{item.name}}</view>
+    <view class="detail">
+      <text>{{item.cityname}} {{item.address}}</text>
+    </view>
+  </view>
+</view>
+<view class="list" bindtap="selectAddress" wx:for="{{list}}" wx:for-index="index" wx:key="index" data-item="{{item}}">
+  <view>
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/18/line_1574072514_19021.png"></image>
+  </view>
+  <view class="item">
+    <view class="name">{{item.name}}</view>
+    <view class="detail">
+      <text>{{item.cityname}} {{item.address}}</text>
+    </view>
+  </view>
+</view>
+<view wx:if="{{list.length==0}}" style="width:100%;margin-top:100rpx;text-align:center">未找到您搜索的地址</view>

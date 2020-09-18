@@ -1,0 +1,36 @@
+<view class="equityCard_hot">
+  <view class="equity_text">{{shoppingMall.title}}</view>
+  <view class="equity_for">
+    <view wx:for="{{shoppingMall.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="goshop">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class="equityCard_hot">
+  <view class="equity_text">{{platformOrder.title}} <text style="font-size:24rpx;color:#333;margin-left:21rpx">{{coupon.subTitle}}</text></view>
+  <view class="equity_for">
+    <view wx:for="{{platformOrder.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="gohot">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class="equityCard_hot">
+  <view class="equity_text">{{travelOrder.title}}  <text style="font-size:24rpx;color:#333;margin-left:21rpx">{{travel.subTitle}}</text></view>
+  <view class="equity_for">
+    <view wx:for="{{travelOrder.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="gotravel">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class="equityCard_hot">
+  <view class="equity_text">{{travelService.title}}  <text style="font-size:24rpx;color:#333;margin-left:21rpx">{{travel.subTitle}}</text></view>
+  <view class="equity_for">
+    <view wx:for="{{travelService.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="goseverice">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>

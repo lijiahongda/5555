@@ -1,0 +1,98 @@
+<view class="s-main">
+	<view class="s-main-fl">
+		<image class="s-main-fl-img" src="{{shopItemData.picurl}}"></image>
+		<view class="s-main-fl-text" style="display:none"></view>
+		<view class="s-main-fl-sort" wx:if="{{shopItemData.sortIndex}}">
+			<view class="title">
+				{{shopItemData.sortIndex}}
+			</view>
+			<view class="top-label">
+				TOP
+			</view>
+		</view>
+		  
+	</view>
+	<view class="s-main-fr">
+		<view class="s-main-fr-name">
+			<image class="mini-icon" wx:if="{{shopItemData.minilogo}}" src="{{shopItemData.minilogo}}"></image><text>{{shopItemData.name}}</text>
+		</view>
+		<view class="progress-box" wx:if="{{shopItemData.progress_num != 'empty'}}">
+			  <progress border-radius="16" percent="{{shopItemData.progress_num}}" activeColor="red" show-info stroke-width="5"></progress>
+			  <view class="num">
+				  已售{{shopItemData.progress_num}}%
+			  </view>
+		</view>
+		<view  class="s-main-fr-label2">
+			<block wx:if="{{shopItemData.coupon.length}}">
+				<view wx:for="{{shopItemData.coupon}}"  class="coupon-list">
+					{{item.discount || item.coupon_discount}}元优惠券
+				</view>
+			</block>
+			<view wx:if="{{shopItemData.comment_num}}" class="s-main-fr-label2-comment">
+				{{shopItemData.comment_num}}条评论
+			</view>
+		</view>
+		<view class="avatar-box" wx:if="{{shopItemData.avatar.length}}">
+			<view class="avatar-fl">
+				<image wx:for="{{shopItemData.avatar}}" wx:if="{{index <9}}" style="z-index:{{index+1}};left:{{index*30}}rpx" class="" src="{{item}}" >
+					
+				</image>
+			</view>
+			<view class="avatar-fr" wx:if="{{shopItemData.buy_num}}">
+				{{shopItemData.buy_num}}人购买
+			</view>  
+		</view>
+		<view class="s-main-fr-price-box-high" wx:if='{{shopItemData.type=="high"}}'>
+			<view class="price">
+				￥{{shopItemData.vipPrice}}
+			</view>
+			<view class="lthro" wx:if="{{shopItemData.oprice!=''}}">
+				￥{{shopItemData.oprice}}
+			</view>
+			<view class="num">成交量{{shopItemData.num}}件</view>
+		</view>
+		<view class="s-main-fr-price-box" wx:else>
+			<view>
+				￥{{shopItemData.vipPrice}}
+			</view>
+			<view class="lthro"  wx:if="{{shopItemData.oprice!=''}}">
+				￥{{shopItemData.oprice}}
+			</view>
+		</view>
+		<!-- <view class="s-main-fr-label1" wx:if="{{shopItemData.promote_price !== 'empty'}}">
+			预估分佣￥{{shopItemData.promote_price}}
+		</view> -->
+		<view class="zw-box">
+			<!--只是占位的盒子-->
+		</view>
+		<view class="btn-2-box btn-box-pub">
+				<block wx:for="{{shopItemData.btntype}}">
+					<view wx:if="{{item == 'add' && isExclusiveRobot == 1}}" catchtap="handleAdd" class="btn-pub btn-pub-b">
+						加入助理
+					</view>
+					<view wx:if="{{item == 'remove'  && isExclusiveRobot == 1}}" catchtap="handleRemove" class="btn-pub btn-pub-b">
+						移除助理
+					</view>
+					<view wx:if="{{item == 'copy'}}" catchtap="handleCopy" class="btn-pub">
+						复制文案
+					</view>
+					<view wx:if="{{item == 'share'}}"  catchtap="handleShare" class="btn-pub">
+						分享海报
+					</view>
+					<view wx:if="{{item == 'buy'}}" class="btn-pub" catchtap="handleBuy">去购买</view>
+				    <view wx:if="{{item == 'my'}}"  class="btn-pub" catchtap="handleMyShop">我要了</view>
+				    <view wx:if="{{item == 'qiang'}}"  class="btn-pub" catchtap="handleQiang">马上抢</view>
+				    <view wx:if="{{item == 'see'}}"  class="btn-pub" catchtap="handleSee">查看详情</view>
+				</block>
+		</view>  
+
+		<!-- <view class="s-main-fr-b-box">
+			<view class="price">
+				￥9.9
+			</view>
+			<view class="s-num">
+				成交量10万+件
+			</view>
+		</view> -->
+	</view>
+</view>

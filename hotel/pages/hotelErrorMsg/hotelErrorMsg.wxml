@@ -1,0 +1,19 @@
+<!--hotel/pages/hotelErrorMsg/hotelErrorMsg.wxml-->
+<view class="hotelErrorMsg">
+  <view class="errormsg">
+    <view class="error_title">酒店名称</view>
+    <view class="error_content">{{hotelName}}</view>
+  </view>
+  <view class="errormsg">
+    <view class="error_title">酒店地址</view>
+    <view class="error_content">{{hotelAddress}}</view>
+  </view>
+  <view class="errormsg">
+    <view class="error_title">酒店电话</view>
+    <view class="error_content">{{hotelPhone}}</view>
+  </view>
+  <view class="hotel_textarea">
+    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="其他备注（选填）：感谢您的反馈，请填写酒店具体的错误信息" placeholder-style="font-size:20rpx"  class="textarea_ctn"/>
+  </view>
+  <view class="sure">提交</view>
+</view>

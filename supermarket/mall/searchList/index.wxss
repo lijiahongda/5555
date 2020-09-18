@@ -1,0 +1,16 @@
+/* pages/commodityList/index.wxss */
+page {
+  background-color: #F8F8F8;
+  padding-top: 20rpx;
+}
+.explosive_goodinfo {
+  background: #fff;
+  border-radius: 20rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  width: 702rpx;
+  position: relative;
+  padding: 20rpx;
+  height: 280rpx;
+  box-sizing: border-box;
+}

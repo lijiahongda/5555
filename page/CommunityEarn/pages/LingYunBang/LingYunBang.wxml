@@ -1,0 +1,54 @@
+<import src="../../../../wxParse/wxParse.wxml" />
+<view>
+  <view>
+    <image style="width:100%" mode="widthFix" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-20/20/yuelvhuii9F3a0Sy161597924811.png" />
+  </view>
+  <view class="pm-box">
+    <view class="pm-ls">当前排名：{{bData.ranking}}</view>
+    <view class="label-list">
+      <view>{{bData.reward}}</view>
+      <view>预计奖励(元)</view>
+    </view>
+    <view class="label-list">
+      <view>{{bData.invite}}</view>
+      <view>有效拉新</view>
+    </view>
+  </view>
+  <view class="ins1">活动期间注册且推广收益≥10元的新用户为有效拉新</view>
+  <view class="u-box">
+    <view class="u-box-hea">
+      <view>排名</view>
+      <view>用户</view>
+      <view>有效拉新</view>
+      <view>预计奖励(元)</view>
+    </view>
+    <view class="u-box-hea">
+      <view>1</view>
+      <view>张三</view>
+      <view>100</view>
+      <view>100</view>
+    </view>
+  </view>
+  <view class="rule-box">
+    <view style="text-align:center;margin-bottom:40rpx">拉新榜奖励规则</view>
+    <view>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+  </view>
+  <view class="lx-j-box">
+    <view class="acw title">拉新榜奖励标准</view>
+    <view class="lx-j-box-list bgw">
+      <view>排名</view>
+      <view>奖励</view>
+    </view>
+    <block wx:for="{{bData.standard}}">
+      <view class="{{index % 2 == 0 ? 'acw':'bgw'}} lx-j-box-list">
+        <view>{{item.sort}}</view>
+        <view>{{item.reward}}</view>
+      </view>
+    </block>
+  </view>
+  <view class="rule-box">
+    <template is="wxParse" data="{{wxParseData:elseRule.nodes}}" />
+  </view>
+</view>

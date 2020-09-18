@@ -1,0 +1,587 @@
+/* page {
+  background: #f9f8f8;
+}
+
+.couponnav {
+  height: 90rpx;
+  line-height: 90rpx;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 3px 4px 0 rgba(8, 33, 59, .05);
+  font-size: 30rpx;
+  padding: 0 102rpx;
+  border-bottom: 1px solid #ececec;
+}
+
+.couponlist {
+  padding: 18rpx 30rpx 20rpx;
+}
+
+.couponlist .item {
+  position: relative;
+  display: flex;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 148rpx;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid #ececec;
+  position: relative;
+  padding: 36rpx 0;
+  margin-top: 20rpx;
+}
+
+.it-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.couponlist .item .worth {
+
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 240rpx;
+  border-right: 2rpx solid rgba(117, 141, 160, .7);
+  height: 140rpx;
+}
+
+.couponlist .item .worth .price {
+  color: #fff;
+  font-size: 72rpx;
+
+  display: flex;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.couponlist .item .worth .req {
+  color: #f0f0f0;
+  font-size: 24rpx;
+}
+
+.couponlist .item .desc {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #efefef;
+  position: relative;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 40rpx;
+}
+
+.couponlist .item .desc .name {
+  font-size: 30rpx;
+  border-radius: 20rpx;
+}
+
+.couponlist .item .desc .type {
+  font-size: 22rpx;
+  margin-top: 14rpx;
+}
+
+.couponlist .item .desc .date {
+  font-size: 20rpx;
+}
+
+.couponnav .curr {
+  color: #EC4543;
+  font-family: PingFang SC Medium;
+
+}
+
+
+.nav_tab {
+  margin-top: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.show {
+  line-height: 100rpx;
+  text-align: center;
+  flex: 1;
+  color: #999999;
+  font-size: 34rpx;
+}
+
+.hidden {
+  line-height: 97rpx;
+  text-align: center;
+  color: #ED4B49;
+  flex: 1;
+  font-size: 34rpx;
+}
+
+.nav_underline {
+  background: #ED4B49;
+  width: 50rpx;
+  height: 6rpx;
+  margin-top: -4rpx;
+  margin-left: 68rpx;
+  border-radius: 8rpx;
+}
+
+.details {
+  margin-top: 34rpx;
+  padding: 0 30rpx;
+}
+
+.details .ticket {
+  margin-bottom: 34rpx;
+}
+
+.details .ticket .title {
+  font-size: 36rpx;
+  color: #242424;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.details .ticket .jindian{
+  display: inline-block;
+  position: relative;
+  left: 90%;
+  top: -68rpx;
+  color: #ccc;
+}
+
+.details .ticket .item {
+  width: 100%;
+  border-radius: 16rpx;
+  margin-bottom: 18rpx;
+}
+
+.details .ticket .item .left {
+  padding: 28rpx;
+  float: left;
+  box-sizing: border-box;
+  width: 70%;
+  background-color: #fff;
+  border-radius: 20rpx;
+  height: 200rpx;
+}
+
+.details .ticket .item .left .detail {
+  color: #ccc;
+  font-size: 24rpx;
+}
+
+.details .ticket .item .left .tit {
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+}
+
+.details .ticket .item .left .tit .couponsName {
+  display: inline-block;
+  background-color: #F7263C;
+  color: #fff;
+  font-size: 20rpx;
+  border-radius: 10rpx;
+  padding: 5rpx 10rpx;
+  vertical-align: middle;
+}
+.details .ticket .item .left .tit .tit-cot {
+  width: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 27rpx;
+  margin-left: 6rpx;
+  vertical-align: middle;
+}
+
+.details .ticket .item .left .tit .couponsName text {
+  color: #fff;
+}
+
+.details .ticket .item .left .time {
+  color: #999999;
+  font-size: 24rpx;
+  margin-bottom: 12rpx;
+}
+
+.details .ticket .item .left .btns {
+  width: 90rpx;
+  background-color: #fff;
+}
+
+.btns {
+  position: relative;
+  left: -60rpx;
+}
+
+.btns view {
+
+  display: inline-block;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+
+.btns .start {
+  background: #fff;
+  color: #FD5934;
+  margin-right: -28rpx;
+  padding: 0 20rpx;
+}
+
+.btns .det {
+  background: #fff;
+  color: #FD5934;
+  position: relative;
+  left: 20rpx;
+  padding: 0 20rpx;
+
+}
+
+.details .ticket .item .right {
+  background-color: #FA4738;
+  float: right;
+  color: #fff;
+  border-radius: 16rpx;
+  width: 30%;
+  height: 200rpx;
+  text-align: right;
+}
+
+.details .ticket .item .right .money {
+  padding-top: 36rpx;
+  text-align: center;
+  margin-bottom: 4rpx;
+  font-weight: bold;
+}
+
+.details .ticket .item .right .discount {
+  padding-top: 40rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+  margin-bottom: 4rpx;
+  text-align: center;
+}
+
+.details .ticket .item .right .full {
+  padding-top: 36rpx;
+  text-align: center;
+  margin-bottom: 4rpx;
+  font-weight: bold;
+}
+
+.details .ticket .item .right .full .full-title .fh {
+  font-size: 34rpx;
+}
+
+.details .ticket .item .right .full .full-title .price {
+  font-size: 54rpx;
+}
+
+.details .ticket .item .right .full text:last-child {
+  text-align: center;
+  font-size: 18rpx;
+}
+
+
+
+.details .ticket .item .right .money text:last-child {
+  text-align: center;
+  font-size: 54rpx;
+}
+
+
+
+.not {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.not image {
+  width: 347rpx;
+}
+
+.popUp {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  z-index: 9000;
+}
+
+.popUp .pop {
+  background: white;
+  width: 600rpx;
+  z-index: 9999;
+  background: white;
+  margin: 0 auto;
+  margin-top: 200rpx;
+  box-sizing: border-box;
+  border-radius: 18rpx;
+  padding: 35rpx 36rpx 65rpx 36rpx;
+}
+
+.popUp .pop .title {
+  color: #666666;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.popUp .pop .title text:last-child {
+  float: right;
+}
+
+.popUp .pop .matter scroll-view {
+  max-height: 700rpx;
+}
+
+.popUp .pop .matter .tit {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+
+}
+
+
+
+.popUp .pop .matter .substance {
+  font-size: 28rpx;
+  color: #666666;
+}
+.expired{
+  background-color: #C7C9CA !important;
+  position: relative;
+
+}
+.used{
+  background-color: #C7C9CA !important;
+  position: relative;
+}
+.expiredleft{
+  background-color: #d7d8d9 !important;
+}
+.expiredleft .tit{
+  color:#fff !important;
+}
+.details .ticket .item .expiredleft .tit .couponsName {
+  width: 100rpx;
+height: 27rpx;
+background-color: #ffffff;
+border-radius: 13rpx;
+  font-size: 20rpx;
+  font-family: PingFang SC Medium, PingFang SC Medium-Medium;
+  font-weight: 500;
+  color: #d7d8d9;
+  display: inline-block;
+  text-align: center;
+  line-height: 27rpx;
+}
+.details .ticket .item .expiredleft .time,.details .ticket .item .expiredleft .detail{
+  color:#fff;
+}
+.usedleft{
+  background-color: #d7d8d9 !important;
+}
+.expired .btns .start{
+  color:#C7C9CA !important;
+}
+.used .btns .start{
+  color:#C7C9CA !important;
+}
+.usedimage image{
+  width: 128rpx;
+  height: 101rpx;
+}
+.usedimage{
+  width: 128rpx;
+height: 101rpx;
+position: absolute;
+top: 51rpx;
+right: 158rpx;
+
+} */
+
+page{
+  background:#f8f8f8;
+}
+.coupon{
+  width: 702rpx;
+margin: 0 auto;
+margin-top: 20rpx;
+position: relative;
+border-radius: 12rpx;
+
+}
+.couponCenter_top{
+  display: flex;
+align-items: center;
+height: 160rpx;
+background: #fff;
+border-radius: 12rpx 12rpx 0 0;
+
+}
+.dealer_img image{
+  width: 120rpx;
+height: 120rpx;
+margin: 20rpx 17rpx;
+background: #000;
+border-radius: 8rpx;
+
+}
+.dealer_title{
+  font-size: 28rpx;
+  color: #141414;
+  
+}
+.dealer_point{
+  font-size: 24rpx;
+color: #7f7876;
+padding-top: 10rpx;
+
+}
+.dealer_hotel{
+  background: #e53a48;
+width: 112rpx;
+height: 48rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 24rpx;
+color: #fff;
+font-size: 24rpx;
+position: absolute;
+top: 56rpx;
+right: 33rpx;
+
+}
+.couponCenter{
+  background-image: url('http://image.zhiding365.com/2020/9/10/45709c10-cb05-49ad-9277-524dc5def96b.png');
+height: 210rpx;
+width: 702rpx;
+background-size: 100% 100%;
+margin: 0 auto;
+position: relative;
+display: flex;
+align-items: center;
+
+}
+.coupon_left{
+  margin-left: 36rpx;
+font-size: 28rpx;
+
+}
+.coupon_left_top{
+  display: flex;
+color: #666666;
+align-items: center;
+margin-top: 20rpx;
+}
+.coupon_left_price text:first-child{
+  font-size: 32rpx;
+
+}
+.coupon_left_price text:last-child{
+  font-size: 46rpx;
+
+}
+.coupon_left_desc{
+  padding-left: 8rpx;
+font-size: 24rpx;
+
+}
+.coupon_left_cent{
+  display: flex;
+align-items: center;
+
+}
+.coupon_left_cent_type{
+  width: 92rpx;
+height: 40rpx;
+background: #e53a48;
+border-radius: 20rpx;
+color: #fff;
+font-size: 22rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.coupon_left_text{
+  font-size: 28rpx;
+color: #141414;
+padding-left: 9rpx;
+
+}
+.coupon_right{
+  width: 132rpx;
+height: 48rpx;
+background: #fff;
+border-radius: 24rpx;
+color: #e53a48;
+font-size: 24rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 123rpx;
+
+}
+.coupon_vip{
+  position: absolute;
+top: 0;
+left: 0;
+width: 130rpx;
+display: flex;
+height: 38rpx;
+background: #000;
+color: #e7dcc5;
+border-radius: 12rpx 0px 12rpx 0;
+font-size: 22rpx;
+justify-content: center;
+align-items: center;
+}
+.coupon_vip image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.getStatus{
+  position: absolute;
+  top: 21rpx;
+  right: 219rpx;
+}
+.getStatus image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.coupon_left_bot{
+  display: flex;
+color: #bcbcbc;
+align-items: center;
+justify-content: space-between;
+margin-top: 22rpx;
+}
+.coupon_left_bot image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.coupon_details{
+  padding: 26rpx 34rpx 0 31rpx;
+font-size: 22rpx;
+color: #141414;
+
+}

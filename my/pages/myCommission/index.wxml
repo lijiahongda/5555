@@ -1,0 +1,63 @@
+<!--my/pages/myCommission/index.wxml-->
+<view class="content">
+  <!-- <view class="earnings clearfix">
+    <view class="left">
+      <text>我的收益：</text>
+      <text>¥</text>
+      <text>{{ommissionAmount}}</text>
+    </view>
+    <view class="deposit" bindtap="deposit">提现</view>
+  </view> -->
+  <view class="nav_tab">
+    <view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected" wx:key="key">{{item}}
+      <view class="{{selected==index?'nav_underline':''}}"></view>
+    </view>
+  </view> 
+  <view class="amounts clearfix">
+    <view class="money" bindtap="total">
+      <!-- <image src="{{pitch_up}}"></image> -->
+      <view>
+        <text>佣金金额：</text>
+        <text>¥</text>
+        <text>{{purchaseAmount}}</text>
+      </view>
+    </view>
+    <view class="money" bindtap="await">
+      <!-- <image src="{{pitch_un}}"></image> -->
+      <view>
+        <text>待到账金额：</text>
+        <text>¥</text>
+        <text>{{whenBill}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="details" wx:if="{{!not}}">
+    <view class="item clearfix" wx:for="{{commissionList}}" wx:key="key">      
+      <view class="img">
+        <image src="{{item.headImg}}"></image>
+      </view>
+      <view class="info">
+        <view class="name">{{item.nickName}}</view>
+        <view class="time">{{item.createTime}}</view>
+        <view class="describe">{{item.businessName}}</view>
+      </view>
+      <view class="amount">
+        <view class="num">
+          <text wx:if="{{item.debitFlag == 2}}">-</text>
+          <text wx:if="{{item.debitFlag == 1}}">+</text>
+          <text>{{item.tradeAmount}}</text>
+        </view>
+        <view class="state" wx:if="{{item.debitFlag == 1}}">结算收益</view>
+        <view class="state" wx:if="{{item.debitFlag == 2}}">已取消</view>
+      </view>
+    </view>
+    
+  
+  </view>
+
+</view>
+
+<view class="not" wx:if="{{not}}">
+   <image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+</view>

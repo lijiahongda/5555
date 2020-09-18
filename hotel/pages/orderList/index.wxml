@@ -1,0 +1,87 @@
+<!-- index.wxml     应该没有用到这个页面-->
+<!-- <view> -->
+  <!-- <view class="couponnav">
+			<view class="item {{ currtype == 0? 'curr':''}}" data-index="0" bindtap="handleTab">
+				<view class="name">全部</view>
+				<view wx:if="{{currtype == 0}}" class="border  {{ currtype == 0? 'bgcolor':''}}"></view>
+			</view>
+			<view class="item {{ currtype == 1? 'curr':''}}" data-index="1" bindtap="handleTab">
+				<view class="name">待支付</view>
+				<view wx:if="{{currtype == 1}}" class="border  {{ currtype == 1? 'bgcolor':''}}"></view>
+			</view>
+			<view class="item  {{ currtype == 2? 'curr':''}}" data-index="2" bindtap="handleTab">
+				<view class="name">待入住</view>
+				<view wx:if="{{currtype == 2}}" class="border  {{ currtype == 2? 'bgcolor':''}}"></view>
+			</view>
+			<view class="item  {{ currtype == 3? 'curr':''}}" data-index="3" bindtap="handleTab">
+				<span class="name">已入住</span>
+				<span wx:if="{{currtype == 3}}" class="border   {{ currtype == 3? 'bgcolor':''}}  "></span>
+			</view>
+		</view> -->
+<!-- <view class="orderlist"> -->
+  <!-- <view class="item"  wx:for='{{orderList}}' wx:key="key"> -->
+  <!-- <text>{{item.hotelName}}</text> -->
+    <!-- <view class="tit clearfix" data-obj="{{item}}" bindtap="handleOrder">
+      <view class="state">
+        <text>订单状态：</text>
+        <text>{{item.orderStatusName}}</text>
+      </view>
+      <view class="show">
+        <text>订单详情</text>
+        <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-02/14/yuelvhui4StN3XtHVn1593670192.png"></image>
+      </view>
+    </view>
+    <view class="matter clearfix">
+      <image class="room_img" src="{{item.imgUrl}}"></image>
+      <view class="text">
+        <view class="title">{{item.hotelName}}</view>
+        <view class="type">{{item.roomName}}</view>
+        <view class="type">{{item.eta}} - {{item.etd}}</view>
+        <view class="money">
+          <text>￥</text>
+          <text>{{item.orderAmount/100}}</text>
+        </view>
+      </view>
+    </view> -->
+  <!-- </view>
+</view> -->
+  <!-- <view class='orderlist' >
+    <view class='item' wx:for='{{orderList}}'  data-obj="{{item}}" bindtap="handleOrder">
+      <view class='iheader'>
+        <image class='roomimg' src='{{item.imgUrl}}'/>
+        <view class='ocontainer'>         
+           <view >
+               {{item.roomName}}({{item.roomPlanName}}
+           </view> 
+          <view class='bcontainer'>
+              <view class='odate'>
+              
+              {{item.orderTime}}
+              </view>
+              <view class='rommt'>
+              {{item.bedTypeStr}} {{item.breakerTypeStr}}
+              </view>
+              <view class='orderstatus'>
+                <text>{{item.payStatus==1?'未':'已'}}支付</text>
+                <text class='osta'>{{item.orderStatusName}}</text>
+              </view>
+          </view>
+        </view>
+      </view>
+      <view class='ifooter'>
+        <view class='price'>
+          <label>总额:</label>
+          <label class="price1">￥{{item.orderAmount/100}}</label>
+        </view>
+        <view class='price'>
+          <label>支付金额:</label>
+          <label  class="price1">￥{{item.payAmount/100}}</label>
+        </view>
+      </view>
+    </view>
+  
+  </view> -->
+  	<!-- <view style="margin-top:200rpx;text-align:center;color:#333;line-height:100px" wx:if="{{orderList.length == 0 && searchObj.curPage == 1}}">
+       <image mode='widthFix' style="width:347rpx" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+    </view>
+</view> -->

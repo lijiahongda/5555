@@ -1,0 +1,62 @@
+<!--components/HotelHomeList/index.wxml-->
+<view class="{{ismap?'font':'back'}}">
+	<view  class="listBox" wx:for="{{HotelList}}" wx:key="HotelList" style="margin-bottom: {{isHotelList?'18':''}}rpx;" data-id="{{item.hotelId}}" data-distance='{{item.distance}}' data-hoteltype='{{item.hotelType}}' bindtap="HotelDetail">
+		<view class="list" >
+			<image class="image" src="{{item.image}}"></image>
+			<view class="info">
+				<view class="name">
+					<text>{{item.hotelName}}</text>
+				</view>
+				<view class="evaluate">
+					<!-- <view class="">“服务热情”</view> -->
+					<view class="Label" >
+						<image src="http://image.zhiding365.com/2020/8/24/b8673175-37c8-421e-84c0-9f6b7a1976e6.png"></image>
+						<!-- <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-06-17/16/yuelvhuivp3guO3fsI1592382583.png"></image> -->
+					</view>
+					<view  class="Fraction"><text>{{item.score}}分</text>  <text style="margin-left:16rpx">{{item.satisfaction}}满意度</text></view>
+					
+				</view>
+				<view class="position">
+					<view class="loc">
+						<image src="{{locImage}}"></image>
+						<text>{{item.distanceDesc?item.distanceDesc:item.city}}</text>
+					</view>
+					<view class="FloorPrice">
+							<text>¥{{item.price}}</text>
+						</view>
+				</view>
+				<view class="money">
+					<view class="money_left">
+						<view>{{item.tag[0]}}</view>
+						<view>{{item.tag[1]}}</view>
+					</view>
+					<view class="money_right">
+						<view class="vipPrice">
+							<text>¥</text>
+							<view>{{item.vipPrice}}</view>                 
+							<text style="font-size:400;color:#666">起</text>
+						</view>    
+					</view>
+				</view>
+				<!-- <view class="money">
+					<view class="price" wx:if="{{isPrice}}">
+						<view class="vipPrice">
+							<text>¥</text>
+							{{item.price}}
+						</view>
+					</view>
+					<view class="price" wx:else>
+						<view class="vipPrice">
+							<text>¥</text>
+							<view>{{item.vipPrice}}</view>                 
+							<text>起</text>
+						</view>      
+						<view class="FloorPrice">
+							<text>原价¥{{item.price}}</text>
+						</view>
+					</view>
+				</view> -->
+			</view>
+		</view>
+	</view>
+</view>

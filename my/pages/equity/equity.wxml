@@ -1,0 +1,5 @@
+<view style="background:{{data.bgColor ? data.bgColor: ''}}" class="content">
+  <image src="{{data.bgImg}}" mode="widthFix"></image>
+  <view class="next" wx:if='{{canGetEight==0}}' bindtap="toNext">开通会员</view>
+  <view class="next" wx:else bindtap="toNext">立即享受权益</view>
+</view>

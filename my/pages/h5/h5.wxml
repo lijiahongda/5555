@@ -1,0 +1,13 @@
+<!--my/pages/h5/h5.wxml-->
+<!-- <web-view src='{{url}}'></web-view> -->
+<view class="shop_bg"></view>
+<view class="shop_list">
+	<view class="pass_cont" style="text-align:center">
+    <view style="padding-top: 100rpx;">请复制此链接在浏览器内打开</view>
+		<view class="tip"><text>{{url}}</text></view>
+		<view class="btn">
+      <view bindtap="quxiao">取消</view>
+      <view data-url="{{url}}" bindtap="clones">复制</view>
+    </view>
+	</view>
+</view>

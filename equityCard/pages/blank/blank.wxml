@@ -1,0 +1,3 @@
+<!--equityCard/pages/blank/blank.wxml-->
+<image src="{{bgImage}}"></image>
+<view>敬请期待!</view>

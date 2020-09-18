@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "商品",
+  "navigationBarBackgroundColor": "#fff",
+  "usingComponents": {
+    "title":"/components/goodsDetail/title/title",
+    "poster":"/components/poster/index"
+  },
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "default"
+}

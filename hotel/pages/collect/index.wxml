@@ -1,0 +1,53 @@
+<!--hotel/pages/collect/index.wxml-->
+
+<view class="content" wx:if="{{collectLength !=0}}">
+	<view class="top" wx:if="{{details}}">
+		<text>共 <text class="left-num">{{collectLength}}</text> 家酒店</text>
+		<text class="bj" bindtap="compile">编辑</text>
+	</view>
+	<view class="top" wx:if="{{redact}}">
+		<text bindtap="cancel">取消</text>
+	</view>
+
+	<view class="collect-cot clearfix" wx:for="{{collect}}" wx:key="key" data-dealerid="{{item.dealerId}}" bindtap="to_tuijian">
+		<view class="select" wx:if="{{redact}}" data-id="{{item.dealerId}}" catchtap="choose">
+			<image src="{{item.electUrl}}"></image>
+		</view>
+		<view class="cot-img"> 
+			<image src="{{item.imgUrl}}"></image>
+		</view>
+		<view class="cot-text">
+			<view class="cot_text_title"> <text>{{item.dealerName}}</text> </view>
+			<view class="cot-address">
+				<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/15/yuelvhuigr2GaqOoow1594970403.png"></image>
+				<text>{{item.city}}</text>
+			</view>
+			<view class="zdbt">直订补贴</view>
+			<!-- <view wx:if="{{item.minPrice>item.vipPrice}}" class="lm_lj">
+				<text>体验会员减{{(item.minPrice-item.vipPrice)/100}}</text>
+			</view> -->
+		</view>
+		<view class="cot-price">
+			<view class="h_price">￥{{item.bazaarAmount/100}}</view>
+			<view class="price-qi">
+				<text class="qi">￥{{item.minPrice/100}} <text class="qi-r">起</text> </text>
+			</view>
+			<view wx:if="{{item.bazaarAmount>item.minPrice}}" class="lm_lj-r">
+				<text>↓会员直降{{(item.bazaarAmount-item.minPrice)/100}}</text>
+			</view>
+		</view>
+	</view>
+	
+	
+</view>
+<view style="width:100%;height:130rpx"></view>
+<view class="operate clearfix" wx:if="{{redact}}">
+	<view class="allCheck" bindtap="allCheck">
+		<!-- <image src="{{allCheckUrl}}"></image> -->
+		<text>全选</text>
+	</view>
+	<view class="cancel" bindtap="cancelCollection">取消收藏</view>
+</view>
+<view class="not" wx:if="{{collectLength ==0}}">
+		<image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+	</view>

@@ -1,0 +1,168 @@
+<!-- page/My/My.wxml -->
+<view class="my-content-box">
+  <view class="main-box">
+    <view class="main-user-box">
+      <view class="fl">
+        <image src="{{UserData.avatar}}" class="avatar" />
+      </view>
+      <view class="mid">
+        <view class="mid-hea">
+          <view class="uname">{{UserData.name}}</view>
+          <view class="vip-box">
+            <view>{{UserData.levelText}}</view>
+          </view>
+        </view>
+        <view class="mid-footer">
+          <text>悦淘号</text>
+          <text>{{UserData.reCode}}</text>
+          <text class="btn-copy" data-text="{{UserData.reCode}}" bindtap="handleCopyCode">复制</text>
+        </view>
+      </view>
+    </view>
+    <view class="p-sy-box">
+      <view class="fl">收益提现</view>
+      <view class="fr" data-ourl="/page/CommunityEarn/pages/TxMoney/TxMoney" bindtap="nextPage">
+        <view>提现</view>
+        <image class="icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+      </view>
+    </view>
+  </view>
+  <view class="order-sy-box">
+    <view class="header">
+      <view class="list-label">
+        <view class="hea">
+          <view class="fl">
+            <view class="name">我的粉丝</view>
+            <image class="" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-16/15/yuelvhuiLmSjxHMWOQ1597563843.png" />
+          </view>
+          <view class="fr" data-ourl="/page/CommunityEarn/pages/Flowers/Flowers" bindtap="nextPage">
+            <view class="label">更多</view>
+            <image class="right-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+          </view>
+        </view>
+        <view class="intro">
+          <view class="label-box">
+            <!-- <view class="line-box"></view> -->
+            <view class="label-box-hea">
+              <view>{{UserData.ordinaryFans}}人</view>
+            </view>
+            <view class="label-box-footer">我的注册用户</view>
+          </view>
+          <view class="label-box">
+            <view class="label-box-hea">
+              <view>{{UserData.groupFans}}人</view>
+            </view>
+            <view class="label-box-footer">我的下级群主</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="p-mb"></view>
+    <view class="footer">
+      <view class="list-label">
+        <view class="hea">
+          <view class="fl">
+            <view class="name">预估收益</view>
+          </view>
+          <view class="fr" bindtap="nextPageDataTj">
+            <view class="label">更多</view>
+            <image class="right-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+          </view>
+        </view>
+        <view class="intro">
+          <view class="label-box" >
+            <view class="line-box"></view>
+            <view class="label-box-hea">
+              <view>{{syObj.extensionProfit}}</view>
+            </view>
+            <view class="label-box-footer">今日推广收益</view>
+          </view>
+          <view class="label-box">
+            <view class="line-box"></view>
+            <view class="label-box-hea">
+              <view>{{syObj.platformReward}}</view>
+            </view>
+            <view class="label-box-footer">今日平台奖励</view>
+          </view>
+          <view class="label-box">
+            <view class="line-box"></view>
+            <view class="label-box-hea">
+              <view>{{syObj.todayRebate}}</view>
+            </view>
+            <view class="label-box-footer">今日返利收益</view>
+          </view>
+          <view class="label-box"  data-type="0" bindtap="nextPageDataTj">
+            <view class="label-box-hea">
+              <view>{{syObj.sumProfit}}</view>
+            </view>
+            <view class="label-box-footer">今日全部收益</view>
+          </view>
+        </view>
+      </view>
+      <!-- <view class="main-img-box" data-ourl="/page/CommunityEarn/pages/LingYunBang/LingYunBang" bindtap="nextPage"> -->
+      <view class="main-img-box" data-ourl="/page/CommunityEarn/pages/LingYunBang/LingYunBang" >
+        <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-16/16/yuelvhui2xQvhc8a1Q1597566023.png" mode="widthFix" />
+      </view>
+    </view>
+    <view class="p-mb"></view>
+    <view>
+      <view class="list-label">
+        <view class="hea">
+          <view class="fl">
+            <view class="name">我的订单</view>
+            <image class="" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-16/15/yuelvhuiLmSjxHMWOQ1597563843.png" />
+          </view>
+          <view class="fr" data-ourl="/page/order/list/list" bindtap="nextPage">
+            <view class="label">更多</view>
+            <image class="right-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+          </view>
+        </view>
+        <view class="intro">
+          <view class="label-box">
+            <!-- <view class="line-box"></view> -->
+            <view class="label-box-hea">
+              <view>{{syObj.myOrder.purchaseVolume}}</view>
+            </view>
+            <view class="label-box-footer">今日购买订单量</view>
+          </view>
+          <view class="label-box">
+            <view class="label-box-hea">
+              <view>{{syObj.myOrder.extensionTodayVolume}}</view>
+            </view>
+            <view class="label-box-footer">今日推广订单量</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="p-mb"></view>
+    <view>
+      <view class="list-label">
+        <view class="hea">
+          <view class="fl">
+            <view class="name">推广补贴</view>
+            <image class="" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-16/15/yuelvhuiLmSjxHMWOQ1597563843.png" />
+          </view>
+          <view class="fr" data-ourl="/page/CommunityEarn/pages/Promotion/Promotion" bindtap="nextPage">
+            <view class="label">更多</view>
+            <image class="right-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+          </view>
+        </view>
+        <view class="intro">
+          <view class="label-box">
+            <!-- <view class="line-box"></view> -->
+            <view class="label-box-hea">
+              <view>{{syObj.promotionSubsidy.purchaseVolume}}</view>
+            </view>
+            <view class="label-box-footer">今日购买订单量</view>
+          </view>
+          <view class="label-box">
+            <view class="label-box-hea">
+              <view>￥{{syObj.promotionSubsidy.extensionTodayVolume}}</view>
+            </view>
+            <view class="label-box-footer">今日补贴收益</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

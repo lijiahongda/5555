@@ -1,0 +1,146 @@
+
+page {
+  font-family:PingFang SC;
+  background: #F8F8F8;
+}
+
+
+.banner_cont{
+  width: 750rpx;
+  height: 330rpx;
+  position: relative;
+}
+.banner_cont .card_top{
+  position: absolute;
+  width: 100%;
+  bottom: 22rpx;
+  left: 0;
+  text-align: center;
+}
+.banner_cont .card_top .card1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner_cont .card_top .card1 text{
+  font-size: 34rpx;
+  color: #FFFFFF;
+  font-weight: 400;
+  background:linear-gradient(180deg,rgba(253,235,231,1) 0%, rgba(247,230,217,1) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.banner_cont .card_top .card_num{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(268deg,rgba(232,195,167,1),rgba(252,241,234,1),rgba(235,197,170,1));
+  border-radius:20rpx;
+  height: 40rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  color: #2A181A;
+  margin: 0 auto;
+  margin-top: 22rpx;
+  width: 300rpx;
+}
+.banner_cont .card_top .card_num image{
+  width: 20rpx;
+  height: 24rpx;
+  margin-right: 8rpx;
+}
+
+
+.card_price{
+  background: url(http://image.zhiding365.com/2020/8/28/c0e47fcd-e002-4174-a9f4-e3476ec88a32.png);
+  background-size: 662rpx 146rpx;
+  margin: 0 auto;
+  width: 662rpx;
+  height: 146rpx;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0 66rpx;
+  box-sizing: border-box;
+  font-size: 36rpx;
+  color: #333;
+  
+}
+.card_price view:nth-child(2){
+  font-size:28rpx;
+  font-weight: 400;
+  color: #EB333F;
+}
+
+
+.coupon{
+  width: 702rpx;
+  margin: 0 auto;
+  border-radius: 10rpx;
+  background: #fff;
+  overflow: hidden;
+  padding: 30rpx 20rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #666666;
+  padding-bottom: 6rpx;
+}
+.coupon .coupon_title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 500;
+}
+.coupon .list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx 0 34rpx;
+  margin: 16rpx 0;
+}
+
+
+
+/* 底部 */
+.bottom{
+  width: 750rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left:0;
+}
+.bottom .pays{
+  width: 440rpx;
+  height: 88rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  font: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.bottom .pays .open{
+  font-size: 38rpx;
+  color:rgba(80,40,9,1);
+  background:linear-gradient(180deg,rgba(104,59,56,1) 0%, rgba(50,25,27,1) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  font-weight: 600;
+  width: 100%;
+}
+.no_share .share_pay{
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #111111;
+  background: linear-gradient(0deg, #F5D3C7 0%, #D3A18B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

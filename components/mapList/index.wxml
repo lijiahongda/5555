@@ -1,0 +1,45 @@
+<!--components/mapList/ind.wxml-->
+<swiper bindchange='bindChange' current="{{current}}" style="padding-top: 20rpx;" data-id="{{item.hotelId}}" bindtap="HotelDetail">
+	<block wx:for="{{HotelList}}" wx:key="listVewCellItem">
+		<swiper-item>
+			<view class="list">
+				<image class="image" src="{{item.image}}"></image>
+				<view class="info">
+					<view class="name">
+						<text>{{item.hotelName}}</text>
+					</view>
+					<view class="position">
+						<view class="loc">
+							<image src="{{locImage}}"></image>
+							<view>{{gnCity}}</view>
+						</view>
+						<view class="Division"></view>
+						<view class="distance">距离{{item.businessZone}}直线{{item.distance}}</view>
+					</view>
+					<view class="evaluate">
+						<view class="Fraction">{{item.score}}分</view>
+						<!-- <view class="">“服务热情”</view> -->
+					</view>
+					<view class="Label">
+						<view wx:for="{{Label}}" wx:for-index="index" wx:key="Label" style="background:{{index == 0?'rgba(237,123,124,0.24)':index == 1?'rgba(242,173,83,0.24)':''}};color:{{index == 0?'#ED7B7C':index == 1?'#F2AD53':''}};">{{item.name}}</view>
+					</view>
+					<view class="money">
+						<view class="price">
+							<view class="vipPrice">
+								<text>¥</text>
+							{{item.price}}
+							</view>
+							<!-- <view class="FloorPrice">
+								<text>¥128起</text>
+							</view> -->
+						</view>
+						<!-- <view class="FullReduction" bindtap="DiscountPopup">
+							<view>已减175元</view>
+							<image src="{{FullReductionImage}}"></image>
+						</view> -->
+					</view>
+				</view>
+			</view>
+		</swiper-item>
+	</block>
+</swiper>

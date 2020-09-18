@@ -1,0 +1,100 @@
+
+/* 一排两个  列表外面view */
+.shopList{
+  width: 750rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.list {
+  width: 340rpx;
+  height: 478rpx;
+  margin-bottom: 22rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  position: relative;
+}
+.list .label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 24rpx;
+  height: 38rpx;
+  line-height: 38rpx;
+  background: linear-gradient(90deg, #C82A29 0%, #EC5E5D 100%);
+  border-radius: 10rpx 0 20rpx 0;
+  z-index: 1;
+  font-size: 22rpx;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.list .vip_label{
+  background: linear-gradient(90deg, #281818 0%, #805754 100%);
+}
+.list .tp {
+  width: 340rpx;
+  height: 340rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+.list .bm {
+  width: 340rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.list .bm .txt {
+  width: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 22rpx;
+}
+
+.list .bm .price_box {
+  font-size: 20rpx;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list .bm .price_box .price_con{
+  display: flex;
+  align-items: flex-end;
+}
+.list .bm .price_box .le {
+  font-size: 40rpx;
+  color: #C82A29;
+  margin-right: 10rpx;
+  font-weight: bold;
+  font-family: DIN Alternate;
+}
+.list .bm .price_box .le .icon {
+  font-size: 20rpx;
+}
+.list .bm .price_box .ri {
+  font-size: 28rpx;
+  text-decoration: line-through;
+  font-family: DIN Alternate;
+}
+.list .bm .price_box .btn{
+  width: 120rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background: #C82A29;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+}
+.list .bm .price_box .vip_btn{
+  background: linear-gradient(90deg, #281818 0%, #805754 100%);
+}

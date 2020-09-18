@@ -1,0 +1,194 @@
+/* hotel/pages/collect/index.wxss */
+page {
+  background: #F8F8F8;
+}
+
+.top {
+  padding: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.cot-img {
+  display: inline-block;
+  width: 30%;
+}
+
+.top text {
+
+  color: #999999;
+}
+
+.top .left-num,
+.top .bj {
+  color: #F6273C;
+}
+.content{
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transform: translateX(90px);
+  transform: translateX(90px);
+  margin-left: -90px;
+  width: 100%;
+}
+.collect-cot {
+  padding: 15rpx;
+  width: 90%;
+  margin-left: 2.5%;
+  background: #fff;
+  border-radius: 10rpx;
+  margin-bottom: 15rpx;
+}
+.select{
+  float: left;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  margin-top: 90rpx;
+}
+.select image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.cot-img {
+  float: left;
+  margin-right: 26rpx;
+  vertical-align: middle;
+}
+
+.cot-img image {
+  width: 213rpx;
+  height: 213rpx;
+}
+.cot-text{
+  float: left;
+  width: 30%;
+}
+.cot_text_title{
+  word-break: break-all;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+}
+.cot-address{
+  margin-top: 30rpx;
+}
+.cot-address image {
+  width: 20rpx;
+  height: 20rpx;
+  vertical-align: middle;
+}
+
+.cot-address text {
+  margin-left: 10rpx;
+  vertical-align: middle;
+  color: #ccc;
+}
+
+.zdbt {
+  width: 90rpx;
+  text-align: center;
+  border-radius: 8rpx;
+  font-size: 20rpx;
+  border: 1rpx solid #E43F44;
+  color: #E43F44;
+ margin-bottom: 6rpx;
+ margin-top: 20rpx;
+}
+
+.lm_lj {
+  /* width: 150rpx; */
+  display: inline-block;
+  border-radius: 8rpx;
+  border: 1rpx solid #bb985b;
+}
+
+.lm_lj {
+  color: #bb985b;
+  font-size: 20rpx;
+  padding: 0 5rpx;
+}
+
+.cot-price {
+  float: right;
+}
+
+.h_price {
+  font-size: 20rpx;
+  line-height: 50rpx;
+  text-align: right;
+  color: #ccc;
+  text-decoration: line-through;
+  margin-top: 90rpx;
+}
+ 
+.price-qi {
+  /* line-height: 80rpx; */
+  text-align: right;
+  color: #E43F44;
+  font-size: 30rpx;
+  font-weight: 700;
+  margin-bottom: 4rpx;
+}
+
+.qi-r {
+  color: #ccc;
+  font-size: 20rpx;
+}
+
+.lm_lj-r {
+  background: linear-gradient(#e03726 0%, #fa7442 100%);
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  border-radius: 16rpx;
+  padding: 4rpx 14rpx;
+}
+
+
+.operate{
+  height: 100rpx;
+  width: 100%;
+  line-height: 100rpx;
+  position: fixed;
+  bottom: 0;
+}
+.operate .allCheck{
+  float: left;
+  width: 50%;
+  text-align: center;
+  background-color: white;
+}
+.operate .allCheck image{
+  width: 36rpx;
+  height: 36rpx;
+  vertical-align: middle;
+  margin-right: 20rpx;
+  margin-left: 50rpx;
+}
+.operate .allCheck text{
+  color: #666666;
+  font-size: 27rpx;
+}
+.operate .cancel{
+  float: left;
+  width: 50%;
+  text-align: center;
+  background-color: #E43F44;
+  color: white;
+  font-size: 31rpx;
+}
+
+
+.not {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.not image {
+  width: 347rpx;
+}

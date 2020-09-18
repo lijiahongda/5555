@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "selectTime": "/components/selectTime/index",
+    "rpItem": "/components/rpItem/rpItem",
+    "custom":"/components/custom/custom",
+    "list": "/components/list/list",
+    "roomDetail": "/components/roomDetail/index"
+  }, 
+  "navigationStyle":"custom"
+
+}

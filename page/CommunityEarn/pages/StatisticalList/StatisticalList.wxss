@@ -1,0 +1,63 @@
+.bgw{
+  background: #fff;
+}
+.order-tab{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 25rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #333333;
+  line-height: 80rpx;
+  display: flex;
+}
+.tab-list{
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-list .active{
+  color:#FF001C;
+}
+
+.tab-list .border-active{
+  height: 4rpx ;
+  background-color: #FF001C;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  bottom: 0;
+}
+.sy-main{
+  background: #f8f8f8;
+  margin-top: 10rpx;
+}
+.sy-main-list{
+  line-height: 88rpx; 
+  display: flex;
+  justify-content: space-between;
+  padding: 0 33rpx;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+.sy-main-list .fl{
+font-size: 28rpx;
+font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+font-weight: 400;
+
+color: #333333;
+}
+.sy-main-list .fr{
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #f7263c;
+}
+.sy-main-list image{
+  width: 32rpx;
+  height: 32rpx;
+}

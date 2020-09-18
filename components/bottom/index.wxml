@@ -1,0 +1,8 @@
+<view class="bottom-box">
+	<view class="bottom-box-list" wx:for="{{icon=='home'?iconImg:JdIconImg}}" wx:for-index="index" wx:key="index" data-type="{{item.val}}" data-url="{{item.url}}" bindtap="nextUrl">
+		<view>
+			<image class="bottom-box-list-img" src="{{type!=item.val?item.icon[0]:item.icon[1]}}" />
+			<view class="{{type==item.val?'bottom-red':'bottom-text'}}">{{item.name}}</view>
+		</view>
+	</view>
+</view>

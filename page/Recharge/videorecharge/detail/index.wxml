@@ -1,0 +1,40 @@
+<!--page/videorecharge/detail/index.wxml-->
+<view class="page">
+    <view> <image class="headimg" src="{{data.goods_info[0].bg_img}}"></image> </view>
+    <view class="main">
+        <view class="title">充值账号</view>
+        <view class="inputview">
+            <input class="input"  bindinput="phoneinput" value="{{data.mobile}}" placeholder="请输入手机号码"></input>
+        </view>
+        <view class="miaoshu">
+            <view>1、该账号为所充值视频平台的账号，请仔细核对账号信息。</view>
+            <view>2、请确保充值账号无误，充值成功后不支持退换。</view>
+            <view>3、本次充值不提供发票。</view>
+        </view>
+        <view class="title">面额</view>
+        <view class="list">
+            <block wx:for="{{data.list}}">
+                <view class="listview {{index==current?'select':''}}" bindtap="selectCard" data-index="{{index}}" data-p_id="{{item.project_id}}">
+                    <view class="listhead">
+                        <view class="cardtype">{{item.item_name}}</view>
+                        <view class="listmiddle">
+                            <text class="hywold">会员价：</text>
+                            <text class="price">{{item.sale_price}}</text>
+                            <text class="hywold">元</text>
+                        </view>
+                        <view class="yprice">官网价：{{item.official_price}}元</view>
+                    </view>
+                    <view class="listbottom">火爆疯抢</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
+<view class="fixbottom">
+    <view class="bottomleft">
+        <text class="wait">合计待支付</text>
+        <text class="biaozhi">￥</text>
+        <text class="payprice">{{payprice}}</text>
+    </view>
+    <view class="paybtn" bindtap="pay">立即支付</view>
+</view>

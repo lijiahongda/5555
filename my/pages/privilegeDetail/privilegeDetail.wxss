@@ -1,0 +1,140 @@
+page{
+  background:#F8F8F8
+}
+.tab{
+  width:750rpx;
+  height: 120rpx;
+  background: url(http://image.zhiding365.com/2020/8/20/bc5dbae2-21a5-4c4d-adb2-6361dcdbf672.png);
+  background-size: 750rpx 120rpx;
+}
+.tabs{
+  width:750rpx;
+  height: 120rpx;
+  display: flex;
+  padding-top: 40rpx;
+  box-sizing: border-box;
+}
+.tab .tab_top{
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  align-items: center;
+  background:linear-gradient(180deg,rgba(80,42,43,1) 0%,rgba(49,26,26,1) 100%);
+  border-radius:10rpx 10rpx 0px 0px;
+  padding: 0 30rpx;
+  font-size: 26rpx;
+  color: #FFFFFF;
+  margin-right: 10rpx;
+  font-weight: 500;
+}
+.tab .tab_top:first-child{
+  margin-left: 16rpx;
+}
+.tab .tab_top image{
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 10rpx;
+}
+.tab .tab_top.tab_act{
+  background:rgba(255,255,255,1);
+  color: #CF895D;
+}
+
+
+.swiper-box{
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 42rpx;
+  height: 1200rpx;
+}
+.tab_cont{
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 42rpx;
+  padding: 30rpx 24rpx;
+  width: 750rpx;
+  box-sizing: border-box;
+}
+.tab_cont .cont_title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.tab_cont .cont_title image{
+  width: 6rpx;
+  height: 32rpx;
+  margin-right: 20rpx;
+}
+.tab_cont .cont{
+  width:702rpx;
+  background:rgba(255,255,255,1);
+  border-radius:20rpx;
+  padding: 40rpx;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+  min-height: 740rpx;
+}
+.tab_cont .cont .cont_name{
+  font-size: 30rpx;
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 44rpx;
+  margin-top: 40rpx;
+}
+.tab_cont .cont .cont_name:first-child{
+  margin-top: 0rpx;
+}
+.tab_cont .cont .cont_name image{
+  width:34rpx;
+  height: 12rpx;
+  margin: 0 20rpx;
+}
+.tab_cont .cont .cont_introduce{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10rpx;
+}
+.tab_cont .cont .cont_introduce .num{
+  width:30rpx;
+  height:30rpx;
+  background:rgba(102,102,102,1);
+  border-radius:50%;
+  font-size:24rpx;
+  font-family:PingFang SC;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 30rpx;
+  margin-top: 6rpx;
+  margin-right: 20rpx;
+}
+.tab_cont .cont .cont_introduce view:nth-child(2n){
+  width:574rpx;
+}
+
+/* 底部按钮 */
+.bot{
+  width: 750rpx;
+  height: 140rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background:#fff;
+}
+.btn{
+  width:702rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  background:linear-gradient(-90deg,rgba(233,199,179,1),rgba(213,157,126,1));
+  border-radius:44rpx;
+  margin: 26rpx auto;
+  text-align: center;
+  font-size: 30rpx;
+  color: #FFFFFF;
+}

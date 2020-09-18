@@ -1,0 +1,112 @@
+/* page/videorecharge/detail/index.wxss */
+page{
+    background: #fff;
+}
+.page{
+    padding-bottom: 120rpx;
+}
+.headimg{
+    width: 750rpx;
+    height: 140rpx;   
+    display: block;
+}
+.main{
+    width: 697rpx;
+    margin-left: 26rpx;
+}
+.title{
+    color:#333333;
+    font-size: 28rpx;
+    margin-top: 50rpx;
+    font-weight: bold;
+}
+.inputview{
+    margin-top: 70rpx;
+}
+.input{
+    font-size: 44rpx;
+    color:#999999;
+    padding-bottom: 30rpx;
+    border-bottom: 1rpx solid #E8E8E8;
+}
+.miaoshu{
+    background: #F8F8F8;
+    border-radius: 10rpx;
+    padding:20rpx;
+    margin-top: 30rpx;
+}
+.miaoshu view{
+    font-size: 24rpx;
+    color:#666666;
+    line-height: 40rpx;
+}
+.list{
+    margin-top:50rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.listview{
+    width: 225rpx;
+    height: 153rpx;
+    border-radius: 10rpx;
+    margin-bottom: 30rpx;
+    text-align: center;
+    border:1rpx solid #CACACA;
+    color:#999999;
+}
+.chongzhiprice{
+    font-size: 40rpx;
+    padding-top: 30rpx;
+}
+.saleprice{
+    font-size: 24rpx;
+    padding-top: 10rpx;
+}
+.select{
+    border:1rpx solid #E33F44;
+    color:#E33F44;
+}
+
+
+
+
+/* 底部 */
+.fixbottom{
+    height: 113rpx;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top: 1prx solid blue;
+    background: #fff;
+}
+.bottomleft{
+    float: left;
+    width: 450rpx;
+    line-height: 113rpx;
+    box-sizing: border-box;
+    padding-left: 50rpx;
+}
+.paybtn{
+    float: right;
+    width: 300rpx;
+    background: #E33F44;
+    text-align: center;
+    line-height: 113rpx;
+    color:#ffffff;
+    font-size: 31rpx;
+}
+.wait{
+    font-size: 24rpx;
+    color: #333333;
+}
+.biaozhi{
+    font-size: 24rpx;
+    color: #E33F44;
+    padding-left: 30rpx;
+}
+.payprice{
+    color:#E33F44;
+    font-size: 48rpx;
+}

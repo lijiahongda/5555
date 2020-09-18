@@ -1,0 +1,38 @@
+<!--my/pages/commissionIncome/index.wxml-->
+<custom titleText="我的钱包" background="rgba(0,0,0,0)" color="#fff" backIcon="http://image.zhiding365.com/2020/7/23/b46767d3-8d70-4ace-b85d-116bc5e0931a.png" homeIcon="" postion="" closeIcon=""></custom>
+
+<!-- <view class="top-fanhui" style="top:{{top?'100rpx':'60rpx'}}">
+	<image bindtap="fanhui" class="fh" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/14/yuelvhuiHhAqob85z41594965762.png"></image>
+	<text class="fanhui-text">我的钱包</text>
+</view> -->
+<view class="content">
+  <view class="details" style="padding:0">
+    <view class="matter">
+      <view class="money">
+        <text>￥</text>
+        <text class="num" wx:if="{{total != NaN}}">{{total/100}}</text>
+        <text class="num" wx:if="{{total == NaN}}">0</text>
+        <view class="deposit" bindtap="deposit">
+          <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-21/16/yuelvhuiOwLIEcInBS1595319583.png"></image>
+          <text>去提现</text>
+        </view>
+      </view>
+      <view class="total">总计</view>
+    </view>
+  </view>
+  <view class="details">
+    <view class="item clearfix" wx:for="{{list}}" wx:key="key" data-id="{{item.memberId}}" data-trade="{{item.tradeAmount}}" bindtap="goJump">
+      <view class="name">{{item.name}}</view>
+      <view class="mon">
+        <text>￥{{item.tradeAmount/100}}</text>
+        <image src="{{right_img}}"></image>
+      </view>
+    </view>
+    
+    <!-- <view class="not" wx:if="{{itemList.length == 0}}">
+      <image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+    </view> -->
+
+  </view>
+
+</view>

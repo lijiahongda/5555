@@ -1,0 +1,76 @@
+<view class="step">
+	<view class="mengceng" wx:if="{{mengceng == 1}}">
+		
+	</view>
+	<view class="itemOne {{stepActive == 1?'active':''}}">
+		<view class="title">第一步</view>
+		<view>修改微信群名称</view>
+	</view>
+	<view class="itemTow {{stepActive == 2?'active':''}}">
+		<view class="title">第二步</view>
+		<view>选择您的群人数</view>
+	</view>
+	<view class="itemThree {{stepActive == 3?'active':''}}">
+		<view class="title">第三步</view>
+		<view>去开通助理</view>
+	</view>
+</view>
+<view class="stepImage">
+	<image src="{{adopt}}"></image>
+	<view class="grayBorder {{stepActive >= 2?'redBorder':''}}"></view>
+	<image src="{{stepActive >= 2?adopt:fail}}"></image>
+	<view class="grayBorder {{stepActive == 3?'redBorder':''}}"></view>
+	<image src="{{stepActive == 3?adopt:fail}}"></image>
+</view>
+<!-- 第一步内容 -->
+<block wx:if="{{stepActive == 1}}">
+	<view class="GroupName">
+		<view>务必修改群名称为</view>
+		<view class="NameContent">{{groupName}}</view>
+		<view class="copy" bindtap="copy">复制</view>
+	</view>
+	<image class="oneImage" src="{{oneStep.img}}"></image>
+	<view class="beCareful">
+		<rich-text nodes="{{oneStep.content}}"></rich-text>
+	</view>
+</block>
+<!-- 第二步内容 -->
+<block wx:if="{{stepActive == 2}}">
+	<view class="TwoTips">{{twoStep.title}}</view>
+	<view class="TwoContent">请确认您的群人数<text>≥{{usernum}}</text>人</view>
+	<image class="TwoImg" src="{{twoStep.img}}"></image>
+	<view class="TwoContent">务必群人数满<text>{{usernum}}</text>人，否则群助理会自动关闭。人</view>
+	<view class="ClickApply" bindtap="ClickApply">点击申请（群人数≥{{usernum}}人）</view>
+</block>
+<!-- 第三步内容 -->
+<block wx:if="{{stepActive == 3}}">
+	<view class="ThreeWxNum">为您分配助理微信号： <text>{{assistantWx}}</text></view>
+	<view wx:for="{{threeStep}}" class="ThreeContent" wx:key="threeStep" wx:for-index="index">
+		<view>{{item.title}}</view>
+		<view wx:if="{{index == 0}}">
+			<view class="" wx:for="{{item.content}}" wx:for-item="content" wx:for-index="index">
+				<view class="Subtitle">{{content.text}}</view>
+				<view bindtap="copy" class="ThreeCopy" wx:if="{{index==0}}" data-type="3">点击复制助理微信</view>
+				<image src="{{content.img}}"></image>
+			</view>
+		</view>
+		<view class="" wx:else>
+			<rich-text nodes="{{item.content}}"></rich-text>
+		</view>
+	</view>
+</block>
+<view class="nextStep" bindtap="nextStep" data-stepactive="{{stepActive}}" wx:if="{{stepActive == 1 || stepActive == 2}}">{{stepActive == 1?'下一步':'上一步'}}</view>
+<!-- 模态窗 -->
+<view class="Mask" bindtap="selectPopup" wx:if="{{isOnePopup}}"></view>
+<!-- 第一步确认弹窗 -->
+<view class="onePopup" wx:if="{{isOnePopup}}" >
+	<view class="title">{{stepActive == 1?'请确认群名称已修改':stepActive == 2?'请确定您的群人数':'复制成功'}}</view>
+	<view class="content" wx:if="{{stepActive == 1}}">请修改群名称为【{{groupName}}】否则无法成功开通群助理哦~</view>
+	<view class="content" wx:if="{{stepActive == 2}}">您的群人数在50人到100人之间</view>
+  <view class="content" wx:if="{{stepActive == 3}}">快去添加助理好友拉它入群吧，<text>千万不要将助理踢出群，若将助理踢出群您将在3天内无法重新申请助理</text></view>
+	<view class="but" style="margin-top:{{stepActive == 2?'80rpx':''}}">
+		<view bindtap="clickOnePopup" data-type="1" wx:if="{{stepActive != 3}}">取消</view>
+		<view class="sure" bindtap="clickOnePopup" data-type="2">确认</view>
+	</view>
+</view>
+<!-- <view class="goGroup" bindtap="goGroup">前往群助手</view> -->

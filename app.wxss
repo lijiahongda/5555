@@ -1,0 +1,23 @@
+/**app.wxss**/
+/**蒙层**/
+.mask-mc{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #333;
+  opacity: 0.6;
+  z-index: 100;
+}
+/* view{
+  font-size: 28rpx;
+} */
+.clearfix::before, .clearfix::after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.clearfix::after {
+  clear: both;
+}

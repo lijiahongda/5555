@@ -1,0 +1,4 @@
+<view wx:for="{{rule}}" wx:for-index="index" wx:key="index" class="list">
+  <view>{{item.title}}</view>
+  <view wx:for="{{item.content}}" wx:for-item="items" wx:for-index="index" wx:key="index">{{items}}</view>
+</view>

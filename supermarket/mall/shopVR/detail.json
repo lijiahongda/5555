@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "list": "/components/list/list",
+    "poster":"/components/poster/index",
+    "shareSelect":"/components/shareSelect/index",
+    "custom":"/components/custom/custom"
+  },
+  "navigationStyle":"custom"
+}

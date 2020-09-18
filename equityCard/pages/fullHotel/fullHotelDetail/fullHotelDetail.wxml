@@ -1,0 +1,131 @@
+<!--page/HotelOther/pages/HotelDetail/HotelDetail.wxml-->
+<swiper class="Detailswiper" indicator-dots="{{indicatorDots}}" autoplay="{{}}" interval="{{interval}}" duration="{{duration}}" bindchange='bindChange'>
+	<block wx:for="{{detail.banner}}" wx:key="banner">
+		<swiper-item>
+			<image src="{{item}}"></image>
+		</swiper-item>
+	</block>
+</swiper>
+<!-- <view class="digits">
+	<image src="{{massage}}"></image>
+	<text class="slide-text">{{current+1}}/{{detail.banner.length}}</text>
+</view> -->
+<view class="titleHead"  bindtap="navigatorUrl" style="padding-top:{{navTop}}rpx; background: {{navBg?'#fff':''}};color: {{navBg?'#000':''}};">
+	<image wx:if="{{isBack}}" src="{{Return}}"></image>
+	<view class="detName">{{detail.name}}</view> 
+</view>
+<view class="userFun" style="top:{{navTop+280}}rpx">
+	<view class="butie">
+		<image src="{{butie}}"></image>
+	</view>
+	<!-- <view class="Fun">
+		<image class="Collection" bindtap="sellout" src="{{isSellOut == 0?Collection:selectCollection}}"></image>
+		<button open-type="share" wx:if="{{isShare}}" style="background-color: transparent;margin-top:12rpx" class='contact' hover-class='none'>
+    		<image class="share" src="{{share}}"></image>
+    	</button>
+	</view> -->
+</view>
+<!-- <view class="userFun" style="top:{{navTop+280}}rpx">
+	<view class="score">
+		<view class="num" wx:if="{{detail.score}}">{{detail.score}}分</view>
+		<image wx:for="{{score}}" src="{{item == 'empy'?emptystar:item?fullstar:halfstar}}"></image>
+	</view>
+	<view class="Fun">
+		<image class="Collection" bindtap="sellout" src="{{isSellOut == 0?Collection:selectCollection}}"></image>
+		<button open-type="share" wx:if="{{isShare}}" style="background-color: transparent;margin-top:12rpx" class='contact' hover-class='none'>
+    		<image class="share" src="{{share}}"></image>
+    </button>
+	</view>
+</view> -->
+<view class="HotelBasicsInfo HotelBasicsInfoN " style="top:{{navTop+350}}rpx;">
+	<view class="title">
+		<text>{{detail.name}}</text>
+	</view>
+	<view class="hotelAddressN">
+		<view class="addressInfoN">
+			<view>{{detail.establishmentDate}}年开业</view>
+			<view>{{detail.establishmentDate}}年装修</view>
+		</view>
+		<view class="addressFunN" bindtap="goGetail">
+			设施.详情 >
+		</view>
+	</view>
+	<view class="sign">
+		<view class="signN">
+			<text>{{detail.score}}</text>
+			<text style="font-size:24rpx;">分</text>
+		</view>
+		<view class="lable">会员权益酒店</view>
+		<!-- <view class="hotelDetial">
+			<view>酒店详情</view>
+			<image src="{{detailmore}}"></image>
+		</view> -->
+	</view>
+	<view class="hotelAddress" bindtap="bindLocationChoose">
+		<view class="addressInfo">
+			<view>{{detail.address}}</view>
+			<view class="position" wx:if='{{distance}}'>
+				<image src="{{position}}"></image>
+				<text>距您直线距离{{distance}}</text>
+			</view>
+			<!-- <view class="LocInfo">
+				<image src="{{loc}}"></image>
+				<view>距宁直线298米，驾车约63分钟，公交约120分钟</view>
+			</view> -->
+		</view>
+		<!-- <view class="addressFun">
+			<view class="item" bindtap="bindLocationChoose" style="margin-right:54rpx">
+				<image src="{{map}}"></image>
+				<view>地图</view>
+			</view>
+			<view class="item" bindtap="call" data-phone="{{detail.phone}}">
+				<image src="{{call}}"></image>
+				<view>电话</view>
+			</view>
+		</view> -->
+	</view>
+</view>
+<view class="HotelBasicsInfo" style="top:{{navTop+830}}rpx;background:#f9f8f8">
+	<view class="merber" bindtap="goEquity">
+		<image src="{{merber}}"></image>
+	</view>
+	<view class="time" bindtap="selectTime">
+		<view class="timeInfo">
+			<view class="CheckTime" >
+				<view class="date">{{CheckTime}}</view>
+				<view class="dateN">入住</view>
+			</view>
+			<view class="nights">共{{nights}}晚</view>
+			<view class="CheckTime">
+				<view class="date">{{outTime}}</view>
+				<view class="dateN">离店</view>
+			</view>
+		</view>
+		<!-- <view class="rooms" bindtap="roomNum">
+			<view>{{roomNum}}间</view>
+			<image src="{{roomsImage}}"></image>
+		</view> -->
+	</view>
+	<hotelDetailList ratePlan="{{ratePlan}}" wx:if="{{ratePlan.length > 0}}" hotelId="{{id}}" identity='{{memberSubDto.identity}}'  roomNum="{{roomNum}}"></hotelDetailList>
+	<view wx:else class="tips">
+		<view>该日期暂无可预订房型</view>
+		<view>请尝试修改日期重新查询或选择其他酒店预订</view>
+		<view>附近同类型酒店</view>
+	</view>
+	
+	<image src="{{tipImage}}" class="tipImage"></image>
+</view>
+<!-- <view class="footer">
+	<view class="price">
+		<view class="title">在线支付：</view>
+		<view>¥666</view>
+	</view>
+	<view class="BookNow" catchtap="BookNow">立即预订</view>
+</view> -->
+<!-- 房间数 -->
+<roomNum isShow="{{isShow}}" bind:setRoomNum="setRoomNum" roomNum="{{roomNum}}"></roomNum>
+<!-- 选择日期 -->
+<selectTime isSelectTime="{{isSelectTime}}" bind:onLoadFun="onLoadFun"></selectTime>
+<!-- 加载中 -->
+<Loading isLoading="{{isLoading}}"></Loading>
+<home></home>

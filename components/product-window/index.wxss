@@ -1,0 +1,248 @@
+@import '/app.wxss';
+
+.commodity {
+  display: flex;
+  flex-direction: row;
+  width: 87%;
+  align-items: center;
+}
+
+.commodity .images image {
+  width: 126rpx;
+  height: 126rpx;
+  background-color: #fff;
+  margin-left: 23rpx;
+  margin-top: 20rpx;
+  border-radius: 12rpx;
+}
+
+.commodity .describe {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+  width: 70%;
+  padding-left: 2%;
+  background-color: #fff;
+}
+
+.sku{
+  width: 100%;
+  height: 50rpx;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  color: #999;
+  text-align: center;
+}
+
+.commodity .describe view {}
+
+.commodity .describe .money {
+  color: #EC4543;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.commodity .describe .specification {
+  color: #242424;
+  font-size: 24rpx;
+}
+
+.size {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 3.5%;
+}
+
+.sizeName {
+  font-size: 28rppx;
+  color: #242424;
+}
+
+.channelContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 43rpx;
+}
+
+.channelContent view {
+  min-height: 56rpx;
+  padding-left: 35rpx;
+  padding-right: 35rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec;
+  margin-right: 4.64%;
+  color: #333;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+  border-radius: 12rpx;
+  box-sizing: border-box;
+  max-width: 500rpx;
+}
+
+.channelContent view.active {
+  color: #fff;
+  padding-left: 33rpx;
+  padding-right: 33rpx;
+  background: #EC4543;
+}
+
+.channelContent view .NotOptional {
+  text-decoration: line-through;
+  color: #999;
+}
+.cartTitle{
+  margin-left: 3.5%;
+  color: #242424;
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  width: 100%;
+}
+
+.sure {
+  width: 630rpx;
+  height: 66rpx;
+  background: #EC4543;
+  border-radius: 44rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size:32rpx;
+  font-family:PingFang SC;
+  font-weight:500;
+  margin:  0 auto;
+  margin-top: 40rpx;
+  margin-bottom: 40rpx;
+}
+
+.product-window {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 110;
+  border-radius: 16rpx 16rpx 0 0;
+  transform: translate3d(0, 100%, 0);
+  transition: all .3s cubic-bezier(.25, .5, .5, .9);
+}
+
+.product-window.on {
+  transform: translate3d(0, 0, 0);
+}
+
+.product-window .textpic {
+  padding: 0 0rpx 0 30rpx;
+  margin-top: 29rpx;
+  position: relative;
+}
+
+.product-window .textpic .pictrue {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.product-window .textpic .pictrue image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+
+.product-window .textpic .text {
+  width: 410rpx;
+  font-size: 32rpx;
+  color: #202020;
+}
+
+.product-window .textpic .text .money {
+  font-size: 24rpx;
+  margin-top: 40rpx;
+}
+
+.product-window .textpic .text .money .num {
+  font-size: 36rpx;
+}
+
+.product-window .textpic .text .money .stock {
+  color: #999;
+  margin-left: 18rpx;
+}
+
+.product-window .textpic .iconfont {
+  position: absolute;
+  right: 30rpx;
+  top: -5rpx;
+  font-size: 35rpx;
+  color: #8a8a8a;
+}
+
+.product-window .cart {
+  margin: 0 auto;
+  margin-top: 36rpx;
+  padding: 0 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 630rpx;
+  background:rgba(249,248,248,1);
+  border-radius:12rpx;
+  height: 78rpx;
+}
+
+.product-window .cart .title {
+  font-size: 24rpx;
+  color: #333333;
+}
+
+.product-window .cart .carnum {
+  height: 54rpx;
+}
+
+.product-window .cart .carnum view {
+  width: 84rpx;
+  text-align: center;
+  height: 100%;
+  line-height: 54rpx;
+  color: #a4a4a4;
+  font-size: 45rpx;
+}
+
+.product-window .cart .carnum .reduce {
+  border-right: 0;
+  border-radius: 6rpx 0 0 6rpx;
+  line-height: 48rpx;
+}
+
+.product-window .cart .carnum .reduce.on {
+  color: #dedede;
+}
+
+.product-window .cart .carnum .plus {
+  border-left: 0;
+  border-radius: 0 6rpx 6rpx 0;
+  line-height: 46rpx;
+}
+
+.product-window .cart .carnum .plus.on {
+  border-color: #e3e3e3;
+  color: #dedede;
+}
+
+.product-window .cart .carnum .num {
+  color: #282828;
+  font-size: 28rpx;
+  background: #fff;
+  width: 134rpx;
+  height: 52rpx;
+}

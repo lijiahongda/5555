@@ -1,0 +1,31 @@
+<block wx:if="{{states}}">
+  <view class="black_bg"  capture-catch:touchmove="preventdefault"></view>
+  <view class="coupon">
+    <view class="top">开卡即得</view>
+    <view class="title">直订联名会员</view>
+    <view class="list">
+      <view class="list_top" wx:for="{{coupons}}" wx:for-index="index" wx:key="index">
+        <view class="list_cont" style="{{buy?'':'background:url(http://image.zhiding365.com/2020/8/30/a9b1399d-abe1-41dc-978a-2c505a0c4539.png);background-size: 310rpx 110rpx;'}}">
+          <view class="list_le">
+            <view>{{item.couponType==1?item.discount:item.prefAmount}}</view>
+            <view style="font-size:22rpx;margin-top:10rpx">{{item.couponType==1?'折扣':'元'}}</view>
+          </view>
+          <view class="list_cen">
+            <view>{{item.couponName}}</view>
+            <view style="margin: 6rpx 0 4rpx 0;">{{item.couponHeadTypeName}}</view>
+            <view wx:if="{{item.timeDesc}}">{{item.timeDesc}}</view>
+            <view wx:else>{{item.dueTime}}-{{item.effecTime}}</view>
+          </view>
+        </view>
+        <view class="num">x {{item.count}}张</view>
+      </view>
+      <view style="width:100%;height:70rpx"></view>
+    </view>
+    <image class="top_bg" src="http://image.zhiding365.com/2020/8/30/e9c67a56-8dd6-45d8-888a-320af67535ef.png"></image>
+    <view class="btn" bindtap="{{buy?'close':'goHotelList'}}">{{btn}}</view>
+    <view class="tips">{{tips}}</view>
+  </view>
+
+  <image class="close" bindtap="close" src="http://image.zhiding365.com/2020/8/30/120ca1cc-68ed-4024-b4f4-8ec85b9700d5.png"></image>
+
+</block>

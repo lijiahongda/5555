@@ -1,0 +1,88 @@
+<import src="../../../../wxParse/wxParse/wxParse.wxml"/>
+
+<view class="pagess">
+  <poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+<shareSelect bind:handleCloseDialog="handleCloseShareDialog" bind:handleShowPosterStatus="handleShowPosterStatus" status="{{shareSelectStatus}}"></shareSelect>
+<home></home>
+
+
+
+
+<swiper class="swiper">
+  <swiper-item wx:for='{{goodsInfo.goods_image}}'>
+    <image src="{{item}}"></image>
+  </swiper-item>
+</swiper>
+
+<view class="content">
+  <view class="priceStatus" wx:if="{{pushStatus==0&&isExclusiveRobot!=0}}">
+    <view style="background:#FF8F32">未推送</view>
+  </view>
+  <view class="price">
+    <view>
+      <text>￥</text>
+      <text class="nowPrice">{{goodsInfo.jd_price}}</text>
+      <text class="origin">￥{{goodsInfo.original_price}}</text>
+      <text class="make">推广赚￥{{goodsInfo.share_save_price}}</text>
+    </view>
+    <view class="sales">已售{{goodsInfo.sale_num}}件</view>
+  </view>
+
+  <!-- 标题组件-->
+  <title title='{{goodsInfo.goods_name}}' image='{{channelIcon}}' tip="{{goodsInfo.goods_desc}}" openMember='{{"1"}}'></title>
+
+  <!-- 优惠券 -->
+  <view class="coupon" bindtap="go" wx:if='{{goodsInfo.coupon.discount}}'>
+    <view class="left">
+      <text>￥</text><text>{{goodsInfo.coupon.discount}}</text>
+    </view>
+    <view class="middle">
+      <view>优惠券</view>
+      <view>有效期到{{goodsInfo.coupon.use_end_time}}</view>
+    </view>
+    <image class="right" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-02-18/22/yuelvhuip0LePRSHxP1582034609.png"></image>
+  </view>
+
+  <!-- 店铺 -->
+  <!-- <view class="shop">
+    <image src="{{goodsInfo.shop_info.shop_logo?goodsInfo.shop_info.shop_logo:'https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-02-23/20/yuelvhuiESrkAkAiDR1582459569.png'}}"></image>
+    <view>{{goodsInfo.shop_info.shop_name}}</view>
+  </view> -->
+</view>
+<view style="width:100%;overflow:hidden">
+  <CPSShare image="{{image}}" good_info="{{good_info}}" bind:shareimageFun="shareimageFun" bind:posterJdFun="posterJdFun"></CPSShare>
+</view>
+<!-- 详情 -->
+<view class="detail" wx:if='{{goodsInfo.detailed}}'>
+  <view class="header">商品详情</view>
+  <template is="wxParse" data="{{wxParseData:goodsInfo.detailed}}" />
+</view>
+
+<view class="footer">
+  <view class="fun">
+    <!-- <view class="feedback">
+      <image></image>
+      <view>进店</view>
+    </view> -->
+    <view class="feedback" style="margin-top:10rpx" wx:if="{{isGroupLeader == 1}}" bindtap="addToppingGoods">
+      <image style="margin-top: -10rpx" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/22/yuelvhuie2HrFN8bO81594994484.png"></image>
+      <view wx:if="{{isTopping!=2}}">置顶</view>
+      <view wx:else>取消置顶</view>
+    </view>
+    <view class="feedback" bindtap="miniWxBox">
+      <button open-type='share'>
+			  <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-16/03/yuelvhuixv9pj4QfKv1594841454.png"></image>
+        <view>小程序</view>
+		  </button>
+    </view>
+  </view>
+  <view class="bun">
+    <view class="SharingPosters" bindtap="SharingPosters" data-type="H5">分享海报</view>
+    <view class="goBuy" bindtap="go">去购买</view>
+  </view>
+</view>
+
+<poster status="{{status}}" posterUrl="{{posterUrl}}" bind:handleBox="handleBox"></poster>
+</view>
+<!-- 授权按钮 -->
+<!-- <view class="authorizationStatus" bindtap='VerificationCode' wx:if="{{authorizationStatus}}"></view> -->

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "shop-item": "/components/shopItem/index",
+    "poster":"/components/poster/index"
+  },
+  "navigationBarTitleText": "助理"
+}

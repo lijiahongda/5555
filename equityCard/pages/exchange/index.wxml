@@ -1,0 +1,11 @@
+<view style="background:{{detail.bg_color}}">
+  <image class="bg" src="{{detail.bg_img}}"></image>
+  <view class="list" wx:for="{{detail.list}}" wx:for-index="index" wx:key="index" bindtap="goDetail" data-item="{{item}}">
+    <image mode="aspectFill" src="{{item.goods_img}}"></image>
+    <view class="title">{{item.goods_name}}</view>
+    <view class="bot">
+      <view class="bot_le"><view style="font-size:36rpx;color:#B0281A">¥</view> <view style="font-size:48rpx;color:#B0281A;font-weight:600;margin-right:10rpx">{{item.price}}</view> <view>{{detail.type}}</view></view>
+      <view class="btn" >免费兑换</view>
+    </view>
+  </view>
+</view>

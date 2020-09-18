@@ -1,0 +1,25 @@
+<!-- index.wxml -->
+<view class="container">
+
+<view class="bg-img-box" >
+    <view class="login-box">
+      <view class="input-item" style="margin-bottom:30rpx">
+        <image style="width:32rpx;height:32rpx" src="/images/login/icon-phone.png" />
+        <input class="input1" style="width:60%" type="number" value="{{mobile}}" data-type="mobile" bindinput="handleInput" placeholder="请填写手机号" />
+        <view class="sendbutton btn1"  bindtap="handleSend" wx:if="{{sendStatus == 0}}">发送验证码</view>
+        <view class="sendbutton btn2" wx:if="{{sendStatus == 1}}">倒计时{{timeNum}}s</view>
+      </view>
+      <view class="input-item">
+        <image style="width:32rpx;height:32rpx" src="/images/login/icon-passworf.png" />
+        <input type="number" style="line-height:44rpx" value="{{smsCode}}" data-type="smsCode" bindinput="handleInput" placeholder="短信验证码" />
+      </view>
+      <!-- <view class="register-description" v-if="loginType == 1">*未注册用户登录即完成注册</view> -->
+      <view>
+        <view class="truebtn"  bindtap="handleBindPhone">确认绑定</view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

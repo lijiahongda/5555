@@ -1,0 +1,513 @@
+
+page {
+ 
+  font-family:PingFang SC;
+}
+
+
+.banner_cont{
+  width: 750rpx;
+  height: 350rpx;
+  position: relative;
+}
+.banner_cont .banner{
+  width: 750rpx;
+  height: 350rpx;
+}
+.banner_cont .banner .card_top{
+  position: absolute;
+  width: 100%;
+  bottom: 48rpx;
+  left: 0;
+  text-align: center;
+}
+.banner_cont .banner .card_top .card1{
+  font-size: 34rpx;
+  color: #FCE0D0;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(180deg,rgba(253,235,231,1) 0%, rgba(247,230,217,1) 100%);
+  -webkit-background-clip:text;
+}
+.banner_cont .banner .card_top .card_num{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:linear-gradient(268deg,rgba(232,195,167,1),rgba(252,241,234,1),rgba(235,197,170,1));
+  border-radius:20rpx;
+  height: 40rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  font-size: 20rpx;
+  color: #2A181A;
+  margin: 0 auto;
+  margin-top: 22rpx;
+  width: 300rpx;
+}
+.banner_cont .banner .card_top .card_num image{
+  width: 20rpx;
+  height: 24rpx;
+  margin-right: 8rpx;
+}
+
+
+/*用来包裹所有的小圆点 */
+.dots {
+  width: 100%;
+  height: 8rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -6rpx;
+ }
+ /*未选中时的小圆点样式 */
+ .dot {
+    width: 24rpx;
+    height: 8rpx;
+    background: rgba(234,200,181,1);
+    border-radius: 4rpx;
+    margin-right: 8rpx;
+ }
+ /*选中以后的小圆点样式 */
+ .active {
+    width: 56rpx;
+    background: rgba(252,247,245,1);
+ }
+ /*未选中时的小圆点样式 */
+ .edot {
+  width: 10rpx;
+  height: 10rpx;
+  background: rgba(158,93,79,1);
+  border-radius: 50%;
+  margin-right: 14rpx;
+}
+/*选中以后的小圆点样式 */
+.eactive {
+  background: rgba(244,218,188,1);
+}
+
+
+ /* icon */
+
+.icons {
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.icons .gwsq {
+  margin-bottom: 60rpx;
+  text-align: center;
+  width: 25%;
+}
+.icons .gwsq image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+.gwsq-l-title {
+  color: #FCE0D0;
+  font-size: 26rpx;
+  line-height: 26rpx;
+  font-weight: 500;
+  margin-top: 18rpx;
+}
+.gwsq-l-cot {
+  padding-top: 14rpx;
+  color: #FCE0D0;
+  font-size: 22rpx;
+  line-height: 20rpx;
+  font-weight: 400;
+}
+
+
+
+
+
+/* 权益滑动 */
+.containerH{
+  position: relative;
+  margin-bottom: 30rpx;
+  height: 380rpx;
+}
+.swiper {
+  width: 100%;
+  height: 350rpx;
+}
+.swiper_item {
+  height: 350rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.equity_list {
+  width: 600rpx;
+  height: 350rpx;
+  border-radius:32rpx;
+  overflow: hidden;
+}
+.equity_list .equity_top{
+  background: url(http://image.zhiding365.com/2020/8/21/a723a753-3d14-4a25-ab72-4920b421706f.png);
+  background-size: 600rpx 100rpx;
+  width: 600rpx;
+  height: 100rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #70392E;
+  font-weight: 600;
+}
+.equity_list .equity_top image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 38rpx;
+}
+.equity_list .equity_cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  padding-top: 18rpx;
+  background:#fff;
+  height: 250rpx;
+}
+.equity_list .equity_cont .equity_shop{
+  width: 160rpx;
+  overflow: hidden;
+  text-align: center;
+  font-size: 26rpx;
+  color: #222222;
+  font-weight: 500;
+  line-height: 34rpx;
+}
+.equity_list .equity_cont .equity_shop image{
+  width: 100%;
+  height: 120rpx;
+  margin-bottom: 8rpx;
+}
+
+
+/* 优惠券 */
+.title_all{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight:600;
+  color:rgba(252,224,208,1);
+  background:linear-gradient(180deg,rgba(255,240,232,1) 0%, rgba(215,165,137,1) 100%);
+  -webkit-background-clip:text;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+.title_all image{
+  width: 34rpx;
+  height: 12rpx;
+  margin: 0 32rpx;
+}
+.vip_coupon{
+  width: 662rpx;
+  margin: 0 auto;
+  margin-top: 28rpx;
+}
+.vip_coupon .coupon_top{
+  width: 662rpx;
+  height: 168rpx;
+  background: url(http://image.zhiding365.com/2020/8/23/2115dd52-bb5c-4732-8e6e-907bc02be5d1.png);
+  background-size: 662rpx 168rpx;
+  background-repeat: no-repeat;
+  padding: 0 28rpx;
+  box-sizing: border-box;
+  padding-top: 32rpx;
+}
+.vip_coupon .coupon_top view{
+  font-size: 24rpx;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  background:linear-gradient(-270deg,rgba(226,176,152,1) 0%, rgba(252,221,207,1) 99.21875%);
+  -webkit-background-clip:text;
+}
+.vip_coupon .coupon_top .tit_num{
+  display: flex;
+  align-items: flex-end;
+  font-size:24rpx;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  background:linear-gradient(-240deg,rgba(236,196,176,1) 0%, rgba(235,202,194,1) 100%);
+  -webkit-background-clip:text;
+  margin-bottom: 10rpx;
+}
+.vip_coupon .coupon_top .tit_num image{
+  width: 24rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+}
+/* 展开后 */
+.vip_coupon .coupon_cont{
+  width:662rpx;
+  /* height:752rpx; */
+  background:rgba(52,51,58,1);
+  border-radius:0px 0px 10rpx 10rpx;
+  margin: 0 auto;
+  padding: 20rpx;
+  padding-top: 0;
+  box-sizing: border-box;
+}
+.vip_coupon .coupon_content{
+  width:622rpx;
+  background:linear-gradient(180deg,rgba(71,70,76,1) 0%,rgba(92,92,92,1) 100%);
+  box-shadow:0px 0px 18rpx 0px rgba(0, 0, 0, 0.06);
+  border-radius:10rpx;
+  margin: 0 auto;
+  overflow: hidden;
+  font-size: 26rpx;
+  color: #fff;
+  padding-bottom: 20rpx;
+}
+.coupon_content .title{
+  padding: 20rpx 14rpx;
+}
+.coupon_content .c_list{
+  display: flex;
+}
+.coupon_content .c_list:nth-last-child(2){
+  height: 160rpx;
+  overflow: hidden;
+}
+.coupon_content .c_list .c_title{
+  writing-mode:tb-rl; 
+  width: 26rpx;
+  font-size: 26rpx;
+  margin: 0 20rpx 0 16rpx;
+}
+.coupon_content .c_list image{
+  width: 2rpx;
+  height: 200rpx;
+}
+.coupon_content .c_list .coupon_bg{
+  width: 396rpx;
+  height: 160rpx;
+  background: url(http://image.zhiding365.com/2020/8/25/8fd53e97-372c-4234-8bd3-05802f6393ac.png);
+  background-size: 396rpx 160rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 40rpx;
+}
+.coupon_content .c_list .coupon_bg .c_label{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height:36rpx;
+  line-height: 36rpx;
+  background:rgba(158,93,79,1);
+  border-radius:4rpx 0px 10rpx 0px;
+  font-size: 20rpx;
+  color: #fff;
+  padding: 0 14rpx;
+}
+.coupon_content .c_list .coupon_bg .c_left{
+  width: 296rpx;
+  height: 160rpx;
+  font-size: 20rpx;
+  color: #70392E;
+  text-align: center;
+  padding-top: 40rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.coupon_content .c_list .coupon_bg .c_left view:nth-child(1){
+  width: 240rpx;
+  font-size: 24rpx;
+  color: #70392E;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow:hidden;
+  /* autoprefixer: ignore next */
+  -webkit-box-orient: vertical;
+  margin: 0 auto;
+  font-weight:500;
+  margin-bottom: 10rpx;
+}
+.coupon_content .c_list .coupon_bg .c_right{
+  width: 98rpx;
+  height: 160rpx;
+  line-height: 160rpx;
+  font-size: 38rpx;
+  color: #CB3428;
+  text-align: center;
+  font-weight:500;
+}
+.coupon_content .c_list .c_num{
+  height: 160rpx;
+  line-height: 160rpx;
+  width: 120rpx;
+  text-align: center;
+}
+.coupon_content .c_list .c_num text:nth-child(1){
+  font-size: 34rpx;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  font-family:PingFang SC;
+  background:linear-gradient(-59deg,rgba(244,218,188,1) 0%, rgba(252,237,220,1) 100%);
+  -webkit-background-clip:text;
+  width: 120rpx;
+  text-align: center;
+}
+.coupon_content .c_bot{
+  width: 622rpx;
+  height: 52rpx;
+  margin-top: 10rpx;
+}
+
+
+
+/* 未展开 */
+.vip_coupon .coupon_bot{
+  background: url(http://image.zhiding365.com/2020/8/23/fdba6636-b61d-48ef-abfa-c7600c41e255.png);
+  background-size: 662rpx 60rpx;
+  background-repeat: no-repeat;
+  width: 662rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx 0 36rpx;
+  font-size: 26rpx;
+  color: #9E9E9E;
+  box-sizing: border-box;
+}
+.vip_coupon .coupon_bot .mores{
+  display: flex;
+  align-items: center;
+}
+.vip_coupon .coupon_bot .more{
+  width: 22rpx;
+  height: 14rpx;
+  margin-left: 12rpx;
+}
+
+
+/* 开卡即送 */
+.card_give{
+  width: 702rpx;
+  height: 160rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.card_give image{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/* 底部 */
+.bottom{
+  width: 750rpx;
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  
+}
+.bottom .pays{
+  width: 440rpx;
+  height: 88rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 30rpx;
+  font: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.bottom .name{
+  height: 88rpx;
+  color: #fff;
+  line-height: 88rpx;
+  font-size: 26rpx;
+  font-weight: 400;
+  width: 273rpx;
+}
+
+.bottom .vip_pay{
+  font-size: 26rpx;
+  font-weight: 600;
+  color:rgba(17,17,17,1);
+  background:linear-gradient(180deg,rgba(99,59,56,1) 0%, rgba(50,25,27,1) 100%);
+  -webkit-background-clip:text;
+  /* -webkit-text-fill-color:transparent; */
+}
+.bottom .pays .open{
+  font-size: 38rpx;
+  color:rgba(80,40,9,1);
+  background:linear-gradient(180deg,rgba(104,59,56,1) 0%, rgba(50,25,27,1) 100%);
+  -webkit-background-clip:text;
+  /* -webkit-text-fill-color:transparent; */
+  font-weight: 600;
+}
+.no_share .share_pay{
+  width: 100%;
+  text-align: center;
+  font-size: 26rpx;
+  font-weight: 600;
+  color: #111111;
+  background: linear-gradient(0deg, #F5D3C7 0%, #D3A18B 100%);
+  -webkit-background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+}
+
+
+
+
+
+
+button{
+  height: 88rpx;
+  border:0;
+  margin:0;
+  padding:0;
+  box-shadow:0;
+}
+button::after{
+  border:none;
+}
+
+
+
+.detail_no{
+  color: #999999;
+  font-size: 28rpx;
+  width: 530rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  text-align: center;
+}
+.detail_no image{
+  width: 454rpx;
+  height: 314rpx;
+  margin: 0 auto;
+  margin-top: 114rpx;
+}

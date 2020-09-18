@@ -1,0 +1,23 @@
+<!--my/pages/indirectFriends/index.wxml-->
+<view class="content" wx:if="{{direct}}">
+  <view class="peopleNum">{{applyList.length}}人</view>
+  <view class="details">
+    <view class="item" wx:for="{{applyList}}" wx:key="key">
+      <view class="img">
+        <image src="{{item.headImg}}"></image>
+      </view>
+      <view class="info">
+        <view class="name clearfix">
+          <text class="left">{{item.nickName}}</text>
+        </view>
+        <view class="num">{{item.mobile}}</view>
+        <view class="time">注册时间：{{item.createTime}}</view>
+      </view>
+    </view>   
+
+  </view>
+  
+</view>
+<view class="details indirect" wx:if="{{indirect}}">
+    <image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+</view>

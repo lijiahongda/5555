@@ -1,0 +1,126 @@
+/* my/pages/commissionIncome/index.wxss */
+
+.top-fanhui {
+  width: 240rpx;
+  height: 150rpx;
+  position: fixed;
+  top: 65rpx;
+  left: 15rpx;
+  z-index: 4;
+  vertical-align: middle;
+}
+.fanhui-text{
+  position: fixed;
+  top: 70rpx;
+  left: 44%;
+  color: #fff;
+  vertical-align: middle;
+}
+.fh {
+  width: 40rpx;
+  height: 60rpx;
+  /* position: absolute;
+  top: 100rpx;
+  left: 25rpx; */
+  z-index: 4;
+}
+page {
+  background: url(https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-21/15/yuelvhuijIcZpP5Ur11595317900.png);
+  background-repeat: no-repeat;
+  background-position: 0 -170px;
+  font-family: Microsoft YaHei Regular;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+  background-color: rgb(248, 248, 248);
+}
+.content{
+  padding: 0 30rpx;
+  margin-top: 10rpx;
+}
+.content .details .matter{
+  text-align: center;
+  padding-top: 50rpx;
+  position: relative;
+  padding-bottom: 50rpx;
+}
+.content .details .matter .money{
+  margin-bottom: 20rpx;
+}
+.content .details .matter .money text{
+  color: #333333;
+  font-size: 33rpx;
+  vertical-align: bottom;
+}
+.content .details .matter .money .num{
+  font-size: 67rpx;
+  color: #333333;
+  letter-spacing: -4rpx;
+}
+.content .details .matter .money .deposit{
+  display: inline-block;
+  width: 153rpx;
+  height: 53rpx;
+  line-height: 53rpx;
+  border: 1rpx solid #e53f45;
+  border-radius: 27rpx;
+  position: absolute;
+  top: 66rpx;
+  right: 67rpx;
+}
+.content .details .matter .money .deposit image{
+  width: 24rpx;
+  height: 24rpx;
+  padding-right: 13rpx;
+}
+.content .details .matter .money .deposit text{
+  font-size: 27rpx;
+  color: #E43F44;
+}
+.content .details .matter .total{
+  color: #333333;
+  font-size: 31rpx;
+}
+
+.content .details{
+  margin-bottom: 13rpx;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 20rpx;
+  background: white;
+  padding: 30rpx;
+}
+.content .details .item{
+  margin-bottom: 50rpx;
+}
+.content .details .item:last-child{
+  margin-bottom: 0;
+}
+.content .details .item .name{
+  float: left;
+  font-size: 28rpx;
+}
+.content .details .item .mon{
+  float: right;
+}
+.content .details .item .mon text{
+  vertical-align: middle;
+  font-size: 28rpx;
+  color: #EC4543;
+  margin-right: 12rpx;
+}
+.content .details .item .mon image{
+  width: 10rpx;
+  height: 18rpx;
+  vertical-align: middle;
+}
+
+.not {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200rpx;
+}
+
+.not image {
+  width: 347rpx;
+}

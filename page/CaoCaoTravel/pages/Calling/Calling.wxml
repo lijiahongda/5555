@@ -1,0 +1,157 @@
+<!-- 约车中 -->
+<view class="Waiting_response" wx:if="{{status==1 && ifWaiting}}">
+  <view class="tips">
+    <view class="title">
+      <text>正在为您全力寻找车辆</text>
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/18/line_1574083063_12638.gif"></image>
+    </view>
+    <view>请您稍作等待</view>
+  </view>
+  <view class="waiting_time">
+    <view class="time">
+      约等
+      <text>{{minute < 10?'0'+minute:minute}}:{{second < 10?'0'+second:second}}</text>
+    </view>
+    <view class="cancel_order" bindtap="cancelOrder">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574141392_69828.png"></image>
+      <view bindtap="waitingCancel">取消订单</view>
+    </view>
+  </view>
+</view>
+<!-- 订单被司机取消 -->
+<view class="Driver_cancelled" wx:if="{{ifWaiting && (status==4 || status==10 || status==21 || status==26 || status==27)}}">
+  <view class="Driver_close">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574153656_66610.png"></image>
+  </view>
+  <view class="Driver_title">订单取消</view>
+  <view class="Driver_tips" wx:if="{{status==10}}">您的订单被取消，请重新叫车</view>
+  <view class="Driver_tips" wx:elif="{{status==4}}">您的订单无司机接单，系统撤单，请重新叫车</view>
+  <view class="Driver_tips" wx:else>您的订单被{{status==21?'客服':status==26?'司机':status==27?'第三方':''}}取消，请重新叫车</view>
+  <view class="Driver_operation">
+    <view class="Driver_Nomore" bindtap="gohome">不叫了</view>
+    <view class="Driver_Recall" bindtap="gohome">重新叫</view>
+  </view>
+</view>
+<!-- 等待接驾 -->
+<view class="waiting_ride" wx:if="{{!cancelTips && (waitingride || status==9)}}">
+  <!-- <view class="waiting_tips">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574153545_18199.png"></image>
+    <view>司机距离您<text>0.3</text>公里，大约需<text>3</text>分钟到达</view>
+  </view> -->
+  <view class="waiting_car_info">
+    <view class="info">
+      <view>{{dataContent.driverInfoVo.card}}</view>
+      <view class="waiting_car_type">{{dataContent.driverInfoVo.carType}}</view>
+    </view>
+    <image class="" src="{{cardImg}}"></image>
+  </view>
+  <view class="Driver_info">
+    <view class="Driver_name">{{dataContent.driverInfoVo.name}}</view>
+    <view class="Driver_Star_class">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574153240_94856.png"></image>
+      <view>{{dataContent.driverInfoVo.level}}</view>
+    </view>
+    <view class="Driver_order_num">{{dataContent.driverInfoVo.orderCnt}}单</view>
+  </view>
+  <view class="operation">
+    <view class="call" bindtap="call" data-mobile="{{dataContent.driverInfoVo.phone}}">打电话</view>
+    <view class="operation_cancel" bindtap="operationcancel">取消订单</view>
+  </view>
+</view>
+<!-- 取消成功 -->
+<view class="Cancellation_Success" wx:if="{{isCancellationSuccess}}">
+  <view class="Cancellation_time">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574171703_86794.png"></image>
+    <view>{{time}}</view>
+  </view>
+  <view class="list">
+    <view class="item">
+      <view class="raido"></view>
+      <view>{{start_name}}</view>
+    </view>
+    <view class="item">
+      <view class="raido" style="background-color:#FF7E36"></view>
+      <view>{{end_name}}</view>
+    </view>
+  </view>
+  <view class="Cancellation_tips">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574172331_65364.png"></image>
+    <view>订单已取消</view>
+  </view>
+</view>
+<!-- 用户取消订单 -->
+<view class="Driver_cancelled" wx:if="{{Drivercancelled}}">
+  <view class="Driver_close">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574153656_66610.png"></image>
+  </view>
+  <view class="Driver_title">确认要取消订单？</view>
+  <view class="Driver_tips">正在努力为您寻找司机，再等一会吧。</view>
+  <view class="Driver_operation">
+    <view class="Driver_Nomore" bindtap="DriverNomore">取消订单</view>
+    <view class="Driver_Recall" bindtap="DriverRecall">继续等待</view>
+  </view>
+</view>
+<!-- 取消提示 -->
+<view class="cancel_Tips" wx:if="{{cancelTips}}" style="height:{{windowHeight}}px">
+  <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574165669_47522.png"></image>
+  <view class="cancel_content">
+    <view>周围车辆较少，重新叫车要排队几分钟分钟， 建议您再等等。</view>
+    <view class="tips">请勿频繁取消，否则可能导致无司机接单。</view>
+  </view>
+  <view class="cancel_operation">
+    <view class="no_cancel" bindtap="nocancel">暂不取消</view>
+    <view class="sure_cancel" bindtap="surecancel">确认取消</view>
+  </view>
+</view>
+<!-- 行驶中 -->
+<view class="waiting_ride" style="border-radius:10rpx" wx:if="{{status==3 }}">
+  <view class="waiting_car_info">
+    <view class="info">
+      <view>{{dataContent.driverInfoVo.card}}</view>
+      <view class="waiting_car_type">{{dataContent.driverInfoVo.carType}}</view>
+    </view>
+    <image class="" src="{{cardImg}}"></image>
+  </view>
+  <view class="Driver_info" style="margin-bottom:0rpx">
+    <view class="Driver_name">{{dataContent.driverInfoVo.name}}</view>
+    <view class="Driver_Star_class">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574153240_94856.png"></image>
+      <view>{{dataContent.driverInfoVo.level}}</view>
+    </view>
+    <view class="Driver_order_num">{{dataContent.driverInfoVo.orderCnt}}万单</view>
+  </view>
+</view>
+<!-- 司机已到达 -->
+<view class="waiting_ride" style="border-radius:10rpx" wx:if="{{status==12 }}">
+  <view class="waiting_car_info">
+    <view class="info">
+      <view>{{dataContent.driverInfoVo.card}}</view>
+      <view class="waiting_car_type">{{dataContent.driverInfoVo.carType}}</view>
+    </view>
+    <image src="{{cardImg}}"></image>
+  </view>
+  <view class="Driver_info" style="margin-bottom:0rpx">
+    <view class="Driver_name">{{dataContent.driverInfoVo.name}}</view>
+    <view class="Driver_Star_class">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574153240_94856.png"></image>
+      <view>{{dataContent.driverInfoVo.level}}</view>
+    </view>
+    <view class="Driver_order_num">{{dataContent.driverInfoVo.orderCnt}}万单</view>
+  </view>
+</view>
+<!-- 行程结束 -->
+<view class="End_stroke" wx:if="{{status == 5 || status == 8}}">
+  <view class="End_price">¥<text>{{dataContent.orderFeeVo.totalFee/100}}</text></view>
+  <view class="coupon" wx:if="{{couponMoney}}">
+    <view>优惠券</view>
+    <view>-{{couponMoney/100}}元</view>
+  </view>
+  <view class="Payment_method">
+    <view class="method">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574159930_60264.png"></image>
+      <view>微信支付</view>
+    </view>
+    <!-- <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574159988_84891.png"></image> -->
+  </view>
+  <view class="Immediate_payment" bindtap="evaluate">立即支付</view>
+</view>

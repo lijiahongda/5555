@@ -1,0 +1,22 @@
+<view class="poster-main" wx:if="{{astatus == 1}}">
+	<view class="poster-mask" bindtap="handleBox">
+		
+	</view>
+	<view class="poster-wrapper">
+		<view class="header" >
+		<view >
+			物流状态及退款
+		</view>
+		<view style="margin-top:20rpx">
+			 请移步悦淘APP查看
+		</view>
+		<image  class="img-down" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/20/yuelvhuijLNlhAJKm91594988277.png" >
+			
+		</image>
+		<!-- <view class="title-name">
+			悦淘APP下载二维码
+		</view> -->
+		</view>
+	
+	</view>
+</view>

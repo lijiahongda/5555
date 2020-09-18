@@ -1,0 +1,49 @@
+<import src="../../../../wxParse/wxParse.wxml"/>
+<view class="banner">
+  <swiper bindchange="bannerChange">
+    <swiper-item wx:for='{{bannerList}}'>
+      <image src="{{item.path?item.path:item}}"></image>
+    </swiper-item>
+  </swiper>
+  <view class="progress">
+    <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-05-06/17/yuelvhuiW8CuqQInJY1588758792.png"></image>
+    <text>{{bannerIndex}}/{{bannerList.length}}</text>
+  </view>
+</view>
+
+<!-- 联名卡兑换 -->
+<block wx:if="{{type=='exchange'}}">
+  <view class="price">
+    <text>市场价：￥</text>
+    <text>{{detailData.vipPrice}}</text>
+  </view>
+  <view class="title" style="padding:0 10rpx;box-sizing: border-box;width:100%;font-size:28rpx">{{detailData.name}}</view>
+</block>
+
+<!-- 白拿 -->
+<block wx:if="{{type!='exchange'}}">
+  <view class="title">
+    <text>{{data.name}}</text>
+  </view>
+
+  <view class="price">
+    <text>会员价：￥</text>
+    <text>{{detailData.vipPrice}}</text>
+    <text>{{detailData.freightDesc}}</text>
+  </view>
+  <view class="sku" bindtap="{{detailData.isCanBuy==0?'':'goBuy'}}">
+    <text>规格</text>
+    <view>{{detailData.skuSale}}</view>
+    <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-04-30/00/yuelvhuigmWQEscU671588178366.png"></image>
+  </view>
+</block>
+
+
+<view class="detail">
+  <view class="header">商品详情</view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<view class="footer noBuy" wx:if="{{detailData.isCanBuy==0}}">{{detailData.payButtonDesc}}</view>
+<view class="footer" wx:else bindtap="goBuy">{{detailData.payButtonDesc}}</view>
+<product-window statusArr="{{statusArr}}" cartNum="{{cartNum}}" goodPrice="{{detailData.vipPrice}}"  payButtonDesc='{{detailData.payButtonDesc}}' productSkuId='{{productSkuId}}' ispay="{{ispay}}" sizeSelectText="{{sizeSelectText}}" colorSize="{{colorSize}}" Specificationsimg="{{Specificationsimg}}" isShow="{{isShow}}" bind:updateSkuid="updateSkuid" bind:goCat="goCat" bind:ChangeAttr="ChangeAttr" bind:ChangeCartNum="ChangeCartNum" id='product-window'></product-window>
+

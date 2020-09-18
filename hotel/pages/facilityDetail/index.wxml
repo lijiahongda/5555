@@ -1,0 +1,34 @@
+<view class="hotelitem1 hotelfac">
+		<view class="title">酒店设施</view>
+		<div class="content">
+			<!-- <div class='{{fold:facHei>235&&!facshow}}'> -->
+			<view wx:for='{{roomData.facilities}}' wx:for-item="item" wx:key="index">
+				<view class="itemname">{{item.typeName}}</view>
+				<view class="y-ul">
+					<view class="y-ul-li" wx:for="{{item.dealerFacility}}" wx:key="index" wx:for-item="itemfac"><text class="ydian"></text><text>{{itemfac.name}}</text></view>
+				</view>
+			</view>
+			<!-- </div> -->
+			<!-- <p class="more" v-show='facHei>235' @click='facshow=!facshow'>
+            <em :class="[facshow?'trans-x2':'trans-x1']"></em>
+          </p> -->
+		</div>
+	</view>
+	<view class="hotelitem1">
+		<view class="title">
+			酒店政策
+		</view>
+		<view class="content">
+			<view class="itemname">入离时间</view>
+			<view class="yls-d">
+				入住时间：{{roomData.bookingConfig.earliestCheckInTime}}:00以后 离店时间：{{roomData.bookingConfig.earliestCheckOutTime}}:00之前
+			</view>
+			<view class="itemname" wx:if="{{roomData.prompt}}">温馨提示</view>
+			<view class="tip" wx:if="{{roomData.prompt}}">
+				{{roomData.prompt}}
+			</view>
+			<view class="more" hidden>
+				<em></em>
+			</view>
+		</view>
+	</view>

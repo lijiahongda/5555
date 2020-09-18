@@ -1,0 +1,320 @@
+@import "/components/wxParse/wxParse.wxss";
+page{
+    width: 750rpx;
+    overflow-x: hidden;
+}
+.swiper-cls {
+    width: 750rpx;
+    height: 750rpx;
+    position: relative;
+}
+
+.swiper-clis-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.prostock {
+    font-size: 24rpx;
+    color: #141414;
+    margin-top: 18rpx;
+}
+
+.proactivity {
+    height: 120rpx;
+    width: 690rpx;
+    background-color: rgba(231, 31, 25, .8);
+    padding: 0 30rpx;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+}
+
+.price1 {
+    font-size: 46rpx;
+    color: #fff;
+    font-weight: bold;
+}
+
+.proname {
+    line-height: 42rpx;
+    font-size: 30rpx;
+    color: #242424;
+    padding: 0 30rpx;
+    margin: 23rpx 0;
+    box-sizing: border-box;
+}
+
+.price {
+    margin-bottom: 37rpx;
+    padding: 0 30rpx;
+    border-bottom: 18rpx solid rgb(246, 246, 246);
+}
+
+.price .seckill {
+    color: #EC4543;
+    display: inline-block;
+}
+
+.price .seckill text:first-child {
+    font-size: 24rpx;
+}
+
+.price .seckill text:nth-child(2) {
+    font-size: 28rpx;
+    display: inline-block;
+    margin-left: 2rpx;
+    margin-right: 7rpx;
+}
+
+.price .seckill text:last-child {
+    font-size: 42rpx;
+}
+
+
+
+.profastMailFee {
+    padding: 20rpx 30rpx;
+    font-size: 28rpx;
+    color: #999999;
+    display: inline-block;
+}
+
+.layer-title {
+    line-height: 32rpx;
+    height: 32rpx;
+    /* overflow: hidden; */
+    /* display: flex; */
+    margin: 30rpx 0;
+    /* padding: 0 20rpx; */
+    /* box-sizing: border-box; */
+    text-align: center;
+}
+
+.layer-title-img {
+    display: inline-block;
+    width: 6rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+    float: left;
+}
+
+.layer-title .title {
+
+    font-size: 34rpx;
+    display: inline-block;
+    color: #333;
+    /* float: left; */
+    /* margin-right: 32rpx; */
+
+}
+
+#pronav {
+    height: 97rpx;
+    line-height: 96rpx;
+    display: flex;
+    border-top: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 101;
+}
+#pronav .shareGain{
+    width: 220rpx;
+    background-color: #333333;
+    color: #fff;
+
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+#pronav .shareGain view:first-child{
+    font-size: 20rpx;
+    color: white;
+}
+#pronav .shareGain view:last-child{
+    font-size: 27rpx;
+    color: white;
+}
+#pronav .ps {
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: center;
+    color: #999;
+    width: 50%;
+}
+
+#pronav .symbol {
+    color: #EC4543;
+}
+
+#pronav .proprice {
+    color: #EC4543;
+    font-size: 36rpx;
+}
+
+#pronav .btnbuy {
+    background-color: #E33F44;
+    color: #fff;
+    font-size: 32rpx;
+}
+
+
+.maincontent {
+    background-color: #fff;
+    position: fixed;
+    z-index: 101;
+    bottom: 97rpx;
+    width: 750rpx;
+    border-top-left-radius: 18rpx;
+    border-top-right-radius: 18rpx;
+}
+
+.currproinfo {
+    padding: 20rpx 30rpx;
+    display: flex;
+    height: 170rpx;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.currproimg {
+    width: 150rpx;
+    position: relative;
+    margin-right: 20rpx;
+}
+
+.img-icon {
+    display: block;
+    width: 150rpx;
+    height: 150rpx;
+    border: 1px solid #aaa;
+    padding: 6rpx;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+}
+
+.propara {
+    color: #999999;
+    flex-grow: 1;
+    margin-top: 43rpx;
+}
+.propara .name{
+    color: #EC4543;
+    font-size: 24rpx;
+    margin-right: 9rpx;
+    display: inline-block;
+}
+.proprice {
+    color: #EC4543;
+    display: inline-block;
+    font-size: 28rpx;
+}
+.proprice text{
+    font-size: 42rpx;
+}
+
+.close {
+    width: 32rpx;
+    height: 32rpx;
+    margin-top: 18rpx;
+}
+
+.proskulist {
+    padding: 0 .30rpx;
+    margin-bottom: 50rpx;
+}
+
+.add-icon {
+    width: 56rpx;
+    height: 56rpx;
+}
+
+.s-le {
+    height: 90rpx;
+    line-height: 90rpx;
+    font-size: 32rpx;
+    color: #141414;
+    margin-left: 20rpx;
+}
+
+.ul-li {
+    background-color: #F8F8F8;
+    color: #333333;
+    height: 56rpx;
+    line-height: 56rpx;
+    font-size: 26rpx;
+    padding: 0 17rpx;
+    float: left;
+    margin-right: 20rpx;
+    margin-bottom: 30rpx;
+    border: 1px solid #F8F8F8;
+}
+
+/* p{height: .9rem; line-height: .9rem; font-size: .32rem; color: #333}
+        ul{overflow: hidden; margin-bottom: .4rem;
+            li{background-color: #eee; color:#666666; height: .44rem; line-height: .44rem; font-size: .26rem; padding: 0 .1rem; float: left; margin-right: .2rem; margin-bottom:.2rem;  }
+            li.curr{color: #fff; background-color: #e71f19}
+        }
+    }
+        .pronum{ display: flex;
+            img{width:.42rem; height: .42rem; }
+
+        }
+    }
+} */
+.pronum {
+    display: flex;
+    float: right;
+
+}
+
+.pronumcon {
+    /* display: flex;
+    justify-content: flex-end;
+    padding-bottom: 50rpx; */
+    padding:0 30rpx;
+    box-sizing: border-box;
+    margin-bottom: 200rpx;
+}
+.pronumcon .name{
+    float: left;
+    font-size: 28rpx;
+    color: #141414;
+}
+
+.label {
+    height: 56rpx;
+    line-height: 56rpx;
+    padding: 0 37rpx;
+    color: #333333;
+    font-size: 28rpx;
+    background-color: #F6F6F6;
+    margin: 0 2rpx;
+}
+
+.tab-box {
+    max-height: 400rpx;
+    overflow-y: auto;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+}
+
+.ul-li-active {
+    background-color: #ffeded;
+    color: #CA2519;
+    border: 1px solid #E33F44;
+    box-sizing: border-box;
+}

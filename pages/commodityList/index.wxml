@@ -1,0 +1,132 @@
+<view class='flex commonHead' style='color:{{myProperty.color?myProperty.color:"#000"}};background:{{myProperty.bg_color?myProperty.bg_color:"white"}};height:{{commonHeadHeight.titleHeight}}px; position:fixed'>
+	<view class='commonHead-wrap flex'>
+		<!-- 0:无返回；1：返回上一级；2：home -->
+		<view class='commonHead_left'>
+			<view class='commonHead_left_back' bindtap='commonHead_left_back'></view>
+		</view>
+		<view class='commonHead_right flex'>
+			<view class='commonHead_right_text line1'>
+				<view bindtap="jdshop" class="{{tabs=='jdshop'?'line1Active':''}}" data-id="jdshop">京东商城</view>
+				<view bindtap="hotelhot" wx:if="{{hotHotelIfShow}}" class="{{tabs=='hotelhot'?'line1Active':''}}" data-id="hotelhot">酒店爆品</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view style="width:750rpx;height:{{commonHeadHeight.titleHeight}}px"></view>
+
+
+<!-- 京东商城 -->
+<view wx:if="{{tabs=='jdshop'}}">
+
+  <view class="banner_cont" style="background:{{bannerBg}}">
+    <!-- 搜索 -->
+    <searchInput default="{{searchDefault}}" type="white" bind:searchBind="searchBind"></searchInput>
+    <!-- banner -->
+    <swipers imgUrls="{{imgUrls}}" height="300"></swipers>
+  </view>
+	<!-- 金刚位 -->
+	<view class="superman">
+		<scroll-view scroll-x="true" class="scroll-view-x" scroll-with-animation="true" scroll-left='0' bindscroll="getleft">
+			<view style="padding-top:40rpx;">
+				<view class="navigator_second" wx:for="{{iconData}}" data-item="{{item}}" wx:key="indexTypesone" bindtap="onIcon" wx:if="{{index%2==0}}">
+					<image class="navigator_icon" src="{{item.img_url}}"></image>
+					<text class="navigator_name">{{item.name}}</text>
+				</view>
+			</view>
+			<view style="padding-top:28rpx">
+				<view class="navigator_second" wx:for="{{iconData}}" data-item="{{item}}" wx:key="indexTypesone" bindtap="onIcon" wx:if="{{index%2==1}}">
+					<image class="navigator_icon" src="{{item.img_url}}"></image>
+					<text class="navigator_name">{{item.name}}</text>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+
+	<view class="regions">
+		<view class="community" bindtap="goCommunity">
+			<image src="http://image.zhiding365.com/2020/9/11/02fe27d2-4b97-4169-9968-949d5be05b2f.png" class="community_logo"></image>
+			<view>社群赚</view>
+			<image src="http://image.zhiding365.com/2020/9/11/07839773-46a3-4cf7-a72c-823afde6e857.png" class="gocommunity"></image>
+		</view>
+		<view class="strategy" bindtap="goStartegy">
+		<image src="http://image.zhiding365.com/2020/9/11/86bd6ccd-b8ca-47f4-bea1-628ced777368.png" class="strategy_logo"></image>
+			<view>攻略</view>
+			<image src="http://image.zhiding365.com/2020/9/11/07839773-46a3-4cf7-a72c-823afde6e857.png" class="gocommunity"></image>
+		</view>
+	</view>
+  <!-- 活动版块 推荐商品 -->
+  <view class="active_box">
+    <image class="active_img" src="{{recommendImg}}"></image>
+    <view class="active_shop" wx:for="{{recommendList}}" wx:for-index="index" wx:key="index" data-item="{{item}}" bindtap="jdDetail">
+      <image mode="aspectFill" src="{{item.img}}"></image>
+      <view class="price">
+        <view>¥{{item.vipPrice}}</view>
+        <view>¥{{item.oPrice}}</view>
+      </view>
+    </view>
+  </view>
+
+
+
+	<!-- 火热爆品 -->
+	<view class="explosive">
+		<view class="explosive_top">火热爆品</view>
+
+    <!-- 分类 -->
+    <view class="two_class">
+      <scroll-view scroll-x class="two_scroll_view">
+        <view wx:for="{{topIcon}}" wx:key="index" class="{{twoIndex==index?'two_tab_activered':'two_tab_item'}}" bindtap="onTwoItemClick" data-item="{{item}}" data-idx="{{index}}">
+          <view>{{item.class_name}}</view>
+        </view>
+      </scroll-view>
+    </view>
+
+		<!-- <view wx:for="{{jdList}}" class="explosive_goodinfo" data-item="{{item}}" bindtap="jdDetail" wx:for-index="index" wx:key="index" style="height:{{isExclusiveRobot==0?'':'390rpx'}}">
+      <image class="top_num" src="{{jdListIcon[index]}}"></image>
+      <shopItems list="{{item}}"></shopItems>
+		</view> -->
+		<view wx:for="{{jdList}}" wx:for-item="shopItemData" class="explosive_goodinfo" data-item="{{shopItemData}}" bindtap="jdDetail" wx:key="shopTypeItem" style="height:{{isExclusiveRobot==0?'':'390rpx'}}">
+			<shopItem shopItemData="{{shopItemData}}" bind:handleMyShop="handleMyShop" bind:handleCopy="handleCopy" bind:handleShare="handleShare" bind:handleAdd="handleAdd"></shopItem>
+		</view>
+	</view>
+</view>
+<poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+
+
+
+<!-- 酒店爆品 -->
+<view class="content" wx:if="{{tabs=='hotelhot'}}">
+	<view class="matter">
+		<view class="tabs" style="margin-bottom:20rpx">
+			<view class="{{tab[0] ? 'tab active' : 'tab'}}" catchtap="changetab" data-idx="0" >特价商品</view>
+			<view class="{{tab[1] ? 'tab active' : 'tab'}}" catchtap="changetab" data-idx="1" >酒店套餐</view>
+		</view>
+		<view wx:for="{{shopData}}" wx:for-item="shopItemData" class="explosive_goodinfo" data-obj="{{shopItemData}}" bindtap="commodityShow" wx:key="shopTypeItem" style="height:{{isExclusiveRobot==0?'':'390rpx'}}">
+			<shopItem shopItemData="{{shopItemData}}" bind:handleMyShop="handleMyShop" bind:handleCopy="handleCopy" bind:handleShare="handleShare" bind:handleAdd="handleAdd"></shopItem>
+		</view>
+		<view style="text-align:center" wx:if="{{shopData.length == 0}}">
+			<view>
+				<image class="wh-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com//yuetao//image//2020-06-28//14//yuelvhuie9djEwGZol1593324395.jpg"></image>
+			</view>
+			<view class="wh">
+				<text>商户正在努力上货中...</text>
+			</view>
+		</view>
+	</view>
+</view>
+
+
+
+<!-- 机器助理 -->
+<movable-area wx:if="{{isExclusiveRobot == 1}}">
+	<movable-view x="{{x}}" y="{{y}}" direction="all" bindtap="transmit">
+		<image class="kefu" src="http://image.zhiding365.com/2020/7/30/7a892f82-c7f7-4a39-b292-bee70a8a55b5.png"></image>
+	</movable-view>
+</movable-area>
+
+
+
+
+
+
+<!-- <my-bottom icon="JdIconImg" type="home"></my-bottom> -->

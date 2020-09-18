@@ -1,0 +1,40 @@
+<!--components/DiscountPopup/index.wxml-->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{isShow}}" catchtouchmove="disMove"></view>
+<view class="popup" wx:if="{{isShow}}">
+	<view class="title">
+		<view>价格明细</view>
+		<image src="{{close}}" bindtap="closePoPup"></image>
+	</view>
+
+	<view class="roomRateItem">
+		<view class="key">房费</view>
+		<view class="value">¥{{price}}</view>
+	</view>
+	<view class="item">
+		<view class="key">限时优惠</view>
+		<view class="value">0</view>
+	</view>
+  <view class="border"></view>
+	<view class="roomRateItem">
+		<view class="key">优惠</view>
+		<view class="value">¥0</view>
+	</view>
+	<view class="item">
+		<view class="key">优惠券抵扣</view>
+		<view class="value">¥0</view>
+	</view>
+	<view class="item">
+		<view class="key">积分抵扣</view>
+		<view class="value">¥0</view>
+	</view>
+	<view class="item">
+		<view class="key">限时优惠</view>
+		<view class="value">0</view>
+	</view>
+  <view class="border"></view>
+	<view class="roomRateItem">
+		<view class="key">总付金额：</view>
+		<view class="Lupay">¥{{price}}</view>
+	</view>
+  <!-- <view class="lookDetail">查看酒店详情</view> -->
+</view>

@@ -1,0 +1,33 @@
+<!--hotel/pages/couponCenter/couponCenter.wxml-->
+<view class="coupon" wx:for="{{couponList}}" wx:key="couponList">
+	<view class="couponCenter_top" wx:if="{{item.channelType==2}}">
+		<view class="dealer_img">
+			<image src="{{item.hotelImg}}"></image>
+		</view>
+		<view class="dealer_content">
+			<view class="dealer_title">{{item.dealerName}}</view>
+			<view class="dealer_point">{{item.hotelScore}}|{{item.satisfaction}}</view>
+		</view>
+		<view class="dealer_hotel">进店</view>
+	</view>
+	<view class="couponCenter">
+		<view class="coupon_left">
+			<view class="coupon_left_top">
+				<view class="coupon_left_price"><text>¥</text> <text>{{item.reducePrice}}</text></view>
+				<view class="coupon_left_desc">满{{item.fullPrice}}元可用</view>
+			</view>
+			<view class="coupon_left_cent">
+				<view class="coupon_left_cent_type">{{item.channelTypeName}}</view>
+				<view class="coupon_left_text">{{item.useChannelTypeName}}</view>
+			</view>
+		</view>
+		<view class="coupon_right">{{item.getStatus==0?'立即领取':'立即使用'}}</view>
+	</view>
+	<view class="coupon_vip">
+		<image src="http://image.zhiding365.com/2020/9/10/33938824-f8af-419b-9bb8-2c75a5c55e0e.png"></image>
+		<view>直订会员</view>
+	</view>
+  <view class="getStatus">
+    <image src="http://image.zhiding365.com/2020/9/10/79502343-7fce-48df-a77b-ca73753abadf.png"></image>
+  </view>
+</view>

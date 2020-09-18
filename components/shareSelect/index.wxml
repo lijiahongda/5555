@@ -1,0 +1,24 @@
+<view class="poster-main" wx:if="{{showstatus == '1'}}">
+		<view class="poster-mask" bindtap="handleCloseDialog"></view>
+		<view class="footer-dialog">
+				<view class="footer-title">分享到</view>
+				<view class="footer-dialog-hea">
+						<view class="fl-box">
+								<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-26/13/yuelvhuiMoSIlQgviM1595741771.png"></image>
+								<button  hover-class="none" class="btn-share"
+									style="width:120rpx"
+								 open-type="share">分享</button>
+								<view class="title">微信</view>
+						</view>
+						<view class="fl-box" bindtap="copyBtn" wx:if="{{copyIcon}}">
+								<image class="" src="http://image.zhiding365.com/2020/7/31/195fa10f-83b5-453b-9a7b-fd59cb4f7ca0.png"></image>
+								<view class="title">复制链接</view>
+						</view>
+						<view class="fl-box" bindtap="handleShowPosterStatus">
+								<image class="" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-26/13/yuelvhuifCDGJm3U5J1595741805.png"></image>
+								<view class="title">海报</view>
+						</view>
+				</view>
+				<view class="footer-dialog-bot" bindtap="handleCloseDialog">取消</view>
+		</view>
+</view>

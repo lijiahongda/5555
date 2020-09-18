@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "poster":"/components/poster/index",
+    "shareSelect":"/components/shareSelect/index",
+    "title": "/components/goodsDetail/title/title",
+    "select": "/components/goodsDetail/select/select",
+    "comment": "/components/goodsDetail/comment/comment",
+    "recommend": "/components/goodsDetail/recommend/recommend",
+    "CPSShare":"/components/CPSShare/CPSShare"
+  },
+  "navigationBarTitleText": "商品详情"
+}

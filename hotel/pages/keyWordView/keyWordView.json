@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "searchList": "/components/searchList/searchList"
+  },
+  "navigationStyle":"custom"
+}

@@ -1,0 +1,90 @@
+<view class="home_top" style="background:{{backBg}}">
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" bindchange="swiperChange">
+		<block wx:for="{{carouselImgs}}" wx:key="carousel_imgs">
+			<swiper-item>
+				<image src="{{item.img}}" class="bannerimage" ></image>
+			</swiper-item>
+		</block>
+	</swiper>
+	<!-- 酒店查询 -->
+	<view class="listContent">
+		<view class="list_title">国内·港澳台</view>
+		<view class="Location">
+			<view class="loc" bindtap="selectCity">
+				<text>{{gnCity}}</text>
+			</view>
+			<view class="address" >
+				<view>{{gnAddressN}}</view>
+			</view>
+			<view class="CurrentPositioning" bindtap="locationBindtap">
+				<image src="http://image.zhiding365.com/2020/9/7/dcee453e-4cdc-48d0-8bef-c581b7bc1ed8.png"></image>
+				<view>当前位置</view>
+			</view>
+		</view>
+		<view class="timeSelect">
+			<view class="CheckTime" bindtap="selectTime">
+				<view>{{checkInDate}}</view>
+				<view class="timeTips">今天</view>
+			</view>
+			<view class="Connector"></view>
+			<view class="CheckTime" bindtap="selectTime">
+				<view>{{checkOutDate}}</view>
+				<view class="timeTips">明天</view>
+			</view>
+			<view class="SeveralNights" bindtap="selectTime">
+				<view>共1晚</view>
+			</view>
+		</view>
+
+		<view class="screenN" bindtap="keyWordView">
+			<view>关键字/位置/品牌/酒店名</view>
+			<image src="{{right}}"></image>
+		</view>
+		<view class="screenN" bindtap="SelectPriceStar">
+			<view class="">{{priceText}} / {{starRateName}}</view>
+			<image src="{{right}}"></image>
+		</view>
+		<view class="PriceSetting" bindtap="PriceSetting">酒店查询</view>
+
+		<view class="list_bottom">
+			<view class="bottom_left">
+				<image src="http://image.zhiding365.com/2020/9/8/dbca6276-eeda-488d-8939-6cf176f5e667.png"></image>
+				<view class="bottom_text">24小时客服</view>
+			</view>
+			<view class="bottom_left">
+				<image src="http://image.zhiding365.com/2020/9/8/6872b912-d689-4d1d-9382-de3fb91bcdae.png"></image>
+				<view class="bottom_text">住酒店得豪礼</view>
+			</view>
+		</view>
+	</view>
+	<!-- 小icon -->
+	<view class="home_icon">
+		<view wx:for="{{hotelList}}" wx:key="hotelList" class="icon_list" data-item="{{item}}" bindtap="hotelList">
+			<image src="{{item.img}}"></image>
+			<view>{{item.title}}</view>
+			<view class="vipCla" wx:if="{{item.id==3||item.id==4}}">会员专享</view>
+		</view>
+	</view>
+</view>
+
+	<!-- 本地生活 -->
+<view class="selfLife">
+  <view class="selfLife_tit">
+    <view>本地生活</view>
+    <view class="selfLife_text">让出行变得更方便，更实惠</view>
+  </view>
+  <view class="selfLife_icon">
+		<view wx:for="{{lifeList}}" wx:key="lifeList" class="icon_list" data-item="{{item}}" bindtap="lifetap">
+			<image src="{{item.img}}" class="selfLife_image"></image>
+			<view>{{item.title}}</view>
+      <view class="selfLife_content">{{item.subtitle}}</view>
+		</view>
+	</view>
+</view>
+
+
+
+<!-- 选择日期 -->
+<selectTime isSelectTime="{{isSelectTime}}" bind:onLoadFun="onLoadFun"></selectTime>
+<!-- 选择星级 -->
+<PriceStar showModalStatus="{{showModalStatus}}" id="PriceStar" bind:PriceStarFun="PriceStarFun"></PriceStar>

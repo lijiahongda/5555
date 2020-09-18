@@ -1,0 +1,53 @@
+
+<import src="../../../../wxParse/wxParse.wxml" />
+
+<view class="">
+  <view class="" hover-class="none" hover-stop-propagation="false">
+    <view class="list-label-one">
+      <view class="tp" hover-class="none" hover-stop-propagation="false">可提现金额：￥{{walletData.withdraw}}</view>
+      <view class="bt" hover-class="none" hover-stop-propagation="false">请下载直订APP，在个人中心-钱包中提现</view>
+    </view>
+    <view class="list-label">
+      <view class="hea">
+        <view class="fl">
+          <view class="name">提现历史</view>
+        </view>
+        <view class="fr"  bindtap="handleDetail">
+          <view class="label">详情</view>
+          <image class="right-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+        </view>
+      </view>
+    </view>
+    <view class="list-label">
+      <!-- <view class="hea">
+        <view class="fl">
+          <view class="name">结算清单</view>
+        </view>
+        <view class="fr" data-ourl="/page/CommunityEarn/pages/Promotion/Promotion" bindtap="nextPage">
+          <view class="label">详情</view>
+          <image class="right-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png" />
+        </view>
+      </view> -->
+    </view>
+  </view>
+  <view class="intro-box">
+    <view class="title">{{walletData.title}}</view>
+
+    <view >
+						<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+    </view>
+    <!-- <view class="" hover-class="none" hover-stop-propagation="false">
+      1.本月预估推广收益：【下单时间】在本月内的推广商品订单佣金总和。
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      2.本月可提现收益额：【完成时间】在上月内的推广商品订单佣金总和。
+    </view>
+    <view class="" hover-class="none" hover-stop-propagation="false">
+      注：退货订单会扣除佣金。换货订单会重新计算可提现时间。
+    </view> -->
+    <view class="bot-wrap" data-item="{{videoData}}" bindtap="webUrlVideo">
+      <view class="txt">如何高质量拉群</view>
+      <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-16/17/yuelvhuisZVeEwuqWe1597569751.png"></image>
+    </view>
+  </view>
+</view>

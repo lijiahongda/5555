@@ -1,0 +1,35 @@
+<!--components/PriceStar/index.wxml-->
+<view class="commodity_screen" bindtap="hideModal" catchtouchmove="disMove" wx:if="{{showModalStatus}}"></view>
+
+<view animation="{{animationData}}" catchtouchmove="disMove" class="commodity_attr_boxs" style='top:{{marginTop?marginTop:""}};bottom:{{marginTop?"":"0rpx"}}' wx:if="{{showModalStatus}}">
+	<view class="title">
+	</view>
+	<view class='priceStarView'>
+		<view class='priceStarViewPriceView'>
+			<view class='priceViewName'>不限
+				<text>（单选）</text>
+			</view>
+			<view class='priceViewSelectView'>
+				<view class="priceViewSelectViewCell {{item.key==1?'priceViewSelectViewCellSelcet':''}}" wx:for="{{price}}" wx:key="price" wx:for-index="id" data-id="{{id}}" bindtap='clickPrice'>{{item.text}}</view>
+			</view>
+
+		</view>
+		<view class='starView'>
+			<view class='starViewTitleView'>
+				<view class='starViewTitleViewStar'>不限</view>
+				<view class='starViewTitleViewDescribe'>（可多选）</view>
+			</view>
+			<view class='starViewListView'>
+				<view class="starList {{item.condition == 1 ? 'starListSelect':''}}" wx:for="{{starList}}" wx:key="starList" wx:for-index="id" data-id="{{id}}" bindtap='clickStarList'>
+					<image class='starListImage' style="display:{{item.condition == 1 ?'block':'none'}}" src="{{item.condition == 1 ?'https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-04-17/13/yuelvhuiPA7BHFeQHJ1587103152.png':''}}"></image>
+					<view class="starListName {{item.condition == 1 ? 'starListNameSelcet':''}}">{{item.name}}</view>
+				</view>
+			</view>
+		</view>
+
+		<view class='emptyConfirmView'>
+			<view class='empty' bindtap='emptyPriceStar'>清空选择</view>
+			<view class='confirm' bindtap='confirmPriceStar'>确定</view>
+		</view>
+	</view>
+</view>

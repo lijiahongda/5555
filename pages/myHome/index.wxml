@@ -1,0 +1,9 @@
+<personal status="2"/>
+
+<movable-area wx:if="{{false}}">
+  <movable-view x="{{x}}" y="{{y}}" direction="all" bindtap="transmit">
+			<button class="kefu"  hover-class="none"  open-type="contact" bindcontact="handleContact">
+				<image src="http://image.zhiding365.com/2020/7/27/3b28b7c9-a807-4ed1-9c42-5b0e91d23e8f.png"></image>
+			</button>
+  </movable-view>
+</movable-area>

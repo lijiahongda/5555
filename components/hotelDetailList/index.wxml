@@ -1,0 +1,76 @@
+<!--components/hotelDetailList/index.wxml-->
+<view class="content">
+    <view class="contentBox" wx:for="{{ratePlan}}" wx:for-index="index" wx:key="ratePlan" bindtap='roomDetail' data-item="{{item}}" data-index="index">
+        <view class="roomsTypes">
+            <view class="image">
+                <image src="{{item.image}}"></image>
+            </view>
+            <view class="Info">
+                <view class="title">
+                    <view>{{item.roomName}}</view>
+                    <view class="OnlinePay">在线支付</view>
+                </view>
+                <view class="element">
+                    <text>{{item.desc}}</text>
+                </view>
+                <view class="label">
+                    <view wx:for="{{item.tags}}" style="background:{{index == 0?'rgba(237,123,124,0.24)':index == 1?'rgba(242,173,83,0.24)':''}};color:{{index == 0?'#ED7B7C':index == 1?'#F2AD53':''}};" wx:for-index="index" wx:key="label">{{item}}</view>
+                </view>
+                <view class="price" catchtap="Retract" data-index="{{index}}">
+                    <view>¥{{item.price}}</view>
+                    <image src="{{item.isSelect?top:bottom}}" ></image>
+                </view>
+            </view>
+        </view>
+        <view class="rpList" wx:if="{{item.isSelect}}">
+            <view class="listBox" wx:for="{{item.plans}}" wx:key="plans" wx:for-item="plans" wx:for-index="index"  >
+                <view class="list" style="border:{{(index == list.length-1)?'0rpx':''}}">
+                    <view class="rpInfo">
+                        <view><text>{{plans.ratePlanName}}</text></view>
+                        <view class="isCancel">
+                            <view style="color:{{(plans.rpType == 1)?'#EC4543':'#64B1F8'}}" class='supplier'>{{plans.rpType==1?plans.oldSourceName:plans.sourceName}}</view>
+                            <view>{{plans.changeRule}}</view>
+                            <!-- <view style="color:#EC4543" >仅剩{{1}}间</view> -->
+                        </view>
+                    </view>
+                    <view class="rpPrice">
+                        <view class="priceBox">
+                            <view class="viewOne" wx:if='{{plans.rpType==1}}'>原价¥{{plans.price}}</view>
+                            <view class="viewTwo">
+                                <text>¥</text>
+                                <text wx:if='{{plans.rpType==1}}' >{{plans.vipPrice}}</text> 
+                                <text wx:else>{{plans.price}}</text> 
+                            </view>
+                            <view class="viewThree" wx:if='{{plans.rpType==1}}'>会员已省{{plans.discountMoney}}元</view>
+                        </view>
+                        <image wx:if='{{plans.rpType==1}}' class="OrderOnline"  data-type= '1' data-plans="{{plans}}" data-roomid="{{item.roomId}}" src="{{huiyun}}" catchtap="BookNow"></image>
+                        <image wx:else class="OrderOnline"  data-plans="{{plans}}" data-roomid="{{item.roomId}}" data-type='2' src="{{line}}" catchtap="BookNow"></image>
+                    </view>
+                </view>
+                <!-- <view class="youhui" > -->
+                <view class="youhui" wx:if='{{plans.rpType==1}}'>
+                    <image src="{{hot}}"></image>
+                    <view>可享¥{{plans.discountMoney}}元优惠</view>
+                </view>
+            </view>
+        </view>
+        <roomDetail roomDetailInfo="{{roomDetailInfo}}" isShow="{{isShow}}" bind:closeRoomDetail="closeRoomDetail"></roomDetail>
+    </view>
+</view>
+
+<!-- 是否开通会员 -->
+<view class="accessMember" wx:if='{{accessMember}}'>
+  <view>
+    <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-31/15/yuelvhuikGbvzaEeSR1596179640.png" class="close" bindtap="switch"></image>
+    <view class="detail">
+      <view class="header">友情提示</view>
+      <view class="tip">尊敬的用户：</view>
+      <view class="desc">您还不是会员哦，只能全价预订酒店， 开通会员后立即享受会员价。</view>
+      <view class="note">直订联名卡会员享最低1元住酒店！</view>
+      <view class="button">
+        <view bindtap="handleBook">全价预订</view>
+        <view bindtap="goButVip">立即成为会员</view>
+      </view>
+    </view>
+  </view>
+</view>

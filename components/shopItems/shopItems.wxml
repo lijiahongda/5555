@@ -1,0 +1,19 @@
+<view class="shop_cont">
+  <image class="shop_img" mode="aspectFill" src="{{list.picurl}}"></image>
+  <view class="shop_ri">
+    <view class="shop_title">{{list.name}}</view>
+    <view class="shop_detail">
+      <view class="shop_price">
+        <view>¥{{list.oprice}}</view>
+        <view>特供价 <text style="font-size:20rpx">¥</text> <text style="font-size:32rpx">{{list.vipPrice}}</text></view>
+      </view>
+      <view class="shop_btn">
+        <view class="discount">
+          <image src="http://image.zhiding365.com/2020/8/19/5e8ae03c-afde-4ca9-89e6-084201b19ff2.png"></image>
+          <view>用券直降<text style="font-size:30rpx">{{list.discount}}</text><text style="font-size:22rpx">元</text></view>
+        </view>
+        <view class="btn">马上抢</view>
+      </view>
+    </view>
+  </view>
+</view>

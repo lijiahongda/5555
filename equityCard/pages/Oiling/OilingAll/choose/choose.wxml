@@ -1,0 +1,78 @@
+<view class="ctop">
+  <view class="top_cont">
+    <image mode="aspectFill" src="{{info.logoSmall}}" class="ctop_img"></image>
+    <view class="cont_right">
+      <view class="title">{{info.name}}</view>
+      <!-- atrr.qiyou.flag==1 -->
+      <view class="price">
+        <view class="price_le"><text style="font-size:24rpx">¥</text>{{attrpAct.priceYfq}}</view>
+        <view style="color:#fff">距您   0.88 km</view>
+      </view>
+      <view class="cont_btn">
+        <view wx:for="{{attrpAct.tag}}" wx:for-index="index" wx:key="index">
+          <text>{{item}}</text>
+        </view>
+        <!-- <view>
+          <text>比国标价</text>
+          <image src="http://image.zhiding365.com/2020/7/17/c97b435e-7867-4e21-871c-a6f49a4a4dfa.png"></image>
+          <text>降0.70</text>
+        </view> -->
+      </view>
+    </view>
+  </view>
+  <view class="location">
+    <view class="loc">
+      <image src="http://image.zhiding365.com/2020/7/17/2ee356bb-4864-4d57-ad79-950d02a73900.png"></image>
+      <view>{{info.address}}</view>
+    </view>
+    <view class="navigation" bindtap="map">
+      <image src="http://image.zhiding365.com/2020/7/17/2120d53b-bb37-476a-9e0b-dcc84ccc45a1.png"></image>
+      <view>导航</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="oiling">
+  <view class="list">
+    <view class="tit">选择商品</view>
+    <view class="list_cont">
+      <view class="{{shopAct.id == item.id ?'list_choose':''}} " wx:for="{{goods}}" wx:for-index="index" wx:key="index" bindtap="chooseShop" data-index="{{index}}">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="tit">选择油号</view>
+    <view class="list_cont">
+      <view class="{{attrpAct.id == item.id ?'list_choose':''}}" wx:for="{{attr.qiyou}}" wx:for-index="index" wx:key="index" bindtap="chooseAttr" data-index="{{index}}" data-item="{{item}}">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="tit">选择枪号</view>
+    <view class="list_cont">
+      <view class="{{toolAct.id == item.id ?'list_choose':''}}" wx:for="{{attr.qiyou[attrIndex].tool}}" wx:for-index="index" wx:key="index" bindtap="chooseTool" data-item="{{item}}">{{item.name}}</view>
+    </view>
+  </view>
+</view>
+
+<view class="tips">
+  <view class="tipsHead"> 
+      <image src="http://image.zhiding365.com/2020/7/17/cf8495ed-b64e-4ec5-b968-ca4b83ca937c.png"></image>
+      <view style="font-size:31rpx;font-weight: 500;color: #f7263c;">重要提示</view>
+  </view>
+  <view class="important">
+    <view class="importantTxts">请务必
+    <text style="color:#9A0010;font-weight:500"> 
+    先到达油站 </text>与工作人员确认后再付款，切勿先买单后加油，避免异常订单的产生！ </view>
+  </view>
+</view>
+
+
+<view class="postt">
+  <view class="btn" bindtap="btn">确认</view>
+
+  <view class="tips_btn">
+    <view>若无您选择的油枪号，请联系油站工作人员</view>
+    <view>支付前请确认加油站是否正确</view>
+  </view>
+
+</view>

@@ -1,0 +1,9 @@
+<!--hotel/pages/payFail/index.wxml-->
+<view class="content">
+  <image class="icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-21/19/yuelvhui3Tu7ES3Mz21595329520.png"></image>
+  <view class="text">支付失败</view>
+  <view class="btns">
+    <view bindtap="orderForm">重新下单</view>
+  </view>
+</view>
+

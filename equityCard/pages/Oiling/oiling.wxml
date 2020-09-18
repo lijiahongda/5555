@@ -1,0 +1,123 @@
+<!--pages/Oiling/oiling.wxml-->
+<view class="main">
+	<!-- 提示语句 -->
+	<view class="headTop">
+			<view class="tishi">油站时时调价，以支付时价格为准</view>
+			<navigator class="kefu" url="/equityCard/pages/service/service">帮助&客服</navigator>
+	</view>
+	<view style="position:relative">
+		<!-- tab start-->
+		<view class="tabs" catchtouchmove='true'>
+			<view class="swiper-tab tabTitle">
+				<view class="swiper-tab-item {{oilling==1?'active':'noactice'}}" data-current="1" bindtap="clickTab">{{name?name:'请选择'}}
+					<image src="http://image.zhiding365.com/2020/7/17/be71ba80-80e6-4839-b112-54af1da80de5.png"></image>
+				</view>
+				<text>|</text>
+				<view class="swiper-tab-item {{oilling==2?'active':'noactice'}}" data-current="2" bindtap="clickTab">{{names}}
+					<image src="http://image.zhiding365.com/2020/7/17/be71ba80-80e6-4839-b112-54af1da80de5.png"></image>
+				</view>
+			</view>
+			<view class="tabBoxs" class="hide{{showView?'':'show'}}">
+				<!-- 1 -->
+				<view class="tabBox" hidden='{{oilling!=1}}'>
+					<!-- 背景色 -->
+					<view class="bg" bindtap="bgBox"></view>
+					<view class="box">
+						<view class="kuai" wx:for="{{fuelNumber}}" wx:for-item="item" wx:for-index="item.id" wx:key="item.id">
+							<view class="title">{{item.name}}</view>
+							<view class="tabList">
+								<view wx:for="{{item.list}}" wx:for-item="k" wx:key="index" class="{{current === k.id ? 'active' : 'noactice' }}" data-id="{{k.id}}" data-name="{{k.name}}" catchtap="changeStyle">
+									{{k.name}}
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<!-- 2 -->
+				<view class="tabBox" hidden='{{oilling!=2}}'>
+					<!-- 背景色 -->
+					<view class="bg" bindtap="bgBox"></view>
+					<view class="box">
+						<view class="kuai">
+							<!-- <view class="title">{{item.name}}</view> -->
+							<view class="tabList">
+								<view wx:for="{{sort}}" wx:for-item="g" wx:for-index="g.id" wx:key="g.id" class="{{current2 === g.id ? 'active' : 'noactice' }}" data-id="{{g.id}}" data-names="{{g.name}}" bindtouchend="changeStyle1">
+									{{g.name}}
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<!-- tab end-->
+
+		<!-- 列表 start -->
+		<view class="listBoxs">
+			<view class="list" wx:for="{{list}}" wx:if="{{list.length}}" wx:for-item="item" wx:key="index" bindtap="goDetail" data-item="{{item}}" data-type=''>
+				<view class="imgBoxs">
+					<image class="listImg" mode="{{mode}}" src="{{item.logoBig}}"></image>
+					<view class="txtBoxs">
+						<view class="title">{{item.title}}</view>
+						<view class="priceTxt">
+							<view class="price">¥{{item.price}}</view>
+							<view class="kms">距您{{item.distance}}</view>
+						</view>
+						<view class="priceLine">
+							<view class="priceLineImgs">
+								<view>
+									<image src="http://image.zhiding365.com/2020/7/17/1f6dbdf4-2e08-467c-a125-29b4e8d80972.png"></image>
+								</view>
+								<text>已降¥{{item.discount}}</text>
+							</view>
+							<view class="txt">国际价格¥{{item.intPrice}}</view>
+						</view>
+					</view>
+					<!-- 弹窗 -->
+					<view class="modalBoxs" wx:if="{{modelShow && cont.id==item.id}}">
+						<view class="bgs"></view>
+						<view class="modalContent">
+							<image class="modalX" catchtap="modalX" src="http://image.zhiding365.com/2020/7/19/97e9cc6a-271f-48dc-b16c-273136acf498.png"></image>
+							<view class="modals">
+								<image class="modalError" src="http://image.zhiding365.com/2020/7/19/96fc0114-a9a7-461b-a11c-6aaa6cf415f9.png"></image>
+								<view class="modaError-txt">您当前位置不在该加油站内!</view>
+								<view class="txt">已选油站距离您过远，请确认是否支付到</view>
+								<view class="modalLogo">
+									<image class="logoSmall" src="{{item.logoSmall}}"></image>
+									<text>{{item.title}}</text>
+								</view>
+								<view class="modalBtns">
+									<view bindtap="goDetail" data-item="{{item}}" data-type='1'>继续支付</view>
+									<view catchtap="modalX">重新选择</view>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+				<view class="listBottom">
+					<view class="leftImg">
+						<image src="http://image.zhiding365.com/2020/7/17/0e13b7a4-4c9d-4107-ba8d-fbb99f7e6503.png"></image>
+						<text>{{item.address}}</text>
+					</view>
+					<view>
+						<image data-lat="{{item.lat}}" data-lng="{{item.lng}}" data-address="{{item.address}}" class="maps" catchtap="map" src="http://image.zhiding365.com/2020/7/17/a4dca679-d733-44ed-92b9-a80c36938724.png"></image>
+					</view>
+				</view>
+			</view>
+			<view wx:if="{{list.length==0}}" style="width:100%;text-align:center;margin-top:100rpx;">暂无记录</view>
+		</view>
+		<view style="width:750rpx;height:180rpx"></view>
+		<!-- 列表 end -->
+		<view class="xiala" wx:if="{{list.length < total}}">
+			<text>下拉加载更多</text>
+			<image src="https://yuntaifawu.com/public/xcximage/images/audio/gengduo.png"></image>
+		</view>
+
+		<!-- 底部 -->
+		<view class="bottom">
+			<view class="txt">严禁在加油站内进行直订推广否则封号</view>
+		</view>
+
+	</view>
+
+</view>

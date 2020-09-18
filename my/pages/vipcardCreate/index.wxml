@@ -1,0 +1,39 @@
+	<view class="banner_cont" style="background:url({{Detail.cardImage}});background-size:750rpx 330rpx">
+		<view class="card_top">
+			<view class="card1"><text>{{Detail.des1}}</text> <text>·</text> <text>{{Detail.des2}}</text></view>
+			<view class="card_num">
+				<image src="http://image.zhiding365.com/2020/8/21/baa87d9d-44ea-4755-b189-de3cf7c1d740.png"></image>
+				<view>{{Detail.des3}}</view>
+			</view>
+		</view>
+	</view>
+
+
+
+
+	<view class="card_price">
+		<view style="margin-top:32rpx">{{Detail.des4}}</view>
+		<view style="margin-top:8rpx"> <text>¥</text><text style="font-size:60rpx;font-weight: 600;">{{Detail.unionCardSubDTO.cardPrice}}</text><text>/{{Detail.deadLine}}</text></view>
+	</view>
+
+
+	<view class="coupon">
+		<view class="coupon_title">{{Detail.des5}}</view>
+		<view class="list" wx:for='{{Detail.coupons}}' wx:for-index="index" wx:key="index">
+			<view>{{item.couponName}}</view>
+			<view>{{item.couponType==2?item.prefAmount:item.couponTypeName}}×{{item.count}}张</view>
+		</view>
+	</view>
+
+
+
+ <!-- // "couponType": 2,  //优惠卷类型        Discount(1, "折扣券"), Cash(2, "现金券"), Exchange(3,"兑换券"), FullSubtraction (4,"满减券"),GiftCoupon(5,"赠品券"); -->
+	<view class="bottom no_share" style="background:url(http://image.zhiding365.com/2020/8/28/5a44137b-1e73-409e-8fc0-d5d0817c66f2.png);background-size: 750rpx 88rpx;background-repeat: no-repeat;">
+		<view class="pay share_pay">
+			¥<text style="font-size:48rpx">{{Detail.unionCardSubDTO.cardPrice}}</text>/{{Detail.deadLine}}
+		</view>
+		<view class="pays">
+			<view class="open" bindtap="open">去支付</view>
+		</view>
+	</view>
+

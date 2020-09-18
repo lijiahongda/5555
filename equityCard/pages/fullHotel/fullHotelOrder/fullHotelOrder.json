@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "DiscountPopup":"/components/DiscountPopup/index",
+    "couponBook":"/components/couponBook/index"
+  },
+  "navigationStyle":"custom"
+}

@@ -1,0 +1,16 @@
+<view class="poster-main" wx:if="{{showstatus == '1'}}">
+	<view class="poster-mask" bindtap="handleBox">
+		
+	</view>
+		<view class="poster-wrapper" style="top:{{isIphoneX?'200':'126'}}rpx">
+			<image mode="widthFix" class="poster-wrapper-img" src="{{posterUrl}}" >
+				
+			</image>
+			<view class="btn-save" bindtap="handleSavePhoto">
+					保存到手机相册
+			</view>
+			<view class="btn-save btn-act" bindtap="showImg">
+					预览海报分享
+			</view> 
+		</view>
+</view>

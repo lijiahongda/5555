@@ -1,0 +1,335 @@
+page {
+  background: #fff;
+  min-height: 100%;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5.2%;
+  padding-right: 5.2%;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 60rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #999999;
+}
+
+.step .title {
+  margin-bottom: 10rpx;
+}
+
+.step .itemTow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.step .itemThree {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.step .active {
+  color: #E33F44;
+}
+
+.stepImage {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5.2%;
+  padding-right: 5.2%;
+  margin-top: 43rpx
+}
+
+.stepImage image {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.grayBorder {
+  width: 40%;
+  height: 2rpx;
+  border: 1px solid #f2f2f2;
+}
+
+.redBorder {
+  width: 40%;
+  height: 2rpx;
+  border: 1px solid #E33F44;
+}
+
+.GroupName {
+  width: 100%;
+  padding-left: 5.2%;
+  padding-right: 5.2%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 26rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #333333;
+  margin-top: 50rpx;
+  box-sizing: border-box;
+}
+
+.GroupName .NameContent {
+  width: 50%;
+  height: 70rpx;
+  background: #f2f2f2;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.GroupName .copy {
+  width: 13%;
+  height: 70rpx;
+  background: #e33f44;
+  border-radius: 10rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 27rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+}
+
+.oneImage {
+  width: 86%;
+  height: 600rpx;
+  margin-left: 7%;
+  margin-top: 50rpx;
+  margin-bottom: 20rpx;
+}
+
+.beCareful {
+  font-size: 30rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #e33f44;
+  padding-left: 5.2%;
+}
+
+.nextStep {
+  margin-left: 5.2%;
+  margin-right: 5.2%;
+  width: 89.6%;
+  height: 94rpx;
+  background: #e33f44;
+  border-radius: 20rpx;
+  margin-top: 100rpx;
+  font-size: 30rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  text-align: center;
+  line-height: 94rpx;
+  margin-bottom: 30rpx;
+}
+
+.Mask {
+  background-color: rgba(20, 20, 20, 0.5);
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9000;
+}
+
+.onePopup {
+  position: fixed;
+  top: 30%;
+  background-color: #fff;
+  border-radius: 25rpx;
+  width: 70%;
+  z-index: 10000;
+  left: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.onePopup .title {
+  font-size: 30rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #141414;
+  margin-top: 50rpx;
+  margin-bottom: 36rpx;
+}
+
+.onePopup .content {
+  padding-left: 9%;
+  padding-right: 9%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.onePopup .content text{
+  color: #E43F44;
+}
+
+.onePopup .but {
+  display: flex;
+  flex: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #f2f2f2;
+  height: 100rpx;
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.onePopup .but view {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.onePopup .but .sure {
+  color: #E33F44
+}
+
+.TwoTips {
+  width: 100%;
+  height: 80rpx;
+  background: #ffdcdd;
+  padding-left: 3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 34rpx;
+  margin-bottom: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #e33f44;
+}
+
+.TwoContent {
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #333333;
+  padding-left: 3%;
+  margin-bottom: 39rpx;
+}
+
+.TwoContent text {
+  color: #E33F44;
+}
+
+.TwoImg {
+  margin-left: 3%;
+  margin-right: 3%;
+  width: 94%;
+  height: 229rpx;
+  margin-bottom: 42rpx;
+}
+
+.ClickApply {
+  width: 56.9%;
+  margin-left: 21.55%;
+  height: 80rpx;
+  background: #f38843;
+  border-radius: 7rpx;
+  font-size: 33rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  text-align: center;
+  line-height: 80rpx;
+  margin-top: 40rpx;
+}
+
+.ThreeWxNum {
+  font-size: 25rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #333333;
+  padding-left: 3%;
+  margin-top: 55rpx;
+  margin-bottom: 33rpx;
+}
+
+.ThreeWxNum text {
+  color: #E33F44;
+}
+
+.ThreeContent {
+  padding-left: 3%;
+  padding-right: 3%;
+  width: 100%;
+}
+
+.ThreeContent .title {
+  font-size: 25rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #333333;
+  margin-bottom: 19rpx;
+}
+
+.ThreeContent .Subtitle {
+  font-size: 25rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #333333;
+  margin-top: 19rpx;
+  margin-bottom: 28rpx;
+}
+
+.ThreeCopy {
+  width: 80%;
+  margin-left: 10%;
+  height: 67rpx;
+  background: #e33f44;
+  border-radius: 7rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #ffffff;
+  line-height: 67rpx;
+  text-align: center;
+  margin-bottom: 27rpx;
+}
+
+.ThreeContent image {
+  width: 100%;
+}
+.mengceng{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+}

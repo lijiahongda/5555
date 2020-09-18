@@ -1,0 +1,10 @@
+/* pages/developing/index.wxss */
+.img{
+  text-align: center;
+}
+image{
+  width: 347rpx;
+  height: 346rpx;
+  display:inline-block;
+  margin-top: 260rpx;
+}

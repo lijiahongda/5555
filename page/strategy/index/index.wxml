@@ -1,0 +1,57 @@
+<view class="tab">
+	<view class="{{steps==0 ? 'active' : ''}}" bindtap="changeSteps" data-steps="0">新人上手</view>
+	<view class="{{steps==1 ? 'active' : ''}}" bindtap="changeSteps" data-steps="1">进阶学习</view>
+	<!-- <view class="{{steps==2 ? 'active' : ''}}" bindtap="changeSteps" data-steps="2">常见问题</view> -->
+	<view class="{{steps==3 ? 'active' : ''}}" bindtap="changeSteps" data-steps="3">邀请海报</view>
+</view>
+
+<!-- <view class="scontent" style="{{!hGroup?'height:850rpx;overflow:hidden;':''}}"> -->
+<!-- <view class="zzc" wx:if="{{status==0||status==3?true:false}}" catchtouchmove="{{true}}"></view> -->
+<!-- 审核流程 -->
+<view class="scontent">
+	<!-- 新人上手 -->
+	<view wx:if="{{steps==0}}" class="NewHands">
+		<swiper>
+			<block wx:for="{{banner}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item.image}}" mode="widthFix"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<view class="NewHandsList" wx:for="{{ListData}}" wx:key="ListData">
+			<view class="title">{{item.title}}</view>
+			<rich-text nodes="{{item.content}}"></rich-text>
+			<view class="fun">
+				<view class="button" wx:for="{{item.button}}" wx:key="button" wx:for-item="button">
+					<view class="buItem" style="position:relative;" bindtap="buItem" wx:if="{{button.type == 4}}" data-item="{{button}}">{{button.text}}
+						<button open-type="share" style="position:absolute;width:100%;height:100%;opacity:0;z-index:11;top:0;left:0;"></button>
+					</view>
+					<view class="buItem" bindtap="buItem" wx:else data-item="{{button}}">{{button.text}}</view>
+				</view>
+				<view class="video" wx:for="{{item.btn}}" wx:key="btn" wx:for-item="btn" data-item="{{btn}}" bindtap="webUrlVideo">
+					<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-30/22/yuelvhuiOfxtmOz6VZ1596120134.png"></image>
+					<view>{{btn.text}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 进阶学习 -->
+	<study wx:if="{{steps==1}}" />
+	<!-- 邀请海报 -->
+	<posters wx:if="{{steps==3}}" />
+	<view class="footer" wx:if="{{steps==0}}">
+		<view class="groupZ" bindtap="goGroup">查看我的智能助理</view>
+	</view>
+</view>
+<view style="height:100rpx">
+	
+</view>
+<view class="Mask" wx:if="{{isPopup}}" bindtap="selectPopup"></view>
+<view class="popup" wx:if="{{isPopup}}">
+	<view class="title">{{popupTitle}}</view>
+	<image bindtouchstart='timestart' bindtouchend='timeend' bindtap='saveImg' src="{{popupImage}}"></image>
+</view>
+
+
+
+<my-bottom icon="JdIconImg" type="Strategy"></my-bottom>

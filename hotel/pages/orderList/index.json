@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "酒店订单",
+  "onReachBottomDistance": 50,
+  "enablePullDownRefresh":true
+}

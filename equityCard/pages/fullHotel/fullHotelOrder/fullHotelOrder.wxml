@@ -1,0 +1,118 @@
+<!--page/HotelOther/pages/BookIng/BookIng.wxml-->
+<view class="titleHead" style="padding-top:{{navTop}}rpx;">
+  <image src="{{backReturn}}" bindtap="navigatorUrl"></image>
+	<view>酒店预订</view>
+</view>
+<view class="HeadContent"></view>
+<view class="BookIngInfo" style="margin-top: {{-332+navTop+21+40}}rpx;">
+  	<view class="timeSelect">
+			<view class="CheckTime" bindtap="selectTime">
+				<view class="timeTips">今天入住</view>
+				<view>{{CheckTime}}</view>
+			</view>
+      <view class="night">{{nights}}晚</view>
+			<view class="CheckTime" bindtap="selectTime">
+				<view class="timeTips">今天离店</view>
+				<view>{{outTime}}</view>
+			</view>
+		</view>
+    <view class="roomType">
+      <view>房型</view>
+      <view class="type">
+        <view>双人大床房</view>
+        <!-- <image src="{{TypeImage}}"></image> -->
+      </view>
+    </view>
+    <view class="NumberOrders">
+      <view class="row" style="justify-content:start">
+        <view>订购房间数</view>
+        <view class="peopleNum">每间最多住2人</view>
+      </view>
+      <!-- <view class="SurplusRoom">仅剩1间</view> -->
+      <view class="row">
+        <!-- <image src="{{jian}}" bindtap="jian" class="jian"></image> -->
+        <input placeholder="1" value="{{roomNum}}" bindinput="roomNumInput" disabled="true"></input>
+        <!-- <image src="{{jia}}" bindtap="jia" class="jia"></image> -->
+      </view>
+    </view>
+    <view class="roomType">
+      <view>房间保留至</view>
+      <view class="type">
+        <picker bindchange="bindPickerChangeRetain" value="{{retainIndex}}" range="{{retain}}">
+          <view class="fill-from-block">
+            {{retain[retainIndex]}}
+          </view>
+        </picker>
+        <image src="{{TypeImage}}"></image>
+      </view>
+    </view>
+    <view wx:for="{{CheckedIn}}" wx:key="CheckedIn" wx:for-index="index">
+      <view class="roomType">
+        <view>入住人</view>
+        <view class="type">
+          <input bindinput="CheckedName" data-index="{{index}}" placeholder="每间只需填写1人"></input>
+        </view>
+      </view>
+    </view>
+    <view class="roomType">
+      <view>手机号</view>
+      <view class="type">
+        <input bindinput="phone"></input>
+      </view>
+    </view>
+    <view class="roomType">
+      <view>身份证号</view>
+      <view class="type">
+        <input bindinput="idCard"></input>
+      </view>
+    </view>
+    <view class="tips">
+      友情提示：该用户名主要用于酒店会员补贴、佣金体现、权益领取 等优惠政策、请认真填写正确。
+    </view>
+    <!-- <view class="roomType" bindtap="coupon">
+      <view>
+        优惠券
+      </view>
+      <view class="type">
+        <view style="color:#EC4543FF">选择优惠券</view>
+        <image src="{{TypeImage}}"></image>
+      </view>
+    </view> -->
+    <!-- <view class="roomType">
+      <view>发票</view>
+      <view class="type">
+        <view>环球悦旅会（ALY3456843）</view>
+        <image src="{{TypeImage}}"></image>
+      </view>
+    </view> -->
+    <!-- <view class="tips">
+      每周三开发票到预留邮箱
+    </view> -->
+    <view class="reminder">
+      <view class="title">温馨提示</view>
+      <view class="item">
+      1.您当天会员立减特权已使用，邀请更多用户开卡，可增加立减特权
+      </view>
+      <view class="item">
+      2.本平台为会员制，只允许会员本人入住；如非会员入住，产生的问题，平台及酒店第三方不负责
+      </view>
+    </view>
+    <view class="reminder" style="margin-bottom:214rpx">
+      <view class="title">取消规则</view>
+      <view class="item">
+      本平台均为特价酒店，18点前如因客户个人原因取消订 单产生退费损失或退款失败，需个人承担。18点后无法 进行订单取消及退款。
+      </view>
+    </view>
+</view>
+<view class="footer">
+	<view class="price">
+		<view class="title">在线支付：</view>
+		<view>¥{{price}}</view>
+	</view>
+  <view class="right">
+    <!-- <view bindtap="Discount">明细</view> -->
+	  <view class="BookNow" bindtap="BookNow">立即预订</view>
+  </view>
+</view>
+<DiscountPopup isShow="{{isShow}}" bind:ClosePopup="ClosePopup" price="{{price}}"></DiscountPopup>
+<couponBook isCoupon="{{isCoupon}}" amount="{{price}}" bind:couponFun="couponFun"></couponBook>

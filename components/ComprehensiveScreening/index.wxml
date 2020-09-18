@@ -1,0 +1,22 @@
+<!--components/ComprehensiveScreening/index.wxml-->
+<!-- 综合筛选 -->
+<view class="commodity_screen" wx:if="{{isScreening}}" bindtap="hideModal" catchtouchmove="disMove"></view>
+<view class='areaView' wx:if="{{isScreening}}" style='top:{{marginTop?marginTop:""}}'>
+	<view class="cont">
+		<scroll-view class='stairView' style='height:750rpx' scroll-y="true" scroll-x='false'>
+			<view class="stairViewCell {{stairKey==id ? 'stairViewCellClick':''}}" wx:for="{{ComprehensiveScreening}}" wx:key="areaView" wx:for-index='id' data-id='{{id}}' bindtap='clickstairComprehensive' data-types='{{id}}'>{{item.stair}}</view>
+		</scroll-view>
+
+		<scroll-view class='conditionsView' style="height:750rpx" scroll-y="true" scroll-x='false'>
+			<view style="display: flex; flex-direction: row;flex-wrap: wrap;margin-top:20rpx">
+				<view class='conditions' wx:for="{{currentData}}" wx:key="levelView" wx:for-index='id' data-title="{{item.title}}" data-checked="{{item.isChecked}}" data-index="{{id}}" data-tabid="{{item.id}}" bindtap='ConditionsCell'>
+					<view class="{{item.isChecked?'secondViewCellNameClick':''}}">{{item.title}}</view>
+				</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view class='emptyConfirmView'>
+		<view class='empty' bindtap='emptyDetermineScreening'>清空选择</view>
+		<view class='confirm' bindtap='DetermineScreening'>确定</view>
+	</view>
+</view>

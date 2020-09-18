@@ -1,0 +1,24 @@
+<view class="">
+    <view class="wrapper-header">
+        <view class="fl">助理发品开关</view>
+        <switch checked="{{switch1Checked == 0}}" bindchange="switch1Change" />
+    </view>
+    <view class="wrapper-tab">
+        <view class="wrapper-tab-li {{aindex == 0?'active':''}}" data-oindex="0" bindtap="handleTap">
+            <view>待推送</view>
+            <!-- <view class="{{aindex == 0 ? 'ac':'as'}}">(8)</view> -->
+        </view>
+        <view class="wrapper-tab-li {{aindex == 1?'active':''}}" data-oindex="1" bindtap="handleTap">
+            <view>推送历史</view>
+            <!-- <view class="{{aindex == 1 ? 'ac':'as'}}">(6)</view> -->
+        </view>
+    </view>
+
+    <poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+    <view class="wrapper-main">
+            <view class="wrapper-main-list" style="position:relative;" wx:for="{{zlData}}" data-obj="{{item}}"  bindtap="handleSee" wx:key="{{index}}">
+                <view class="no-send" wx:if="{{aindex == 0}}">未推送</view>    
+                <shop-item shopItemData="{{item}}"  bind:handleCopy="handleCopy" bind:handleShare="handleShare" bind:handleRemove="handleRemove" ></shop-item>
+            </view>
+    </view>
+</view>

@@ -1,0 +1,50 @@
+/* hotel/pages/hotelErrorMsg/hotelErrorMsg.wxss */
+page{
+  background: #f8f8f8;
+}
+.hotelErrorMsg{
+  width: 702rpx;
+background: #fff;
+border-radius: 20rpx;
+margin: 0 auto;
+margin-top: 22rpx;
+padding-bottom: 107rpx;
+
+}
+.errormsg{
+  padding: 0 20rpx;
+height: 83rpx;
+border-bottom: 1px solid #f8f8f8;
+line-height: 83rpx;
+color: #333333;
+display: flex;
+font-size: 28rpx;
+}
+.error_content{
+  margin-left: 42rpx;
+}
+
+.hotel_textarea{
+  width: 662rpx;
+height: 246rpx;
+background: #f6f6f6;
+border-radius: 10rpx;
+margin: 0 auto;
+margin-top: 25rpx;
+padding: 17rpx 0 0 12rpx;
+
+}
+
+.sure{
+  margin: 0 auto;
+width: 662rpx;
+height: 88rpx;
+background: #fe9b16;
+color: #fff;
+border-radius: 10rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 449rpx;
+
+}

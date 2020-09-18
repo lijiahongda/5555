@@ -1,0 +1,7 @@
+{
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "my-bottom":"/components/bottom/index",
+    "custom":"/components/custom/custom"
+  }
+}

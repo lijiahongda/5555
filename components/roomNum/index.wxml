@@ -1,0 +1,18 @@
+<!--components/roomNum/index.wxml-->
+<view class="commodity_screen" bindtap="hideModal" catchtouchmove="disMove" wx:if="{{isShow}}"></view>
+<view class="selectRoomNum" wx:if="{{isShow}}">
+  <view class="title">
+    <view>选择房间数</view>
+    <image src="{{close}}" bindtap="close"></image>
+  </view>
+  <view class="CurrentSelection">当前选择：{{roomNum}}间</view>
+  <view class="OrderRoomNum">
+    <view class="OrderRoomNumTitle">订购房间数</view>
+    <view class="maxNum">每间最多住2人</view>
+    <view class="Surplus">仅剩一间</view>
+    <image class="jian" src="{{jian}}" bindtap="jian"></image>
+    <input value="{{roomNum}}" bindblur="roomNumInput"></input>
+    <image class="jia" src="{{jia}}" bindtap="jia"></image>
+  </view>
+  <view class="sure" bindtap="sure">确认</view>
+</view>

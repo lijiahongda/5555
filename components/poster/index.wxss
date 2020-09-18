@@ -1,0 +1,44 @@
+.poster-mask{
+  position: fixed;
+  z-index: 999999;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #333;
+  opacity: 0.6;
+}
+.poster-wrapper{
+  position: fixed;
+  z-index: 1000000;
+  width: 580rpx;
+  left: 85rpx;
+  right: 85rpx;
+  top: 156rpx;
+  max-height: 100%;
+  overflow: auto;
+}
+.btn-save{
+  width:580rpx;
+  height:88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background:rgba(237,46,46,1);
+  border-radius:44rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  margin: 0 auto;
+}
+
+.btn-act{
+  margin-top: 30rpx;
+  background:rgba(255,120,0,1);
+
+}
+.poster-wrapper-img{
+  display: block;
+  width: 580rpx;
+  margin: 0 auto 30rpx;
+  max-height: 530px;
+}

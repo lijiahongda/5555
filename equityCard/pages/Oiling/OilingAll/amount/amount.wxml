@@ -1,0 +1,82 @@
+<view class='oheader'>
+  <view class="hotelname">加油订单</view>
+  <view class="list">
+    <view>油站名称</view>
+    <view>{{zname}}</view>
+  </view>
+  <view class="list">
+    <view>油号/枪号</view>
+    <view>{{name}} {{gun_id}}号枪</view>
+  </view>
+  <view class="list">
+    <view class="price">
+      <view>金额</view>
+      <input bindinput="bindinputMoney" value="{{money?money:''}}" placeholder="请输入消费金额" placeholder-style="font-size:28rpx;color:#999999;font-weight:400" ></input>
+    </view>
+    <view>{{literTitle}}</view>
+  </view>
+</view>
+
+
+<view class='oheader reward'>
+  <view class="hotelname">优惠奖励</view>
+  <view class="list">
+    <view>会员专享</view>
+    <view class="{{detail.isMemberReduce?'':'noshow'}}">-¥{{detail.plummetsShow?detail.plummetsShow:0}}</view>
+  </view>
+  <view class="list">
+    <view>优惠券</view>
+    <view class="{{detail.isMemberCoupon?'':'noshow'}}">-¥{{detail.couponsPriceShow?detail.couponsPriceShow:0}}</view>
+  </view>
+</view>
+
+
+<view class="rule" wx:if="{{price.length}}">
+  <view class="lists" bindtap="rule" wx:if="{{state}}">
+    <image src="http://image.zhiding365.com/2020/7/17/a03be21b-5dda-48e5-9657-ca8864fba2f9.png"></image>
+    <view>优惠规则</view>
+  </view>
+  <view class="list">
+    <view wx:for="{{price}}" wx:for-index="index" wx:key="index" bindtap="inputMonty" data-item="{{item}}">¥{{item}}</view>
+  </view>
+</view>
+
+
+<view class='ofooter'>
+  <view class="footer_le">
+    <view class='gprice'>
+      <view>合计待支付</view>
+      <view class='price'>
+        <text style="font-size:24rpx">￥</text>
+        <text>{{payAmount}}</text>
+      </view>
+    </view>
+    <view class='btnmx' bindtap="detailed">
+      <view>明细</view>
+      <image wx:if="{{!detailedBox}}" style="width:19rpx;height:10rpx;margin-left:8rpx" src="http://image.zhiding365.com/2020/7/17/32365000-8a68-4cb6-8eb5-f6e9df2391a1.png"></image>
+      <image wx:else style="width:19rpx;height:10rpx;margin-left:8rpx" src="http://image.zhiding365.com/2020/7/19/9be4d708-363b-4bfc-9ec3-73f927804674.png"></image>
+    </view>
+  </view>
+  
+  <view class='btnpay' bindtap="handleBuy">确认支付</view>
+</view>
+
+
+<block wx:if="{{detailedBox}}">
+  <view class="mask-mc" catchtap="detailedClose"></view>
+  <view class='maincontent'>
+    <view class='subtitle'>
+      <text class='text'>总金额</text>
+      <text class='price22'>￥{{payAmount}}</text>
+    </view>
+    
+      <view class='subtitle subtitle1'>
+      <text class='text'>会员专享</text>
+      <text class='price22' class="{{detail.isMemberReduce?'':'noshow'}}">-¥{{detail.plummetsShow?detail.plummetsShow:0}}</text>
+    </view>
+      <view class='subtitle'>
+      <text class='text'>优惠券</text>
+      <text class='price22' class="{{detail.isMemberCoupon?'':'noshow'}}">-¥{{detail.couponsPriceShow?detail.couponsPriceShow:0}}</text>
+    </view>
+  </view>
+</block>

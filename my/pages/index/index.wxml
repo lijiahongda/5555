@@ -1,0 +1,72 @@
+<view class="container">
+	<view class="memtopcontainer">
+		<image class="img-bg" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-05-21/20/yuelvhuilCvclUoXgI1590064676.jpg" />
+		<view class="memtop">
+			<image src="http://image.zhiding365.com/2020/8/29/14072bca-44d6-432c-a190-62090a5317c7.png" class="bgmemtop" />
+			<view class="percontainer">
+				<view class="pertop">
+					<view class="perimg v">
+						<image class="icon-head" wx:if="{{userinfo}}" src='{{uimg}}' />
+						<image class="vicon" src="/images/icon_v.png" /> 
+					</view>
+				</view>
+				<view>
+					{{userinfo.nickName}}
+				</view>
+				<!-- <span class="pername" v-text="userinfo.nickname"></span> -->
+
+				<!-- <view  class="levelinfo" v-if="isCard == 1"> -->
+				<view class="levelinfo" wx:if="{{isCard == 1}}">
+					<image src="http://image.zhiding365.com/2020/8/29/e21f8254-1d31-452c-8223-7137046adcdb.png" class="level-img" />
+					<!-- <span v-if="info" class="levelname">{{info.levelCardDTO.name}}</span> -->
+					<view style="color:#fff;">
+						{{centerData.levelCardDTO.name}}
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+
+	<view class="memnav">
+		<!-- <router-link :to="{name:'orderlist'}" class="item"> -->
+		<view class="item" bindtap="nextRoomOrder">
+
+
+			<image class="img-icon" src="/images/icon_roomorder.png" />
+			<span class="name">客房订单</span>
+		</view>
+		<!-- </router-link> -->
+
+		<!-- <router-link :to="{name:'mallorderlist'}" class="item"> -->
+		<view class="item" bindtap="nextMallOrder">
+			<image class="img-icon" src="/images/icon_mallorder.png" />
+			<span class="name">商城订单</span>
+		</view>
+		<!-- </router-link> -->
+
+	</view>
+	<view class="memnav1" bindtap="handleNextCoupon">
+
+		<!-- <router-link :to="{name:'couponlist'}" class="item"> -->
+		<view class="item">
+
+
+			<span class="name">我的优惠券</span>
+		</view>
+		<!-- </router-link> -->
+
+	</view>
+
+	<view class="memnav1" bindtap="nextAddress">
+		<!-- <router-link :to="{name:'addresslist',query:{back:0}}" class="item"> -->
+		<view class="item">
+
+
+			<text class="name">我的地址</text>
+			<text class="val">收货地址</text>
+		</view>
+		<!-- </router-link> -->
+	</view>
+</view>

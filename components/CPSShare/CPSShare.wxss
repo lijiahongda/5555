@@ -1,0 +1,161 @@
+page {
+  background-color: #F5F7FA;
+}
+
+.content {
+  margin-top: 16rpx;
+  width:100%
+}
+
+.content .itme {
+  padding-top: 24rpx;
+  border-radius: 16rpx;
+  background-color: #fff;
+  padding-bottom: 13rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18rpx;
+}
+
+.content .title {
+  font-size: 30rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: rgba(20, 20, 20, 1);
+  padding-left: 1.8%;
+  margin-bottom: 16rpx;
+  width: 100%;
+}
+
+.content .Picture_library {
+  width: 96.4%;
+  margin-left: 1.8%;
+  margin-right: 1.8%;
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.content .Picture_library .item {
+  position: relative;
+}
+
+.content .Picture_library .item image {
+  width: 226rpx;
+  height: 226rpx;
+  border-radius: 16rpx;
+}
+
+.content .Picture_library .item .Check_list {
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  top: 5rpx;
+  right: 5rpx;
+}
+
+.content .Sharing_Copywriters {
+  margin-left: 1.8%;
+  margin-right: 1.8%;
+  padding-left: 3.3%;
+  padding-right: 6%;
+  padding-top: 25rpx;
+  padding-bottom: 33rpx;
+  background-color: rgba(245, 247, 250, 1);
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(20, 20, 20, 1);
+  border-radius: 16rpx;
+}
+
+.content .copy {
+  width: 128rpx;
+  height: 44rpx;
+  background: rgba(237, 46, 46, 1);
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 16rpx;
+}
+
+.content .Sharing_mode {
+  margin-top: 65rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .Sharing_mode .Sharing_list {
+  margin-left: 7.6%;
+  margin-right: 7.6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .Sharing_mode .Sharing_list image {
+  width: 110rpx;
+  height: 110rpx;
+  margin-bottom: 21rpx;
+}
+
+button[class="con_listbox"]::after {
+  border: 0;
+}
+
+.con_listbox {
+  margin-top: 0rpx;
+  line-height: 0;
+  margin-bottom: 5rpx;
+  background-color: #fff;
+  padding: 0
+}
+
+.posterButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 24rpx;
+}
+
+.posterButton .OneClickSave {
+  width: 128rpx;
+  height: 44rpx;
+  border-radius: 22rpx;
+  border: 2rpx solid rgba(237, 46, 46, 1);
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(237, 46, 46, 1);
+  text-align: center;
+  line-height: 44rpx;
+  margin-right:12rpx
+}
+
+.posterButton .shareImage {
+  width: 128rpx;
+  height: 44rpx;
+  background: rgba(237, 46, 46, 1);
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  margin-right: 14rpx;
+  text-align: center;
+  line-height: 44rpx;
+}

@@ -1,0 +1,26 @@
+
+<view class="title">
+  <view class="titleDetail">
+    <image wx:if='{{image}}' src="{{image}}"></image>
+    <text bindtap="copy" data-text="{{title}}">{{title}}</text>
+  </view>
+    <view class="add-p-box">
+    <view class="add-zl-btn" wx:if="{{addstatus == 1 && isAddAssistant == 0}}" bindtap="handleAddZl">
+      加入助理
+    </view>
+  </view>
+  <text>{{tip}}</text>
+
+<!-- <view class="l-box" wx:if="{{sevenstatus == 1}}">
+  <image class="l-box-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-16/15/yuelvhui9ASmotd5PI1594884419.png">
+  </image>
+  悦淘优选·闪电发货·极速退货·七天无理由退换货
+</view> -->
+</view>
+
+<view class="reason" wx:if='{{reasonShow}}'>
+  <view>
+    <text>推荐理由：</text>
+    <text>{{reasonData}}</text>
+  </view>
+</view>

@@ -1,0 +1,74 @@
+/* equityCard/pages/service/service.wxss */
+page{
+  width:100%;
+  height:100%;
+  background: #f8f8f8;
+}
+.headImg{
+  width:100%;
+  height:180rpx;
+  margin:0 0 20rpx 0
+}
+
+.serviceBox .title{
+  line-height: 100rpx;
+  box-sizing: border-box;
+  padding: 0 45rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #333333;
+  background: #fff;
+  border-bottom:1px solid #eeeeee
+}
+.boxs{
+  width:100%;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  margin-bottom:10rpx
+}
+.boxs>view{
+  text-align: center;
+}
+.boxLeft {
+  width:200rpx;
+  height:200rpx;
+  border-right:1px solid #eee;
+  box-sizing: border-box;
+  padding: 50rpx 0 0 0;
+
+}
+.boxLeft image{
+  width: 50rpx;
+  height:50rpx;
+  margin-bottom:18rpx
+}
+.boxLeft .txt{
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+}
+
+.boxContent {
+  width:548rpx;
+}
+.boxContent .txts{
+  width:49%;
+  float: left;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #666666;
+  border-bottom:1px solid #eee
+}
+.boxContent .txts:nth-child(3),.boxContent .txts:nth-child(4){
+  border-bottom:none
+}
+.boxContent .txts:nth-child(2n-1){
+  border-right:1px solid #eee
+}

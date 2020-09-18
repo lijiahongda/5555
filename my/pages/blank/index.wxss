@@ -1,0 +1,311 @@
+/* my/pages/blank/index.wxss */
+page{
+  background: #f9f8f8;
+}
+.content{
+  padding: 25rpx 30rpx;
+}
+.content .item{
+  width: 100%;
+  background: white;
+  border-radius: 16rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-bottom: 18rpx;
+}
+.content .item .title{
+  padding: 23rpx 0;
+  color: #242424;
+  font-size: 32rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #F3F3F3;
+}
+.content .item .matter{
+  padding: 24rpx 0;
+}
+.content .item .matter image{
+  float: left;
+  width: 173rpx;
+  height: 173rpx;
+  vertical-align: middle;
+  margin-right: 30rpx;
+}
+.content .item .matter .text{
+  vertical-align: middle;
+  float: left;
+}
+.content .item .matter .text .tit{
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+  margin-top: 15rpx;
+  font-family: PingFang SC Bold;
+}
+.content .item .matter .text .time{
+  font-size: 20rpx;
+  color: #666666;
+  margin-bottom: 15rpx;
+  font-family: PingFang SC Medium;
+}
+.content .item .matter .text .money{
+  color: #EC4543;
+  font-weight: bold;
+  font-family: PingFang SC Heavy;
+}
+.content .item .matter .text .money text:first-child{
+  font-size: 28rpx;
+}
+.content .item .matter .text .money text:last-child{
+  font-size: 36rpx;
+}
+
+.not{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200rpx;
+}
+.not image{
+  width: 347rpx;
+}
+
+.banner{
+  width: 682rpx;
+  height: 326rpx;
+  background: #2a2829;
+  border-radius: 24rpx;
+  margin:0 auto 20rpx auto;
+  position: relative;
+}
+
+.header-card-lm{
+  font-size: 28rpx;
+  color: #fff;
+  padding: 60rpx 50rpx 48rpx 50rpx;
+  line-height: 42rpx;
+}
+.card-name {
+  background: linear-gradient(to right , #e9c4b9, #ffffff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 40rpx;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 90rpx;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .75);
+}
+
+.mask .pop {
+  width: 100%;
+  height: 1000rpx;
+  box-sizing: border-box;
+  padding: 40rpx 0rpx 53rpx 0rpx;
+  background: #fff;
+  border-radius: 13rpx 13rpx 0 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.mask .pop .hide-btn {
+  width: 670rpx;
+  height: 74rpx;
+  background: #ff4e40;
+  border-radius: 37rpx;
+  text-align: center;
+  line-height: 74rpx;
+  margin: 125rpx auto 0 auto;
+  font-size: 28rpx;
+  color: #fff;
+}
+
+.lm-ticket {
+  width: 100%;
+}
+.scr-v {
+  height: 180rpx;
+  white-space: nowrap;
+  /* margin-left: 40rpx;
+  position: relative; */
+}
+.brandedCard{
+  font-size: 32rpx;
+  line-height: 32rpx;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50rpx;
+  font-weight: 500;
+  margin-top: 50rpx;
+}
+.ticket_cot {
+  display: inline-block;
+  margin-right: 20rpx;
+  width: 286rpx;
+  height: 180rpx;
+  background: url(http://image.zhiding365.com/2020/7/22/79efa54c-2225-4ae9-884a-060ff15bc24e.png) no-repeat;
+  overflow: hidden;
+  background-size: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.ticket_cot .ticket_cotnent{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 180rpx;
+}
+.ticket_cot .ticket_top{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding: 0 10rpx;
+  color: #fff;
+  font-size: 20rpx;
+  background: #E43F44;
+  border-radius: 14rpx 0 14rpx 0;
+} 
+.ticket_cot .ticket_le{
+  width: 224rpx;
+}
+.ticket_le .ticket_price{
+  font-size: 36rpx;
+  color: #333333;
+  font-weight: 600;
+}
+.ticket_le .ticket_title {
+  font-size: 24rpx;
+  color: #333333;
+  font-weight: 500;
+}
+.ticket_content {
+  font-size: 20rpx;
+  color: #666666;
+  margin-top: 12rpx;
+}
+.ticket_cotnent .ticket_btn{
+  font-size: 24rpx;
+  color: #E43F44;
+  font-weight: 500;
+  width: 40rpx;
+  text-align: center;
+  margin: 0 auto;
+  height: 180rpx;
+  writing-mode: vertical-lr;
+  writing-mode: tb-lr;
+  line-height: 40rpx;
+}
+
+.years{
+  width: 670rpx;
+  height: 180rpx;
+  left: 40rpx;
+  margin-bottom: 26rpx;
+  background: url(http://image.zhiding365.com/2020/7/22/8f60cb35-361e-412e-b2f4-07925ba3f91c.png) no-repeat;
+  background-size: 670rpx 180rpx;
+}
+.years .ticket_le{
+  width: 524rpx;
+}
+.years .ticket_top{
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 0 22rpx;
+  font-size: 24rpx;
+}
+.years .ticket_title{
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.years .ticket_price{
+  font-size: 20rpx;
+  color: #666666;
+  font-weight: 400;
+}
+.years .ticket_btns{
+  width: 220rpx;
+  font-size: 54rpx;
+  color: #333333;
+  font-weight: 600;
+}
+.years .ticket_btns .btn{
+  width: 120rpx;
+  height: 48rpx;
+  line-height: 46rpx;
+  text-align: center;
+  color: #E43F44;
+  font-size: 24rpx;
+  font-weight: 500;
+  border: 1rpx solid #e43f44;
+  border-radius: 24rpx;
+  margin: 0 auto;
+}
+
+.icons {
+  padding: 0 10rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 60rpx;
+}
+.icons .gwsq {
+  margin-bottom: 60rpx;
+  text-align: center;
+  width: 25%;
+}
+.icons .gwsq image{
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+}
+.gwsq-l-title {
+  color: #333333;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  font-weight: 500;
+  margin-top: 18rpx;
+}
+.gwsq-l-cot {
+  padding-top: 14rpx;
+  color: #999999;
+  font-size: 20rpx;
+  line-height: 20rpx;
+  font-weight: 400;
+}
+
+.tits {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 34rpx;
+  font-size: 29rpx;
+  color: #333333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.tits .handle {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.check-detail {
+  font-size: 24rpx;
+  color: #fff;
+  position: absolute;
+  right: 10rpx;
+  bottom: 10rpx;
+}

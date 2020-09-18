@@ -1,0 +1,212 @@
+<!-- index.wxml -->
+
+<view class="TopContent">
+	<view class="status">
+		<block>
+			<view style="font-size: 44rpx;padding-bottom:15rpx">{{info.orderStatusName}}</view>
+			<view wx:if="{{info.orderStatus==45||info.orderStatus==55}}" style="font-size: 26rpx;">您的订单已取消</view>
+			<view wx:if="{{info.orderStatus==1}}" style="font-size: 26rpx;">您的订单已提交成功，请耐心等待</view>
+			<view wx:if="{{info.orderStatus==0&&info.payStatus==1}}" style="font-size: 26rpx;">您的订单将于{{info.expireTime}}自动取消，请尽快完成支付</view>
+			<view wx:if="{{info.orderStatus==25}}" style="font-size: 26rpx;"> 感谢您的信赖，我们将为您提供更优质的服务</view>
+		</block>
+
+	</view>
+</view>
+<view class="orderDetails">
+	<view class="userInfo">
+		<view class="userinfo_text">
+			<view>支付金额： <text>¥{{info.orderAmount/100}}</text></view>
+      <view bindtap="pricedetail" class="fei">费用明细 ></view>
+		</view>
+		<view class="userinfo_btn" bindtap="{{info.orderSource=='1006'?'handlePay':'Hotelpay'}}" wx:if="{{info.orderStatus==0&&info.payStatus==1}}">立即支付</view>
+		<view class="userinfo_btn" wx:if="{{info.orderStatus==25||info.orderStatus==45}}" bindtap="againd">再次预定</view>
+		<view class="userinfo_btn" wx:if="{{info.cancelationFlag==0 && info.cancelationType>=0 && (info.orderStatus == 1 || info.orderStatus == 5)}}" bindtap="cancelHotel">取消订单</view>
+	</view>
+
+	<view class="hotelinfo">
+		<view class="hotelinfo_title">
+			<view class="hotel_etext">
+				<view>预计到店时间</view>
+				<view>{{times}}</view>
+			</view>
+			<view class="hotel_save">酒店将尽量为您保留房间</view>
+		</view>
+		<view class="hotel_details">
+			<view>入住人</view>
+			<view class="hotel_details_text">{{info.contact}}</view>
+		</view>
+		<view class="hotel_details">
+			<view>联系方式（手机）</view>
+			<view class="hotel_details_text">{{info.telPhone}}</view>
+		</view>
+		<view class="hotel_details">
+			<view>房间信息</view>
+			<view class="hotel_details_text">{{info.roomName}}({{info.roomPlanName}})</view>
+		</view>
+		<view class="hotel_details">
+			<view>入住日期</view>
+			<view class="hotel_details_text">{{info.eta}}</view>
+		</view>
+		<view class="hotel_details">
+			<view>离店日期</view>
+			<view class="hotel_details_text">{{info.etd}}</view>
+		</view>
+	</view>
+
+	<view class="addressinfo">
+		<view class="address_detail">
+			<image src="http://image.zhiding365.com/2020/7/20/7e21ef27-d2e0-4b5d-a99b-3802bd04a22a.png"></image>
+			<view class="address_text">{{info.hotelName}}</view>
+		</view>
+		<view class="address_pression">{{info.hotelAddress}}</view>
+	</view>
+
+	<view class="orderdetail">
+		<view class="oDetail_title">订单信息</view>
+		<view class="oDetail_info">
+			<view>订单编号</view>
+			<view>{{info.orderSource=='1006'?info.orderNo:info.pfOrderNo}}</view>
+		</view>
+		<view class="oDetail_info">
+			<view>下单时间</view>
+			<view>{{info.orderTime}}</view>
+		</view>
+	</view>
+
+	<view class="footerbtns">
+		<view class="footerbtns_hotel" bindtap="hoteldel" >
+		
+			<button class="kefu"  hover-class="none"  open-type="contact" bindcontact="handleContact">
+					<image src="http://image.zhiding365.com/2020/7/23/d239bd38-0988-4926-bac3-0022c73ee702.png"></image>
+					<view>联系酒店</view>
+			</button>
+
+
+		</view>
+		<view class="footerbtns_ditu" bindtap="map">
+			<image src="http://image.zhiding365.com/2020/7/23/60d2918b-8dea-4272-9659-7949485403bd.png"></image>
+			<view>查看地图</view>
+		</view>
+	</view>
+
+	<!-- <view class="rules">
+		<view>退改规则</view>
+		<view>规则内容</view>
+	</view> -->
+</view>
+<!-- <view>
+<view class="container">
+	<view class="item">
+		<view class="title">订单信息</view>
+		<view class="content">
+			<view class="li-list"><label>订单编号：</label>
+				<p>{{info.orderNo}}</p>
+			</view>
+			<view class="li-list"><label>订单时间：</label>
+				<p>{{info.orderTime}}</p>
+			</view>
+			<view class="li-list"><label>订单状态：</label>
+				<p class="ostatus">{{info.orderStatusName}}</p>
+			</view>
+		</view>
+	</view>
+	<view class="item">
+		<view class="title">商品信息</view>
+		<view class="content">
+			<view class="li-list"><label>酒店名称：</label>
+				<p>{{info.hotelName}}</p>
+			</view>
+			<view class="li-list"><label>酒店房型：</label>
+				<p>{{info.roomName}}({{info.roomPlanName}})</p>
+			</view>
+			<view class="li-list"><label>客房数量：</label>
+				<p>{{info.buyNight}}间</p>
+			</view>
+			<view class="li-list"><label>入住时间：</label>
+				<p>{{info.eta}}</p>
+			</view>
+			<view class="li-list"><label>离店时间：</label>
+				<p>{{info.etd}}</p>
+			</view>
+			<view class="li-list"><label>订单金额：</label>
+				<p>{{info.oriAmount/100}}元</p>
+			</view>
+			<view class="li-list"><label>支付金额：</label>
+				<p>{{info.payAmount/100}}元</p>
+			</view>
+			<view class="li-list"><label>优惠抵扣：</label>
+				<p>{{(info.discountAmount+info.pointAmount)/100}}元</p>
+			</view>
+		</view>
+	</view>
+	<view class="item">
+		<view class="title">联系人信息</view>
+		<view class="content">
+			<view class="li-list"><label>姓名：</label>
+				<p>{{info.contact}}</p>
+			</view>
+			<view class="li-list"><label>电话：</label>
+				<p>{{info.telPhone}}</p>
+			</view>
+		</view>
+	</view>
+	<div class="footernav" wx:if='{{info.orderStatus>=0}}'>
+		<view class="pricecontainer">
+			<view style="color:#333;">价格：</view>
+			<view class="pp-price"><text>￥</text>{{info.orderAmount/100}}</view>
+		</view>
+		<div class="btnpay" wx:if="{{info.orderStatus>=0 && info.orderStatus < 10&& info.payStatus==1}}" bindtap='handlePay'>去支付</div>
+	</div>
+</view>
+
+<view style="height:100rpx;">
+
+</view>
+</view> -->
+
+
+
+<view class="mengC" wx:if="{{shareshow}}" bindtap="closemeng"></view>
+<view class="meng" wx:if="{{shareshow}}">
+	<view class="hotelinfo_test">价格明细</view>
+		<view class="hotelinfo_title">
+			<view class="hotel_etext">
+				<view>房费</view>
+				<view class="hotelred"> ¥{{info.oriAmount/100}}</view>
+			</view>
+			<view class="hotel_etext">
+				<view>{{info.eta}}-{{info.etd}}</view>
+				<view>{{info.buyNight}}间*¥{{info.oriAmount/100}}</view>
+			</view>
+		</view>
+		 <view class="hotelinfo_footer">
+			<view>优惠券优惠</view>
+			<view class="hotel_details_text hotelred" >{{info.couponDiscountAmount?info.couponDiscountAmount/100:'0'}}</view>
+		</view>
+		<!--<view class="hotel_details">
+			<view>优惠券折扣</view>
+			<view class="hotel_details_text">{{info.telPhone}}</view>
+		 </view> -->
+		<!--<view class="hotel_details">
+			<view>兑换券</view>
+			<view class="hotel_details_text">{{info.roomName}}({{info.roomPlanName}})</view>
+		</view>-->
+		<view class="hotelinfo_footer">
+			<view>会员优惠</view>
+			<view class="hotel_details_text hotelred">{{info.vipDiscountAmount?info.vipDiscountAmount/100:'0'}}</view>
+		</view>
+		<!--<view class="hotel_details">
+			<view>现金优惠</view>
+			<view class="hotel_details_text">{{info.etd}}</view>
+		</view>
+		<view class="hotel_details">
+			<view>满减优惠</view>
+			<view class="hotel_details_text">{{info.etd}}</view>
+		</view> -->
+		<view class="hotelinfo_footer">
+			<view class="hotel_etext">
+				<view>总付款金额</view>
+				<view class="hotelred">¥{{info.orderAmount/100}}</view>
+			</view>
+		</view>
+	</view>

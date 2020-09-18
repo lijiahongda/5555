@@ -1,0 +1,55 @@
+
+.navbar{
+    position: relative;
+}
+.back-icon, .home-icon,.close-icon{
+    width: 60rpx;
+    height: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    z-index: 10000;
+    display: flex;
+}
+.back-icon{
+    left: 16rpx;
+}
+.home-icon{
+    left: 24rpx
+}
+.back-icon image{
+    width: 18rpx;
+    height: 32rpx;
+    margin: auto;
+}
+.home-icon image{
+    width: 60rpx;
+    height: 60rpx;
+    margin: auto;
+}
+.close-icon{
+  left: 20rpx;
+  top: 87%;
+  width: 44rpx;
+}
+.close-icon image{
+  width: 44rpx;
+  height: 44rpx;
+}
+.nav-title, .nav-icon{
+  /* margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
+  width: 100%;
+  box-sizing: border-box;
+  padding-right: 30rpx;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  font-size: 0;
+}

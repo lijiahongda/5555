@@ -1,0 +1,35 @@
+<!--equityCard/pages/ELM/ELM.wxml-->
+<view style="background-image: url({{bg}});" class="content">
+	<view class="shares">
+    <view class="shares_text">
+      <image src="{{elmCoupon}}"></image>
+    </view>
+		<view class="buttonBox" bindtap="go">
+			<view>领券点外卖</view>
+			<!-- <view>
+      <image src="{{button}}" class="go" bindtap="go"></image>
+    </view> -->
+		</view>
+		<button open-type="share" class="shareBox">
+      <view class="wechaticon">
+        <image src="{{wechatIcon}}"></image>
+        <view>分享给好友拿福利</view>
+      </view>
+		</button>
+	</view>
+  <view class="TB" style="height:{{showversion==1?'520rpx':'420rpx'}}">
+    <view class="TKL">注意  饿了么狂撒①亿拷鋇這段 
+    (Nuql1ywIhXO)打开【 tao寶】立享【饿 
+    了么隐藏】优 惠</view>
+    <view class="cloneKL" bindtap="clonetkl">复制口令赚钱</view>
+    <view class="TBshare" bindtap="shareTB" wx:if="{{showversion==1}}">
+      <image src="http://image.zhiding365.com/2020/7/26/f8fb874d-84e2-494b-b31c-e3d09a9e8828.png"></image>
+      <view class="tbshareText">分享小程序码赚钱</view>
+    </view>
+  </view>
+	<view class="sm">
+		<text style="padding-top: 33rpx;">{{ruleDesc.title}}</text>
+		<text class="list" wx:for='{{ruleDesc.desc}}' wx:key='*this'>{{item}}</text>
+	</view>
+</view>
+<poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>

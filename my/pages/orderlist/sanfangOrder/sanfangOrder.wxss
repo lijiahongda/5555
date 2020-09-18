@@ -1,0 +1,138 @@
+/* my/pages/orderlist/sanfangOrder/sanfangOrder.wxss */
+page{
+  background:#f8f8f8;
+}
+.sf{
+  width: 694rpx;
+height: 334rpx;
+background: #fff;
+border-radius: 16rpx;
+margin: 0 auto;
+margin-top: 16rpx;
+}
+.sf_meituan{
+  display: flex;
+padding-left: 24rpx;
+padding-top: 26rpx;
+font-size: 26rpx !important;
+align-items: center;
+}
+.sf_clone{
+  margin-left: 24rpx;
+width: 60rpx;
+height: 40rpx;
+background: #f5f7fa;
+font-size: 20rpx;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #666;
+border-radius: 6rpx;
+
+}
+.sf_info{
+  margin-top: 20rpx;
+display: flex;
+padding-left: 24rpx;
+}
+.sf_image>image{
+  width: 160rpx;
+height: 160rpx;
+border-radius: 6rpx;
+background: #ccc;
+
+}
+.sf_text{
+  margin-left: 24rpx
+}
+.sf_icon{
+  display: flex;
+align-items: center;
+
+}
+.sf_icon>image{
+  width: 36rpx;
+height: 36rpx;
+
+}
+.sf_title{
+  margin-left: 10rpx;
+  word-break: break-all;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 1;
+overflow: hidden;
+width: 90%;
+}
+.sf_price{
+  margin-top: 26rpx;
+}
+.sf_date{
+  font-size: 26rpx;
+color: #999;
+margin-top: 4rpx;
+}
+.sf_commsion{
+  display: flex;
+justify-content: space-between;
+padding-top: 14rpx;
+align-items: center;
+padding-left: 24rpx;
+
+}
+.sf_sharePrice{
+  color:#ED2E2E;
+  padding-right: 24rpx
+}
+/* 加油订单 */
+.phoneOrder{
+  width: 690rpx;
+height: 189rpx;
+margin: 0 auto;
+background: #fff;
+border-radius: 16rpx;
+margin-top: 16rpx;
+
+}
+.phoneOrder_top{
+  display: flex;
+padding: 24rpx;
+justify-content: space-between;
+align-items: center;
+
+}
+.phoneOrder_top view{
+  display: flex;
+align-items: center;
+
+}
+.phoneOrder_top view image{
+  width: 24rpx;
+height: 28rpx;
+background: #ccc;
+margin-right: 10rpx;
+
+}
+.phoneOrder_cont{
+  padding: 0 24rpx;
+
+}
+.phoneOrder_footer{
+  display: flex;
+justify-content: space-between;
+padding: 5rpx 24rpx;
+color: #999;
+
+}
+.phone_active{
+color:#999
+}
+.not{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200rpx;
+}
+.not image{
+  width: 347rpx;
+}

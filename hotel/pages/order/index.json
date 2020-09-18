@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "创建订单",
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "custom": "/components/custom/custom",
+    "poster":"/components/poster/index",
+    "shareSelect":"/components/shareSelect/index"
+  }
+
+}

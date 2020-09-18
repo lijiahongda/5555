@@ -1,0 +1,18 @@
+<view class="{{longPhone?'longPhone':''}} content">
+	<image src="{{backImg}}" class="backImg" mode="widthFix"></image>
+	<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNum" class="btn login">
+		开启专享之旅
+	</button>
+	<view class="noLogin" bindtap="loginout">暂不登录</view>
+</view>
+
+
+
+<view class="mask-mc" wx:if="{{isauthorization}}"></view>
+<view class="authorization" wx:if="{{isauthorization}}">
+  <image src="http://image.zhiding365.com/2020/8/12/017e3193-b44b-4783-bc71-03feac6d13f9.png"></image>
+  <view>直订申请获取您的公开信息</view>
+  <view>（包含头像、昵称等）</view>
+  <button open-type="getUserInfo" class="authorize" bindgetuserinfo="getPerson">授权</button>
+</view>
+

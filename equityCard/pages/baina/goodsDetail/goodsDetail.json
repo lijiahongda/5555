@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "product-window": "/components/product-window/index"
+  },
+  "navigationBarTitleText": "商品",
+  "navigationStyle": "default"
+}

@@ -1,0 +1,44 @@
+<view class="box_shadow"></view>
+<view class="content">
+  <view class="Vehicle_type">{{content.name}}</view>
+  <view class="Vehicle_time">{{time}}</view>
+  <view class="type">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/18/line_1574076966_16643.png"></image>
+    <view class="">实用车型</view>
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/18/line_1574076966_16643.png"></image>
+  </view>
+  <view class="list">
+    <view class="item" wx:for="{{content.detail}}" wx:for-index="index" wx:key="index">
+      <view class="top">
+        <view class="title">{{item.chargeDesc}}</view>
+        <view class="price">{{item.amount/100}}元</view>
+      </view>
+    </view>
+
+    <!-- <view class="item">
+      <view class="top">
+        <view class="title">起步价</view>
+        <view class="price">14.00元</view>
+      </view>
+      <view class="center">含时长10分钟，含里程3公里</view>
+    </view>
+    <view class="item">
+      <view class="top">
+        <view class="title">起步价</view>
+        <view class="price">14.00元</view>
+      </view>
+      <view class="center">含时长10分钟，含里程3公里</view>
+      <view class="bottom">
+        <view>21:40-22:41(27.6公里)</view>
+        <view class="price">59.34元</view>
+      </view>
+    </view> -->
+  </view>
+  <image class="Dividing_line" src="https://image.yuelvhui.com/pubfile/2019/11/18/line_1574080121_77594.png"></image>
+  <view class="Amount_money">
+    预估支付金额
+    <text>{{content.price/100}}</text>元
+  </view>
+  <view class="tips">预估价是根据实时交通状况、预估行驶里程、时间等因素预估计算得出，存在波动，仅供参考。高速费以司机实际支付为准</view>
+  <!-- <view class="Valuation_Rules" bindtap="ValuationRules">查看计价规则</view> -->
+</view>

@@ -1,0 +1,273 @@
+/* components/HotelHomeList/index.wxss */
+.front {
+  animation: front 1s linear 1;
+  backface-visibility: hidden;
+}
+
+.back {
+  animation: back 1s linear 1;
+}
+
+@keyframes front {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes back {
+  from {
+    transform: rotateY(-180deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  padding-top: 30rpx;
+  padding-bottom: 60rpx;
+  /* padding-left: 3.2%; */
+  /* padding-right: 3.2%; */
+  /* border-radius: 18rpx; */
+  /* background-color: #F9F8F8; */
+  border-bottom: 1rpx solid #DEDEDE;
+}
+
+.list .image {
+  width: 190rpx;
+  height: 190rpx;
+  background-color: #eee;
+  margin-right: 3.2%;
+}
+
+.list .info {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 190rpx;
+}
+
+.list .info .name text {
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(36, 36, 36, 1);
+  margin-bottom: 17rpx;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.list .info .position {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* margin-bottom: 30rpx; */
+  justify-content: space-between;
+
+}
+
+.list .info .position .loc {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.list .info .position .loc image {
+  width: 18rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+
+.list .info .Division {
+  margin-left: 12rpx;
+  margin-right: 12rpx;
+  width: 1px;
+  height: 20rpx;
+  background: rgba(153, 153, 153, 1);
+  flex-wrap: wrap;
+}
+
+.list .info .distance {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  width: 60%;
+}
+.list .info .distance text{
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list .info .evaluate {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  /* margin-bottom: 25rpx; */
+}
+
+.list .info .evaluate .Fraction {
+  height: 40rpx;
+  line-height:40rpx;
+  text-align: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 600;
+  color: #F08F4C;
+  margin-left: 16rpx;
+}
+
+.list .info .Label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.list .info .Label view {
+  padding-left: 11rpx;
+  padding-right: 11rpx;
+  height: 26rpx;
+  line-height: 26rpx;
+  border-right: 6rpx;
+  font-size: 18rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  margin-right: 12rpx;
+}
+
+.list .info .money {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.list .info .money .money_left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.list .info .money .money_right .vipPrice {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 45rpx;
+  font-family: PingFang SC;
+  color: rgba(236, 69, 67, 1);
+}
+
+
+.list .info .money .money_right .vipPrice text:first-child {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  color: rgba(236, 69, 67, 1);
+  margin-right: 8rpx;
+  margin-bottom: 7rpx;
+}
+.list .info .money .money_right .vipPrice text:last-child {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  margin-left: 8rpx;
+  margin-bottom: 7rpx;
+}
+.list .info .position .FloorPrice text {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  text-decoration: line-through;
+  color: rgba(153, 153, 153, 1);
+}
+
+.list .info .money .FullReduction {
+  padding-left: 11rpx;
+  padding-right: 11rpx;
+  height: 26rpx;
+  background: rgba(236, 69, 67, 1);
+  border-radius: 13rpx;
+  line-height: 26rpx;
+  font-size: 18rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.list .info .money .FullReduction image{
+  width: 14rpx;
+  height: 14rpx;
+  margin-left: 8rpx;
+}
+.listBox{
+  display: flex;
+  flex-direction: column;
+}
+.botom{
+  border-bottom:2rpx solid #dedede ;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18rpx;
+}
+.left, .right{
+  display: flex;
+  flex-direction: row;
+}
+.Label image:nth-child(1){
+  width: 128rpx;
+  height: 34rpx;
+}
+.Label image:nth-child(2){
+  width: 102rpx;
+  height: 40rpx;
+  margin-left: 4rpx;
+}
+.moneyN{
+  height:50rpx ;
+}
+.money_left view{
+  width:140rpx;
+height:32rpx;
+background:rgba(0,0,0,0);
+border:1px solid rgba(199, 124, 44, 1);
+border-radius:2rpx;
+font-size:20rpx;
+font-family:PingFang SC;
+font-weight:400;
+color:rgba(199,124,44,1);
+text-align: center;
+}
+.money_left view:last-child{
+  margin-left: 6rpx;
+  background:rgba(0,0,0,0);
+border:1px solid rgba(238, 126, 49, 1);
+color:rgba(238,126,49,1);
+}

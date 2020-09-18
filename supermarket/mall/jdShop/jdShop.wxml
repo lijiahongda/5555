@@ -1,0 +1,6 @@
+<!--supermarket/mall/jdShop/jdShop.wxml-->
+<view wx:for="{{screllList}}" wx:for-item="shopItemData" class="seckill_goodinfo" data-item="{{shopItemData}}" bindtap="jdDetail" wx:key="shopTypeItem" 
+style="height:{{isExclusiveRobot==0?'':'390rpx'}}">
+        <shopItem shopItemData="{{shopItemData}}" bind:handleMyShop="handleMyShop" bind:handleCopy="handleCopy" bind:handleShare="handleShare" bind:handleAdd="handleAdd"></shopItem>
+</view>
+<poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>

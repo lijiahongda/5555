@@ -1,0 +1,202 @@
+.my-content-box .title-box {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background: #1e1a19;
+  text-align: center;
+  color: #fff;
+  font-size: 34rpx;
+  z-index: 999;
+}
+.my-content-box .title-box-active {
+  background: #fff;
+  border-bottom: 1px solid #f8f8f8;
+  color: #333;
+}
+.my-content-box .main-box {
+  background: #1e1a19;
+  padding: 30rpx 0 60rpx 0;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+}
+
+.main-user-box {
+  height: 94rpx;
+  display: flex;
+  /* align-content: space-between; */
+  align-items: center;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.main-user-box .fl {
+  width: 88rpx;
+  height: 88rpx;
+  margin-right: 19rpx;
+}
+.main-user-box .fl .avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 100px;
+  border: 2rpx solid #fff;
+}
+.main-user-box .mid {
+  height: 100%;
+  width: 400rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  overflow: hidden;
+}
+.main-user-box .mid .mid-hea,
+.mid-footer {
+  display: flex;
+}
+
+.main-user-box .uname {
+  font-size: 32rpx;
+  max-width: 200rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-user-box .vip-box {
+  width: 158rpx;
+  height: 44rpx;
+  background: #2c2a29;
+  border-radius: 22px;
+  margin: 0 0 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-user-box .vip-icon-box {
+  width: 40rpx;
+  height: 40rpx;
+  background: #05040b;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-user-box .vip-icon {
+  width: 30rpx;
+  height: 30rpx;
+  display: block;
+}
+.btn-copy {
+  width: 70rpx;
+  height: 34rpx;
+  background: #1e1a19;
+  border: 2rpx solid #999999;
+  border-radius: 8px;
+  display: block;
+  text-align: center;
+  line-height: 36rpx;
+  font-size: 24rpx;
+  margin-left: 21rpx;
+}
+
+.main-user-money {
+  text-align: center;
+  padding: 50rpx 0 0 0;
+  box-sizing: border-box;
+}
+.main-user-money .money-label {
+  line-height: 23rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #999999;
+}
+
+.main-user-money .money-val {
+  line-height: 31rpx;
+  font-size: 40rpx;
+  font-family: PingFang SC Medium, PingFang SC Medium-Medium;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 2rpx;
+  margin-bottom: 18rpx;
+}
+.btn-share-z {
+  width: 184rpx;
+  height: 60rpx;
+  background: linear-gradient(#e8b54a 0%, #ffe7ba 100%);
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #333;
+  position: absolute;
+  top: 30rpx;
+  right: 26rpx;
+  font-size: 26rpx;
+}
+.box-main1 {
+  padding: 0 24rpx;
+  box-sizing: border-box;
+}
+.box-main1-hea {
+  line-height: 90rpx;
+  color: #333;
+  display: flex;
+}
+.box-main1-hea .label-fl {
+  color: #333333;
+  font-size: 26rpx;
+}
+.box-main1-hea .label-fr {
+  color: #141414;
+  font-size: 22rpx;
+}
+page {
+  background: #fff;
+}
+.shop-main {
+  display: flex;
+}
+.shop-main-list {
+  width: 220rpx;
+  color: #141414;
+}
+.shop-main-img-box {
+  width: 220rpx;
+  height: 220rpx;
+}
+.icon {
+  width: 220rpx;
+  height: 100%;
+}
+
+.shop-name {
+  width: 100%;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pub-hea-main {
+  text-align: center;
+  position: relative;
+}
+.pub-hea-main .img-icon {
+  width: 36rpx;
+  height: 12rpx;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -18rpx;
+}
+.right-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: left;
+  color: #141414;
+  line-height: 24px;
+}

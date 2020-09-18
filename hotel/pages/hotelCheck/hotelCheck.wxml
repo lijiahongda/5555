@@ -1,0 +1,53 @@
+<!--page/MyOther/pages/editInfo/editInfo.wxml-->
+<view class="content" style="margin-top:{{navTop+88}}rpx">
+	<image class="banner" bindtap="explain" src="http://image.zhiding365.com/2020/8/12/2cb3b36e-0aa2-4b19-b7b1-bd544fc2ec19.png"></image>
+	<view class="cont">
+		<view class="title">查找您的酒店</view>
+		<view class="first">
+			<view class="item" bindtap="LocationMore">
+				<view style="color:#666666">选择省市</view>
+				<view class="key">
+					<view>{{province}} {{city}} {{area}}</view>
+					<image src="{{del}}"></image>
+				</view>
+			</view>
+			<view class="result">
+				<view class="list_title">
+					<input bindinput="hotelKey" value="{{keyword}}" placeholder="输入酒店关键词，选择您的酒店" placeholder-style="color:#DDDDDD;"></input>
+					<view style="color:#999999" wx:if="{{list.length!=0 && first}}">未找到</view>
+				</view>
+				<view class="list" wx:if="{{list.length!=0}}">
+					<view wx:for="{{list}}" wx:for-index="index" wx:key="index" bindtap="choose" data-item="{{item}}">{{item.hotelName}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="tips" wx:if="{{list.length==0 && first}}">未找到与您匹配的酒店，请点击下一步填写酒店信息</view>
+	</view>
+</view>
+
+<view class="btn" bindtap="btn">下一步</view>
+
+
+<view class="commodity_screenlong" wx:if="{{Status}}"></view>
+<view animation="{{animationData}}" class="commodity_attr_boxlong" wx:if="{{Status}}">
+	<view class="title">
+		<view>请选择</view>
+		<image src="http://image.zhiding365.com/2020/7/21/94f785ba-c708-4d44-b3df-85b34dc1f6c6.png" bindtap='hideModal'></image>
+	</view>
+	<view class="item">
+		<view style="color:{{province == '请选择'?'':'#333'}}" bindtap='defaultData'>{{province}}</view>
+		<view style="color:{{city == '请选择'?'':'#333'}}" bindtap='Selectprovince'>{{province == '请选择'?'':city}}</view>
+		<view style="color:{{area == '请选择'?'':'#333'}}" bindtap='SelectCity'>{{city == '请选择'?'':area}}</view>
+		<view style="color:{{Town == '请选择'?'':'#333'}}" bindtap='SelectTown' wx:if="{{isTown}}">{{area == '请选择'?'':Town}}</view>
+	</view>
+	<view class="region">
+		<scroll-view scroll-y style="height:{{height}}px">
+			<view class="regionList" wx:for="{{isprovince?provincelist:iscity?citylist:isarea?arealist:''}}" wx:key="provincelist" data-id="{{item.id}}" data-name="{{item.name}}" bindtap='{{isprovince?"Selectprovince":iscity?"SelectCity":isarea?"Selectarea":""}}'>
+				<view class="{{item.id == provinceId?'active':''}} provinceId" wx:if="{{isprovince}}">{{item.name}}</view>
+				<view class="{{item.id == cityId?'active':''}} cityId" wx:elif="{{iscity}}">{{item.name}}</view>
+				<view class="{{item.id == areaId?'active':''}} areaId" wx:elif="{{isarea}}">{{item.name}}</view>
+				<!--  <image wx:if="{{item.id == provinceId || item.id == cityId || item.id == areaId}}" src=""></image> -->
+			</view>
+		</scroll-view>
+	</view>
+</view>

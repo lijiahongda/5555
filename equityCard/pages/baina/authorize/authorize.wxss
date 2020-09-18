@@ -1,0 +1,199 @@
+/* pages/authorize/authorize.wxss */
+@import "../../../../app.wxss";
+
+.bg {
+  width: 100%;
+  height: 1334rpx;
+  position: fixed;
+  left: 0;
+}
+
+.Popup {
+  width: 80%;
+  position: fixed;
+  top: 20%;
+  left: 10%;
+  z-index: 320;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Popup .title {
+  width: 148rpx;
+  height: 81rpx;
+  text-align: center;
+  margin-bottom: 149rpx;
+}
+
+.Popup .noLogin {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #ccc;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.Popup .noLogin view {
+  border-bottom: 1px solid #ccc;
+
+}
+
+.Popup .tip {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  padding: 0 24rpx;
+  margin-top: 23rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 67rpx;
+}
+
+.Popup .wxLogin {
+  width: 610rpx;
+  height: 90rpx;
+  border-radius: 50rpx;
+  background-color: #52af36;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #fff;
+}
+
+.Popup .codeLogin {
+  width: 610rpx;
+  height: 90rpx;
+  border-radius: 50rpx;
+  background-color: #fff;
+  text-align: center;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #69696C;
+  margin-top: 40rpx;
+  margin-bottom: 36rpx;
+  margin-bottom: 36rpx;
+}
+
+.Popup .MobilePhone,
+.VerificationCode {
+  width: 100%;
+  height: 90rpx;
+  background: rgba(206, 206, 206, 0.7);
+  border-radius: 45rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 40rpx;
+}
+
+.Popup .MobilePhone .Areacode {
+  margin-left: 5.8%;
+}
+
+.Popup .MobilePhone input {
+  margin-left: 5.3%;
+  height: 90rpx;
+  width: 88.9%;
+}
+
+.Popup .VerificationCode input {
+  height: 90rpx;
+  margin-left: 5.8%;
+  width: 56.2%;
+}
+
+.Popup .VerificationCode .code {
+  border-left: 1px solid #fff;
+  padding-left: 4.6%;
+  margin-right: 5.8%;
+  color: #f2f2f2;
+  width: 32%;
+  text-align: center;
+}
+.Popup .LoginImmediately{
+  width: 100%;
+  height: 90rpx;
+  background: rgba(235, 126, 121);
+  border-radius: 45rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+}
+
+.commodity_screenlong {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1200;
+  color: #fff;
+}
+
+.commodity_screenlong_authorization {
+  width: 560rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 36%;
+  z-index: 1000000;
+  left: 13.2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.commodity_screenlong_authorization image {
+  width: 169rpx;
+  height: 169rpx;
+  border-radius: 50%;
+  margin-top: -70rpx;
+  margin-bottom: 33rpx;
+}
+
+.commodity_screenlong_authorization_bind {
+  width: 100%;
+  height: 88rpx;
+  border-radius: 44rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #E93323;
+  margin-top: 41rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

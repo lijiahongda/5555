@@ -1,0 +1,43 @@
+/* components/RecommendedSort/index.wxss */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 100;
+  color: #fff;
+}
+.recommendView {
+  width: 100%;
+  background-color: #f6f9fb;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  position: fixed;
+  z-index: 101;
+}
+
+.recommendViewCell {
+  width: 100%;
+  height: 90rpx;
+  margin-bottom: 2rpx;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+
+.recommendViewCellImage {
+  width: 23rpx;
+  height: 16rpx;
+  margin-left: 54rpx;
+}
+
+.recommendViewCellText {
+  font-size: 30rpx;
+  color: #333;
+  margin-left: 24rpx;
+}

@@ -1,0 +1,41 @@
+<view class="top" wx:if="{{warnMsg}}">
+	<image src="http://image.zhiding365.com/2020/9/1/c813ccb4-e7c3-4296-9405-73ac78e27a69.png"></image>
+	<view>{{warnMsg}}</view>
+</view>
+
+
+<!--hotel/pages/pmsList/pmsList.wxml-->
+	<view wx:if="{{TuijHotel.length > 0}}" class="recommend-cot" wx:for="{{TuijHotel}}" wx:key="index" bindtap="to_tuijian" data-dealerid="{{item.dealerId}}">
+		<view class="hotel-pic">
+			<image wx:if="{{item.imgUrl}}" src="{{item.imgUrl}}"></image>
+			<image wx:else src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-03/15/yuelvhuisPsDaedxF41593760583.png"></image>
+		</view>
+		<view class="hotel-cot">
+			<view class="hotel-cot-title"> <text class="cot-title">{{item.dealerName}}</text></view>
+			<view class="hotel-cot-pic">
+			
+			</view>
+			<view class="hotel-cot-adderss">
+				<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/15/yuelvhuigr2GaqOoow1594970403.png"></image>
+				<text>{{item.city}}</text>
+			</view>
+			<view>
+				<view class="hotel-cot-zdbt">
+					<text>直订补贴</text>
+				</view>
+			</view>
+			<view class="hotel-cot-bottom">
+				<view class="min-price"> <text>￥{{item.bazaarAmount/100}}</text> </view>
+				<view class="price"> <text class="price-fh">￥</text><text class="price-num">{{item.minPrice/100}} <text class="qi">起</text> </text>
+				</view>
+			</view>
+			<view class="btm-hyzj" wx:if="{{item.minPrice<item.bazaarAmount}}">
+				<text>	↓会员直降￥{{(item.bazaarAmount-item.minPrice)/100}}</text>
+			</view>
+		</view>
+	</view>
+	<!-- <HotelHomeList  isHotelList="{{isTuijHotel}}" HotelList="{{TuijHotel}}" ismap="{{ismap}}" gnCity="{{gnCity}}"></HotelHomeList> -->
+	<view class="no-data" wx:if="{{TuijHotel.length==0}}">
+		<image class="ig" src="/images/no-data.png"></image>
+		<view class="ts">暂无数据</view>
+	</view>

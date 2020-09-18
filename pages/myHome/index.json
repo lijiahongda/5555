@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "personal": "/components/personal/index"
+  },
+  "navigationStyle":"custom"
+}

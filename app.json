@@ -1,0 +1,224 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/index/index",
+    "pages/bindPhone/index",
+    "pages/login/index",
+    "pages/developing/index",
+    "pages/myHome/index",
+    "page/weijiafuPayCeshi/weijiafuPayCeshi",
+    "pages/vipcard/index",
+    "pages/commodityList/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "直订",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "subpackages": [
+    {
+      "root": "hotel",
+      "pages": [
+        "pages/couponCenter/couponCenter",
+        "pages/hotelErrorMsg/hotelErrorMsg",
+        "pages/pmsList/pmsList",
+        "pages/index",
+        "pages/order/index",
+        "pages/orderList/index",
+        "pages/orderDetail/index",
+        "pages/facilityDetail/index",
+        "pages/pay/index",
+        "pages/collect/index",
+        "pages/hotelHistory/index",
+        "pages/paySuccess/index",
+        "pages/payFail/index",
+        "pages/hotelCheck/hotelCheck",
+        "pages/hotelInfo/hotelInfo",
+        "pages/hotelExplain/hotelExplain",
+        "pages/hotelList/hotelList",
+        "pages/keyWordView/keyWordView",
+        "pages/selectCity/selectCity",
+        "pages/searchMore/searchMore"
+      ]
+    },
+    {
+      "root": "my",
+      "pages": [
+        "pages/h5/h5",
+        "pages/poster/poster",
+        "pages/integral/integral",
+        "pages/IntegralMallDatail/IntegralMallDatail",
+        "pages/IntegralMallBean/IntegralMallBean",
+        "pages/IntegralMallOrder/IntegralMallOrder",
+        "pages/IntegralMallOrderDetail/IntegralMallOrderDetail",
+        "pages/orderlist/shopOrder/shopOrder",
+        "pages/orderlist/sanfangOrder/sanfangOrder",
+        "pages/orderDetail/shopOrderDetail/shopOrderDetail",
+        "pages/logistics/shopLogistics/shopLogistics",
+        "pages/vipcardCreate/index",
+        "pages/newPay/index",
+        "pages/coupon/index",
+        "pages/index/index",
+        "pages/blank/index",
+        "pages/myOrder/index",
+        "pages/myCommission/index",
+        "pages/commissionIncome/index",
+        "pages/circleFriends/index",
+        "pages/indirectFriends/index",
+        "pages/equity/equity",
+        "pages/privilegeDetail/privilegeDetail"
+      ]
+    },
+    {
+      "root": "supermarket",
+      "pages": [
+        "mall/searchList/index",
+        "mall/jdDetail/index",
+        "mall/CommoditySharing/index",
+        "mall/shopVR/detail",
+        "mall/jdShop/jdShop",
+        "mall/jdAssistant/jdAssistant",
+        "shop/index",
+        "shop/detail/index",
+        "shop/order/index",
+        "shop/orderList/index",
+        "shop/orderDetail/index",
+        "shop/webContainer/index",
+        "shop/address/index"
+      ]
+    },
+    {
+      "root": "equityCard",
+      "pages": [
+        "pages/fullHotel/fullHotelDetailNew/fullHotelDetailNew",
+        "pages/fullHotel/fullHotelDetail/fullHotelDetail",
+        "pages/fullHotel/fullHotelOrder/fullHotelOrder",
+        "pages/service/service",
+        "pages/service/method/method",
+        "pages/service/video/video",
+        "pages/ELM/ELM",
+        "pages/blank/blank",
+        "pages/equityCard/equityCard",
+        "pages/Oiling/oiling",
+        "pages/Oiling/OilingAll/choose/choose",
+        "pages/Oiling/OilingAll/amount/amount",
+        "pages/Oiling/OilingAll/Strategy/Strategy",
+        "pages/TrainTickets/TrainTicketsHome/index",
+        "pages/TrainTickets/vehicleSelect/vehicleSelect",
+        "pages/TrainTickets/selectCity/index",
+        "pages/TrainTickets/calendar/index",
+        "pages/TrainTickets/SubmitOrder/index",
+        "pages/Oiling/OilingAll/rule/rule",
+        "pages/baina/authorize/authorize",
+        "pages/baina/whiteWith/whiteWith",
+        "pages/baina/vipGoodDetail/vipGoodDetail",
+        "pages/baina/whiteActivity/whiteActivity",
+        "pages/baina/goodsDetail/goodsDetail",
+        "pages/baina/balancers/balancers",
+        "pages/baina/colorLine/colorLine",
+        "pages/baina/orderDetail/orderDetail",
+        "pages/exchange/index"
+      ]
+    },
+    {
+      "root": "page/Community",
+      "pages": [
+        "index",
+        "pages/myGroup/myGroup",
+        "pages/home/home",
+        "pages/groupUp/groupUp",
+        "pages/webVideo/webVideo",
+        "pages/main/index",
+        "pages/webUrl/webUrl",
+        "pages/main/commodities/index",
+        "pages/main/communityDetail/communityDetail",
+        "pages/orderList/orderList",
+        "pages/openAssistant/openAssistant",
+        "pages/main/group/noactivation/index"
+      ]
+    },
+    {
+      "root": "page/CommunityEarn",
+      "pages": [
+        "pages/home/home",
+        "pages/Promotion/Promotion",
+        "pages/TxMoney/TxMoney",
+        "pages/TxMoneyHistory/TxMoneyHistory",
+        "pages/Flowers/Flowers",
+        "pages/Statistical/Statistical",
+        "pages/StatisticalList/StatisticalList",
+        "pages/LingYunBang/LingYunBang"
+      ]
+    },
+    {
+      "root": "page/CaoCaoTravel",
+      "pages": [
+        "pages/CaoCaoTravel",
+        "pages/Calling/Calling",
+        "pages/CaoCaoMyOrder/CaoCaoMyOrder",
+        "pages/CityChoice/CityChoice",
+        "pages/evaluate/evaluate",
+        "pages/FareEstimate/FareEstimate",
+        "pages/ReasonsCancellation/ReasonsCancellation",
+        "pages/SearchPlace/SearchPlace",
+        "pages/ValuationRules/ValuationRules"
+      ]
+    },
+    {
+      "root": "page/Recharge",
+      "pages": [
+        "phonerecharge/detail/index",
+        "phonerecharge/list/index",
+        "videorecharge/index/index",
+        "videorecharge/detail/index",
+        "videorecharge/list/index"
+      ]
+    },
+    {
+      "root": "page/strategy",
+      "pages": [
+        "index/index"
+      ]
+    }
+  ],
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#282828",
+    "selectedColor": "#e93323",
+    "borderStyle": "white",
+    "list": [
+        {
+            "pagePath": "pages/home/index",
+            "iconPath": "images/tabImg/zhiding2.png",
+            "selectedIconPath": "images/tabImg/zhiding.png",
+            "text": "直订首页"
+        },
+        {
+            "pagePath": "pages/commodityList/index",
+            "iconPath": "images/tabImg/jingdong2.png",
+            "selectedIconPath": "images/tabImg/jingdong.png",
+            "text": "京东商城"
+        },
+        {
+            "pagePath": "pages/vipcard/index",
+            "iconPath": "images/tabImg/vip2.png",
+            "selectedIconPath": "images/tabImg/vip.png",
+            "text": "会员"
+        },
+        {
+            "pagePath": "pages/myHome/index",
+            "iconPath": "images/tabImg/my2.png",
+            "selectedIconPath": "images/tabImg/my.png",
+            "text": "我的"
+        }
+    ]
+},
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息效果展示"
+    }
+  }
+}

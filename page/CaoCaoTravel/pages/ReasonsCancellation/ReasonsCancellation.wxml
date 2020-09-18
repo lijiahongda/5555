@@ -1,0 +1,23 @@
+<view class="icon">
+  <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574173767_61828.png"></image>
+</view>
+<view class="title">行程已取消</view>
+<view class="tips">司机接单后三分钟内免费取消</view>
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="index" wx:key="index" bindtap="Choice" data-index="{{index}}" data-item="{{item}}">
+    <view class="info">
+      <view class="num">{{item.code}}</view>
+      <view>{{item.reason}}</view>
+    </view>
+    <image wx:if="{{index==cur}}" src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574174391_76426.png"></image>
+    <image wx:else src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574174439_81829.png"></image>
+  </view>
+  <!-- <view class="item">
+    <view class="info">
+      <view class="num">1</view>
+      <view>行程有变</view>
+    </view>
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574174439_81829.png"></image>
+  </view> -->
+</view>
+<view class="Submission" bindtap="Submission" style="background-color:{{'#4DAD38'}}">提交</view>

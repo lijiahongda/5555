@@ -1,0 +1,154 @@
+/* equityCard/pages/ELM/ELM.wxss */
+page{
+  min-height: 100%;
+}
+.content{
+  overflow: hidden;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+background-color: #00469C;
+}
+.buttonBox{
+  display: flex;
+justify-content: center;
+margin: 0 auto;
+width: 310rpx;
+height: 40px;
+background: linear-gradient(to top,#ffa81b,#fece1b);
+border-radius: 40rpx;
+align-items: center;
+font-size: 34rpx;
+font-family: PingFang SC Semibold, PingFang SC Semibold-Semibold;
+font-weight: 600;
+color: #682c00;
+
+}
+.go{
+  width: 336rpx;
+  height:111rpx;
+  display: block;
+}
+.sm{
+  width: 690rpx;
+margin: 0 auto;
+margin-top: 28rpx;
+color: #fff;
+font-size: 28rpx;
+margin-bottom: 56rpx;
+background: #0063d2;
+opacity: 0.5;
+border-radius: 8rpx;
+height: 445rpx;
+
+}
+.sm text{
+  display: block;
+  padding: 0 16rpx;
+
+}
+.sm .list{
+  font-size: 26rpx;
+  margin-top: 10rpx;
+}
+.shareBox{
+  /* justify-content: space-between; */
+  /* margin: 0 auto; */
+  width: 640rpx;
+  background: none;
+  border: 0rpx solid #eee;
+  outline: none;
+  padding: 0;
+  display: inline;
+}
+.shareBox::after{
+  border:none;
+}
+.wechaticon{
+  width: 640rpx;
+margin: 0 auto;
+background: linear-gradient(to bottom,#00bdff,#0083fa);
+border-radius: 40rpx;
+display: flex;
+height: 80rpx;
+justify-content: center;
+align-items: center;
+color: #fff;
+margin-top: 30rpx;
+}
+.wechaticon image{
+width: 54rpx;
+height: 42rpx;
+margin-right: 17rpx;
+}
+.share{
+  width: 383rpx;
+  height: 60rpx;
+  display: block;
+  margin: 0 auto;
+}
+.shares{
+  width: 687rpx;
+height: 390rpx;
+background: #fff;
+border-radius: 20rpx;
+margin: 0 auto;
+margin-top: 837rpx;
+
+}
+.shares_text image{
+  width: 538rpx;
+height: 39rpx;
+margin: 45rpx 74rpx;
+
+}
+.TB{
+  width: 687rpx;
+height: 520rpx;
+background: #fff;
+border-radius: 20rpx;
+margin: 0 auto;
+margin-top: 36rpx;
+
+}
+.TKL{
+  padding: 0 69rpx;
+text-align: center;
+padding-top: 60rpx;
+padding-bottom: 32rpx;
+
+}
+.cloneKL{
+  width: 605rpx;
+height: 80rpx;
+background: linear-gradient(to bottom,#fed918,#ffa41b);
+border-radius: 40rpx;
+margin: 0 auto;
+font-size: 36rpx;
+font-weight: 600;
+color: #913604;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 51rpx;
+}
+.TBshare{
+  display: flex;
+width: 604rpx;
+height: 80rpx;
+border: 2px solid #ffa41b;
+border-radius: 40rpx;
+justify-content: center;
+align-items: center;
+margin: 0 auto;
+margin-top: 35rpx;
+color: #913604;
+font-size: 30rpx;
+font-weight: 500;
+
+}
+.TBshare image{
+  width: 27rpx;
+  height: 26rpx;
+  margin-right: 10rpx;
+}

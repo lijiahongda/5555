@@ -1,0 +1,140 @@
+<!--equityCard/pages/TrainTickets/SubmitOrder/index.wxml-->
+<my-component my-property='{{aa}}' /> 
+<view class="OrderDetail">
+        <view class="submitorder">
+              <view class="submitorder_date" bindtap="choosedate">{{date.month}}月{{date.day}}日 {{date.monday}}</view>
+        </view>
+        <view style="width:100%;height:100rpx;"></view>
+        <view class="Order_detail">
+          <view class="Order_detail_date">
+            <view class="Order_detail_date_start">
+              <view class="start_city">{{pessengelist.FromStationName}}</view>
+              <view class="start_date">{{pessengelist.StartTime}}</view>
+            </view>
+            <view class="Order_detail_date_model">
+              <view>{{pessengelist.DurationMinutes}}</view>
+              <image src="https://image.yuelvhui.com/pubfile/2019/11/22/line_1574430461_68752.png"></image>
+              <view>{{pessengelist.TrainNo}}</view>
+            </view>
+            <view class="Order_detail_date_end">
+              <view class="start_city">{{pessengelist.ToStationName}}</view>
+              <view class="start_date">{{pessengelist.ArriveTime}}</view>
+            </view>
+          </view>
+          <view class="Order_detail_total">
+            <view class="Order_detail_total_one">终</view>
+            <view class="Order_detail_total_city">{{pessengelist.ToStationName}}</view>
+          </view>
+          <view class="hr"></view>
+          <view class="ticket_sit">
+            <view  wx:for="{{pessengelist.Seats}}" wx:key="pessengelist.Seats" wx:for-item="siter" data-index="{{index}}" class="ticket_sit_shang {{idx==index?'actives':''}}" data-name="{{siter.SeatName}}" data-price="{{siter.Price}}" bindtap="chooseSit">
+              <view>{{siter.SeatName}}</view>
+              <view>{{siter.TicketLeft}}</view>
+              <view>¥{{siter.Price}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="OrderDetail_sitperson" wx:if="{{!changeType}}">
+          <view class="OrderDetail_sitperson_top" wx:for="{{lister}}" wx:key="lister">
+            <view class="OrderDetail_sitperson_name">{{item.truename}}</view>
+            <view class="OrderDetail_sitperson_card">{{item.showNumber}}</view>
+            <view class="OrderDetail_sitperson_status" style="color:#5A8FDF"><text wx:if="{{item.passengerType==1}}">成人票</text><text wx:if="{{item.passengerType==2}}">儿童票</text></view>
+            <view class="OrderDetail_sitperson_siter" style="color:#5A8FDF">{{sitname}}</view>
+            <view class="OrderDetail_sitperson_image" data-index="{{index}}" data-id="{{item.id}}" data-item='{{item}}' bindtap="delperson">
+              <image src="https://image.yuelvhui.com/pubfile/2019/11/24/line_1574594257_87967.png" ></image>
+            </view>
+          </view>
+          <view class="OrderDetail_sitperson_center" >
+            <view class="OrderDetail_sitperson_center_image" >
+              <image src="https://image.yuelvhui.com/pubfile/2019/11/24/line_1574594939_43792.png"></image>
+            </view>
+            <view class="OrderDetail_sitperson_center_text"  bindtap="chooseper">选择乘客</view>
+          </view>
+        </view>
+        <view class="OrderDetail_sitperson" wx:if="{{changeType}}">
+          <view class="OrderDetail_sitperson_top">
+            <view class="OrderDetail_sitperson_name">{{listpess.truename}}</view>
+            <view class="OrderDetail_sitperson_card">{{listpess.card_id}}</view>
+            <view class="OrderDetail_sitperson_status" style="color:#5A8FDF"><text wx:if="{{listpess.passenger_type==1}}">成人票</text><text wx:if="{{listpess.passenger_type==2}}">儿童票</text></view>
+            <view class="OrderDetail_sitperson_siter" style="color:#5A8FDF">{{sitname?sitname:seat_info}}</view>
+           
+          </view>
+        </view>
+        <view wx:if="{{zuoweishow}}">
+          <view class="OrderDetail_choose" wx:if="{{sitType==0}}">
+          <view class="OrderDetail_choose_top">
+            <view class="OrderDetail_choose_top_text">选座服务</view>
+            <view class="OrderDetail_choose_top_right">可选一个座位</view>
+          </view>
+          <view class="OrderDetail_choose_siter">
+            <view class="OrderDetail_choose_siter_widon">窗</view>
+            <view class="OrderDetail_choose_siter_a {{ids=='a'?'actives':''}}"  data-sit="a" bindtap="choosesiter">A</view>
+            <view class="OrderDetail_choose_siter_b {{ids=='b'?'actives':''}}" data-sit="b" bindtap="choosesiter">B</view>
+            <view class="OrderDetail_choose_siter_c {{ids=='c'?'actives':''}}" data-sit="c" bindtap="choosesiter">C</view>
+            <view class="OrderDetail_choose_siter_gorow">过道</view>
+            <view class="OrderDetail_choose_siter_d {{ids=='d'?'actives':''}}" data-sit="d" bindtap="choosesiter">D</view>
+            <view class="OrderDetail_choose_siter_f {{ids=='f'?'actives':''}}" data-sit="f" bindtap="choosesiter">F</view>
+            <view class="OrderDetail_choose_siter_widon">窗</view>
+          </view>
+          <view class="OrderDetail_choose_notice">
+            若剩余席位无法满足选座需求，系统将自动为您分配席位。
+          </view>
+        </view>
+        <view class="OrderDetail_choose" wx:if="{{sitType==3}}">
+          <view class="OrderDetail_choose_top">
+            <view class="OrderDetail_choose_top_text">选座服务</view>
+            <view class="OrderDetail_choose_top_right">可选一个座位</view>
+          </view>
+          <view class="OrderDetail_choose_siter">
+            <view class="OrderDetail_choose_siter_widon">窗</view>
+            <view class="OrderDetail_choose_siter_a {{ids=='a'?'actives':''}}" data-sit="a" bindtap="choosesiter">A</view>
+            <view class="OrderDetail_choose_siter_c {{ids=='c'?'actives':''}}" data-sit="c" bindtap="choosesiter">C</view>
+            <view class="OrderDetail_choose_siter_gorow">过道</view>
+            <view class="OrderDetail_choose_siter_f {{ids=='f'?'actives':''}}" data-sit="f" bindtap="choosesiter">F</view>
+            <view class="OrderDetail_choose_siter_widon">窗</view>
+          </view>
+          <view class="OrderDetail_choose_notice">
+            若剩余席位无法满足选座需求，系统将自动为您分配席位。
+          </view>
+        </view>
+        <view class="OrderDetail_choose" wx:if="{{sitType==1}}">
+          <view class="OrderDetail_choose_top">
+            <view class="OrderDetail_choose_top_text">选座服务</view>
+            <view class="OrderDetail_choose_top_right">可选一个座位</view>
+          </view>
+          <view class="OrderDetail_choose_siter">
+            <view class="OrderDetail_choose_siter_widon">窗</view>
+            <view class="OrderDetail_choose_siter_a {{ids=='a'?'actives':''}}"  data-sit="a" bindtap="choosesiter">A</view>
+            <view class="OrderDetail_choose_siter_c {{ids=='c'?'actives':''}}" data-sit="c" bindtap="choosesiter">C</view>
+            <view class="OrderDetail_choose_siter_gorow">过道</view>
+            <view class="OrderDetail_choose_siter_d {{ids=='d'?'actives':''}}" data-sit="d" bindtap="choosesiter">D</view>
+            <view class="OrderDetail_choose_siter_f {{ids=='f'?'actives':''}}" data-sit="f" bindtap="choosesiter">F</view>
+            <view class="OrderDetail_choose_siter_widon">窗</view>
+          </view>
+          <view class="OrderDetail_choose_notice">
+            若剩余席位无法满足选座需求，系统将自动为您分配席位。
+          </view>
+        </view>
+        </view>
+        <view class="OrderDetail_notice">
+          <view class="OrderDetail_notice_total">
+            <view class="OrderDetail_notice_total_image">
+              <image src="https://image.yuelvhui.com/pubfile/2019/11/24/line_1574597104_28252.png"></image>
+            </view>
+            <view class="OrderDetail_notice_total_text">温馨提示：</view>
+          </view>
+          <view class="OrderDetail_notice_text">1.显示的卧铺票价均为上铺票价，供您参考。具体票价以您确认支付时实际购买的铺别票价为准。</view>
+        </view>
+        <view class="OrderDetail_btn" data-info="{{pessengelist}}" bindtap="submitorder">
+          提交订单
+        </view>
+</view>
+
+<view class="black" wx:if="{{showloading}}"></view>
+<view class="filterpage" wx:if="{{showloading}}">
+  <view class="filterpage_image">
+    <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2019-12-20/19/yuelvhuisaqeZaS5Hf1576839997.png"></image>
+  </view>
+  <view class="filterpage_text">出票中</view>
+  <view class="countTime">等待{{timecount}}</view>
+</view>

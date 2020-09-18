@@ -1,0 +1,51 @@
+<!--pages/home/hotel/selectCity/index.wxml-->
+<view class='backgroundView'>
+  <!--滚动视图  -->
+  <scroll-view scroll-y style="height: 100%" scroll-into-view="{{alpha}}">
+    <view class="alphabet">
+      <!--搜索  -->
+      <!-- <view class='searchView'>
+        <view class='searchBackgroundVIew'>
+          <input class='searchViewInput' name='keyInput' placeholder="请输入关键字/地点/品牌/酒店名称" placeholder-style="font-size: 24rpx;color: #afafaf; text-align:left" value='{{searchValue}}' bindinput="bindinput" bindfocus="bindfocus" bindblur="bindblur" bindconfirm="bindconfirm"
+            confirm-type="搜索" auto-focus='true' focus='true' maxlength='10'></input>
+        </view>
+      </view> -->
+      <!-- 当前定位城市 -->
+      <view class="Loc">
+        <view class="title">当前定位的城市</view>
+        <view class="Loc_Content">
+          <view>{{hotelDepartCity}}</view>
+        </view>
+      </view>
+      <!--热门城市  -->
+      <view class='hotCityVIew'>
+        <view class='hotCityVIewTitle'>热门城市</view>
+        <view class='cityTabVIew'>
+          <block wx:for="{{hotCityCellData}}" wx:key="hotCityCellData" wx:for-item="items">
+            <view class='cityTabVIewCell' data-city='{{items.cityName}}' data-id='{{items.cityCode}}' bindtap='cityBindtap' data-item='{{items}}'>{{items.cityName}}</view>
+          </block>
+        </view>
+      </view>
+      <!-- 所有城市 -->
+      <view class="alphabet-list">
+        <view wx:for="{{list}}" wx:key="unique" id="{{item.title}}" class="section-item" data-index="{{index}}">
+          <view class="section-item-header">
+            {{item.title}}
+          </view>
+          <view style="border-radius: 10rpx; background-color: #fff;margin-left: 3.2%;margin-right: 8.1%;">
+            <view wx:for="{{item.data}}" wx:key="item.children" wx:for-item="cell" wx:for-index="cellIndex" class="section-item-cells" data-city='{{cell.cityName}}' data-id='{{cell.cityCode}}' bindtap='cityBindtap' data-item='{{cell}}'>
+              <view class="section-item-cell {{cellIndex != (item.data.length-1) ? ' border-bottom ':' '}}">
+                <text>{{cell.cityName}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view data-id="selector" class="alphanet-selector">
+    <view data-ap="{{item.title}}" catchtouchstart="handlerAlphaTap" catchtouchmove="handlerMove" wx:for="{{list}}" wx:key="unique" class="selector-one">
+      {{item.title}}
+    </view>
+  </view>
+</view>

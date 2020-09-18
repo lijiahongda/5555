@@ -1,0 +1,33 @@
+page{
+  background-color: rgb(255, 255, 255);
+}
+.content{
+  text-align: center;
+}
+.content .icon{
+  width: 125rpx;
+  height: 125rpx;
+  margin-top: 70rpx;
+}
+.content .text{
+  line-height: 1;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #F7263C;
+}
+
+.content .btns{
+  margin-top: 80rpx;
+}
+.content .btns view{
+  display: inline-block;
+  width: 242rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  background-color: #F7263C;
+  color: white;
+  font-size: 33rpx;
+  border-radius: 13rpx;
+}

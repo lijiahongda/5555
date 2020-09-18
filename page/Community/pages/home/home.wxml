@@ -1,0 +1,132 @@
+<!-- page/My/My.wxml -->
+<view class="my-content-box">
+  <!-- <yTdialog showstatus="{{showstatus}}" bind:handleCallBack="handleCallBack"></yTdialog> -->
+  <view class="main-box">
+    <view class="main-user-box">
+      <view class="fl" data-ourl="/page/MyOther/pages/memberInformation/memberInformation" bindtap="nextPage">
+        <image src="{{UserData.avatar}}" class="avatar" />
+      </view>
+      <view class="mid">
+        <view class="mid-hea">
+          <view class="uname">{{UserData.name}}</view>
+          <view class="vip-box">
+            <view>{{UserData.levelText}}</view>
+            <view class="vip-icon-box">
+              <image class="vip-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuinXpTxxBZAK1594200340.png" />
+            </view>
+          </view>
+        </view>
+        <view class="mid-footer">
+          <text>悦淘号</text>
+          <text>{{UserData.reCode}}</text>
+          <text class="btn-copy" data-text="{{UserData.reCode}}" bindtap="handleCopyCode">复制</text>
+        </view>
+      </view>
+    </view>
+    <view class="btn-share-z">我的社群赚></view>
+  </view>
+
+  <view class="box-main1" > 
+      <view class="box-main1-hea">
+        <view class="label-fl">
+            社群分享专区
+        </view>
+        <view class="label-fr">
+            (仅限社群分享购买)
+        </view>
+      </view>
+      <view class="shop-main" >
+          <view class="shop-main-list">
+              <view class="shop-main-img-box" hover-class="none" hover-stop-propagation="false">
+                  <image class="icon" src="" mode="widthFix" ></image>
+              </view>
+              <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+               <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+          </view>
+            <view class="shop-main-list">
+              <view class="shop-main-img-box" hover-class="none" hover-stop-propagation="false">
+                  <image class="icon" src="" mode="widthFix" ></image>
+              </view>
+              <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+               <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+          </view>
+            <view class="shop-main-list">
+              <view class="shop-main-img-box" hover-class="none" hover-stop-propagation="false">
+                  <image class="icon" src="" mode="widthFix" ></image>
+              </view>
+              <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+               <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+          </view>
+      </view>
+  </view>
+  <view class="box-main1" > 
+      <view class="box-main1-hea">
+        <view class="label-fl">
+            群主自购专区
+        </view>
+        <view class="label-fr">
+            (仅限群主购买)
+        </view>
+      </view>
+
+      <view class="pub-hea">
+          <view class="pub-hea-main">
+            <view>淘礼金专区</view>
+            <image class="img-icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-11/14/yuelvhuiyvvvP8fukS1597127305.png" >
+              
+            </image>
+            <view class="right-box">
+              查看更多 >
+            </view>
+          </view>
+
+      </view>
+      <view class="shop-main" >
+          <view class="shop-main-list">
+              <view class="shop-main-img-box" hover-class="none" hover-stop-propagation="false">
+                  <image class="icon" src="" mode="widthFix" ></image>
+              </view>
+              <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+               <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+          </view>
+            <view class="shop-main-list">
+              <view class="shop-main-img-box" hover-class="none" hover-stop-propagation="false">
+                  <image class="icon" src="" mode="widthFix" ></image>
+              </view>
+              <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+               <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+          </view>
+            <view class="shop-main-list">
+              <view class="shop-main-img-box" hover-class="none" hover-stop-propagation="false">
+                  <image class="icon" src="" mode="widthFix" ></image>
+              </view>
+              <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+               <view class="shop-name" >
+                啊啊啊啊啊面包按奥术大师多
+              </view>
+          </view>
+      </view>
+  </view>
+</view>

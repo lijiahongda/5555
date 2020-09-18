@@ -1,0 +1,94 @@
+<!--my/pages/blank/index.wxml-->
+<!-- wx:if="{{!not}}" -->
+<view class="content" wx:if="{{false}}">
+	<view class="item" wx:for="{{applyList}}" wx:key="key">
+		<view class="title">{{item.dealerName}}</view>
+		<view class="matter clearfix">
+			<image wx:if="{{item.type == 1}}" src="{{jointly_img}}"></image>
+			<image wx:if="{{item.type == 2}}" src="{{member_img}}"></image>
+			<view class="text">
+				<view class="tit">{{item.cardName}}</view>
+				<view class="time">下单时间：{{item.createTime}}</view>
+				<view class="money">
+					<text>￥</text>
+					<text>{{item.cardPrice}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="item" wx:for="{{dealerCardList}}" wx:key="key">
+		<view class="title">{{item.dealerName}}</view>
+		<view class="matter clearfix">
+			<image wx:if="{{item.type == 1}}" src="{{jointly_img}}"></image>
+			<image wx:if="{{item.type == 2}}" src="{{member_img}}"></image>
+			<view class="text">
+				<view class="tit">{{item.cardName}}</view>
+				<view class="time">下单时间：{{item.createTime}}</view>
+				<view class="money">
+					<text>￥</text>
+					<text>{{item.cardPrice}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+</view>
+
+<!-- wx:if="{{not}}" -->
+<view class="not" wx:if="{{cardList.length == 0}}">
+	<image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+</view>
+
+<view wx:for="{{cardList}}" wx:key="index" catchtap="getCardDetail" data-cardId="{{item.cardId}}">
+	<view class="tits">
+		<text>{{item.dealerName}}</text>
+		<text class="handle">{{item.titleDescribe}}</text>
+	</view>
+	<view class="banner" style="background:url({{vipBg[0]}});background-size: 682rpx 326rpx;">
+		<view class="header-card-lm">
+			<view class="card-name">{{item.cardName}}</view>
+			<view class="card_cont">{{item.cardDes[0]}}</view>
+			<view class="card_cont">{{item.cardDes[1]}}</view>
+		</view>
+		<view class="check-detail">查看详情 ></view>
+	</view>
+</view>
+
+<view class="mask" hidden="{{hidePop}}">
+	<view class="pop">
+		<!-- <view class="brandedCard">联名卡会员权益</view> -->
+		<view style="margin-left: 40rpx;position: relative;">
+			<scroll-view scroll-x="true" class="scr-v">
+				<view class="lm-ticket">
+					<view class="ticket_cot" wx:for="{{cardDetail.unionCardDTO.coupons}}" wx:key="index">
+						<view class="ticket_cotnent">
+							<view class="ticket_top">{{item.couponTypeName}}</view>
+							<view class="ticket_le">
+								<view class="ticket_price"> <text style="font-size:20rpx;font-weight:400">¥</text> {{item.prefAmount}}</view>
+								<!-- <view class="ticket_price" style="font-size:20rpx">免费</view> -->
+								<view class="ticket_title">{{item.couponName}}</view>
+								<!-- <view class="ticket_content"> {{item.aaa}} </view> -->
+							</view>
+							<view class="ticket_btn">已 领 取</view>
+						</view>
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<!-- icon -->
+		<view class="icons">
+			<view class="gwsq" wx:for="{{cardDetail.cardLogoList}}" wx:key="index">
+				<view class="gwsq-r">
+					<image src="{{item.logo}}"></image>
+				</view>
+				<view class="gwsq-l">
+					<view class="gwsq-l-title">{{item.title}}</view>
+					<view class="gwsq-l-cot">{{item.subTitle}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="hide-btn" catchtap="hides">收起</view>
+	</view>
+
+</view>

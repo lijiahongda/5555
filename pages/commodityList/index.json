@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "swipers":"/components/swipers/index",
+    "poster":"/components/poster/index",
+    "searchInput":"/components/searchInput/searchInput",
+    "shopItem": "/components/shopItem/index",
+    "my-bottom":"/components/bottom/index"
+  },
+  "navigationStyle": "custom"
+}

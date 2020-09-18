@@ -1,0 +1,65 @@
+<!-- !--优惠券弹窗 --> 
+<couponPopup  id="couponPopup"  inner-text="{{list}}"></couponPopup>
+<view class="isSign" wx:if="{{isSign}}" style="z-index:9" bindtap="VerificationCode"></view>
+<!-- <view class="isSign" wx:if="{{isVip}}" bindtap="gift"></view> -->
+
+<view class="box_shadow"></view>
+<view class="Taxi_module">
+  <view class="Taxi_tab">
+    <view class="tab {{item.id == curTab?'active':''}}" wx:for="{{travel}}" wx:key="travel" bindtap="swictab" data-item="{{item}}" data-id="{{item.id}}">{{item.name}}</view>
+  </view>
+  <view class="list" wx:if="{{curTab == 2}}">
+    <view class="raido" style="background:#558FE1;margin-bottom:36rpx"></view>
+    <view class="Whereitem" style="border-bottom:1px solid #dcdde0">
+      <view class="Where" style="margin-bottom:35rpx">
+        <view class="tui-picker-content">
+          <picker mode="multiSelector" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArr}}">
+            <view class="tui-picker-detail">
+              {{dateTimeArr[0][index1]}} {{dateTimeArr[1][index2]}}{{dateTimeArr[2][index3]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="list">
+    <view class="raido"></view>
+    <view class="item" bindtap="SearchPlace" data-type="Start">
+      <view class="platipsce">{{currentLocation}}</view>
+      <!-- <view class="tips">您常用的上车点</view> -->
+    </view>
+  </view>
+  <view class="list">
+    <view class="raido" style="background:#FC9153;margin-bottom:0rpx"></view>
+    <view class="Whereitem" bindtap="SearchPlace" data-type="end">
+      <view class="Where" style="{{Destination=='您要去哪儿'?'color:#CCCCCC':'color:#666666'}}">{{Destination}}</view>
+    </view>
+  </view>
+</view>
+<view class="Vehicle_Type" wx:if="{{isVehicle}}">
+  <view class="tab_h">
+    <view id="{{'d'+item.typeId}}" wx:for="{{types}}" wx:for-index="index" wx:key="index" class="tab_item {{item.id == currentTab ? 'active' : ''}}" data-active="{{item.id}}" data-item="{{item}}" data-index="{{index}}" bindtap="swichNav">{{item.name}}
+    </view>
+  </view>
+  <view class="Vehicle_Details">
+    <image src="{{types[cardImgIndex].img}}" class="car"></image>
+    <view class="Vehicle_info">
+      <view class="Vehicle_price">
+        <view>预估</view>
+        <view class="vip_Price">¥{{cardInfor.price/100}}</view>
+        <view>
+          <text class="Original_Price">¥{{cardInfor.originPrice/100}}</text>
+        </view>
+        <image bindtap="FareEstimate" src="https://image.yuelvhui.com/pubfile/2019/11/18/line_1574074112_61098.png"></image>
+      </view>
+      <view>动态折扣价预估{{Discount}}折</view>
+    </view>
+  </view>
+  <view class="Call" bindtap="Calling">呼叫专车</view>
+</view>
+<view class="Notice" wx:for="{{Notice}}" wx:key="Notice">
+  <image src="https://image.yuelvhui.com/pubfile/2019/11/30/line_1575043463_88694.png"></image>
+  <view>
+    <text>{{item.title}}</text>
+  </view>
+</view>

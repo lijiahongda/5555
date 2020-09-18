@@ -1,0 +1,23 @@
+<view class="top">
+  <view class="goods">
+    <image src="{{imageUrl}}"></image>
+    <view class="detail">
+      <view class="title">{{goodsName}}</view>
+      <view class="desc">数量：{{goodsNum}}，{{skuName}}</view>
+      <view class="price">¥{{goodsPrice/100}}</view>
+    </view>
+  </view>
+  <view>
+    <view class="list">
+      <text>物流单号：{{data.expressNo}}</text>
+      <text class="copy" data-text="{{data.expressNo}}" bindtap="copy">复制</text>
+    </view>
+    <view class="list">物流公司：{{data.companyName}}</view>
+  </view>
+</view>
+<view class="logistics">
+  <view class="list" wx:for='{{logisticsInfo}}' wx:key='{{item.acceptTime}}'>
+    <view>{{item.acceptStation}}</view>
+    <view class="time">{{item.acceptTime}}</view>
+  </view>
+</view>

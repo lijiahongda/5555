@@ -1,0 +1,286 @@
+page {
+  /* width: 100%;
+  height: auto;
+  overflow: hidden; */
+  padding-bottom: 146rpx;
+}
+.pagess{
+  width:750rpx;
+  box-sizing: border-box;
+}
+.swiper {
+  width: 100%;
+  height: 750rpx;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  padding: 0;
+}
+
+.content {
+  width: 100%;
+  border-radius: 0 0 18rpx 18rpx;
+  box-sizing: border-box;
+}
+
+.price {
+  background: #fff;
+  padding: 0 24rpx;
+  color: #ED2E2E;
+  font-size: 36rpx;
+  height: 94rpx;
+  padding-top: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  padding-bottom: 16rpx;
+}
+
+.price>text {
+  vertical-align: bottom;
+}
+
+.price .nowPrice {
+  font-size: 52rpx;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  color: rgba(237, 46, 46, 1);
+}
+
+.price .origin {
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 160, 173, 1);
+  text-decoration: line-through;
+  padding-left: 4rpx;
+  padding-right: 22rpx;
+}
+
+.price .make {
+  padding-left: 18rpx;
+  padding-right: 18rpx;
+  height: 44rpx;
+  background: rgba(237, 46, 46, 1);
+  border-radius: 22rpx;
+  box-sizing: border-box;
+  color: #CA2519;
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 44rpx;
+  position: relative;
+  top: -10rpx;
+}
+
+.price .sales {
+  font-size: 26rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 160, 173, 1);
+}
+
+.coupon {
+  height: 180rpx;
+  background-image: url(https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-02-18/22/yuelvhuiJfHxoztzkP1582034595.png);
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  width: 702rpx;
+  margin: 0 auto;
+  background-color: #F5F7FA;
+}
+
+.coupon .left {
+  width: 210rpx;
+  text-align: center;
+  color: #CA2519;
+  font-size: 32rpx;
+}
+
+.coupon .left>text:nth-child(2) {
+  font-size: 58rpx;
+  vertical-align: top;
+}
+
+.coupon .middle {
+  color: #CA2519;
+  font-size: 36rpx;
+  width: 260rpx;
+  padding-left: 40rpx;
+}
+
+.coupon .middle>view:nth-child(2) {
+  font-size: 24rpx;
+  margin-top: 6rpx;
+}
+
+.coupon .right {
+  width: 142rpx;
+  height: 62rpx;
+}
+
+.shop {
+  width: 702rpx;
+  margin: 0 auto;
+  height: 86rpx;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  color: #141414;
+  font-size: 30rpx;
+  box-sizing: border-box;
+}
+
+.shop>image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-right: 20rpx;
+}
+
+.detail {
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border-radius: 18rpx 18rpx 0 0;
+  margin-top: 20rpx;
+}
+
+.detail .header {
+  width: 100%;
+  height: 96rpx;
+  color: #666666;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 96rpx;
+}
+
+.footer {
+  width: 100%;
+  height: 98rpx;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  background: #fff;
+  color: #fff;
+  font-size: 34rpx;
+}
+
+.footer .fun {
+  /* width: 43.7%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .feedback {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  /* padding-left: 11%; */
+  /* padding-right: 8%; */
+}
+
+.footer .feedback button {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  height: 98rpx;
+  background: #fff;
+
+}
+
+.footer .feedback image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.footer .bun {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 56.3%;
+}
+
+.footer .bun .SharingPosters {
+  width: 50%;
+  height: 98rpx;
+  background: #201E1D;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 98rpx;
+}
+
+.footer .bun .goBuy {
+  width: 50%;
+  height: 98rpx;
+  background: rgba(255, 0, 27, 1);
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  line-height: 98rpx;
+}
+
+.footer .share {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+}
+
+/* 授权 */
+.authorizationStatus {
+  position: absolute;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  top: 0rpx;
+  margin-top: 0rpx;
+}
+.priceStatus{
+  padding-left: 10rpx;
+background: #fff;
+padding-top: 5px;
+
+}
+.priceStatus view{
+  font-size: 24rpx;
+  color:#fff;
+  background: rgba(0,0,0,0.5);
+display: flex;
+width: 102rpx;
+margin-left: 10rpx;
+border-radius: 10rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 5rpx 0;
+}

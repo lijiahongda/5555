@@ -1,0 +1,134 @@
+<my-component titleText="" background="" backIcon="" homeIcon="http://image.zhiding365.com/2020/8/31/d6f39d78-5098-42d5-b215-077b86eedbe7.png" postion="" closeIcon=""></my-component>
+<view class="top" style="margin-top: -{{status + navHeight}}px">
+   <swiper bindchange="swiperChange" class="swiper_img">
+    <block wx:for="{{detailTop.banners}}" wx:key="*this">
+      <swiper-item wx:key="*this">
+        <image src="{{item.imgUrl}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="imageCount" style="{{levelId==0?'':'bottom:10rpx'}}"><text>{{current+1}}</text> <text style="color:rgba(255,255,255,0.5);">/ {{detailTop.banners.length}}</text></view>
+  <view class="btn" style="{{levelId==0?'':'bottom:10rpx'}}">
+    <image class="swiper_btn" wx:if="{{shoucang}}"  bindtap="qx_C" src="http://image.zhiding365.com/2020/8/24/8ddd7949-5dd4-44d4-a43b-8bf7d8913c30.png"></image>
+    <image class="swiper_btn" wx:else bindtap="sh_C" src="http://image.zhiding365.com/2020/8/24/bad70d61-b36b-4f60-8961-86f9b5d1d191.png"></image>
+    <button open-type="share" class="swiper_btn"></button>
+  </view>
+  
+  <view class="card" bindtap="goCard" wx:if="{{levelId==0}}">
+    <view class="card_list">
+      <image src="http://image.zhiding365.com/2020/8/24/2cfe2183-d92e-4d9c-9e07-83d73b8e3649.png"></image>
+      <view>直订联名会员</view>
+    </view>
+    <view class="card_btn">立即开通</view>
+  </view>
+</view>
+
+<view class="rights" bindtap="goCard" wx:if="{{levelId==0}}">
+  <view class="list" wx:for="{{detailTop.cardIcons}}">
+    <image src="{{item.imgUrl}}"></image>
+    <view>{{item.desc1}}</view>
+    <view>{{item.desc2}}</view>
+  </view>
+</view>
+
+
+
+
+<view class="main_body">  
+  <view class="hotel_name">
+    <view class="hotel_name_title">
+      <view>{{detailTop.dealerName}}</view>
+      <image class="bt_hy" src="http://image.zhiding365.com/2020/8/24/b8673175-37c8-421e-84c0-9f6b7a1976e6.png"></image>
+    </view>
+    <view bindtap="to_facilityDetail" class="hotel_name_ss">
+      <view>{{detailTop.openYear}}年开业 {{detailTop.lastRenovationYear}}年装修</view> 
+      <view class="ss_right" catchtap="to_facilityDetail">
+        <view>设施·详情</view>
+        <image src="http://image.zhiding365.com/2020/8/24/f23107d4-480a-42e5-8781-52986745fc12.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="hoteladdress">
+    <view class="hotel_address">
+      <view>{{detailTop.address}}</view>
+      <view class="hotel_line" wx:if="{{detailTop.dis}}">
+        <image src="http://image.zhiding365.com/2020/8/24/cfbbf9a1-f698-49ad-98e6-622e7d2815ad.png"></image>
+        <text>距您直线{{detailTop.dis}}公里</text>
+      </view>
+    </view>
+    <view class="hotelittext" bindtap="getLocation">
+      <image src="http://image.zhiding365.com/2020/8/24/4ae7f746-4c89-4e0a-91ec-1da8c603408d.png"></image>
+      <view>地图·周边</view>
+    </view>
+  </view>
+
+</view>
+
+
+
+
+
+<view class="cont">
+
+  <view class="JDtitle">
+    <image src="http://image.zhiding365.com/2020/8/24/28b479b3-17d4-43fb-8693-8e289dbc6ca5.png"></image>
+    <view><text>推荐·</text><text style="color:#E43F44;font-size:34rpx">房型</text></view>
+    <image src="http://image.zhiding365.com/2020/8/24/932e0ca8-bdd5-45a3-8d1f-9219d0021f2a.png"></image>
+  </view>
+  <view class="JDdesc">为您挑选出品质好·服务佳·设施全的优质房型</view>
+
+
+
+  <view class="hot">
+    <view class="hot_lists">
+      <scroll-view scroll-x class="two_scroll_view">
+        <view wx:for="{{detailTop.rooms}}" wx:for-index="index" wx:key="index" class="two_tab_item" data-roomid='{{item.roomId}}' catchtap="gohotel">
+          <image src="{{item.imgUrl}}" mode="aspectFill"></image>
+          <view>{{item.roomName}}</view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  
+
+ <!-- 商品秒杀 -->
+  <view class="JDtitle">
+    <image src="http://image.zhiding365.com/2020/8/24/28b479b3-17d4-43fb-8693-8e289dbc6ca5.png"></image>
+    <view><text>直订·</text><text style="color:#E43F44;font-size:34rpx">爆品</text></view>
+    <image src="http://image.zhiding365.com/2020/8/24/932e0ca8-bdd5-45a3-8d1f-9219d0021f2a.png"></image>
+  </view>
+
+  <view class="seckill">
+    <view class="seckill_text">
+      <view class="seckill_text_good">秒杀商品</view>
+      <view class="seckill_text_title" bindtap="jdHome" data-goods_id="{{screllList.goods_id}}">
+         <view>查看全部</view>
+        <image src="http://image.zhiding365.com/2020/8/25/6daa3a93-ae51-4472-b10a-995123285e12.png"></image>
+      </view>
+    </view>
+    <view class="shop_list" bindtap="jdDetail" data-goods_id="{{screllList.goods_id}}">
+      <view class="shop_cont">
+        <image class="shop_img" mode="aspectFill" src="{{screllList.goods_image}}"></image>
+        <view class="shop_ri">
+          <view class="shop_title">{{screllList.goods_name}}</view>
+          <view class="shop_detail">
+            <view><text style="font-size:22rpx">¥</text>{{screllList.jd_price}}</view>
+            <view>¥{{screllList.original_price}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+</view>
+
+  
+  <view style="width:750rpx;height:116rpx"></view>
+
+
+
+
+<poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+
+<my-bottom icon="home" type="{{iconType}}"></my-bottom>

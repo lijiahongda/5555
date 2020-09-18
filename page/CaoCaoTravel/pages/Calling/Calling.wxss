@@ -1,0 +1,572 @@
+
+page {
+  background-color: #f4f5f9;
+}
+
+.cancel_Tips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  background-color: #fff;
+}
+
+.cancel_Tips image {
+  width: 100%;
+  height: 446rpx;
+}
+
+.cancel_Tips .cancel_content {
+  padding-top: 31rpx;
+  padding-left: 12.2%;
+  padding-right: 12.2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.cancel_Tips .cancel_content .tips {
+  margin-top: 31rpx;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  width: 100%;
+  margin-bottom: 406rpx;
+}
+
+.cancel_operation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 85.6%;
+  padding-left: 7.4%;
+  padding-right: 7.4%;
+  background-color: #fff;
+}
+
+.cancel_operation .no_cancel {
+  width: 300rpx;
+  height: 88rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.cancel_operation .sure_cancel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 88rpx;
+  border: 1px solid rgba(77, 173, 56, 1);
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(77, 173, 56, 1);
+}
+
+.Waiting_response {
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5rpx 10rpx 0px rgba(197, 196, 196, 0.49);
+  padding-top: 40rpx;
+  padding-bottom: 64rpx;
+  margin-top: 40rpx;
+}
+
+.Waiting_response .tips {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 31rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  width: 100%;
+  margin-bottom: 74rpx;
+}
+
+.Waiting_response .tips .title {
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Waiting_response .tips .title image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 22rpx;
+}
+
+.waiting_time {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.waiting_time .time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  margin-bottom: 79rpx;
+}
+
+.waiting_time .time text {
+  font-size: 80rpx;
+  font-family: DIN Condensed;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  margin-left: 12rpx;
+}
+
+.waiting_time .cancel_order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.waiting_time .cancel_order image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 9rpx;
+}
+
+.Driver_cancelled {
+  margin-top: 359rpx;
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5rpx 10rpx 0px rgba(197, 196, 196, 0.49);
+  padding-top: 20rpx;
+  padding-bottom: 62rpx;
+}
+
+.Driver_cancelled .Driver_close {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Driver_cancelled .Driver_close image {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+.Driver_cancelled .Driver_title {
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 28rpx;
+  width: 100%;
+}
+
+.Driver_cancelled .Driver_tips {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  width: 100%;
+  margin-bottom: 80rpx;
+}
+
+.Driver_cancelled .Driver_operation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Driver_cancelled .Driver_Nomore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300rpx;
+  height: 88rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  border-radius: 10rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.Driver_cancelled .Driver_Recall {
+  width: 300rpx;
+  height: 88rpx;
+  background: rgba(77, 173, 56, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+}
+
+.waiting_ride {
+  margin-top: 40rpx;
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5rpx 10rpx 0px rgba(197, 196, 196, 0.49);
+  padding-top: 40rpx;
+  padding-bottom: 62rpx;
+}
+
+.waiting_ride .waiting_tips {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 51rpx;
+  width: 100%;
+}
+
+.waiting_ride .waiting_tips image {
+  width: 31rpx;
+  height: 25rpx;
+  margin-right: 18rpx;
+}
+
+.waiting_ride .waiting_tips text {
+  color: #4dad38;
+}
+
+.waiting_ride .waiting_car_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 48rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 1);
+  width: 100%;
+  margin-bottom: 15rpx;
+}
+
+.waiting_ride .waiting_car_info info {
+  display: flex;
+  flex-direction: column;
+}
+
+.waiting_car_info .waiting_car_type {
+  margin-top: 24rpx;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+
+.waiting_car_info image {
+  width: 278rpx;
+  height: 120rpx;
+}
+
+.Driver_info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 121rpx;
+}
+
+.Driver_info .Driver_name {
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  margin-right: 38rpx;
+}
+
+.Driver_info .Driver_Star_class {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 20rpx;
+}
+
+.Driver_info .Driver_Star_class image {
+  width: 26rpx;
+  height: 23rpx;
+  margin-right: 11rpx;
+}
+
+.operation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.operation .call {
+  width: 300rpx;
+  height: 88rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.operation .operation_cancel {
+  width: 300rpx;
+  height: 88rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.End_stroke {
+  margin-top: 40rpx;
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5rpx 10rpx 0px rgba(197, 196, 196, 0.49);
+  padding-top: 42rpx;
+  border-radius: 10rpx;
+}
+
+.End_price {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 40rpx;
+  font-size: 40rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 1);
+  width: 100%;
+  margin-bottom: 28rpx;
+}
+
+.End_price text {
+  font-size: 80rpx;
+  font-family: DIN Condensed;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+  margin-left: 12rpx;
+}
+.End_stroke .coupon{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #666666;
+  font-size: 28rpx;
+  width: 100%;
+  margin-bottom: 50rpx;
+}
+
+.Payment_method {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 32rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.Payment_method .method {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40rpx;
+}
+
+.Payment_method .method image {
+  width: 31rpx;
+  height: 31rpx;
+  margin-right: 22rpx;
+}
+
+.Payment_method image {
+  width: 14rpx;
+  height: 14rpx;
+}
+
+.Immediate_payment {
+  width: 623rpx;
+  height: 88rpx;
+  background: rgba(77, 173, 56, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 42rpx;
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.Cancellation_Success {
+  margin-top: 40rpx;
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5rpx 10rpx 0px rgba(197, 196, 196, 0.49);
+  padding-top: 40rpx;
+  padding-bottom: 60rpx;
+}
+
+.Cancellation_Success .Cancellation_time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 29rpx;
+}
+
+.Cancellation_Success .Cancellation_time image {
+  margin-right: 21rpx;
+  width: 22rpx;
+  height: 22rpx;
+}
+
+.Cancellation_Success .list {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8rpx;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 55rpx;
+}
+
+.Cancellation_Success .list .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 24rpx;
+}
+
+.Cancellation_Success .list .item .raido {
+  width: 14rpx;
+  height: 14rpx;
+  background: rgba(77, 173, 56, 1);
+  border-radius: 50%;
+  margin-right: 26rpx;
+}
+
+.Cancellation_Success .Cancellation_tips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 28rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+}
+
+.Cancellation_Success .Cancellation_tips image {
+  width: 96rpx;
+  height: 96rpx;
+  margin-bottom: 39rpx;
+}

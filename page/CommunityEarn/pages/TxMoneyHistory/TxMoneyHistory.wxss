@@ -1,0 +1,19 @@
+
+.h-box{
+  padding: 20rpx 0 0 0;
+  box-sizing: border-box;
+}
+.list-box{
+  color: #242424;
+  width: 697rpx;
+  background: #ffffff;
+  box-shadow: 1rpx 4rpx 16rpx 4rpx rgba(0,0,0,0.08); 
+  margin:0 auto 20rpx;
+  font-size: 24rpx;
+  border-radius: 8rpx;
+  padding: 27rpx;
+  box-sizing: border-box;
+}
+.fail-label{
+  color: #ff001c;
+}

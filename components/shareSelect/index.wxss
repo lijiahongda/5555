@@ -1,0 +1,79 @@
+.footer-dialog {
+  width: 750rpx;
+  height: 504rpx;
+  background: #f8f8f8;
+  border-top-left-radius: 13rpx;
+  border-top-right-radius: 13rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 90001;
+}
+.footer-title {
+  text-align: center;
+  color: #333333;
+  font-size: 31rpx;
+  padding: 66rpx 0;
+  box-sizing: border-box;
+}
+.footer-dialog-hea {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer-dialog-hea .fl-box {
+  /* float: left;
+  width: 50%; */
+  position: relative;
+}
+.btn-share{
+  position: absolute;
+  z-index: 11;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.footer-dialog-hea .fl-box image {
+  width: 93rpx;
+  height: 93rpx;
+  display: block;
+  margin: 0 auto 30rpx;
+}
+.footer-dialog-hea .fl-box .title {
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+}
+.footer-dialog-bot {
+  height: 120rpx;
+  line-height: 120rpx;
+  background: #ffffff;
+  text-align: center;
+  font-size: 31rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #333333;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 31rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+}
+.poster-mask {
+  position: fixed;
+  z-index: 90000;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #333;
+  opacity: 0.6;
+}
+

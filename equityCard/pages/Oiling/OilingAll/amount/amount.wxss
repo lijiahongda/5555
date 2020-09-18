@@ -1,0 +1,198 @@
+
+ page {
+  background-color: #f6f9fb;
+} 
+.oheader {
+  width: 697rpx;
+  margin: 0 auto;
+  margin-top: 14rpx;
+  background-color: #fff;
+  border-radius: 14rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.hotelname{
+  padding: 30rpx 0rpx;
+  font-weight: 500;
+  font-size: 32rpx;
+  color: #000;
+  border-bottom: 1rpx solid #eee;
+  display: block;
+}
+.oheader .list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  border-bottom: 1rpx solid #eeeeee;
+  line-height: 90rpx;
+  font-size: 26rpx;
+  color: #333333;
+}
+.oheader .list:last-child{
+  border-bottom: none;
+}
+.oheader .list .price{
+  display: flex;
+  align-items: center;
+  width: 400rpx;
+}
+.oheader .list .price input{
+  margin-left: 40rpx;
+  font-size: 40rpx;
+  color: #F7263C;
+  font-weight: 500;
+  width: 300rpx;
+}
+.reward .list view:nth-child(2n){
+  font-size:24rpx;
+  color:#F7263C;
+  font-weight: 600;
+}
+.reward .list view:nth-child(2n).noshow{
+  color:#999999;
+  text-decoration:line-through
+}
+
+.rule{
+  width: 697rpx;
+  font-size: 24rpx;
+  color: #333;
+  margin: 0 auto;
+  margin-top: 32rpx;
+}
+.rule image{
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 6rpx;
+}
+.rule .list,.rule .lists{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.rule .lists{
+  margin-bottom: 32rpx;
+}
+.rule .list view{
+  width: 150rpx;
+  height: 56rpx;
+  border: 1px solid #999999;
+  border-radius: 14rpx;
+  line-height: 56rpx;
+  color: #999;
+  text-align: center;
+  margin:0 26rpx 26rpx 0;
+}
+.rule .list view:nth-child(4n){
+  margin-right: 0;
+}
+
+
+
+
+.ofooter {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 112rpx;
+  font-size: 30rpx;
+  display: flex;
+  background: #fff;
+  z-index: 101;
+  box-shadow: 0px -3px 27px 0px rgba(153,153,153,0.2); 
+}
+.ofooter .footer_le{
+  width: 484rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 26rpx 0 30rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.ofooter .gprice {
+  display: flex;
+  align-items: center;
+}
+.ofooter .gprice .price {
+  color: #F7263C;
+  font-size: 40rpx;
+  display: flex;
+  align-items: baseline;
+  width: 200rpx;
+  justify-content: flex-end;
+}
+.ofooter .btnmx {
+  color: #F7263C;
+  font-size: 20rpx;
+  line-height: 112rpx;
+  display: flex;
+  align-items: center;
+}
+.ofooter .btnmx view{
+  color: #F7263C;
+  font-size: 20rpx;
+}
+.ofooter .btnmx image{
+  width: 20rpx;
+  height: 10rpx;
+}
+.ofooter .btnpay {
+  width: 266rpx;
+  background: #f52a42;
+  color: #fff;
+  font-size: 32rpx;
+  height: 113px;
+  line-height: 113rpx;
+  text-align: center;
+}
+
+.maincontent{
+  position: fixed;
+  bottom: 112rpx;
+  background-color: #fff;
+  width:750rpx;
+  z-index: 100;
+}
+.maincontent .title {
+  height: 90rpx;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 30rpx;
+  justify-content: center;
+  background-color: #f6f9fb;
+}
+.couponlist{
+  font-size: 30rpx;
+  color: #666;
+  height: 500rpx;
+  overflow-y: scroll;
+}
+.cou-list{
+  display: flex;
+  padding: 0 30rpx;
+  height: 115rpx;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+}
+
+.maincontent .subtitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 0;
+  margin: 0 30rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 28rpx;
+}
+.maincontent .subtitle .noshow{
+  color:#999999;
+  text-decoration:line-through
+}
+.maincontent .subtitle:last-child {
+  border-bottom: none;
+}

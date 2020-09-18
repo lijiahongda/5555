@@ -1,0 +1,10 @@
+page{
+  padding: 24rpx 26rpx;
+  background-color:#F8F8F8;
+  width: 750rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.list{
+  margin-bottom: 20rpx;
+}

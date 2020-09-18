@@ -1,0 +1,62 @@
+<view class="box_shadow"></view>
+<!-- <block wx:if="{{status == 6 || status == 7}}"> -->
+<view class="Driver_info">
+  <view class="info">
+    <view class="Driver_name">{{driverInfoVo.name}}</view>
+    <view class="Driver_price">
+      <text>{{orderFeeVo.totalFee/100}}</text>元
+    </view>
+  </view>
+  <view class="Driver_call" bindtap="call" data-phone="{{driverInfoVo.phone}}">
+    <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574163128_96157.png"></image>
+    <view>打电话</view>
+  </view>
+</view>
+
+<view class="Rating_star">
+  <view class="Rating_tips">
+    <view class="tips" style="margin-bottom:{{isselectStars?'0':''}}rpx">
+      <view>您的评价会让司机做的更好</view>
+      <view class="anonymous">匿名</view>
+    </view>
+    <view wx:if="{{!isselectStars}}">
+      <view class="stars">
+        <image wx:for="{{packstars}}" wx:key="packstars" wx:index="{{index}}" data-id="{{index+1}}" src="{{item?redImage:GrayImage}}" bindtap='{{isselectStars?"packstars":""}}'></image>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{!isselectStars}}" style="width:100%">{{TextArea}}</view>
+  <view class="Rating_title" wx:if="{{isselectStars}}">星级评价</view>
+  <view class="stars" wx:if="{{isselectStars}}">
+    <image wx:for="{{packstars}}" wx:key="packstars" wx:index="{{index}}" data-id="{{index+1}}" src="{{item?redImage:GrayImage}}" bindtap='{{isselectStars?"packstars":""}}'></image>
+  </view>
+</view>
+<view class="Rating_content" wx:if="{{isselectStars}}">
+  <textarea bindinput="bindTextAreaBlur" placeholder="输入您的评价" maxlength="100" />
+  <view class="operation">
+    <view bindtap="Submission">提交</view>
+  </view>
+</view>
+<!-- </block> -->
+<!-- <block wx:elif="{{status == 4||status==20||status==21||status==26}}">
+  <view class="Cancellation_Success">
+    <view class="Cancellation_time">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574171703_86794.png"></image>
+      <view>{{basicOrderVO.departureTime}}</view>
+    </view>
+    <view class="list">
+      <view class="item">
+        <view class="raido"></view>
+        <view>{{basicOrderVO.startAddress}}</view>
+      </view>
+      <view class="item">
+        <view class="raido" style="background-color:#FF7E36"></view>
+        <view>{{basicOrderVO.endAddress}}</view>
+      </view>
+    </view>
+    <view class="Cancellation_tips">
+      <image src="https://image.yuelvhui.com/pubfile/2019/11/19/line_1574172331_65364.png"></image>
+      <view>订单已取消</view>
+    </view>
+  </view>
+</block> -->

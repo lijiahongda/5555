@@ -1,0 +1,48 @@
+page{
+  background-color: rgb(255, 255, 255);
+}
+.content{
+  text-align: center;
+}
+.content .icon{
+  width: 125rpx;
+  height: 125rpx;
+  margin-top: 70rpx;
+}
+.content .text{
+  line-height: 1;
+  margin-top: 30rpx;
+  font-size: 24rpx;
+  color: #09BB07;
+}
+.content .money{
+  color: #000000;
+  font-size: 67rpx;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 30rpx;
+}
+.content .btns{
+  margin-top: 80rpx;
+}
+.content .btns view{
+  display: inline-block;
+  width: 242rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  box-sizing: border-box;
+}
+.content .btns view:first-child{
+  margin-right: 50rpx;
+  border: 1rpx solid #f7263c;
+  border-radius: 13rpx;
+  color: #F7263C;
+  font-size: 33rpx;
+}
+.content .btns view:last-child{
+  background-color: #F7263C;
+  color: white;
+  font-size: 33rpx;
+  border-radius: 13rpx;
+}

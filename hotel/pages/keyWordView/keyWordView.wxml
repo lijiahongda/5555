@@ -1,0 +1,32 @@
+<!--page/HotelOther/pages/keyWordView/keyWordView.wxml-->
+<view class="titleHead" style="padding-top:{{navTop}}rpx;">
+	<view bindtap="navi">取消</view>
+	<view class="search">
+		<image src="{{searchImage}}"></image>
+		<input bindinput="bindblur" placeholder="关键字/位置/品牌/酒店" placeholder-class="font-family:PingFang SC;font-weight:400;color:rgba(153,153,153,1);font-size:22rpx"></input>
+	</view>
+</view>
+<view class="HistoricalRecord" style="margin-top:{{navTop+100}}rpx">
+	<view class="title">历史记录</view>
+	<view class="hotContent">
+		<view wx:for="{{BusinessHistory}}" bindtap="SelectHistoricalRecord" data-item="{{item}}" wx:key="BusinessHistory">{{item.keyWord}}</view>
+	</view>
+</view>
+<view class="Category" wx:for="{{BusinessList}}" wx:key="BusinessList">
+	<view class="title">
+		<view class="left">
+			<image src="{{item.iconUrl}}"></image>
+			<view>{{item.tagTypeName}}</view>
+		</view>
+		<view class="more" bindtap="more" data-ismore="{{item.isMore}}" wx:if="{{item.more}}" data-item="{{item.more}}">
+			<view>更多</view>
+			<image src="{{moreImage}}"></image>
+		</view>
+	</view>
+	<view class="Content">
+		<view class="item" wx:for="{{item.showData}}" data-item="{{data}}" bindtap="showData" wx:key="showData" wx:for-item="data"><text>{{data.title}}</text></view>
+	</view>
+</view>
+<view catchtouchmove='true'>
+	<searchList searchCity="{{searchCity}}" isShow="{{isShow}}" bind:setCity="setCity" citylist="{{citylist}}" marginTop="{{marginTop}}" type="2" searchType="1"></searchList>
+</view>

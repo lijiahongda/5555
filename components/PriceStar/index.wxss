@@ -1,0 +1,181 @@
+/* components/PriceStar/index.wxss */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 100;
+  color: #fff;
+}
+.commodity_attr_boxs {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 101;
+  bottom: 0rpx;
+  left: 0rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.priceStarView {
+  width: 100%;
+  background-color: white;
+  padding-top: 20rpx;
+}
+.priceStarViewPriceView {
+  width: 690rpx;
+  padding-left: 30rpx;
+}
+
+.priceViewName {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 46rpx;
+}
+.priceViewSelectView {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  /* height:  */
+}
+
+
+.priceViewSelectViewCell {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  background-color: #f6f6f6;
+  width: 168rpx;
+  height: 80rpx;
+  border-radius: 10rpx;
+  margin-right: 5rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.priceViewSelectViewCellSelcet {
+  background: #EC4543;
+  opacity: 0.7;
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #fff;
+}
+.starView {
+  width: 690rpx;
+  margin-left: 30rpx;
+  height: 335rpx;
+  background-color: white;
+}
+
+.starViewTitleView {
+  width: 690rpx;
+  display: flex;
+  align-items: flex-end;
+  height: 105rpx;
+  line-height: 105rpx;
+}
+
+.starViewTitleViewStar {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.starViewTitleViewDescribe {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.starViewListView {
+  width: 690rpx;
+  height: 200rpx;
+  display: flex;
+  flex-wrap: wrap;
+}
+.starList {
+  width: 169rpx;
+  height: 80rpx;
+  background-color: #f6f6f6;
+  border-radius: 15rpx;
+  margin-right: 5rpx;
+  display: flex;
+}
+.starListImage {
+  width: 168rpx;
+  height: 80rpx;
+  /* background-color: #4bd392; */
+  border-radius: 0 0 15rpx 0;
+}
+.starListName {
+  font-size: 26rpx;
+  color: #333;
+  width: 168rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  position: absolute;
+}
+.emptyConfirmView {
+  width: 100%;
+  height: 130rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.empty {
+  width: 300rpx;
+  height: 60rpx;
+  border: 1px solid rgba(153, 153, 153, 1);
+  border-radius: 10px;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  background-color: white;
+  margin-top: 2rpx;
+}
+
+.confirm {
+  width: 300rpx;
+  height: 66rpx;
+  background: #EC4543;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 82rpx;
+}
+.title{
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  color: #242424;
+  background: #FFF;
+  padding-left: 30rpx;
+  padding-top: 38rpx;
+}
+.title view:nth-child(2){
+  margin-left: 200rpx;
+}

@@ -1,0 +1,11 @@
+<view class="">
+  <view class="order-tab bgw">
+    <view class="tab-list" wx:for="{{tabData}}" bindtap="handleTabMy" wx:key="{{item.id}}" data-id="{{item.id}}">
+      <view class="{{tabDataIndex == item.id?'active':''}}">{{item.name}}</view>
+      <view hidden="{{!tabDataIndex == item.id}}" class="border-active"></view>
+    </view>
+  </view>
+  <view class="empty-box">
+    暂无数据
+  </view>
+</view>

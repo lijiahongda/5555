@@ -1,0 +1,30 @@
+<!--equityCard/pages/TrainTickets/calendar/index.wxml-->
+<my-component my-property='{{aa}}' />
+<view class="date_pick">
+  <view class="weeks_box">
+    <view class="weeks_item" wx:for="{{weeks}}" wx:key="index">{{item}}</view>
+  </view>
+  <view wx:for="{{dateList}}" wx:key="index" class="calendar_content">
+    <view class="month_title">
+      <view>
+        {{item.month}}
+      </view>
+      <view>
+        {{item.year}}
+      </view>
+    </view>
+    <view class="day_content" >
+      <view class="day_item" wx:for="{{item.startWeeks}}" wx:key="index"></view>
+      <view class="day_item {{item.isDisable?'disable':''}} {{item.date===selectedDate? 'active' :''}}" 
+        wx:for="{{item.everyDay}}" 
+        wx:key="index"
+        data-date="{{item}}"
+        data-isDisable="{{item.isDisable}}"
+        bindtap="getSelectedDate"
+      >
+        <view>{{item.day}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+

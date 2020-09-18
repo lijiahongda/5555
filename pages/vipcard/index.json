@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "poster":"/components/poster/index",
+    "shareSelect":"/components/shareSelect/index"
+  },
+  "navigationBarTitleText":"直订联名卡"
+}

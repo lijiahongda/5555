@@ -1,0 +1,381 @@
+/* equityCard/pages/equityCard/equityCard.wxss */
+page {
+  background: #080707;
+}
+
+.image_top {
+  width: 750rpx;
+  height: 770rpx;
+  background: url(http://image.zhiding365.com/2020/8/24/54b2da98-c6f4-4d28-bacb-6b40c2203b45.png);
+  background-size: 750rpx 770rpx;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.image_top .title {
+  position: absolute;
+  bottom: 246rpx;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image_top .title text{
+  font-size: 34rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(180deg, rgba(252, 235, 231, 1) 0%, rgba(246, 230, 216, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.image_top .saveMoney {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 172rpx;
+  left: 0;
+}
+
+.image_top .save_money {
+  height: 40rpx;
+  background: linear-gradient(268deg, rgba(231, 195, 166, 1), rgba(251, 241, 233, 1), rgba(234, 197, 169, 1));
+  border-radius: 20rpx;
+  line-height: 40rpx;
+  font-size: 20rpx;
+  color: #291819;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20rpx;
+  margin: 0 auto;
+  width: 262rpx;
+}
+
+.image_top image {
+  width: 20rpx;
+  height: 24rpx;
+  margin-right: 8rpx;
+}
+.lockImg {
+  position: absolute;
+  bottom: 38rpx;
+  right: 30rpx;
+  width: 42rpx;
+  height: 42rpx;
+}
+.equityCard_hot {
+  width:702rpx;
+  height:349rpx;
+  background:rgba(26,25,22,1);
+  border-radius:20rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(251,223,207,1);
+  padding: 60rpx 0 50rpx 0;
+  box-sizing: border-box;
+}
+.equityCard_hot .equity_text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  font-size:26rpx;
+  font-weight:400;
+  color:rgba(251,223,207,1);
+}
+.equityCard_hot .equity_text view:nth-child(1){
+  font-size:36rpx;
+  font-weight:600;
+  color:rgba(251,223,207,1);
+  background:linear-gradient(0deg,rgba(254,240,231,1) 0%, rgba(214,165,136,1) 100%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  margin-right: 16rpx;
+}
+
+
+
+.equity_for {
+  display: flex;
+  margin-top: 56rpx;
+  justify-content: center;
+}
+
+.equity_sanfang {
+  width: 20%;
+  text-align: center;
+  position: relative;
+}
+
+.equity_sanfang .equity_img {
+  width: 90rpx;
+  height: 90rpx;
+
+}
+
+
+
+.redbaglist {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #F4EDE6;
+  border-radius: 10rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  margin-bottom: 20rpx;
+}
+.scroll-view-item_H {
+  font-size: 28rpx;
+  width: 324rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin-bottom: 20rpx;
+  color: #333333;
+}
+
+.vidlist_image image {
+  width: 324rpx;
+  height: 324rpx;
+}
+
+.price {
+  width: 100%;
+  padding: 0 14rpx;
+  font-size: 28rpx;
+  color: #333333;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.old_price {
+  width: 100%;
+  padding: 0 14rpx;
+  box-sizing: border-box;
+  font-size: 36rpx;
+  color: #E33F43;
+  padding-bottom: 12rpx;
+  display: flex;
+  align-items: center;
+}
+.old_price image{
+  width: 104rpx;
+  height: 36rpx;
+  margin-right: 10rpx;
+}
+.old_num {
+  color: #999;
+  font-size: 24rpx;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin-left: 8rpx;
+}
+
+/* 兑换 */
+.card{
+  width: 702rpx;
+  height: 168rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: url(http://image.zhiding365.com/2020/8/30/9eff43aa-5bcf-468d-a140-7bdffdfd7c83.png);
+  background-size: 702rpx 168rpx;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+.card .card_list{
+  width: 50%;
+  height: 168rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #ECC4B0;
+  font-weight: 500;
+  padding-top: 26rpx;
+}
+.card .card_list:nth-child(2){
+  color: #473130;
+}
+.card .card_cont{
+  display: flex;
+  justify-content: center;
+  line-height: 50rpx;
+  margin-top: 6rpx;
+}
+.card .card_btn{
+  width: 180rpx;
+  height: 40rpx;
+  background: linear-gradient(0deg, #ECC4B0 0%, #F6E6DE 100%);
+  border-radius: 20rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  color: #513534;
+  margin: 0 auto;
+  margin-top: 6rpx;
+}
+.card .card_list:nth-child(2) .card_btn{
+  background: linear-gradient(0deg, #281818 0%, #805754 100%);
+}
+.card .card_list:nth-child(2) .card_btn{
+  color: #ECC4B0;
+}
+
+
+
+.wites {
+  width: 697rpx;
+  margin: 0 auto;
+}
+
+.wites_goods {
+  width:678rpx;
+  height:120rpx;
+  background:linear-gradient(-90deg,rgba(113,61,48,1),rgba(157,93,78,1));
+  border-radius:20px 20px 0px 0px;
+  color: #fff;
+  font-size: 22rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20rpx 0 30rpx;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.wites_goods .title view:nth-child(1){
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+.wites_goods .more{
+  width:166rpx;
+  height:58rpx;
+  border:2rpx solid rgba(255, 255, 255, 1);
+  border-radius:30rpx;
+  text-align: center;
+  line-height: 58rpx;
+  font-size: 24rpx;
+}
+.groups {
+  width:702rpx;
+  height:364rpx;
+  background:rgba(245,237,231,1);
+  border-radius:10rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.groups image{
+  width: 662rpx;
+  height: 324rpx;
+  margin-top: 20rpx;
+}
+.lockBoxs {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.lockBoxBg {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.lockBox {
+  width: 520rpx;
+  height: 620rpx;
+  box-sizing: border-box;
+  background: url("https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-31/15/yuelvhuirCf4g79zJu1596179712.png") no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+.lockBox_X {
+  position: absolute;
+  top: -98rpx;
+  right: 0;
+  width: 58rpx;
+  height: 58rpx;
+}
+
+.lockBtns {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 430rpx;
+  line-height: 86rpx;
+  font-size: 30rpx;
+  background: linear-gradient(#e43f44 0%, #ff5f4c 100%);
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #ffffff;
+  border-radius: 60rpx;
+}
+
+.lockBox>.title {
+  position: absolute;
+  top: 52rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.lockBox>.txts {
+  width: 420rpx;
+  position: absolute;
+  top: 259rpx;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 28rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #333333;
+}
+
+.lockBox>.txts>view:first-child {
+  margin-bottom: 34rpx
+}
+
+.lockBox>.txts>view:last-child {
+  line-height: 48rpx;
+}
+
+.del_box {
+  display: block
+}
+
+.hide_box {
+  display: none
+}

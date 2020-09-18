@@ -1,0 +1,284 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"enhance": false,
+		"postcss": true,
+		"preloadBackgroundData": false,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": true,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"compileHotReLoad": false,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		},
+		"useIsolateContext": true,
+		"useCompilerModule": true,
+		"userConfirmedUseCompilerModuleSwitch": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.11.0",
+	"appid": "wx9d427e623c3fb4c4",
+	"projectname": "pms-applet",
+	"cloudfunctionTemplateRoot": "",
+	"watchOptions": {
+		"ignore": []
+	},
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"current": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "酒店爆品",
+					"pathName": "supermarket/mall/commodityList/index",
+					"query": "dealerId=100013&shid=res",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "酒店详情",
+					"pathName": "hotel/pages/index",
+					"query": "dealerId=638455",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "虚拟爆款商品详情",
+					"pathName": "supermarket/mall/shopVR/detail",
+					"query": "id=53",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员卡",
+					"pathName": "my/pages/blank/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 5,
+					"name": "酒店首页",
+					"pathName": "pages/index/index",
+					"query": "dealerId=100273",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录",
+					"pathName": "pages/login/index",
+					"query": "dealerId=99998",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "创建订单页面",
+					"pathName": "hotel/pages/order/index",
+					"query": "dealerId=100103&sdate=1598649363000&edate=1598994963000",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "酒店会员卡",
+					"pathName": "my/pages/vipcard/index",
+					"query": "id=53",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index",
+					"pathName": "pages/index/index",
+					"query": "scene=dealerId%3D100280%26code%3D186838547",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "全量酒店",
+					"pathName": "hotel/pages/hotelList/hotelList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "特权详情",
+					"pathName": "my/pages/privilegeDetail/privilegeDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "全量酒店详情",
+					"pathName": "equityCard/pages/fullHotel/fullHotelDetail/fullHotelDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "白拿列表",
+					"pathName": "equityCard/pages/baina/whiteWith/whiteWith",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "社群首页",
+					"pathName": "page/Community/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "攻略",
+					"pathName": "page/strategy/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员卡创建订单",
+					"pathName": "my/pages/vipcardCreate/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "加油",
+					"pathName": "equityCard/pages/Oiling/oiling",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 18,
+					"name": "兑换列表",
+					"pathName": "equityCard/pages/exchange/index",
+					"query": "cardId=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "联名卡权益",
+					"pathName": "equityCard/pages/equityCard/equityCard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 20,
+					"name": "支付成功",
+					"pathName": "hotel/pages/paySuccess/index",
+					"query": "cardId=5",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pms酒店",
+					"pathName": "hotel/pages/pmsList/pmsList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 22,
+					"name": "手机充值",
+					"pathName": "page/Recharge/phonerecharge/detail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "视频充值列表",
+					"pathName": "page/Recharge/videorecharge/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "视频充值详情",
+					"pathName": "page/Recharge/videorecharge/detail/index",
+					"query": "project_id=c7165",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设施详情",
+					"pathName": "equityCard/pages/fullHotel/fullHotelDetailNew/fullHotelDetailNew",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "酒店信息报错",
+					"pathName": "hotel/pages/hotelErrorMsg/hotelErrorMsg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "领券中心",
+					"pathName": "hotel/pages/couponCenter/couponCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的优惠券",
+					"pathName": "my/pages/coupon/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/home/index",
+					"pathName": "pages/home/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

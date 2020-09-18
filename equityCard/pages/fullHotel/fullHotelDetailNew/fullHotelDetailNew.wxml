@@ -1,0 +1,106 @@
+<!--page/HotelOther/pages/hotelDetailHew/hotelDetailHew.wxml-->
+<!--  -->
+<view class="newtop">
+	<view class="newtop_text">
+		详情·设施
+	</view>
+	<view class="navtab">
+		<image src="{{iscollect==0?'http://image.zhiding365.com/2020/9/9/e904ad2e-76ba-4fa0-a784-a56c9a868cea.png':'http://image.zhiding365.com/2020/9/9/e6f02e7d-5904-4947-8881-a125a0e0be8b.png'}}" bindtap="sureCollect"></image>
+		<image src="http://image.zhiding365.com/2020/9/9/15d6c491-1e13-47d5-a38e-f207f05527d8.png" bindtap="report"></image>
+		<image src="http://image.zhiding365.com/2020/9/9/0329561b-9303-4458-87cb-950182757394.png"></image>
+	</view>
+</view>
+
+<view class="tabs" style="margin-bottom:20rpx">
+	<view class="{{tab[0] ? 'tab active' : 'tab'}}" catchtap="changetab" data-idx="0">酒店卖点</view>
+	<view class="{{tab[1] ? 'tab active' : 'tab'}}" catchtap="changetab" data-idx="1">酒店政策</view>
+	<view class="{{tab[2] ? 'tab active' : 'tab'}}" catchtap="changetab" data-idx="2">酒店设施</view>
+</view>
+<block wx:if="{{tab[0]}}">
+	<view class="hotel_top">
+		<view class="hotel_tit">
+			<view class="hotel_name">{{sell.hotelName}}</view>
+			<view class="hotel_text">{{sell.establishmentDate}}｜2017年装修｜{{sell.roomTotalAmount}}</view>
+		</view>
+		<view class="hotel_phone">
+			<view>酒店电话：{{sell.phone}}</view>
+			<image bindtap="call" src="http://image.zhiding365.com/2020/9/6/b63c2449-1ee6-4a6c-990f-fee1c936d04c.png"></image>
+		</view>
+		<view class="hotel_content">
+			<view class="hotel_content_img">
+				<image src="http://image.zhiding365.com/2020/8/24/b8673175-37c8-421e-84c0-9f6b7a1976e6.png"></image>
+				<image src="http://image.zhiding365.com/2020/9/6/f837c835-174c-4bd7-aab2-82072c1c8efa.png" class="hotel_vip_img" wx:for="{{sell.starRateCode}}"></image>
+				<!-- <image src="https://yuelvdaren-1300766538.cos.ap-beijing.myqcloud.com/daren/2020/07/10/Gimage2Local_1594365062.jpeg"></image>
+				<image src="https://yuelvdaren-1300766538.cos.ap-beijing.myqcloud.com/daren/2020/07/10/Gimage2Local_1594365062.jpeg" class="hotel_vip_img"></image> -->
+			</view>
+			<view class="hotel_content_text">{{sell.message}}</view>
+		</view>
+	</view>
+	<view class="usp">
+		<view class="title">
+			<image src="http://image.zhiding365.com/2020/9/7/b99af81c-53c5-4d2c-9b60-b97d9c01f38b.png"></image>
+			<view>酒店卖点</view>
+			<image src="http://image.zhiding365.com/2020/9/7/30657af6-3d7b-403c-84aa-8d7bc6315e57.png"></image>
+		</view>
+		<view>
+			<import src="../../../components/wxParse/wxParse.wxml" />
+		</view>
+	</view>
+</block>
+<block wx:if="{{tab[1]}}">
+	<view class="notice" wx:for="{{policy}}" wx:key="policy">
+		<view class="top_rules">
+			<image src="{{item.icon}}"></image>
+			<view>{{item.title}}</view>
+		</view>
+		<view class="notices_title" wx:for="{{item.item}}" wx:for-item="policyItem">
+			<view class="policy">
+				<view class="policy_icon"></view>
+				<view class="policy_text">{{policyItem.title}}</view>
+			</view>
+			<view class="policy_content">{{policyItem.item}}</view>
+		</view>
+	</view>
+	<!-- <view class="notice">
+		<view class="top_rules">
+			<image src="https://yuelvdaren-1300766538.cos.ap-beijing.myqcloud.com/daren/2020/07/10/Gimage2Local_1594365062.jpeg"></image>
+			<view>政策</view>
+		</view>
+	</view> -->
+</block>
+
+<block wx:if="{{tab[2]}}">
+	<view class="box">
+		<view class="box_title">设施服务</view>
+		<view class="FacilitiesList" wx:for="{{facilities}}" wx:key="facilities">
+			<view class="title">
+				<image src="{{item.icon}}"></image>
+				<view>{{item.title}}</view>
+			</view>
+			<view class="FacilitiesListcontent">
+				<view wx:for="{{item.item}}" wx:key="i">{{item}}</view>
+			</view>
+		</view>
+	</view>
+</block>
+<!-- 弹窗 -->
+<view class="lockBoxs" wx:if="{{show}}">
+	<view class="lockBoxBg"></view>
+	<view class="lockBox">
+		<view class="errorList">
+			<view class="errormsg" wx:for="{{erroeMsg}}" data-item="{{item}}" bindtap="errormsg">{{item.text}}</view>
+		</view>
+		<view class="errorNo" bindtap="showFalse">取消</view>
+		<!-- <view bindtap="lockHotel" class="lockBtns">进入酒店会员页开通</view> -->
+	</view>
+</view>
+<view class="lockBoxs" wx:if="{{ifShow}}">
+	<view class="lockBoxBg"></view>
+	<view class="lockBox_ctn">
+		<view class="lockbox_content">您确定“{{errorMsg}}”吗？</view>
+		<view class="lockbtn">
+			<view class="lockbtn_left" bindtap="clones">取消</view>
+			<view class="lockbtn_right" bindtap="sures">确认</view>
+		</view>
+	</view>
+</view>

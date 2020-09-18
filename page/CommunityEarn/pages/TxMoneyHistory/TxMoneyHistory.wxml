@@ -1,0 +1,16 @@
+<view class="h-box">
+    <view class="list-box" wx:for="{{oList}}" wx:key="{{index}}">
+      <view >
+          提现金额：￥{{item.amount}}
+      </view>
+        <view >
+          提现账户：{{item.bank}}
+      </view>
+        <view >
+          时间：{{item.createTime}}
+      </view>
+        <view class="{{item.status == 4?'fail-label':''}}">
+          状态：已打款
+      </view>
+    </view>
+</view>

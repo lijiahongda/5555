@@ -1,0 +1,47 @@
+<!--my/pages/orderlist/sanfangOrder/sanfangOrder.wxml-->
+<!-- 美团订单 -->
+<view class="sf" wx:for="{{orderList}}" wx:if="{{type=='JD'||type=='elm'}}">
+  <view class="sf_meituan">
+    <view>订单号：{{item.order_sn}}</view>
+    <view class="sf_clone" bindtap="clond" data-ordersn="{{item.order_sn}}">复制</view>
+  </view>
+  <view class="sf_info">
+    <view class="sf_image">
+      <image src="{{item.goods_thumbnail_url}}"></image>
+    </view>
+    <view class="sf_text">
+      <view class="sf_icon">
+        <image wx:if="{{type=='JD'}}" src="http://image.zhiding365.com/2020/7/23/431cefe7-3a81-4efe-ab5c-101d12651129.png"></image>
+        <image wx:if="{{type=='elm'}}" src="http://image.zhiding365.com/2020/8/1/ff8f4a8c-3401-455d-a9dc-9c7779c4b115.png"></image>
+        <view class="sf_title">{{item.goods_name}}</view>
+      </view>
+      <view class="sf_price">实付金额：{{type=='JD'?item.order_amount:item.order_amount/100}}</view>
+      <view class="sf_date">{{type=='JD'?item.order_create_time:item.create_time}}</view>
+    </view>
+  </view>
+  <view class="sf_commsion">
+    <view>【预估佣金】本单预计返</view>
+    <view class="sf_sharePrice">¥{{type=='JD'?item.promotion_amount:item.promotion_amount/100}}</view>
+  </view>
+</view>
+
+
+<!-- 加油订单 -->
+<view class="phoneOrder" wx:if="{{type=='addoil'}}" wx:for="{{orderList}}">
+  <view class="phoneOrder_top">
+    <view>
+      <image src="http://image.zhiding365.com/2020/8/12/75d11134-1a49-4aa1-987e-cab91d4b7387.png"></image>
+      <view>{{item.titleRe}}</view>
+    </view>
+    <view class="phone_active">{{item.statusText}}</view>
+  </view>
+  <view class="phoneOrder_cont">{{item.title}}</view>
+  <view class="phoneOrder_footer">
+    <view>{{item.time}}</view>
+    <view style="color:#000">¥{{item.price}}</view>
+  </view>
+</view>
+
+<view class="not" wx:if="{{orderList==''}}">
+  <image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+</view>

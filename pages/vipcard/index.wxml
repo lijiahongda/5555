@@ -1,0 +1,177 @@
+<block wx:if="{{Detail.length}}">
+	<view style="background:#121315;">
+
+		<view class="banner_cont">
+			<swiper class="banner" current="{{currentSwiper}}" bindchange="swiperChange" style="background:url({{Detail[currentSwiper].cardImage}});background-size: 750rpx 350rpx;">
+				<swiper-item wx:for="{{Detail}}" data-itemobj="{{item}}" wx:for-index="index" wx:key='incex'>
+					<view class="card_top">
+						<view class="card1"><view>{{item.des1}}</view> <view>·</view> <view>{{item.des2}}</view></view>
+						<view class="card_num">
+							<image src="http://image.zhiding365.com/2020/8/21/baa87d9d-44ea-4755-b189-de3cf7c1d740.png"></image>
+							<view>{{item.des3}}</view>
+						</view>
+					</view>
+				</swiper-item>
+			</swiper>
+			<!--重置小圆点的样式 -->
+			<view class="dots">
+				<block wx:for="{{Detail}}">
+					<view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+				</block>
+			</view>
+		</view>
+
+		<!-- icon -->
+		<view class="icons">
+			<view class="gwsq" wx:for="{{Detail[currentSwiper].cardLogoList}}" bindtap="privilegeDetail">
+				<view class="gwsq-r">
+					<image src="{{item.logo}}"></image>
+				</view>
+				<view class="gwsq-l">
+					<view class="gwsq-l-title">{{item.title}}</view>
+					<view class="gwsq-l-cot">{{item.subTitle}}</view>
+				</view>
+			</view>
+		</view>
+
+
+
+
+		<!-- 联名卡滑动 -->
+		<view class="containerH">
+			<swiper previous-margin="66rpx" next-margin="66rpx" bindchange="swiperBindchange" current="{{swiper_curPage}}" class="swiper">
+				<block wx:for="{{equityList}}" wx:key="index">
+					<swiper-item class='swiper_item'>
+						<view class="equity_list" bindtap="privilegeDetail">
+							<view class="equity_top">
+								<image src="{{item.image}}"></image>
+								<view>
+									<view>{{item.title}}</view>
+									<view style="font-size:22rpx;font-weight:400;">{{item.desc}}</view>
+								</view>
+							</view>
+							<view class="equity_cont">
+								<view wx:for="{{item.list}}" wx:for-item="items" wx:key="idx" class="equity_shop" style="{{item.list.length==2?'width:256rpx':''}}">
+									<image src="{{items.image}}"></image>
+									<view>{{items.title}}</view>
+									<view style="font-size:22rpx;color:#666666;font-weight:400;">{{items.desc}}</view>
+								</view>
+							</view>
+						</view>
+					</swiper-item>
+				</block>
+			</swiper>
+			<!--重置小圆点的样式 -->
+			<view class="dots">
+				<block wx:for="{{equityList}}">
+					<view class="edot{{index == swiper_curPage ? ' eactive' : ''}}"></view>
+				</block>
+			</view>
+		</view>
+
+
+
+		<!-- 会员专享优惠券 -->
+		<view class="title_all">
+			<image src="http://image.zhiding365.com/2020/8/21/20acf748-11ed-4f3a-99f2-964b985c29e3.png"></image>
+			<view>会员专享优惠券</view>
+			<image src="http://image.zhiding365.com/2020/8/21/0476ca79-1b04-44e5-b13c-2f11d0e7e9b6.png"></image>
+		</view>
+		<view class="vip_card">
+			<view class="vip_coupon">
+				<view class="coupon_top">
+					<view class="tit_num">
+						<image src="http://image.zhiding365.com/2020/8/23/e3b5960a-e35e-4f2a-82f3-89615a907eea.png"></image>
+						<view>{{Detail[currentSwiper].des4}}</view>
+						<view style="font-size:40rpx;font-weight: 800;margin: 0 10rpx;">{{Detail[currentSwiper].des5}}</view>
+						<view>{{Detail[currentSwiper].des6}}</view>
+					</view>
+					<view>{{Detail[currentSwiper].des7}}</view>
+				</view>
+
+				<view class="coupon_cont" wx:if="{{couponShow}}">
+					<view class="coupon_content">
+						<view class="title">查看联名卡优惠券</view>
+						<view class="c_list" wx:for="{{Detail[currentSwiper].coupons}}" wx:for-index="index" wx:key="index">
+							<view class="c_title">{{item.couponHeadTypeName}}</view>
+							<image src="http://image.zhiding365.com/2020/8/25/8d3b05c0-3d3c-4264-916e-7b6f0ed42cf3.png"></image>
+							<view class="coupon_bg">
+								<view class="c_label">{{item.couponTypeName}}</view>
+								<view class="c_left">
+									<view>{{item.couponName}}</view>
+									<!-- <view wx:if="{{item.timeDesc}}">{{item.timeDesc}}</view> -->
+									<!-- <view wx:else>有效期至：{{item.dueTime}}</view> -->
+								</view>
+								<view class="c_right"><text style="font-size:20rpx">¥</text><text>{{item.couponType==1?item.discount:item.prefAmount}}{{item.couponType==1?'折扣':'元'}}</text></view>
+							</view>
+							<view class="c_num"><text>{{item.count}}</text> <text style="font-size:24rpx;color:#fff"> 张</text></view>
+						</view>
+						<image class="c_bot" catchtap="couponBox" src="http://image.zhiding365.com/2020/8/25/59ee8781-7d5e-4a98-a850-788fb580522a.png"></image>
+					</view>
+				</view>
+
+				<view class="coupon_bot" wx:if="{{!couponShow}}" catchtap="couponBox">
+					<view>查看联名卡优惠券</view>
+					<view class="mores">
+						<view>展开</view>
+						<image class="more" src="http://image.zhiding365.com/2020/8/23/da5d04f7-3e61-47d8-9933-0723498f1576.png"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+
+		<!-- 开卡即送 -->
+		<view class="title_all">
+			<image src="http://image.zhiding365.com/2020/8/21/20acf748-11ed-4f3a-99f2-964b985c29e3.png"></image>
+			<view>开卡即送</view>
+			<image src="http://image.zhiding365.com/2020/8/21/0476ca79-1b04-44e5-b13c-2f11d0e7e9b6.png"></image>
+		</view>
+		<view class="card_give">
+			<image src="{{Detail[currentSwiper].goodsImage}}"></image>
+		</view>
+
+
+
+
+		<view style="width:750rpx;height:128rpx"></view>
+
+
+		<block wx:if="{{Detail[currentSwiper].payStatus==0}}">
+			<view class="bottom" wx:if="{{Detail[currentSwiper].shareCommission}}" style="background:url(http://image.zhiding365.com/2020/8/23/661cf32c-9126-4c25-a31b-6434c8b80f48.png);background-size: 750rpx 88rpx;background-repeat: no-repeat;">
+				<view class="pay share_pay">
+					<button bindtap="handleShowSelect" style="background-color:transparent;margin: 0;padding: 0;border: none;width: auto;">
+						<view class="name">分享赚¥{{Detail[currentSwiper].shareCommission}}</view>
+					</button>
+				</view>
+				<view class="pays">
+					<view class="vip_pay">¥<text style="font-size:48rpx">{{Detail[currentSwiper].cardPrice}}</text>/{{Detail[currentSwiper].deadLine}}</view>
+					<view class="open" bindtap="open">立即开通</view>
+				</view>
+			</view>
+
+			<view class="bottom no_share" wx:if="{{Detail[currentSwiper].shareCommission==0}}" style="background:url(http://image.zhiding365.com/2020/8/28/5a44137b-1e73-409e-8fc0-d5d0817c66f2.png);background-size: 750rpx 88rpx;background-repeat: no-repeat;">
+				<view class="pay share_pay">
+					¥<text style="font-size:48rpx">{{Detail[currentSwiper].cardPrice}}</text>/{{Detail[currentSwiper].deadLine}}
+				</view>
+				<view class="pays">
+					<view></view>
+					<view class="open" bindtap="open">立即开通</view>
+				</view>
+			</view>
+		</block>
+
+
+
+		<poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+		<shareSelect bind:handleCloseDialog="handleCloseShareDialog" hName="{{Detail[currentSwiper].cardName}}" cpsCustomerId="{{cpsCustomerId}}" price="{{Detail[currentSwiper].cardPrice}}" cName="{{Detail[currentSwiper].title}}" type="{{Detail[currentSwiper].type}}" bind:handleShowPosterStatus="handleShowPosterStatus" status="{{shareSelectStatus}}"></shareSelect>
+	</view>
+
+</block>
+
+<block wx:if="{{Detail.length==0}}">
+	<view class="detail_no">
+		<image src="http://image.zhiding365.com/2020/8/31/ba510f8c-1d3a-450b-b8a6-fa626f977ebd.png"></image>
+		<view>这个酒店刚刚创建，还未来得及设置联名卡、会员，请耐心等待！</view>
+	</view>
+</block>

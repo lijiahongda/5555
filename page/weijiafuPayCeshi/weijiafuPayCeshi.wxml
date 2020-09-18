@@ -1,0 +1,2 @@
+<!--page/weijiafuPayCeshi/weijiafuPayCeshi.wxml-->
+<view bindtap="goPay">去支付</view>

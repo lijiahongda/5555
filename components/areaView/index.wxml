@@ -1,0 +1,27 @@
+<!--components/areaView/index.wxml-->
+<!-- 行政区 -->
+<view class="commodity_screen" wx:if="{{isArea}}" bindtap="hideModal" catchtouchmove="disMove"></view>
+<view class='areaView' style='top:{{marginTop?marginTop:""}}' wx:if="{{isArea}}">
+	<scroll-view class='stairView' scroll-y="true" scroll-x='false'>
+		<view class="stairViewCell {{stairKey==id ? 'stairViewCellClick':''}}" wx:for="{{areaView}}" wx:key="area" wx:for-index='id' data-id='{{id}}' bindtap='clickstairCell' data-types='{{id}}'>{{item.stair}}</view>
+	</scroll-view>
+	<scroll-view class='secondView' scroll-y="true" scroll-x='false' wx:if="{{stairKey == 3}}">
+		<view style='display: flex;flex-direction: row'>
+			<scroll-view class='' style='height:840rpx;width:30%' scroll-y="true" scroll-x='false'>
+				<view class="stairViewCell {{stationKey==index ? 'secondViewCellNameClick':''}}" wx:for="{{secondViewCell}}" data-index='{{index}}' wx:key="second" data-subwayKey="{{subwayKey}}" data-id='{{index}}' bindtap="{{stairKey == 3?'onsubInfoStations':'onSubwaySubMenuTap'}}" data-types='3' style='width:156rpx'>{{item.title}}</view>
+			</scroll-view>
+			<scroll-view class='' style='height:840rpx;margin-top:20rpx' scroll-y="true" scroll-x='false'>
+				<view class='subwayKeyCell' wx:for="{{stairKey == 3?subInfoStations:subInfo}}" wx:key="second3" wx:for-index='id' data-title="{{item.title}}" data-index="{{id}}" bindtap='clickSecondCell' data-types='3'>
+					<view class="secondViewCellName {{secondKey==id?'secondViewCellNameClick':''}}" style='font-size:28rpx'>{{item.title}}</view>
+					<image class='secondViewCellImage' src="{{secondKey==id?selectImage:''}}"></image>
+				</view>
+			</scroll-view>
+		</view>
+	</scroll-view>
+	<scroll-view class='secondView' scroll-y="true" scroll-x='false' wx:else>
+		<view class='secondViewCell' wx:for="{{secondViewCell}}" wx:key="second0" wx:for-index='id' data-title="{{item.title}}" data-index="{{id}}" bindtap='clickSecondCell' data-types='0'>
+			<view class="secondViewCellName {{secondKey==id?'secondViewCellNameClick':''}}">{{item.title}}</view>
+			<image class='secondViewCellImage' src="{{secondKey==id?selectImage:''}}"></image>
+		</view>
+	</scroll-view>
+</view>

@@ -1,0 +1,186 @@
+/* my/pages/myCommission/index.wxss */
+page{
+  background: #f9f8f8;
+}
+.content{
+  padding: 0 36rpx;
+  padding-top: 36rpx;
+}
+
+.content .earnings{
+  background: white;
+  border-radius: 25rpx;
+  height: 130rpx;
+  line-height: 130rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.content .earnings .left{
+  float: left;
+}
+.content .earnings .left text:first-child{
+  color: #242424;
+  font-size: 32rpx;
+}
+.content .earnings .left text:nth-child(2){
+  color: #ED4B49;
+  font-size: 32rpx;
+  display: inline-block;
+  margin-left: 14rpx;
+  margin-right: 8rpx;
+}
+.content .earnings .left text:last-child{
+  color: #ED4B49;
+  font-size: 50rpx;
+}
+.content .earnings .deposit{
+  float: right;
+  width: 150rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  background: #ED4B49;
+  border-radius: 12rpx;
+  color: #FFFFFF;
+  margin-top: 40rpx;
+}
+
+.nav_tab{
+  margin-top: 30rpx;
+  width:100%;
+  height:100rpx;
+  display:flex;
+  flex-direction:row;
+}
+.show{
+  line-height:100rpx;
+  text-align:center;
+  flex:1;
+  color:#999999;
+  font-size:32rpx;
+}
+.hidden{
+  line-height:82rpx;
+  text-align:center;
+  color:#ED4B49;
+  flex:1;
+  font-size:34rpx;
+}
+.nav_underline{
+  background:#ED4B49;
+  width:80rpx;
+  height:4rpx;
+  margin-top:-4rpx;
+  margin-left:48rpx;
+  border-radius:8rpx;
+}
+
+.content .amounts{
+  margin-top: 30rpx;
+  width: 100%;
+}
+.content .amounts .money{
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+.content .amounts .money image{
+  width: 26rpx;
+  height: 26rpx;
+  vertical-align: middle;
+  margin-right: 12rpx;
+}
+.content .amounts .money view{
+  display: inline-block;
+  vertical-align: middle;                                  
+}
+.content .amounts .money view text:first-child{
+  color: #242424;
+  font-size: 32rpx;
+  display: inline-block;
+  margin-right: 6rpx;
+}
+.content .amounts .money view text:nth-child(2){
+  color: #ED4B49;
+  font-size: 28rpxs;
+}
+.content .amounts .money view text:last-child{
+  font-size: 32rpx;
+  color: #ED4B49;
+}
+
+.content .details{
+  margin-top: 40rpx;
+}
+.content .details .item{
+  margin-bottom: 26rpx;
+  width: 100%;
+  background: white;
+  border-radius: 20rpx;
+}
+.content .details .item .img{
+  width: 100rpx;
+  height: 100rpx;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 24rpx;
+  margin-left: 30rpx;
+  padding: 36rpx 0;
+}
+.content .details .item image{
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;  
+}
+.content .details .item .info{
+  display: inline-block;
+  vertical-align: middle;
+  width: 380rpx;
+}
+.content .details .item .info .name{
+  font-weight: bold;
+  font-size: 30rpx;
+  color: #242424;
+  margin-bottom: 10rpx;
+}
+.content .details .item .info .time{
+  margin-bottom: 10rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+.content .details .item .info .describe{
+  color: #666666;
+  font-size: 24rpx;
+  width: 90%;
+  overflow: hidden;
+  white-space:nowrap;/*不显示的地方用省略号...代替*/
+  text-overflow:ellipsis;/* 支持 IE */
+}
+.content .details .item .amount{
+  float: right;
+  color: #ED4B49;
+  text-align: right;
+  margin-right: 30rpx;
+  margin-top: 68rpx;
+}
+.content .details .item .amount .num{
+  margin-bottom: 6rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.content .details .item .amount .num text:first-child{
+  display: inline-block;
+  margin-right: 4rpx;
+  font-weight: normal;
+}
+
+
+.not{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 200rpx;
+}
+.not image{
+  width: 347rpx;
+}

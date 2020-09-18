@@ -1,0 +1,112 @@
+page {
+  background: #ba2930;
+}
+.pm-box {
+  width: 697rpx;
+  height: 205rpx;
+  background: #ffffff;
+  border: 3rpx solid #f7c6a2;
+  border-radius: 13rpx;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+.pm-ls {
+  text-align: center;
+  left: 50%;
+  margin-left: -269.5rpx;
+  width: 539rpx;
+  height: 119rpx;
+  line-height: 133rpx;
+  position: absolute;
+  top: -68rpx;
+  background: url("https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-20/20/yuelvhuiFaTIupMUef1597928011.png")
+    no-repeat;
+  background-size: cover;
+  font-size: 28rpx;
+  font-family: FZZhengHeiS-B-GB Regular, FZZhengHeiS-B-GB Regular-Regular;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 2rpx;
+  }
+.label-list{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 32rpx;
+  font-family: PingFang SC Medium, PingFang SC Medium-Medium;
+  font-weight: 500;
+  color: #333333;
+}
+.label-list view{
+  width: 100%;
+  text-align: center;
+}
+.ins1{
+
+
+font-size: 24rpx;
+font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+font-weight: 400;
+text-align: center;
+color: #ffffff;
+margin: 20rpx auto;
+}
+.u-box{
+  width: 697rpx;
+height: 662rpx;
+background: #ffffff;
+border: 3rpx solid #f7c6a2;
+border-radius: 13rpx;
+margin:0 auto;
+}
+.u-box-hea{
+  display: flex;
+}
+.u-box-hea view{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  line-height: 60rpx;
+}
+.rule-box{
+  margin: 20rpx 40rpx;
+  color: #fff;
+}
+.lx-j-box-list{
+  display: flex;
+}
+.bgw{
+  background: #fff;
+}
+.acw{
+  background: #FAE5E4;
+}
+.lx-j-box{
+  width: 697rpx;
+  margin: 0 auto;
+  border-radius: 14rpx;
+  overflow: hidden;
+
+}
+.lx-j-box .title{
+
+line-height: 86rpx;
+text-align: center;
+font-size: 28rpx;
+font-family: PingFang SC Medium, PingFang SC Medium-Medium;
+font-weight: 500;
+
+color: #ba2930;
+
+}
+.lx-j-box-list view{
+  color: #BA2930;
+  display: flex;
+  flex:1;
+  justify-content: center;
+  line-height: 86rpx;
+}

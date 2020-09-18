@@ -1,0 +1,131 @@
+/* hotel/pages/selectCity/selectCity.wxss */
+/* @import '../../../../css/common.wxss'; */
+
+page {
+    background-color: #F9F8F8;
+    height: 100%;
+}
+
+.titleHead {
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    background-color: rgba(249, 248, 248, 1);
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    padding-bottom: 21rpx;
+    z-index: 102;
+    margin-bottom: 38rpx;
+}
+.navi{
+    margin-left: 4%
+}
+.search {
+    width: 57%;
+    height: 60rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 27.4%
+}
+
+.search input {
+    width: 85%;
+    font-size: 20rpx;
+}
+
+.search image {
+    width: 24rpx;
+    height: 24rpx;
+    margin-left: 4%;
+    margin-right: 1%;
+}
+
+.city__list {
+    height: 100%;
+}
+
+.CurrentPosi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 30rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(36, 36, 36, 1);
+    padding-left: 4%;
+    margin-bottom: 41rpx;
+}
+
+.CurrentPosi image {
+    width: 20rpx;
+    height: 24rpx;
+    margin-right: 15rpx;
+}
+
+.hotCity,
+.HistoricalRecord {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin-bottom: 29rpx;
+}
+
+.hotCity .title,
+.HistoricalRecord .title {
+    font-size: 28rpx;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: rgba(36, 36, 36, 1);
+    margin-bottom: 6rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.HistoricalRecord .title .ClearRecord {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 22rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    margin-left: 41rpx;
+}
+.HistoricalRecord .title .ClearRecord image{
+    width: 20rpx;
+    height: 20rpx;
+    margin-right: 5rpx;
+}
+.hotCity .hotContent,
+.HistoricalRecord .hotContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hotCity .hotContent view,
+.HistoricalRecord .hotContent view {
+    height: 54rpx;
+    padding-left: 41rpx;
+    padding-right: 41rpx;
+    border-radius: 27rpx;
+    font-size: 24rpx;
+    font-family: PingFang SC;
+    font-weight: 400;
+    color: rgba(36, 36, 36, 1);
+    background-color: #fff;
+    margin-top: 18rpx;
+    line-height: 54rpx;
+    margin-right: 12rpx;
+}

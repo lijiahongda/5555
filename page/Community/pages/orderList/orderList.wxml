@@ -1,0 +1,119 @@
+<view class="order-box">
+  <view class="order-tab bgw">
+    <view class="tab-list" wx:for="{{tabData}}" bindtap="handleTabMy" wx:key="{{item.id}}" data-id="{{item.id}}">
+      <view class="{{tabDataIndex == item.id?'active':''}}">{{item.name}}</view>
+      <view hidden="{{!tabDataIndex == item.id}}" class="border-active"></view>
+    </view>
+  </view>
+  <view class="order-nav bgw" wx:if="{{tabDataIndex == 1}}">
+    <block wx:for="{{orderTabData}}" wx:key="{{item.id}}">
+      <view class="lhs" bindtap="handleTabOrderStaus" data-id="{{item.id}}" data-status="{{item.status}}" class="order-nav-list {{item.id == orderTabDataIndex?'active':''}}">
+        {{item.name}}
+      </view>
+    </block>
+  </view>
+  <view class="time-box bgw" bindtap="handleChooseDate">
+    <view class="time-box-name">{{alltime?alltime:"下单时间筛选"}}</view>
+    <image class="icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-10/13/yuelvhuiQR9Q14Mkkw1597038256.png" />
+  </view>
+  <view class="fixed-time-box" hidden="{{statusObj.date == 1}}">
+    <view class="time-box-hea">
+      <view class="list-label" bindtap="handleHideMc">取消</view>
+      <view class="list-label time-box-hea-c" bindtap="handleTrueDate">确定</view>
+    </view>
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindDateTimeChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" wx:key="{{years}}" style="line-height: 50px; text-align: center;">
+          {{item}}年
+        </view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" wx:key="{{months}}" style="line-height: 50px; text-align: center;">
+          {{item}}月
+        </view>
+      </picker-view-column>
+      <!-- <picker-view-column>
+        <view wx:for="{{days}}" wx:key="{{days}}" style="line-height: 50px; text-align: center;">
+          {{item}}日
+        </view>
+      </picker-view-column> -->
+    </picker-view>
+  </view>
+  <view class="mc" bindtap="handleHideMc" hidden="{{statusObj.date == 1}}"></view>
+  <view class="order-main">
+    <view class="empty-box" wx:if="{{StallListData.length == 0 && tabDataIndex == 0}}">暂无推广订单</view>
+    <view class="empty-box" wx:if="{{BuyListData.length == 0 && tabDataIndex == 1}}">暂无购买订单</view>
+    <block wx:if="{{tabDataIndex == 0}}">
+      <view class="order-main-list" wx:for="{{StallListData}}" wx:key="{{index}}">
+        <view class="label-list">
+          <view class="label">单号：</view>
+          <view class="intro">
+            <view class="blue-text">{{item.order_sn}}</view>
+            <image class="copy" data-ordersn="{{item.order_sn}}" bindtap="handleCopy" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-10/14/yuelvhuifFvFv38G0s1597041585.png"></image>
+          </view>
+        </view>
+        <view class="label-list">
+          <view class="label">时间：</view>
+          <view class="intro">{{item.create_time}}</view>
+        </view>
+        <view class="label-list">
+          <view class="label">状态：</view>
+          <view class="intro">{{item.order_status_mean}}</view>
+          <view style="margin-left:10rpx" >预估收益：{{item.commission}}</view>
+        </view>
+        <block>
+          <view class="sp-list">
+            <view class="sp-list-fl">
+              <image class="icon" src="{{item.goods_thumbnail_url}}" mode="widthFix" lazy-load="false"></image>
+            </view>
+            <view class="sp-list-fr">
+              <view class="lhs">{{item.goods_name}}</view>
+              <view>数量：*{{item.goods_quantity}}</view>
+            </view>
+            <view class="price-js">计佣金额:{{item.commission}}</view>
+          </view>
+          <view class="lbel-bottom">
+            <view class="lbel-bottom-list lbel-bottom-list-fl">订单金额：</view>
+            <view class="lbel-bottom-list lbel-bottom-list-fr">￥{{item.order_amount}}</view>
+          </view>
+        </block>
+      </view>
+    </block>
+      <block wx:if="{{tabDataIndex == 1}}">
+      <view class="order-main-list" wx:for="{{BuyListData}}" wx:key="{{index}}">
+        <view class="label-list">
+          <view class="label">单号：</view>
+          <view class="intro"  data-ordersn="{{item.order_sn}}" bindtap="handleCopy">
+            <view class="blue-text">{{item.order_sn}}</view>
+            <image class="copy" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-08-10/14/yuelvhuifFvFv38G0s1597041585.png"></image>
+          </view>
+        </view>
+        <view class="label-list">
+          <view class="label">时间：</view>
+          <view class="intro">{{item.create_time}}</view>
+        </view>
+        <view class="label-list">
+          <view class="label">状态：</view>
+          <view class="intro">{{item.order_status_mean}}</view>
+          <!-- <view style="margin-left:10rpx">预估收益：￥1.27</view> -->
+        </view>
+        <block>
+          <view class="sp-list">
+            <view class="sp-list-fl">
+              <image class="icon" src="{{item.goods_thumbnail_url}}" mode="widthFix" lazy-load="false"></image>
+            </view>
+            <view class="sp-list-fr">
+              <view>{{item.goods_name}}</view>
+              <view>数量：*{{item.goods_quantity}}</view>
+            </view>
+            <!-- <view class="price-js">计佣金额:{{item.commission}}</view> -->
+          </view>
+          <view class="lbel-bottom">
+            <view class="lbel-bottom-list lbel-bottom-list-fl">订单金额：</view>
+            <view class="lbel-bottom-list lbel-bottom-list-fr">￥{{item.order_amount}}</view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>

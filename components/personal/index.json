@@ -1,0 +1,8 @@
+{
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "custom":"/components/custom/custom",
+    "couponBox":"/components/couponBox/couponBox"
+  },
+  "component": true
+}

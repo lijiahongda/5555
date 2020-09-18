@@ -1,0 +1,114 @@
+<custom titleText="" background="rgba(0,0,0,0)" backIcon="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/14/yuelvhuiHhAqob85z41594965762.png" homeIcon="" postion="" closeIcon=""></custom>
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="content">
+	<image class="banner" src="{{shopDetail.breifImage}}"></image>
+	<view class="main-content">
+		<view class="goods">
+			<view class="title">{{shopDetail.cardName}}</view>
+			<view class="describe">
+				<view>{{shopDetail.dealerName + '官方直销'}}</view>
+				<image class="icon" src="/images/icon-vip.png"></image>
+			</view>
+			<view class="tc">
+				<view>套餐包含</view>
+				<view class="handle">（共{{shopDetail.coupons && shopDetail.coupons.length}}张优惠券）</view>
+			</view>
+			<view class="coupon" wx:for="{{shopDetail.coupons}}" wx:key="index">
+				<view class="row1">
+					<view class="status s1">{{item.couponTypeName || '优惠券'}}</view>
+					<view>{{item.couponName}}</view>
+				</view>
+				<view class="row2">使用时间：{{item.effecTime}}至{{item.dueTime}}</view>
+				<view class="row3">
+					<view wx:if="{{item.prefAmount!=0}}">¥{{item.prefAmount / 100}}</view>
+					<!-- <view class="handle">¥1999.00</view> -->
+				</view>
+				<view class="counts">
+					<text>X</text>
+					<text class="handle">{{item.count}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="tabs">
+			<view class="{{tabs[0] ? 'tab active' : 'tab'}}" data-idx="0" catchtap="changeTabs">商品内容</view>
+			<view class="{{tabs[1] ? 'tab active' : 'tab'}}" data-idx="1" catchtap="changeTabs">图文详情</view>
+			<view class="{{tabs[2] ? 'tab active' : 'tab'}}" data-idx="2" catchtap="changeTabs">购买须知</view>
+		</view>
+		<view class="details" hidden="{{!tabs[0]}}">
+			<view class="info">
+				<view class="info-c">商品内容</view>
+				<view class="info-e">COMMODITY CONTENT</view>
+			</view>
+			<view>
+				<template is="wxParse" data="{{wxParseData:content1.nodes}}" />
+			</view>
+		</view>
+		<view class="details" hidden="{{!tabs[1]}}">
+			<view class="info">
+				<view class="info-c">图文详情</view>
+				<view class="info-e">PICTURE AND TEXT DETAILS</view>
+			</view>
+			<view>
+				<template is="wxParse" data="{{wxParseData:content2.nodes}}" />
+			</view>
+		</view>
+		<view class="details" hidden="{{!tabs[2]}}">
+			<view class="info">
+				<view class="info-c">购买须知</view>
+				<view class="info-e">PURCHASE INSTRUCTIONS</view>
+			</view>
+			<view>
+				<template is="wxParse" data="{{wxParseData:content3.nodes}}" />
+			</view>
+		</view>
+		<view class="details">
+			<view class="info">
+				<view class="info-c">商家信息</view>
+				<view class="info-e">MERCHANT INFORMATION</view>
+			</view>
+			<view class="store-info">
+				<view class="row1">
+					<image class="icon" src="/images/icon-location.png"></image>
+					<text>{{shopDetail.dealerName}}</text>
+				</view>
+				<view class="row2">{{shopDetail.address || ''}}</view>
+				<view class="row1" data-phone="{{shopDetail.telphone}}" catchtap="call">
+					<image class="icon" src="/images/icon-call.png"></image>
+					<text style="color:#666">{{shopDetail.telphone}} ></text>
+				</view>
+				<view class="ri" data-lat="{{shopDetail.lat}}" data-lng="{{shopDetail.lng}}" data-address="{{shopDetail.address}}" catchtap="map">
+					<image class="pic" src="/images/info-bg.png"></image>
+					<view class="txt-box">
+						<view class="txt">查看位置</view>
+						<view>></view>
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="details" style="margin-bottom:0">
+			<view class="info">
+				<view class="info-c">商家热卖</view>
+				<view class="info-e">MERCHANT INFORMATION</view>
+			</view>
+			<view>
+				<list list="{{shopDetail.productCardList}}" changeStyle="{{true}}"></list>
+			</view>
+		</view>
+	</view>
+	<view class="btm">
+		<view class="le" catchtap="handleShowSelect" wx:if="{{shopDetail.shareCommission}}">
+			<view class="txt">
+				<view>分享赚</view>
+				<view>¥{{shopDetail.shareCommission}}</view>
+			</view>
+		</view>
+		<view class="ri" style="{{!shopDetail.shareCommission ? 'width:100%' : ''}}" catchtap="buyAtOnce">
+			<view class="txt">
+				<view>立即购买</view>
+				<view>¥{{shopDetail.cardPrice}}</view>
+			</view>
+		</view>
+	</view>
+	<poster status="{{posterObj.status}}" posterUrl="{{posterObj.url}}" bind:handleBox="handleBox"></poster>
+	<shareSelect fromtype="all" goodObj="{{copyDetail}}" bind:handleCloseDialog="handleCloseShareDialog" bind:handleShowPosterStatus="handleShowPosterStatus" status="{{shareSelectStatus}}"></shareSelect>
+</view>

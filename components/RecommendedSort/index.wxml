@@ -1,0 +1,9 @@
+<!--components/RecommendedSort/index.wxml-->
+<!-- 推荐排序 -->
+<view class="commodity_screen" wx:if="{{isSort}}" bindtap="hideModal" catchtouchmove="disMove"></view>
+<view class="recommendView" style='top:{{marginTop?marginTop:""}}' wx:if="{{isSort}}">
+	<view class="recommendViewCell" wx:for="{{recommendCell}}" wx:key="cell" wx:for-index="id" data-id="{{id}}" bindtap='clickrecommend' data-condition="{{item.condition}}" data-title="{{item.title}}">
+		<image class='recommendViewCellImage' src="{{item.condition==1?selectImage:''}}"></image>
+		<view class="recommendViewCellText {{item.condition == 1 ? 'recommendCellClick':''}}">{{item.title}}</view>
+	</view>
+</view>

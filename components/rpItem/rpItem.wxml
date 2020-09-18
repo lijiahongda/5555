@@ -1,0 +1,79 @@
+<view class="roominfo" data-index="{{index}}" style="{{room.showStatus == 1?'border:none':''}}">
+	<image src="{{room.image}}" class="roomimg" />
+	<view class="roombasicinfo">
+		<view class="roomname">
+			<view>{{room.roomName}}</view>
+			<image src="http://image.zhiding365.com/2020/9/7/f9b10947-0b91-494a-a52f-02f9fa7700f3.png"></image>
+		</view>
+		<view class="roomfac">
+
+			<view class="room_tip">
+				<view>{{room.bedType}} 111111{{room.window}} {{room.window}}</view>
+				<view class="room_icon">
+					<view class="discount">直订会员6折起</view>
+					<view class="coupon">优惠券</view>
+				</view>
+			</view>
+
+			<view class="price">
+				<view>
+					<view class="old_price">¥{{room.price}}</view>
+					<view class="minprice">
+						<view class="min-label">￥<text class="lable-price">{{room.plans[0].vipPrice}}</text>
+						</view>
+						<view class="lable-qi">起</view>
+					</view>
+				</view>
+				<image class="btm-img" catchtap="handleShowChildList" data-index="{{index}}" wx:if="{{room.showStatus == 0}}" src="http://image.zhiding365.com/2020/9/7/a1b869a0-f421-47fc-bce3-3053c84e1e7c.png"></image>
+				<image class="btm-img" catchtap="handleShowChildList" data-index="{{index}}" wx:if="{{room.showStatus == 1}}" src="http://image.zhiding365.com/2020/9/7/f8006972-3704-484c-856e-d3c987394a0e.png"></image>
+			</view>
+
+		</view>
+	</view>
+</view>
+
+
+
+
+<block wx:if="{{room.showStatus == 1}}">
+	<view class="fw_list_all">
+		<view class="fw_list" wx:for="{{room.plans}}" wx:for-item="rpitem" wx:for-index="index" wx:key="index">
+			<view class="roomname">
+				<view>{{rpitem.ratePlanName}}</view>
+				<image src="http://image.zhiding365.com/2020/9/7/f9b10947-0b91-494a-a52f-02f9fa7700f3.png"></image>
+			</view>
+			<!-- <view class="vip_text">（会员专享）</view> -->
+			<!-- <view class="room_icon">
+				<view>免费兑早餐</view>
+				<view>免费兑延迟退房</view>
+			</view> -->
+			
+			<!-- <view class="time">入住当天18:00前可免费取消</view> -->
+			<view class="state">
+				<!-- <block wx:if="{{false}}">
+					<image style="width:12rpx;height:22rpx" src="http://image.zhiding365.com/2020/9/7/9bc815df-3311-47b9-9cf2-18e0954da5ab.png"></image>
+					<view>立即确认</view>
+				</block> -->
+				<block wx:if="{{true}}">
+					<image style="width:24rpx;height:24rpx" src="http://image.zhiding365.com/2020/9/7/766866d7-aebf-4cc7-a5ce-997d0d9e2ab3.png"></image>
+					<view style="color:#333333">不可取消</view>
+				</block>
+			</view>
+			
+			<view class="fw_list_pos">
+				<view class="oriprice">
+					<text>￥</text><text>{{room.price}}</text>
+				</view>
+
+				<view class="rp_btn_ri">
+					<view wx:if="{{room.currentAlloment==0 || room.currentAlloment>5}}">仅剩{{room.currentAlloment}}间</view>
+					<view class="rp_btn" data-obj="{{rpitem}}" catchtap="switch">
+						<view class="rp_btn_t">抢</view>
+						<view class="rp_btn_b">在线付</view>
+					</view>
+				</view>
+			</view>
+
+		</view>
+	</view>
+</block>

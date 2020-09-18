@@ -1,0 +1,33 @@
+<!--equityCard/pages/service/service.wxml-->
+<view class="main">
+  <navigator url="/equityCard/pages/service/video/video">
+      <image  class="headImg" bindtap="imgBox" src="{{data.course}}"></image>
+  </navigator>
+  <view class="serviceBox">
+     <view class="title">帮助中心</view>
+     <block wx:for="{{data.helpList}}" wx:for-item="item">
+        <view class="boxs">
+            <view class="boxLeft">
+              <image src="{{item.icon}}"></image>
+              <view class="txt">{{item.title}}</view>
+            </view>
+            <view class="boxContent" >
+             <!-- wx:for="{{item.content}}" wx:for-item="k"  -->
+              <navigator class="txts" 
+                  url="/equityCard/pages/service/method/method?id={{item.content[0].id}}"
+              >{{item.content[0].title}}</navigator>
+              <navigator class="txts" 
+                  url="/equityCard/pages/service/method/method?id={{item.content[1].id}}"
+              >{{item.content[1].title}}</navigator>
+              <navigator class="txts" 
+                  url="/equityCard/pages/service/method/method?id={{item.content[2].id}}"
+              >{{item.content[2].title}}</navigator>
+              <navigator class="txts" 
+                  url="/equityCard/pages/service/method/method?id={{item.content[3].id}}"
+              >{{item.content[3].title}}</navigator>
+            </view>
+        </view>
+      
+    </block>    
+  </view>
+</view>

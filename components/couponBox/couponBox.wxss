@@ -1,0 +1,142 @@
+.black_bg{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #333;
+  opacity: 0.8;
+  z-index: 10000;
+}
+.coupon{
+  position: fixed;
+  left: 70rpx;
+  right: 0;
+  top: 22%;
+  bottom: 0;
+  z-index: 10001;
+  width: 564rpx;
+  height: 668rpx;
+  background: url(http://image.zhiding365.com/2020/8/30/4b93c919-3919-4532-9189-e1fcfe308a5f.png);
+  background-size: 564rpx 668rpx;
+}
+.coupon .top{
+  position: absolute;
+  left: 106rpx;
+  width: 48rpx;
+  height: 134rpx;
+  text-align: center;
+  vertical-align: middle;
+  top: 24rpx;
+  font-size:26rpx ;
+  color: #FFF3D3;
+  line-height: 28rpx;
+  padding-top: 6rpx;
+}
+.coupon .title{
+  width: 218rpx;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #67331E;
+  background: linear-gradient(208deg, #5D3319 0%, #C3714D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  left: 210rpx;
+  top: 80rpx;
+  line-height: 36rpx;
+}
+.coupon .list{
+  width: 450rpx;
+  height: 330rpx;
+  position: absolute;
+  left: 85rpx;
+  top: 170rpx;
+  overflow-y: auto;
+  padding: 0 30rpx;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.coupon .list .list_top{
+  display: flex;
+  align-items: center;
+}
+.coupon .list .list_cont{
+  width: 310rpx;
+  height: 110rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  align-items: center;
+  background: url(http://image.zhiding365.com/2020/8/30/11d8467d-5328-425c-aa48-e50409f741fa.png);
+  background-size: 310rpx 110rpx;
+}
+.coupon .list .list_cont .list_le{
+  width: 106rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #fff;
+  height: 110rpx;
+}
+.coupon .list .list_cont .list_cen{
+  width: 204rpx;
+  font-size: 14rpx;
+  color: #fff;
+  height: 110rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+.coupon .list .list_cont .list_cen view:first-child{
+  font-size:26rpx;
+  margin-top:18rpx;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coupon .list .num{
+  font-size: 24rpx;
+  color: #5D331A;
+  margin-left: 14rpx;
+  font-weight: 600;
+}
+
+
+.top_bg{
+  width: 508rpx;
+  height: 136rpx;
+  position: absolute;
+  top: 380rpx;
+  left: 52rpx;
+  z-index: 10002;
+}
+.btn{
+  position: absolute;
+  width: 312rpx;
+  height: 74rpx;
+  left: 157rpx;
+  top: 516rpx;
+  text-align: center;
+  line-height: 72rpx;
+  font-size: 28rpx;
+  color: #68341E;
+}
+.tips{
+  font-size: 24rpx;
+  color: #DDB496;
+  width: 512rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 22rpx;
+  right: 0;
+}
+.close{
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  top: 70%;
+  left: 46%;
+  z-index: 10006;
+}

@@ -1,0 +1,70 @@
+/* equityCard/pages/TrainTickets/calendar/index.wxss */
+.date_pick {
+  position: relative;
+  background: #fff;
+}
+
+.weeks_box {
+  color: #fff;
+  font-size: 30rpx;
+  font-weight: 400;
+  width: 100%;
+  height: 75rpx;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #E8E8E8;
+  align-items: center;
+  background: linear-gradient(0deg,rgba(255,86,84,1) 0%,rgba(247,48,55,1) 100%);
+}
+.month_title {
+  color: #333333;
+  font-size: 30rpx;
+  height: 100rpx;
+  text-align: center;
+  font-weight: 500;
+  line-height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.month_title view {
+  margin: 0 10rpx;
+}
+
+.day_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.day_content .day_item {
+  width: 14.28%;
+  height: 105rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  font-size: 24rpx;
+}
+
+.day_content .active {
+  color: #fff;
+  background: #FE5452;
+}
+
+.day_content .disable {
+  color: #999999;
+  background: #fff;
+}
+
+.priceDis {
+  color: #999999;
+}

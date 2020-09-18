@@ -1,0 +1,91 @@
+<!--page/MyOther/pages/orderDetail/orderDetail.wxml-->
+<view class="titleHead" style="padding-top:{{navTop}}rpx;background-color:{{type==2?'#818CA0':''}}">
+  <image src="{{backReturn}}" bindtap="navigatorUrl"></image>
+	<view>支付结果</view>
+</view>
+<view class="HeadContent" style="background-image:url({{type == 2?fial:'https: //yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-04-15/22/yuelvhuiNb2pJTqArR1586959965.png'}});height:{{type== 2?'494rpx':''}}"></view>
+<view class="content" style="margin-top: {{type==1?-332+navTop+21+40:-442+navTop+21+40}}rpx;">
+  <view class="orderStatus">
+    <image src="{{paySuccess}}"></image>
+    <view class="title" wx:if="{{type == 1}}">预定成功</view>
+    <view class="title" wx:else>预定失败</view>
+    <view class="statusInfo" wx:if="{{type == 2}}">
+      <view class="tips">请尽快完成 支付锁定房间库存</view>
+    </view>
+  </view>
+  <view class="payInfo">
+    <view class="title">
+      <view class="orderPrice">
+        订单总额 <text>¥{{totalAmount}}</text>
+      </view>
+      <!-- <view class="ExpenseDetails">
+        <view>费用明细</view>
+        <image src="{{roow}}"></image>
+      </view> -->
+    </view>
+    <view class="payMethod">
+      <image src="{{wx}}"></image>
+      <view class="MethodInfo">
+        <view class="title">微信支付</view>
+        <!-- <view class="Discount">已享优惠5元</view> -->
+      </view>
+    </view>
+    <view class="PayNow" bindtap="Hotelpay" wx:if="{{type == 2}}">立即支付</view>
+    <view class="PayNow" bindtap="goHome" wx:else>返回首页</view>
+    <!-- <view class="BookHere">
+      <view>再次预定</view>
+    </view> -->
+  </view>
+  <!-- <view class="hotelInfo">
+    <view class="ExpectedArrival">
+      <view class="left">
+        <view class="title">预计到店时间</view>
+        <view>酒店将尽量为您保留房间</view>
+      </view>
+    </view>
+    <view class="item">
+      <view>入住人</view>
+      <view class="key">sssss</view>
+    </view>
+    <view class="item">
+      <view>联系手机</view>
+      <view class="key">sssss</view>
+    </view>
+    <view class="item">
+      <view>房间信息</view>
+      <view class="key">sssss</view>
+    </view>
+    <view class="item">
+      <view>入住日期</view>
+      <view class="key">sssss</view>
+    </view>
+  </view>
+  <view class="hotelAddress">
+    <view class="address">
+      <view class="title">
+        <text>福星居旅馆（仅限北京本地及隔离满14天福星居旅馆（仅限北京本地及隔离满14天</text>
+      </view>
+      <view>北京市平谷区新南路98号</view>
+    </view>
+  </view>
+  <view class="hotelInfo" style="padding-top:42rpx;">
+    <view class="item">
+      <view>房间信息</view>
+      <view class="key">sssss</view>
+    </view>
+    <view class="item">
+      <view>入住日期</view>
+      <view class="key">sssss</view>
+    </view>
+    <view class="cancelOrder">
+      <view>取消订单</view>
+    </view>
+  </view>
+  <view class="Rules">
+    <view class="title">改退规则</view>
+    <view class="item">1.请在30分钟内完成支付，预期未付款将自动取消；</view>
+    <view class="item">1.请在30分钟内完成支付，预期未付款将自动取消；</view>
+    <view class="item">1.请在30分钟内完成支付，预期未付款将自动取消；</view>
+    <view class="item">4.请您于入住当日14:00之后办理入住，若提前到店，酒店视当 前客房情况决定是否为您办理入住；退房时间为离店当日的中午 124.请您于入住当日14:00之后办理入住，若提前到店，酒店视当 前客房情况决定是否为您办理入住；退房时间为离店当日的中午 12</view>
+  </view> -->
+</view>

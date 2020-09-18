@@ -1,0 +1,31 @@
+<!--page/videorecharge/detail/index.wxml-->
+<view class="page">
+    <view> <image class="headimg" src="{{data.bg_img}}"></image> </view>
+    <view class="main">
+        <view class="inputview">
+            <input class="input" value="{{data.phone}}" bindinput="phoneinput" placeholder="请输入手机号码"></input>
+        </view>
+        <view class="miaoshu">
+            <view>1、充值仅限会员手机号，优惠充值24小时内到账。</view>
+            <view>2、一经充值成功，无法退换。</view>
+            <view>3、本次充值不提供发票。</view>
+        </view>
+        <view class="title">充值金额</view>
+        <view class="list">
+            <block wx:for="{{data.list}}">
+                <view class="listview {{index==current?'select':''}}" bindtap="selectCard" data-index="{{index}}" data-item_id="{{item.item_id}}">
+                    <view class="chongzhiprice">{{item.ori_price}}元</view>
+                    <view class="saleprice">售价：{{item.price}}元</view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
+<view class="fixbottom">
+    <view class="bottomleft">
+        <text class="wait">合计待支付</text>
+        <text class="biaozhi">￥</text>
+        <text class="payprice">{{payprice}}</text>
+    </view>
+    <view class="paybtn" bindtap="pay">立即支付</view>
+</view>

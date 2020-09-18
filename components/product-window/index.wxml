@@ -1,0 +1,40 @@
+<view class='product-window {{isShow?"on":""}}' wx:if="{{isShow}}">
+	<view class='textpic acea-row row-between-wrapper'>
+		<view class="commodity" style="">
+			<view class="images" style="background-color:#fff">
+				<image src="{{Specificationsimg}}" data-src="{{Specificationsimg}}" catchtap="imgYu" data-list="{{bannerItem}}"></image>
+			</view>
+			<view class="describe">
+				<view class="money">
+					<view style="color:#CA2519;margin-right:30rpx">￥{{goodPrice}}</view>
+				</view>
+				<view class="specification">
+					<text>已选：</text>
+					<text>{{sizeSelectText}}</text>
+				</view>
+			</view>
+		</view>
+		<scroll-view scroll-y style="height: 185px;margin-top:40rpx">
+			<view class="size" wx:for="{{colorSize}}" style="margin-top:{{isSale.saleState == 0?'124rpx':''}}" wx:for-index="idx" wx:key="colorSizeItem" wx:for-item="colorSizeItem" data-idx="{{idx}}">
+				<view class="sizeName">{{colorSizeItem.title}}</view>
+				<view class="channelContent">
+					<view class="{{statusArr[idx] == index?'active':''}}" wx:for="{{colorSizeItem.buttons}}" wx:key="label" data-index='{{index}}' data-idx="{{idx}}" data-name="{{item.text}}" catchtap='{{item.isEnable?"swichLabel":""}}' data-sku="{{item.skuList}}">
+						<text class="{{item.isEnable?'':'NotOptional'}}">{{item.text}}</text>
+					</view>
+				</view>
+			</view>
+		</scroll-view>
+		<view class="cartTitle" wx:if="{{isFree == 1}}">数量</view>
+		<view class='cart' wx:if="{{isFree ==1}}">
+			<view class='title'>购买数量</view>
+			<view class='carnum acea-row row-left'>
+				<view class='reduce {{cartNum <= 1 ? "on":""}}' bindtap='CartNumDes'>-</view>
+				<view class='num'>{{cartNum}}</view>
+				<view class='plus {{cartNum >= productSelect.stock || productSelect.is_on ? "on":""}}' bindtap='CartNumInt'>+</view>
+			</view>
+		</view>
+		<view class="sku">商品编号：{{productSkuId}}</view>
+		<view class="sure" bindtap="sure">{{payButtonDesc}}</view>
+	</view>
+</view>
+<view class='mask' catchtouchmove="true" hidden='{{!isShow}}' bindtap='close'></view>

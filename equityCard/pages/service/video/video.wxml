@@ -1,0 +1,6 @@
+<!--equityCard/pages/service/video/video.wxml-->
+<view class="main">
+    <image src="{{data.courseTopImg}}"  mode="{{mode}}" ></image>
+    <video id="myVideo" src="{{data.courseVideo}}" binderror="videoErrorCallback"  controls></video>
+    <image src="{{data.courseBottomImg}}"  mode="{{mode}}" ></image>
+</view>

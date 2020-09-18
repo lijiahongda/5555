@@ -1,0 +1,50 @@
+/* page/videorecharge/list/index.wxss */
+.list{
+    width: 700rpx;
+    margin-left: 25rpx;
+    background: #ffffff;
+    margin-top: 20rpx;
+    box-sizing: border-box;
+    padding: 20rpx;
+}
+.status{
+    text-align: right;
+    font-size: 24rpx;
+    color:#333333;
+}
+.logo{
+    width: 100rpx;
+    height: 100rpx;
+    display: block;
+    margin-right: 20rpx;
+}
+.cardname{
+    font-size: 30rpx;
+    color:#000000;
+}
+.cardtype{
+    font-size: 30rpx;
+    color:#666666;
+}
+.currentprice{
+    font-size: 30rpx;
+    color:#000000;
+}
+.price{
+    text-align: right;
+    margin-top: 30rpx;
+}
+.btn{
+    text-align: right;
+    margin-top: 30rpx;
+}
+.middle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30rpx;
+}
+.middleleft{
+    display: flex;
+    flex-direction: row;
+}

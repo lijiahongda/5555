@@ -1,0 +1,21 @@
+page{
+  position: relative;
+  min-height: 100%;
+  padding-top: 1rpx;
+}
+.backImage{
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+.go{
+  width: 456rpx;
+  height: 74rpx;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1117rpx;
+  position: relative;
+  z-index: 2;
+}

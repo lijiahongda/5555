@@ -1,0 +1,67 @@
+<view class="tab">
+  <scroll-view scroll-x="true" style="width: 100%;white-space:nowrap;" scroll-into-view="{{atabAct}}">
+    <view class="tabs">
+      <view class="tab_top {{tabAct==index?'tab_act':''}}" wx:for="{{tabList}}" wx:for-index="index" wx:key="index" catchtap="setTab" data-idx="{{index}}" id="{{'a'+index}}" >
+        <image src="{{item.icon}}" wx:if="{{tabAct==index}}"></image>
+        <view class="tab_title">{{item.title}}</view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<swiper class="swiper-box" circular="true" interval="2000" duration="500" bindchange="bindchange" current='{{tabAct}}'>
+	<block wx:for="{{list}}" wx:for-index="index" wx:key="index">
+		<swiper-item style="display: flex;flex-wrap: wrap;">
+			<view class="tab_cont">
+				<view class="cont_title">
+          <image src="http://image.zhiding365.com/2020/8/20/c105f59f-5165-472b-acb1-4b010ed1db22.png"></image>
+          <view>{{item.title}}</view>
+        </view>
+				<view class="cont">
+          <!-- 权益介绍 -->
+          <block>
+            <view class="cont_name">
+              <image src="http://image.zhiding365.com/2020/8/20/9b3f3c6e-72d1-4cc9-9405-41104cf8b08d.png"></image>
+              <view>{{item.introduce.title}}</view>
+              <image src="http://image.zhiding365.com/2020/8/20/c9706eff-1715-4230-819f-44ad0bf7f56b.png"></image>
+            </view>
+            <view class="cont_introduce" wx:for-items="{{item.introduce.list}}" wx:for-index="idx1" wx:key="idx1" wx:for-item="item1">
+              <view class="num">{{idx1+1}}</view>
+              <view>{{item1}}</view>
+            </view>
+          </block>
+          <!-- 权益对象 -->
+          <block>
+            <view class="cont_name">
+              <image src="http://image.zhiding365.com/2020/8/20/9b3f3c6e-72d1-4cc9-9405-41104cf8b08d.png"></image>
+              <view>{{item.object.title}}</view>
+              <image src="http://image.zhiding365.com/2020/8/20/c9706eff-1715-4230-819f-44ad0bf7f56b.png"></image>
+            </view>
+            <view class="cont_introduce" wx:for-items="{{item.object.list}}" wx:for-index="idx1" wx:key="idx1" wx:for-item="item1">
+              <image style="width:30rpx;height:30rpx;margin-top:6rpx;margin-right:20rpx" src="{{idx1==0?'http://image.zhiding365.com/2020/8/20/45dda5cd-7a9e-4c05-8eb8-638cd9d81164.png':''}}"></image>
+              <view>{{item1}}</view>
+            </view>
+          </block>
+          <!-- 使用说明 -->
+          <block wx:if="{{item.desc.title}}">
+            <view class="cont_name">
+              <image src="http://image.zhiding365.com/2020/8/20/9b3f3c6e-72d1-4cc9-9405-41104cf8b08d.png"></image>
+              <view>{{item.desc.title}}</view>
+              <image src="http://image.zhiding365.com/2020/8/20/c9706eff-1715-4230-819f-44ad0bf7f56b.png"></image>
+            </view>
+            <view class="cont_introduce" wx:for-items="{{item.desc.list}}" wx:for-index="idx1" wx:key="idx1" wx:for-item="item1">
+              <view class="num">{{idx1+1}}</view>
+              <view>{{item1}}</view>
+            </view>
+          </block>
+				</view>
+			</view>
+		</swiper-item>
+	</block>
+</swiper>
+
+
+<view class="bot">
+  <view class="btn" bindtap="open">立即开通联名会员</view>
+</view>

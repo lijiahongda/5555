@@ -1,0 +1,8 @@
+<view class="search" wx:if="{{type=='white'}}">
+  <image src="http://image.zhiding365.com/2020/8/18/10839fd1-01db-416b-adef-ed57fc5d97e8.png"></image>
+  <input placeholder="{{default}}" placeholder-style="color:#fff" value="{{searchVal}}" confirm-type="search" bindconfirm="searchBind"></input>
+</view>
+<view class="search" wx:if="{{type=='black'}}" style="background:rgba(230,228,228,1);color:#333">
+  <image src="http://image.zhiding365.com/2020/8/20/90ed9eb2-bca2-4c7a-8952-a065b6b98ced.png"></image>
+  <input placeholder="{{default}}" placeholder-style="color:#989898" value="{{searchVal}}" style="color:#333" confirm-type="search" bindconfirm="searchBind"></input>
+</view>

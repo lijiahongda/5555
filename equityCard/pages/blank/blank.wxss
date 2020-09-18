@@ -1,0 +1,11 @@
+/* equityCard/pages/blank/blank.wxss */
+image{
+  margin: 120rpx 30rpx 0 ;
+  width: 690rpx;
+  height: 455rpx;
+}
+view{
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+}

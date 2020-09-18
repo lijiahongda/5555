@@ -1,0 +1,21 @@
+<view class="shopList" >
+	<view class="list" bindtap="commodityShow" wx:for="{{list}}" wx:for-index="index" wx:key="index" data-obj="{{item}}">
+		<view class="label" wx:if="{{item.label=='1'}}">入住即送</view>
+		<view class="label vip_label" wx:if="{{item.label=='2'}}">直订会员免费领取</view>
+		<image mode="aspectFill" class="tp" src="{{item.imageUrl}}"></image>
+		<view class="bm">
+			<view class="txt">{{item.productName}}</view>
+			<view class="price_box">
+				<view class="price_con">
+					<view class="le">
+						<text class="icon">¥</text>
+						<text>{{item.price}}</text>
+					</view>
+					<view class="ri"><text style="font-size:20rpx">¥</text>{{item.originPrice}}</view>
+				</view>
+				<view class="btn" wx:if="{{item.label!='2'}}">立即购买</view>
+				<view class="btn vip_btn" wx:if="{{item.label=='2'}}">开通会员</view>
+			</view>
+		</view>
+	</view>
+</view>

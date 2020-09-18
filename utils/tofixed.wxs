@@ -1,0 +1,15 @@
+
+// var Fix= {
+//   toFix: function (value) {
+//     return value.toFixed(1)//此处1为保留一位小数
+//   }
+// }
+var Fix= {
+  toFix_o: function (value) {
+    return Math.floor(value)//此处1为保留一位小数
+  }
+}
+module.exports = {
+  toFix: Fix.toFix,
+  twoFix:Fix.toFix_o
+}

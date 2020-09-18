@@ -1,0 +1,44 @@
+<!--equityCard/pages/TrainTickets/TrainTicketsHome/index.wxml-->
+<view class="banner">
+  <swiper autoplay="true" circular="true">
+    <block wx:for="{{banner}}" wx:for-index="index" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<view class="content">
+  <view class="city">
+    <view bindtap="devCity">{{startCity}}</view>
+    <image bindtap="replace" src="https://image.yuelvhui.com/pubfile/2019/11/20/line_1574263685_22858.png"></image>
+    <view bindtap="arrCity">{{endCity}}</view>
+  </view>
+
+  <view class="date" bindtap="date">
+    <view>出发日期</view>
+    <view class="time">{{selectedDay.month}}月{{selectedDay.day}}日</view>
+    <view>{{subName}}</view>
+  </view>
+
+  <view class="btn" bindtap="queryTicket">查询车票</view>
+  <view class="history" wx:if="{{historyCity}}">
+    <view bindtap="subhistory">{{historyCity}}</view>
+    <view class="actives" bindtap="clearHistory"><image  src="https://image.yuelvhui.com/pubfile/2019/11/20/line_1574264680_97497.png"></image>
+    <view>清除历史</view></view>
+  </view>
+  <view catchtouchmove="preventTouchMove" class="alert-mask" wx:if="{{showModal}}"></view>
+  <view class="modalDlg" wx:if="{{showModal}}">
+    <view class="modelTitle">温馨提示</view>
+    <view class="modeContent">
+      <view class="modeContent_text" wx:for="{{tiptime}}" wx:key="tiptime">{{item}}</view>
+      <!-- <view class="modeContent_text">2、非业务处理时间可预订，预支付</view>
+      <view class="modeContent_text">3、若无票情况，我们将全额退款，退款将在1-15个工作日退回原支付通道</view> -->
+      <view class="modeContent_btn">
+        <view class="modeContent_btn_qu" bindtap="quxiao">取消</view>
+        <view class="modeContent_btn_sub" bindtap="queding">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

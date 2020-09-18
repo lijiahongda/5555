@@ -1,0 +1,56 @@
+<!--page/MyOther/pages/editInfo/editInfo.wxml-->
+<view class="content">
+	<view class="first">
+		<block wx:if="{{type!='1'}}">
+			<view class="Nickname">
+				<view>酒店名称</view>
+				<input bindinput='hotelName' value="{{form.hotelName}}" placeholder="请填写酒店名称" placeholder-style="color:#DDDDDD;"></input>
+			</view>
+			<view class="Nickname">
+				<view>酒店电话</view>
+				<input bindinput='hotelMobile' value="{{form.hotelMobile}}" type="number" placeholder="请填写座机，无座机填写电话" placeholder-style="color:#DDDDDD;"></input>
+			</view>
+			<view class="Nickname">
+				<view>酒店地址</view>
+				<input bindinput='hotelAddress' value="{{form.hotelAddress}}" placeholder="请填写酒店地址" placeholder-style="color:#DDDDDD;"></input>
+			</view>
+		</block>
+		<view class="Nickname">
+			<view>酒店联系人</view>
+			<input bindinput='hotelUser' value="{{form.hotelUser}}" placeholder="请填写酒店真实联系人姓名" placeholder-style="color:#DDDDDD"></input>
+		</view>
+	</view>
+	<view class="first">
+		<view class="Nickname">
+			<view>联系人手机号</view>
+			<input bindinput='userPhone' value="{{form.userPhone}}" placeholder="请填写手机号" type="number" placeholder-style="color:#DDDDDD;" style="width:50%"></input>
+			<view bindtap="{{codeStatus==0?'getCodeNumber':''}}" style="width:140rpx">{{innertext}}</view>
+		</view>
+		<view class="Nickname">
+			<view>验证码</view>
+			<input bindinput='userCode' value="{{form.userCode}}" placeholder="请填写验证码" bindblur="userCodeblur" placeholder-style="color:#DDDDDD;"></input>
+		</view>
+	</view>
+	<view class="first">
+		<view class="Nickname">
+			<view>邀请码</view>
+			<input bindinput='userNumber' value="{{form.invitationCode}}" placeholder="请填写邀请码" placeholder-style="color:#DDDDDD;"></input>
+		</view>
+		<view class="Nickname">
+			<view>联系人邮箱</view>
+			<input bindinput='userEmail' value="{{form.userEmail}}" placeholder="请填写联系人邮箱" placeholder-style="color:#DDDDDD;"></input>
+		</view>
+		<view class="Nickname">
+			<view>联系人职位</view>
+			<input bindinput='userPosition' value="{{form.userPosition}}" placeholder="请填写联系人职位" placeholder-style="color:#DDDDDD;"></input>
+		</view>
+		<view class="Nickname">
+			<view>营业执照号码</view>
+			<input bindinput='licenseNumber' value="{{form.licenseNumber}}" placeholder="请填写营业执照(三合一或五合一)号码" placeholder-style="color:#DDDDDD;"></input>
+		</view>
+	</view>
+
+
+	<view class="tips">您申请的信息提交成功后，我们的工作人员会尽快联系您，请保持手机号码畅通</view>
+	<view class="btn" bindtap="btn">提交审核</view>
+</view>

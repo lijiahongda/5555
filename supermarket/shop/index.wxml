@@ -1,0 +1,23 @@
+<!-- index.wxml -->
+<view class="container">
+	<view class="fix-cl">
+		<view class="fix-cl-list" wx:for="{{shopData}}" data-obj="{{item}}" bindtap="nextUrl">
+			<view class="img-box">
+				<image class="imgs" src="{{item.imgList[0].path}}" lazy-load="false"></image>
+			</view> 
+			<view>
+				<view class="productname">{{item.name}}</view>
+				<view class="price">￥{{item.price}}</view>
+			</view>
+		</view>
+	</view>
+	<view style="text-align:center" wx:if="{{shopData.length == 0}}">
+		<view>
+			<image class="wh-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com//yuetao//image//2020-06-28//14//yuelvhuie9djEwGZol1593324395.jpg"></image>
+		</view>
+		<view class="wh">
+			<text>商户正在努力上货中...</text>
+		</view>
+
+	</view>
+</view>

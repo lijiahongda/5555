@@ -1,0 +1,62 @@
+.bgw {
+  background: #fff;
+}
+.order-tab {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 25rpx;
+  font-family: PingFangSC, PingFangSC-Medium;
+  font-weight: 500;
+  text-align: center;
+  color: #333333;
+  line-height: 80rpx;
+  display: flex;
+}
+.tab-list {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tab-list .active {
+  color: #f7263c;
+}
+.tab-list .border-active {
+  height: 4rpx;
+  background-color: #ff001c;
+  position: absolute;
+  left: 30%;
+  right: 30%;
+  bottom: 0;
+}
+.empty-box {
+  margin-top: 100rpx;
+  font-size: 24rpx;
+  color: #999;
+  text-align: center;
+}
+.user-box{
+  padding:27rpx 33rpx;
+  box-sizing: border-box;
+  display: flex;
+  background: #fff;
+  align-items: center;
+}
+.user-box .fl{
+  width: 103rpx;
+  height: 103rpx;
+}
+.user-box .fl image{
+  width: 103rpx;
+  height: 103rpx;
+  border-radius: 100px;
+}
+.user-box .fr{
+  color: #333;
+  margin-left: 10rpx;
+}
+.c99{
+  color: #999;
+  font-size: 24rpx;
+}

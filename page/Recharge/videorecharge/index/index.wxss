@@ -1,0 +1,58 @@
+/* page/videorecharge/index/index.wxss */
+page{
+    background: #F7F7F7;
+    padding-top: 34rpx;
+}
+.main{
+    padding-left: 26rpx;
+}
+.imgview{
+    margin-bottom:20rpx;
+    width: 697rpx;
+    height: 167rpx;
+}
+.name{
+    font-size: 33rpx;
+    color:#ffffff;
+    font-weight: bold;
+    margin-left: 100rpx;
+    padding-top: 30rpx;
+    width: 165rpx;
+    text-align: center;
+}
+.btn1{
+    width: 165rpx;
+    height: 52rpx;
+    border-radius: 24rpx;
+    background: #ffffff;
+    font-size: 24rpx;
+    color:#AC59EF;
+    text-align: center;
+    line-height: 52rpx;
+    margin-left: 100rpx;
+    margin-top: 15rpx;
+}
+.btn0{
+    width: 165rpx;
+    height: 52rpx;
+    border-radius: 24rpx;
+    background: #ffffff;
+    font-size: 24rpx;
+    color:#1E8B50;
+    text-align: center;
+    line-height: 52rpx;
+    margin-left: 100rpx;
+    margin-top: 15rpx;
+}
+.btn2{
+    width: 165rpx;
+    height: 52rpx;
+    border-radius: 24rpx;
+    background: #ffffff;
+    font-size: 24rpx;
+    color:#3D90CD;
+    text-align: center;
+    line-height: 52rpx;
+    margin-left: 100rpx;
+    margin-top: 15rpx;
+}

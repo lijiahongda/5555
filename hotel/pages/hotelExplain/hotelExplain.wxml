@@ -1,0 +1,4 @@
+<!--hotel/pages/hotelExplain/hotelExplain.wxml-->
+<view>
+	<image wx:for="{{dataList}}" wx:key="dataList" src="{{item}}" mode="widthFix"></image>
+</view>

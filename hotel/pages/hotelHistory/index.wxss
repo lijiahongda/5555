@@ -1,0 +1,212 @@
+/* hotel/pages/hotelHistory/index.wxss */
+page{
+  background: #f8f8f8f8;
+}
+.recommend-cot {
+  background: #fff;
+  padding: 20rpx;
+  border-radius: 26rpx;
+  box-sizing: border-box;
+  width: 96%;
+  margin: 15rpx auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hotel-cot {
+  width: 67%;
+}
+
+.hotel-cot-pic {
+  margin-top: 14rpx;
+}
+
+.hotel-cot-pic-r {
+  display: inline-block;
+  border-radius: 0 10rpx 10rpx 0;
+}
+
+
+
+.hotel-pic image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 15rpx;
+}
+
+.hotel-cot {
+  width: 67%;
+  position: relative;
+  margin-left: 20rpx;
+}
+
+.hotel-cot-title {
+
+  white-space: nowrap;
+  /* 规定文本是否折行 */
+  overflow: hidden;
+  /* 规定超出内容宽度的元素隐藏 */
+  text-overflow: ellipsis;
+  height: 32px;
+}
+
+
+.hotel-cot-pic image {
+  width: 120rpx;
+  height: 40rpx;
+  margin-right: 3rpx;
+  vertical-align: middle;
+}
+
+.hotel-cot .hotel-cot-pic-bg {
+  color: #fceedb;
+  font-size: 21rpx;
+  /* font-weight:600 ; */
+  line-height: 40rpx;
+  display: inline-block;
+  border-radius: 0 5px 5px 0;
+  width: 120rpx;
+  text-align: center;
+  vertical-align: middle;
+  background: url(https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-02/16/yuelvhuie0hvEiTFkP1593678699.png);
+}
+
+/* .hotel-cot .hotel-cot-pic-bg text {
+  width: 120rpx;
+  line-height: 40rpx;
+  color: #fff;
+} */
+
+.hotel-cot .hotel-cot-adderss {
+  margin-top: 10rpx;
+}
+
+.hotel-cot .hotel-cot-adderss image {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 10rpx;
+}
+
+.hotel-cot .hotel-cot-adderss text {
+  color: #ccc;
+}
+
+.hotel-cot-zdbt {
+  width: 90rpx;
+  border: 1rpx solid #F6273C;
+  border-radius: 10rpx; 
+  height: 30rpx;
+  margin-top: 20rpx;
+  padding:4rpx 7rpx;
+}
+
+.hotel-cot-zdbt text {
+  display: block;
+  font-size: 22rpx;
+  color: #F6273C;
+  line-height: 30rpx;
+  margin-top: 0rpx;
+}
+
+.hotel-cot-lm_zj {
+  padding: 0rpx 5rpx;
+  display: inline-block;
+  width: auto;
+  overflow: hidden;
+  border: 1rpx solid #C19750;
+  border-radius: 10rpx;
+  height: 30rpx;
+  color: #C19750;
+  line-height: 30rpx;
+  font-size: 22rpx;
+}
+
+/* .hotel-cot-lm_zj text {
+
+  line-height: 30rpx;
+  display: block;
+  color: #C19750;
+} */
+
+.hotel-cot-bottom {
+  position: absolute;
+  left: 280rpx;
+  top: 50rpx;
+  text-align: right;
+}
+
+.hotel-cot .hotel-cot-bottom view {
+  width: 50%;
+}
+
+.hotel-cot-bottom .min-price {
+  margin-bottom: 3rpx;
+  margin-left: 100rpx;
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.min-price text {
+  text-align: right;
+}
+
+.hotel-cot .hotel-cot-bottom text {
+  font-size: 12px;
+}
+
+.btm-hyzj {
+  position: absolute;
+  right: -8rpx;
+  bottom: 0rpx;
+  /* width: 243rpx; */
+  padding: 4rpx 20rpx;
+  text-align: center;
+  background: #FD411D;
+  border-radius: 30rpx;
+  height: 30rpx; 
+  color: #C19750;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  display: inline-block;
+}
+.btm-hyzj text{
+  color: #fff;
+}
+
+
+
+.hotel-cot .hotel-cot-bottom .price {
+  width: 100%;
+  margin-left: 20rpx;
+  vertical-align: middle;
+}
+
+.hotel-cot .hotel-cot-bottom .price-fh {
+  color: #ed5755;
+  font-size: 10px;
+}
+
+.hotel-cot .hotel-cot-bottom {
+  padding-top: 25rpx;
+}
+
+.hotel-cot .hotel-cot-bottom .price-num {
+
+  color: #ed5755;
+  font-size: 18px;
+  font-weight: 700;
+  vertical-align: middle;
+
+}
+
+.hotel-cot-bottom .price-num .qi {
+  /* margin-left: -4rpx; */
+  color: #999999;
+  vertical-align: middle;
+  font-size: 10px;
+}
+
+.hotel-cot .hotel-cot-bottom .price-yj {
+  color: #ccc;
+  font-size: 12px;
+}

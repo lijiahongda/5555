@@ -1,0 +1,150 @@
+page{
+  background:#f8f8f8;
+}
+.coupon{
+  width: 702rpx;
+margin: 0 auto;
+margin-top: 20rpx;
+position: relative;
+background: #fff;
+border-radius: 12rpx;
+
+}
+.couponCenter_top{
+  display: flex;
+align-items: center;
+height: 160rpx;
+
+}
+.dealer_img image{
+  width: 120rpx;
+height: 120rpx;
+margin: 20rpx 17rpx;
+background: #000;
+border-radius: 8rpx;
+
+}
+.dealer_title{
+  font-size: 28rpx;
+  color: #141414;
+  
+}
+.dealer_point{
+  font-size: 24rpx;
+color: #7f7876;
+padding-top: 10rpx;
+
+}
+.dealer_hotel{
+  background: #e53a48;
+width: 112rpx;
+height: 48rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 24rpx;
+color: #fff;
+font-size: 24rpx;
+position: absolute;
+top: 56rpx;
+right: 33rpx;
+
+}
+.couponCenter{
+  background-image: url('http://image.zhiding365.com/2020/9/10/45709c10-cb05-49ad-9277-524dc5def96b.png');
+height: 210rpx;
+width: 702rpx;
+background-size: 100% 100%;
+margin: 0 auto;
+position: relative;
+display: flex;
+align-items: center;
+
+}
+.coupon_left{
+  margin-left: 36rpx;
+font-size: 28rpx;
+
+}
+.coupon_left_top{
+  display: flex;
+color: #e53a48;
+align-items: center;
+
+}
+.coupon_left_price text:first-child{
+  font-size: 32rpx;
+
+}
+.coupon_left_price text:last-child{
+  font-size: 46rpx;
+
+}
+.coupon_left_desc{
+  padding-left: 8rpx;
+font-size: 24rpx;
+
+}
+.coupon_left_cent{
+  display: flex;
+align-items: center;
+
+}
+.coupon_left_cent_type{
+  width: 92rpx;
+height: 40rpx;
+background: #e53a48;
+border-radius: 20rpx;
+color: #fff;
+font-size: 22rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.coupon_left_text{
+  font-size: 28rpx;
+color: #141414;
+padding-left: 9rpx;
+
+}
+.coupon_right{
+  width: 132rpx;
+height: 48rpx;
+background: #fff;
+border-radius: 24rpx;
+color: #e53a48;
+font-size: 24rpx;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-left: 123rpx;
+
+}
+.coupon_vip{
+  position: absolute;
+top: 0;
+left: 0;
+width: 130rpx;
+display: flex;
+height: 38rpx;
+background: #000;
+color: #e7dcc5;
+border-radius: 12rpx 0px 12rpx 0;
+font-size: 22rpx;
+justify-content: center;
+align-items: center;
+}
+.coupon_vip image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.getStatus{
+  position: absolute;
+  top: 21rpx;
+  right: 219rpx;
+}
+.getStatus image{
+  width: 90rpx;
+  height: 90rpx;
+}

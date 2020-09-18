@@ -1,0 +1,32 @@
+<view class="titleHead" style="padding-top:{{navTop}}rpx;">
+	<view bindtap="navi" class="navi">取消</view>
+	<view class="search">
+		<image src="{{searchImage}}"></image>
+		<input bindinput="bindblur" placeholder="{{keyWord}}" placeholder-class="font-size:22rpx;font-family:PingFang SC;font-weight:400;color:rgba(153,153,153,1);"></input>
+	</view>
+</view>
+<view class="CurrentPosi" style="margin-top:{{navTop+100}}rpx">
+	<image src="{{loc}}"></image>
+	<view>当前城市:{{LocgnCity}}</view>
+</view>
+<view class="hotCity">
+	<view class="title">热门城市</view>
+	<view class="hotContent">
+		<view wx:for="{{hotCity}}" bindtap="selectHotCity" data-name="{{item.cityName}}" wx:key="hotCity">{{item.cityName}}</view>
+	</view>
+</view>
+<view class="HistoricalRecord" wx:if="{{HistoricalRecord}}">
+	<view class="title">
+		<view>历史记录</view>
+		<view class="ClearRecord" bindtap="ClearRecord">
+			<image src="{{Clear}}"></image>
+			<view>清空记录</view>
+		</view>
+	</view>
+	<view class="hotContent">
+		<view wx:for="{{HistoricalRecord}}" bindtap="SelectHistoricalRecord" data-city="{{item}}" wx:key="HistoricalRecord">{{item}}</view>
+	</view>
+</view>
+
+<searchList searchCity="{{searchCity}}" marginTop="{{marginTop}}" isShow="{{isShow}}" bind:setCity="setCity" citylist="{{citylist}}" type="1" searchType="2"></searchList>
+<mp-indexList class="city__list" list="{{list}}" bind:onChoose="onChoose"></mp-indexList>

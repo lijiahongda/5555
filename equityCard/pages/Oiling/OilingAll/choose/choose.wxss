@@ -1,0 +1,232 @@
+page{
+  background: #f8f8f8;
+  padding: 12rpx 26rpx;
+  width: 750rpx;
+  box-sizing: border-box;
+}
+
+.ctop{
+  width: 696rpx;
+  height: 312rpx;
+  background: #ffffff;
+  border-radius: 14rpx;
+  padding: 0 18rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.ctop .top_cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 10rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.ctop .top_cont .ctop_img{
+  width: 154rpx;
+  height: 154rpx;
+  border-radius: 12rpx;
+  margin-right: 30rpx;
+}
+.ctop .top_cont .cont_right{
+  width: 454rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.ctop .top_cont .cont_right .title{
+  font-size: 32rpx;
+  color: #333333;
+  font-weight: 500;
+  width: 500rpx;
+}
+.ctop .top_cont .cont_right .price{
+  display: flex;
+  margin:14rpx 0;
+  align-items: baseline;
+}
+.ctop .top_cont .cont_right .price .price_le{
+  font-size: 44rpx;
+  color: #F7263C;
+}
+.ctop .top_cont .cont_right .cont_btn{
+  display: flex;
+}
+.ctop .top_cont .cont_right .cont_btn view{
+  height: 36rpx;
+  border: 1px solid #f7263c;
+  border-radius: 6px;
+  font-size: 22rpx;
+  color: #F7263C;
+  padding: 0 8rpx;
+  margin-right: 12rpx;
+  padding-left: 0;
+  overflow: hidden;
+  padding-right: 0;
+}
+.ctop .top_cont .cont_right .cont_btn view:nth-child(2n){
+  margin-right: 0;
+}
+.ctop .cont_btn view text:first-child{
+  width: 104rpx;
+  height: 36px;
+  background: #ffebeb;
+  line-height: 36rpx;
+  padding: 0 10rpx;
+}
+.ctop .top_cont .cont_right .cont_btn image{
+  width: 13rpx;
+  height: 15rpx;
+  margin-left: 2rpx;
+}
+
+.ctop .location{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16rpx;
+  padding: 0 10rpx;
+  box-sizing: border-box;
+}
+.ctop .location .loc{
+  color: #666;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  height: 30rpx;
+}
+.ctop .location .loc view{
+  width: 410rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  height: 32rpx;
+  margin-left: 6rpx;
+}
+.ctop .location .loc image{
+  width: 20rpx;
+  height: 27rpx;
+}
+.ctop .location .navigation{
+  display: flex;
+  align-items: center;
+  width: 170rpx;
+  height: 56rpx;
+  background: #f7263c;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 56rpx;
+}
+.ctop .location .navigation image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 28rpx;
+  margin-left: 34rpx;
+}
+
+
+.oiling{
+  background: #fff;
+  padding: 28rpx 26rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  color: #333333;
+  border-radius: 14px;
+  margin-top: 14rpx;
+  width: 697rpx;
+}
+.oiling .list .tit{
+  margin-bottom: 18rpx;
+}
+.oiling .list .list_cont{
+  width:100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.oiling .list .list_cont view{
+  width: 146rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background: #fff;
+  border: 1px solid #a8a8a8;
+  border-radius: 12rpx;
+  text-align: center;
+  color: #999999;
+  font-size: 26rpx;
+  /* margin-right: 14rpx;
+  margin-bottom: 20rpx; */
+  margin:0 13rpx 19rpx 0;
+}
+.oiling .list .list_cont view:nth-child(4n){
+  margin-right: 0rpx;
+}
+.oiling .list .list_cont view.list_choose{
+  background: #f7263c;
+  color: #fff;
+  border: 1px solid #f7263c;
+}
+
+.tips{
+  width: 697rpx;
+  background: #fff2f2;
+  border-radius: 13px;
+  box-sizing: border-box;
+  padding: 30rpx 60rpx;
+}
+.tipsHead{
+  margin-bottom:19rpx;
+  display: flex;
+  align-items: center;
+}
+.tipsHead image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 6rpx;
+}
+.tips .important{
+  width: 542rpx;
+}
+.importantTxts{
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  color: #f7263c;
+  line-height: 33rpx;
+}
+.postt{
+  margin-top: 150rpx;
+  width: 697rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #333333;
+  margin-bottom: 50rpx;
+}
+.postt .btn{
+  width: 532rpx;
+  height: 70rpx;
+  background: #f7263c;
+  border-radius: 12rpx;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 70rpx;
+  font-weight: 500;
+  margin: 0 auto;
+  margin-bottom: 24rpx;
+}
+.postt .tips_btn >view{
+  margin: 0 auto;
+  font-size: 24rpx;
+  font-family: PingFang SC Regular, PingFang SC Regular-Regular;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
+  line-height: 33rpx;
+}

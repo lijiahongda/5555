@@ -1,0 +1,28 @@
+<!-- index.wxml -->
+<view>
+     <wxs module="comUnit" src="../../../filters/comUnit.wxs"></wxs>
+    <view class="item" wx:for="{{orderList}}" data-obj="{{item}}" bindtap="handleNextDetail">
+            <view class="orderno">订单编号：{{item.orderNo}}</view>
+            <view class="goods" wx:for="{{item.subInfoList[0].goodsList}}" wx:for-item="it">
+                <image class="goods-img" src="{{it.imageUrl}}" />
+                <view class="goodsinfo">
+                    <view class="goodsname">{{it.goodsName}}</view>
+                    <view class="orderdate">{{item.createTime}}</view>
+                    <view class="order">
+                        <view class="orderprice">￥{{comUnit.unitmethod(item.totalAmount)}}</view>
+                        <view class="orderstatus">
+                            <view>
+                                    {{item.subInfoList[0].orderSubStatusDesc}}
+                            </view>
+                            <view class="btn-pay" data-obj="{{item}}" bindtap="handlePay" wx:if="{{item.subInfoList[0].orderSubStatus==5}}">去支付</view>                          
+                        </view>
+                    </view>
+                </view>
+            </view>
+        
+    </view>
+
+    <view style="margin-top:200rpx;text-align:center;font-size:30rpx;line-height:100rpx" wx:if="{{orderList.length == 0 && searchObj.curPage == 1}}">
+        <image mode='widthFix' style="width:347rpx" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+    </view>
+</view>

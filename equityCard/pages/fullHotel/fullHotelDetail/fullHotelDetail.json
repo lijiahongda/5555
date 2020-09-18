@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "hotelDetailList": "/components/hotelDetailList/index",
+    "roomNum": "/components/roomNum/index",
+    "selectTime": "/components/selectTime/index",
+    "home":"/components/home/index"
+  },
+  "navigationStyle":"custom"
+}

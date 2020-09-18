@@ -1,0 +1,90 @@
+<!--my/pages/integral/integral.wxml-->
+
+<view class="top_cont">
+	<view class="top_cont_cer">
+		<view>{{userPoint}}</view>
+		<view style="font-size:24rpx;">剩余悦豆</view>
+
+	</view>
+</view>
+
+
+<view class="content">
+
+
+	<view class="title_top">
+		<image src="http://image.zhiding365.com/2020/7/17/a82d3f05-e765-4458-96a7-53193b86504c.png"></image>
+		<view>旅游产品</view>
+	</view>
+	<view class="ContentArea">
+		<view class="flex_list">
+			<view class="item" wx:for="{{travel}}" wx:for-index="index" wx:key="index" wx:if="{{index%2==0}}" data-goodsid="{{item.id}}" bindtap='details' data-skuid="{{item.skuId}}">
+				<view class="shopImageLeft">
+					<image class="" src="{{item.pic}}"></image>
+				</view>
+				<view class="itemInfo">
+					<view class="title">
+						<text>{{item.name}}</text>
+					</view>
+
+					<view>
+						<view class="price">
+							<view>{{item.point}}悦豆</view>
+              <view class="dui">兑换</view>
+						</view>
+
+					</view>
+				</view>
+			</view>
+		</view>
+		<view class="flex_list">
+			<view class="item" wx:for="{{travel}}" wx:for-index="index" wx:key="index" wx:if="{{index%2!=0}}" data-goodsid="{{item.id}}" bindtap='details' data-skuid="{{item.skuId}}">
+				<view class="shopImageLeft">
+					<image class="" src="{{item.pic}}"></image>
+				</view>
+				<view class="itemInfo">
+					<view class="title">
+						<text>{{item.name}}</text>
+					</view>
+					<!-- <view class="describe">
+            <text>{{item.goodsInfo}}</text>
+          </view> -->
+					<view>
+						<view class="price">
+							<view>{{item.point}}悦豆</view>
+							<view class="dui">兑换</view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- <view class="title_top">
+    <image src="http://image.zhiding365.com/2020/7/17/323ea5d0-59f6-4491-ba67-62070ba10410.png"></image>
+    <view>生活服务</view>
+  </view>
+  <view class="content_list">
+    <view class="item" wx:for="{{life}}" wx:key="life" data-goodsid="{{item.goodsId}}" bindtap='details' data-skuid="{{item.skuId}}">
+      <view class="shopImageLeft">
+        <image mode="aspectFill" class="" src="{{item.goodsImg}}"></image>
+      </view>
+      <view class="itemInfo">
+        <view class="title">
+          <text>{{item.goodsName}}</text>
+        </view>
+        <view class="describe">
+          <text>{{item.goodsInfo}}</text>
+        </view>
+        <view>
+          <view class="price" wx:if="{{item.type == 0}}">
+            <view>{{item.integralPrice}}悦豆</view>
+          </view>
+          <view class="price" wx:else>
+            <view>{{item.integralPrice}}悦豆+￥{{item.integralCash}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>-->
+
+</view> 

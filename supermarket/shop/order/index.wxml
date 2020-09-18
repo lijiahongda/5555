@@ -1,0 +1,48 @@
+<!-- index.wxml -->
+<view>
+	<view class="orderpage">
+		<view class="tip">下单后，请在15分钟内支付，否则系统将自动取消订单</view>
+		<view class="prolist" wx:for="{{goodsArr}}" wx:key="skuId">
+			<view class="proinfocon">
+				<view class="proimg">
+					<image class="proimg-img" src="{{item.imageUrl}}" />
+				</view>
+				<view class="proinfo">
+					<view class="proname">{{item.goodsName}}</view>
+					<view class="skuname">已选:{{item.skuName}}</view>
+					<view class="proprice">
+						<text>¥</text>
+						<text>{{item.goodsPrice/100}}元</text>
+						<text>×{{item.goodsNum}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view wx:if="{{mallOrderType !=5 }}">
+
+
+		<view>
+			<view class="express clearfix" wx:if="{{addressIds}}">
+				<image class="left" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/14/yuelvhuinLhnl1lKVz1594967041.png"></image>
+				<view class="text">
+					<view class="name">
+						<text>{{isaddress.receiverName}}</text>
+						<text>{{isaddress.mobile}}</text>
+					</view>
+					<view class="site">{{isaddress.proviceName}} {{isaddress.cityName}} {{isaddress.zoneName}} {{isaddress.townName}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="addexpress" wx:if="{{addressIds}}" bindtap="handleChooseAddress">重新选择地址</view>
+		<view class="addexpress" wx:else bindtap="handleChooseAddress">选择地址</view>
+	</view>
+	<view id="pronav">
+		<view class="nav-p">
+			总计：
+			<text class="symbol">¥</text>
+			<text class="proprice">{{totalPrice}}</text>
+		</view>
+		<view class="btnbuy nav-p" bindtap="handleBuy">立即购买</view>
+	</view>
+</view>

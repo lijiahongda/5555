@@ -1,0 +1,5 @@
+.pasy-s{
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 200rpx;
+}

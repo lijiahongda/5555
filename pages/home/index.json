@@ -1,0 +1,8 @@
+{
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "selectTime": "/components/selectTime/index",
+    "PriceStar":"/components/PriceStar/index",
+    "custom":"/components/custom/custom"
+  }
+}

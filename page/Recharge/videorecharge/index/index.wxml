@@ -1,0 +1,10 @@
+<view class="main">
+    <view class="imglist">
+        <block wx:for="{{list}}">
+            <view style="background:url('{{item.bg_img}}');background-size: 100%;" class="imgview" bindtap="jump"  data-project_id="{{item.project_id}}">
+                <view class="name">{{item.name}}</view>
+                <view class="btn{{index}}">立即充值</view>
+            </view>
+        </block>
+    </view>
+</view>

@@ -1,0 +1,212 @@
+/* page/HotelOther/HotelList/HotelList.wxss */
+page{
+  background: #F9F8F8;
+}
+.titleHead {
+  z-index: 100;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: #000;
+  background-color: #F9F8F8;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 390rpx;
+  padding-right: 40.4%;
+  padding-left: 4%;
+  top: 0;
+  padding-bottom: 21rpx;
+  z-index: 102;
+}
+
+.searchContent {
+  padding-left: 4%;
+  padding-right: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 38rpx;
+  position: relative;
+  z-index: 101;
+
+}
+
+.searchContent .search {
+  width: 89.5%;
+  height: 60rpx;
+  padding-left: 4%;
+  padding-right: 4%;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 30rpx;
+  margin-right: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.searchContent image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.searchContent .search .time {
+  display: flex;
+  flex-direction: column;
+  font-size: 18rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  min-width: 14%;
+  border-left: 1px solid #DEDEDE;
+  border-right: 1px solid #DEDEDE;
+  min-width: 23.8%;
+  align-items: center;
+}
+.titleN {
+  display: flex;
+  flex-direction: row;
+}
+.titleN view:nth-child(2){
+  color: #EC4543;
+  margin-left: 10rpx;
+}
+
+.searchContent .search .city {
+  min-width: 23.8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+}
+
+.searchContent .search .city image {
+  width: 10rpx;
+  height: 10rpx;
+  margin-left: 1%;
+  margin-top: 12rpx;
+}
+
+.searchContent .search .city view {
+  /* width: 75%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchContent .search .city text {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.searchContent .address {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  min-width: 52%;
+  margin-left: 26rpx;
+}
+
+.searchContent .search image {
+  width: 18rpx;
+  height: 18rpx;
+}
+
+.screen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 4%;
+  padding-right: 4%;
+  margin-bottom: 23rpx;
+  position: relative;
+  z-index: 101;
+}
+
+.screen .item {
+  z-index: 103;
+  width: 22%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen .item text {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.screen .item image {
+  width: 10rpx;
+  height: 10rpx;
+  margin-top: 13rpx;
+}
+
+.contentList {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+.hotelList .hotelinfo .info .satisfactionGenreView {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.hotelList .hotelinfo .info .satisfactionGenreView .score {
+  color: rgb(153, 153, 153);
+  font-size: 28rpx;
+  margin-right: 5%;
+}
+
+.hotelList .hotelinfo .info .satisfactionGenreView .score text {
+  color: #FFA700;
+}
+
+
+.front {
+  animation: front 1s linear 1;
+  backface-visibility: hidden;
+}
+
+.back {
+  animation: back 1s linear 1;
+}
+
+@keyframes front {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes back {
+  from {
+    transform: rotateY(-180deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}

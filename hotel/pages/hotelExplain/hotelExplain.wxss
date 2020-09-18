@@ -1,0 +1,4 @@
+/* hotel/pages/hotelExplain/hotelExplain.wxss */
+view image {
+  width: 750rpx;
+}

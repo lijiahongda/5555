@@ -1,0 +1,12 @@
+<view class="content">
+  <image class="icon" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-21/17/yuelvhuiih3J4dHB6A1595324852.png"></image>
+  <view class="text">已支付</view>
+  <view class="money">¥{{lastprice}}</view>
+  <view class="btns">
+    <view bindtap="goHome">返回首页</view>
+    <view bindtap="orderForm">查看订单</view>
+  </view>
+</view>
+
+
+<couponBox coupons="{{coupons}}" states="{{states}}" buy="1" btn="开心收下" tips="前往“我的优惠券”中使用" wx:if="{{coupons.length!=0}}"></couponBox>

@@ -1,0 +1,57 @@
+.fix-cl {
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 4%;
+    overflow: hidden;
+    box-sizing: border-box;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.fix-cl .fix-cl-list {
+    width: 337rpx;
+}
+
+.fix-cl .fix-cl-list .img-box {
+    width: 335rpx;
+    height: 335rpx;
+}
+
+.fix-cl .productname {
+    font-size: 14px;
+    margin: .2rem 0 .1rem;
+    color: #333;
+    text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 35rpx;
+    line-height: 35rpx;
+}
+
+.fix-cl .price {
+    margin-bottom: .2rem;
+    color: #a9905e;
+    font-size: 15px;
+}
+
+.imgs {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.wh {
+    position: relative;
+    top: 250rpx;
+    font-size: 14px;
+    text-align: center;
+}
+
+.wh-img {
+    position: relative;
+    top: 250rpx;
+    width: 70%;
+    margin: 0 auto;
+}

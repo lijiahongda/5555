@@ -1,0 +1,35 @@
+<view class="s-main" bindtap="handleDetail">
+	<view class="s-main-fr" >
+		<view class="s-main-img-box" >
+				<image class="s-main-img" mode="widthFix" src="{{shopItemData.picurl}}"></image>
+		</view>
+		<view class="s-main-fr-name">
+			<view class="jd-box">JD</view>	
+			{{shopItemData.name}}
+		</view>
+		<view  class="s-main-fr-label2">
+			<view wx:if="{{shopItemData.coupon.length}}">
+	
+			</view>
+		</view>
+		<view class="avatar-box" wx:if="{{shopItemData.avatar.length}}">
+			<view class="avatar-fl">
+				<image wx:for="{{shopItemData.avatar}}" class="" src="{{item.url}}" >
+					
+				</image>
+			</view> 
+		</view>
+		  
+		<view class="s-main-fr-price-box">
+			<view>
+				￥{{shopItemData.vipPrice}}
+			</view>
+			<view class="lthro">
+				￥{{shopItemData.oprice}}
+			</view>
+		</view>
+		<view class="s-main-fr-label1">
+			推广赚￥{{shopItemData.promote_price}}
+		</view>	
+	</view>
+</view>

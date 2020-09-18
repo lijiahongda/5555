@@ -1,0 +1,76 @@
+<view class="sy-box">
+  <view class="order-tab bgw">
+    <view class="tab-list" wx:for="{{tabData}}" bindtap="handleTabMy" wx:key="{{item.id}}" data-id="{{item.id}}" data-status="{{item.status}}">
+      <view class="{{tabDataIndex == item.id?'active':''}}">{{item.name}}</view>
+      <view wx:if="{{tabDataIndex == item.id}}" class="border-active"></view>
+    </view>
+  </view>
+  <view class="sy-main">
+    <view class="sy-main-list">
+      <view class="fl">本月预估总收益</view>
+      <view class="fr">￥{{oData.totalEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估推广收益</view>
+      <view class="fr">￥{{oData.promationEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估返利收益</view>
+      <view class="fr">￥{{oData.rebeatEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估平台奖励</view>
+      <view class="fr">￥{{oData.platformEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估拉新收益</view>
+      <view class="fr">￥{{oData.newsEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估拉新奖励收益</view>
+      <view class="fr">￥{{oData.awardNewsEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估金融拉新推广收益</view>
+      <view class="fr">￥{{oData.awardFinanEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估金融拉新奖励收益</view>
+      <view class="fr">￥{{oData.awardFinanNewEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估生活服务类收益（外卖加油等）</view>
+      <view class="fr">￥{{oData.awardLifeServerEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">本月预估推广补贴</view>
+      <view class="fr">￥{{oData.awardPromationSubsidy}}</view>
+    </view>
+    <view class="sy-main-list" data-type="1" style="margin-top:10rpx" bindtap="nextPage">
+      <view class="fl">我的总收益详情</view>
+      <view class="fr">
+        <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png"  lazy-load="false"></image>
+      </view>
+    </view>
+    <view class="sy-main-list" data-type="2" bindtap="nextPage">
+      <view class="fl">我的推广收益详情</view>
+      <view class="fr">
+        <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png"  lazy-load="false"></image>
+      </view>
+    </view>
+    <view class="sy-main-list" data-type="3" bindtap="nextPage">
+      <view class="fl">我的平台奖励详情</view>
+      <view class="fr">
+        <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-08/17/yuelvhuiSRYAsZDGxa1594201992.png"  lazy-load="false"></image>
+      </view>
+    </view>
+    <view class="sy-main-list" style="margin-top:10rpx">
+      <view class="fl">本月预估结算金额</view>
+      <view class="fr">￥{{oData.thisMonthCloseEarn}}</view>
+    </view>
+    <view class="sy-main-list">
+      <view class="fl">下月预估结算金额</view>
+      <view class="fr">￥{{oData.nextMonthCloseEarn}}</view>
+    </view>
+  </view>
+</view>

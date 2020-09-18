@@ -1,0 +1,24 @@
+
+<!-- wx:if="{{ismore == 0}}" -->
+<block>
+	<view >
+		<view class="TradingArea" wx:for="{{more}}" wx:key="ismoreOne" data-title="{{item.title}}" bindtap='TradingArea'>
+			<view class="title">{{item.title}}</view>
+		</view>
+	</view>
+</block>
+<!-- <block wx:else>
+	<view class='areaView' style="margin-top:{{navTop+90}}rpx">
+		<scroll-view class='stairView' scroll-y="true" scroll-x='false'>
+			<view class="stairViewCell {{stairKey==id ? 'stairViewCellClick':''}}" wx:key="area" wx:for-index='id' data-id='{{id}}' bindtap='clickstairCell' wx:for="{{more}}" data-types='{{id}}'>
+				<text>{{item.title}}</text>
+			</view>
+		</scroll-view>
+		<scroll-view class='secondView' scroll-y="true" scroll-x='false'>
+			<view class='secondViewCell' wx:key="second0" wx:for-index='id' wx:for="{{secondViewCell}}" data-title="{{item.title}}" data-index="{{id}}" bindtap='clickSecondCell' data-types='0'>
+				<view class="secondViewCellName {{secondKey==id?'secondViewCellNameClick':''}}">{{item.title}}</view>
+				<image class='secondViewCellImage' src="{{secondKey==id?'../../../../../../images/hotel/勾.png':''}}"></image>
+			</view>
+		</scroll-view>
+	</view>
+</block> -->

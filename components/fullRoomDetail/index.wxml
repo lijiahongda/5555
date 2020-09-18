@@ -1,0 +1,73 @@
+<!--components/roomDetail/index.wxml-->
+<view class="commodity_screen" wx:if="{{isShow}}" catchtap="close"></view>
+<view class="roomInfo" wx:if="{{isShow}}">
+	<view class="title">
+		<view>{{roomDetailInfo.roomName}}</view>
+		<image src="{{close}}" catchtap="close"></image>
+	</view>
+	<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}">
+		<block wx:for="{{roomDetailInfo.listImage}}" wx:key="listImage" wx:for-index="index">
+			<swiper-item>
+				<view class="roomImage" data-cur="{{img}}" data-item="{{roomDetailInfo.listImage}}" catchtap="lookBagImage">
+					<image src="{{item}}" class="bannerimage"></image>
+          <view class="imageCurrent">
+            <image src="{{img}}"></image>
+              <view>{{index+1}}/{{roomDetailInfo.listImage.length}}</view>
+          </view>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
+  <view class="base">
+		<view class="baseItem">
+			<view>房型：</view>
+			<view class="key">{{roomDetailInfo.bedType}}</view>
+		</view>
+		<view class="baseItem">
+			<view>面积：</view>
+			<view class="key">{{roomDetailInfo.area}}</view>
+		</view>
+		<view class="baseItem">
+			<view>可住：</view>
+			<view class="key">{{roomDetailInfo.capcity}}</view>
+		</view>
+		<view class="baseItem">
+			<view>楼层：</view>
+			<view class="key">{{roomDetailInfo.floor}}</view>
+		</view>
+		<view class="baseItem">
+			<view>网络：</view>
+			<view class="key">{{roomDetailInfo.broadNet}}</view>
+		</view>
+		<view class="baseItem">
+			<view>窗户：</view>
+			<view class="key">{{roomDetailInfo.window}}</view>
+		</view>
+		<!-- <view class="baseItem">
+			<view>早餐：</view>
+			<view class="key">{{roomDetailInfo.window}}</view>
+		</view> -->
+	</view>
+	<view class="CancellationPolicyTitle">退订政策</view>
+	<view class="CancellationPolicy">
+		<view class="cancelled">不可取消</view>
+		<view>预定成功后，不可变更/取消</view>
+	</view>
+	<view class="RoomFacilitiesTitle">客房设施</view>
+	<view class="RoomFacilitiesItem">
+		<view>有无空调：</view>
+		<view class="key">{{roomDetailInfo.more.facility}}</view>
+	</view>
+	<view class="RoomFacilitiesItem">
+		<view>浴室：</view>
+		<view class="key">{{roomDetailInfo.more.bath}}</view>
+	</view>
+	<view class="RoomFacilitiesItem">
+		<view>饮食饮品：</view>
+		<view class="key">{{roomDetailInfo.more.catering}}</view>
+	</view>
+	<view class="RoomFacilitiesItem">
+		<view>媒体科技：</view>
+		<view class="key">{{roomDetailInfo.more.media}}</view>
+	</view>
+</view>

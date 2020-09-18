@@ -1,0 +1,65 @@
+<!-- index.wxml -->
+<view>
+    <wxs module="comUnit" src="../../../filters/comUnit.wxs"></wxs>
+    <view style="height:10px;background:#f7f7f7;"></view>
+    <view class="orderinfo">
+        <view class="title">订单信息</view>
+        <view>
+            <view class="list">
+                <text>订单编号：</text>
+                <span>{{orderinfo.orderNo}}</span>
+            </view>
+            <view class="list">
+                <text>订单交易时间：</text>
+                <span>{{orderinfo.createTime}}</span>
+            </view>
+            <view class="list"><text>订单金额：</text><span>¥{{comUnit.unitmethod(orderinfo.orderAmount)}}</span></view>
+    			<view class="list"><text>支付金额：</text><span>¥{{ comUnit.unitmethod(orderinfo.totalAmount)}}</span></view>
+            <view class="list" style="color:#e71f19">
+                <text style="color:#e71f19">订单状态：</text>
+                <span>{{orderinfo.subInfoList[0].orderSubStatusDesc}}</span>
+            </view>
+        </view>
+    </view>
+    <view style="height:10px;background:#f7f7f7;" ></view>
+    <view class="orderinfo" wx:if="{{malltype ==1}}">
+        <view class="title">联系人信息</view>
+        <view>
+            <view class="list">
+                <text>联系人：</text>
+                <span>{{orderinfo.subInfoList[0].receiveInfo.contact}}</span>
+            </view>
+            <view class="list">
+                <text>联系电话：</text>
+                <span>{{orderinfo.subInfoList[0].receiveInfo.telphone}}</span>
+            </view>
+            <view class="list">
+                <text>详细地址：</text>
+                <span>{{orderinfo.subInfoList[0].receiveInfo.addressDetail}}</span>
+            </view>
+        </view>
+    </view>
+
+    <view style="height:10px;background:#f7f7f7;"></view>
+
+    <view style="background-color:#fff">
+    		<!-- <p class="btnpay" v-if="orderinfo.payStatus==1&&orderinfo.cancelationType==0" @click="pay">去支付</p> -->
+			<view class="btnpay" wx:if="{{orderinfo.subInfoList[0].orderSubStatus==5}}" bindtap="handlePay">去支付</view>
+			<view class="btnpay" style="background:#fa4535" wx:if="{{orderinfo.subInfoList[0].mallOrderType == 5 &&(orderinfo.subInfoList[0].orderSubStatus !=5 &&orderinfo.subInfoList[0].orderSubStatus!=25) }}" bindtap="handleCardCode">查看二维码</view>
+			<!-- <view class="btnpay" style="background:#fa4535" wx:if="{{orderinfo.subInfoList[0].mallOrderType == 5  }}" bindtap="handleCardCode">查看二维码</view> -->
+	    	<view class="btnlist" wx:if="{{orderinfo.subInfoList[0].orderSubStatus==15}}">
+			
+					<!-- <span  class="btn btnexpress" @click="showexpress">
+						查看物流信息
+					</span> -->
+					<!-- <span class="btn overbtn"  bindtap="handleOver">确认收货</span> -->
+			
+			</view>
+			<!-- <div class="btnlist" v-if="orderinfo.payStatus!=20">
+				<span class="btn btncancel" @click="cancel">取消订单</span>
+			</div> -->
+    	</view> 
+</view>
+
+
+<canvas  style="width: 200px; height: 200px;margin:0 auto 30px;" canvas-id="myQrcode"></canvas>

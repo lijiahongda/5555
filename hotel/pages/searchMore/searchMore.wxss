@@ -1,0 +1,117 @@
+/* hotel/pages/searchMore/searchMore.wxss */
+page{
+  background-color: rgba(249, 248, 248, 1);
+}
+.titleHead {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(36, 36, 36, 1);
+  background-color: rgba(249, 248, 248, 1);
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 45.4%;
+  padding-left: 4%;
+  top: 0;
+  padding-bottom: 21rpx;
+  z-index: 102;
+  margin-bottom: 38rpx;
+}
+
+.areaView {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 100%
+}
+
+.stairView {
+  width: 25.7%;
+  height: 100%;
+  background-color: #e7e7e7;
+}
+
+.stairViewCell {
+  font-size: 28rpx;
+  color: #333;
+  height: 88rpx;
+  line-height: 76rpx;
+  padding-left: 30rpx;
+}
+.stairViewCell text{
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.stairViewCellClick {
+  background-color: white;
+}
+
+.secondView {
+  width: 73.4%;
+  height: 100%;
+  background-color: white;
+}
+
+.secondViewCell {
+  padding-left: 30rpx;
+  height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ebecee;
+  /* line-height: 88rpx; */
+}
+
+.secondViewCellName {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.secondViewCellNameClick {
+  color: rgb(255, 96, 50);
+}
+
+.secondViewCellImage {
+  width: 23rpx;
+  height: 16rpx;
+  /* background-color: #f4aa11; */
+  margin-right: 30rpx;
+}
+
+.subwayKeyCell {
+  padding-left: 30rpx;
+  height: 88rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.TradingArea {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-bottom: 1px solid #ebecee;
+  height: 80rpx;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff
+}
+
+.TradingArea .title {
+  color: #333;
+  font-size: 28rpx
+}

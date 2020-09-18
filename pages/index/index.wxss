@@ -1,0 +1,440 @@
+page {
+  background: #F8F8F8;
+}
+
+.top{
+  width:750rpx;
+  height:456rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.swiper_img,
+.slide-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 750rpx;
+  height: 456rpx;
+  z-index: 1;
+}
+.imageCount {
+  position: absolute;
+  z-index: 111;
+  left: 13px;
+  bottom: 100rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4rpx;
+  color: #fff;
+  font-size: 24rpx;
+  padding: 0 16rpx;
+  text-align: center;
+}
+.top .btn{
+  position: absolute;
+  bottom: 84rpx;
+  right: 60rpx;
+  /* background: red; */
+  width: 140rpx;
+  height: 60rpx;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top .btn .swiper_btn{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0;
+  padding: 0;
+}
+button{
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border:none;
+  background: url(http://image.zhiding365.com/2020/8/24/a57cfe1f-36a8-429f-8831-ad5abfe76db6.png);
+  background-size: 60rpx 60rpx;
+}
+button::after{
+  border:none；
+}
+.card {
+  width: 702rpx;
+  height: 81rpx;
+  background: url(http://image.zhiding365.com/2020/8/24/e01b7ff6-d702-4d4e-9c08-2d24d7c677e7.png);
+  background-size: 702rpx 81rpx;
+  border-radius: 8rpx 8rpx 0px 0px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 24rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  font-size: 26rpx;
+  justify-content: space-between;
+  z-index: 1000;
+  color: #FCE0D0;
+}
+.card .card_list {
+  display: flex;
+  align-items: center;
+}
+.card image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-right: 14rpx;
+}
+.card .card_btn {
+  width: 146rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  background:linear-gradient(-87deg,rgba(252,235,217,1) 0%,rgba(224,181,157,1) 100%);
+  border-radius: 20px;
+  font-size: 20rpx;
+  color: #70392E;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.rights{
+  width: 702rpx;
+  height: 238rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #1B1917;
+  border-radius: 0 0 10rpx 10rpx;
+  margin: 0 auto;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.rights image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-bottom: 14rpx;
+}
+.rights .list{
+  font-size:26rpx;
+  font-weight:500;
+  color:rgba(252,224,208,1);
+  text-align: center;
+}
+.rights .list view:nth-child(3){
+  font-size:22rpx;
+  font-weight:400;
+}
+
+
+
+
+
+
+.main_body {
+  width:702rpx;
+  height:268rpx;
+  background:rgba(255,255,255,1);
+  border-radius:12rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-top: 50rpx;
+}
+.hotel_name {
+  width: 662rpx;
+  height: 140rpx;
+  border-bottom: 1rpx solid rgba(232,232,232,1);
+  color: #333333;
+  font-size: 24rpx;
+  margin: 0 20rpx;
+  padding-top: 28rpx;
+  box-sizing: border-box;
+}
+.hotel_name_title,.hotel_name_ss{
+  display: flex;
+  align-items: center;
+  font-size: 34rpx;
+  color: #333333;
+  margin-bottom: 6rpx;
+}
+.hotel_name .bt_hy {
+  width:128rpx;
+  height:34rpx;
+  margin-left: 36rpx;
+}
+.hotel_name_ss{
+  justify-content: space-between;
+  font-size: 24rpx;
+}
+.hotel_name_ss .ss_right{
+  color: #3886EE;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+}
+.hotel_name_ss .ss_right image{
+  width: 12rpx;
+  height: 18rpx;
+  margin-left: 12rpx;
+}
+.hoteladdress {
+  width: 702rpx;
+  height: 128rpx;
+  background: url(http://image.zhiding365.com/2020/8/24/42e92534-92d0-4d7c-abdd-681cc88a1f99.png);
+  background-size: 702rpx 128rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx 0 20rpx;
+  box-sizing: border-box;
+}
+.hoteladdress .hotel_address{
+  font-size: 26rpx;
+  color:#333333;
+}
+.hoteladdress .hotel_address .hotel_line{
+  display: flex;
+  align-items: center;
+  font-size: 22rpx;
+  color: #666666;
+  margin-top: 6rpx;
+}
+.hoteladdress .hotel_address .hotel_line image{
+  width: 14rpx;
+  height: 20rpx;
+  margin-right: 12rpx;
+}
+.hoteladdress .hotelittext{
+  font-size: 24rpx;
+  color: #3886EE;
+  text-align: center;
+  width: 144rpx;
+}
+.hoteladdress .hotelittext image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+.cont {
+  width: 100%;
+  border-radius: 20rpx 20rpx 0 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background:linear-gradient(0deg,rgba(255,255,255,1),rgba(248,248,248,1));
+}
+.JDtitle{
+  display: flex;
+  align-items: center;
+  margin-top: 50rpx;
+  width: 100%;
+  justify-content: center;
+}
+.JDtitle image{
+  width: 34rpx;
+  height: 12rpx;
+}
+.JDtitle view{
+  font-size: 34rpx;
+  padding: 0 20rpx;
+  color: #333;
+}
+.JDdesc{
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 20rpx;
+  width: 100%;
+  text-align: center;
+}
+
+/* 热门房型 */
+.hot .title {
+  font-size: 28rpx;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx 26rpx;
+}
+
+.hot .title .title_ri {
+  font-size: 24rpx;
+}
+
+.hot .title .title_ri image {
+  width: 12rpx;
+  height: 20rpx;
+  margin-left: 14rpx;
+}
+
+.hot_lists {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 10rpx 26rpx;
+  background-position: bottom 0rpx left 0;
+  margin-bottom: 24rpx;
+  z-index: 999;
+}
+
+.hot_lists .two_scroll_view {
+  display: block;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.hot_lists .two_tab_item {
+  margin-right: 20rpx;
+  display: inline-block;
+  font-size: 20rpx;
+  font-weight: 400;
+  text-align: center;
+  position: relative;
+  width: 280rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.hot_lists .two_tab_item view{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  width: 256rpx;
+  position: absolute;
+  left: 10rpx;
+  bottom: 20rpx;
+  height:36rpx;
+  line-height: 36rpx;
+  background:rgba(0,0,0,0.5);
+  color: #fff;
+  border-left: 6rpx solid rgba(228,190,168,1);
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+.hot_lists image {
+  width: 280rpx;
+  height: 280rpx;
+  border-radius: 10rpx;
+}
+
+/* 秒杀 */
+.seckill {
+  width: 702rpx;
+  border-radius: 12rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.seckill_text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  width: 702rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.seckill_text_good {
+  background:linear-gradient(90deg,rgba(230,168,133,1),rgba(238,185,175,1));
+  border-radius:12rpx 12rpx 0px 0px;
+  width: 672rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  color: #70392E;
+  font-size: 30rpx;
+}
+.seckill_text_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24rpx;
+  background: url(http://image.zhiding365.com/2020/8/25/781c66de-c90f-4506-b34e-4279c6a0031b.png);
+  background-size: 202rpx 70rpx;
+  width: 202rpx;
+  height: 70rpx;
+  margin-top: 10rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.seckill_text_title image {
+  margin-left: 10rpx;
+  width: 12rpx;
+  height: 20rpx;
+}
+
+.shop_list {
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 20rpx;
+  background-position: bottom 0rpx left 0;
+  margin-bottom: 24rpx;
+  background: #fff;
+  border-radius: 0px 0px 12rpx 12rpx;
+}
+
+
+
+.shop_cont{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+}
+.shop_cont .shop_img{
+  width:210rpx;
+  height:210rpx;
+  border-radius:10rpx;
+  margin-right: 20rpx;
+}
+.shop_cont .shop_ri{
+  width: 428rpx;
+  height: 210rpx;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.shop_cont .shop_title{
+  width: 428rpx;
+  height: 72rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.shop_cont .shop_detail{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24rpx;
+  color: #E43F44;
+  font-size: 36rpx;
+  font-weight: 500;
+}
+.shop_cont .shop_detail view:nth-child(2){
+  text-decoration:line-through;
+  color: #999999;
+  font-size: 24rpx;
+  font-weight: 400;
+  margin-left: 10rpx;
+}

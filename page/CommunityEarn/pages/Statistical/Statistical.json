@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "总收益详情",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "default",
+  "usingComponents": {
+    "ec-canvas": "/utils/ec-canvas/ec-canvas"
+  }
+}

@@ -1,0 +1,190 @@
+page{
+    background: #f6f9fb;
+}
+.couponnav {
+    height: 90rpx;
+    line-height: 90rpx;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    /* background-color: #fff; */
+    box-shadow: 0 3px 4px 0 rgba(8,33,59,.05);
+    font-size: 30rpx;
+    font-family: PingFang SC Medium;
+    padding: 0 52rpx;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 36rpx;
+  }
+  .couponnav .item {
+  
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #666;
+  }
+  
+  
+  .couponnav .item .border {
+    background-color: #EC4543;
+    width: 40rpx;
+    height: 4rpx;
+    position: absolute;
+  }
+  .couponnav .curr {
+    color: #EC4543;
+    font-family: PingFang SC Medium;
+  
+  }
+/* .orderlist .item {
+    margin-bottom: 20rpx;
+    background-color: #fff;
+}
+
+.iheader{
+    padding: 30rpx;
+    border-bottom: 1rpx solid #f1f1f1;
+
+    display: flex;
+    font-size: 26rpx;
+    color: #666;
+}
+
+.iheader .roomimg {
+    width: 238rpx;
+    height: 156rpx;
+    margin-right: 20rpx;
+    border-radius: 20rpx;
+}
+.item .iheader .ocontainer{
+    width: 490rpx;
+}
+.ocontainer .roomname {
+    font-size: 30rpx;
+    color: #333;
+    height: 38rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    white-space: nowrap;
+}
+.ocontainer .bcontainer {
+
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.bcontainer p{
+    display: block;
+    margin-top: .14rem;
+}
+.ocontainer .bcontainer .orderstatus {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+.orderstatus .osta {
+    font-size: 30rpx;
+    color: #33558d;
+}
+
+.item .ifooter {
+    padding: 15rpx 30rpx;
+    display: flex;
+    height: 66rpx;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.ifooter .price{
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    font-size: 22rpx;
+    color: #666;
+    height: 66rpx;
+    line-height: 66rpx;
+}
+
+.price1{
+    
+        font-size: 30rpx;
+        color: #fc6931;
+        margin-left: 20rpx;
+    
+} */
+.orderlist{
+    padding: 30rpx;
+}
+.orderlist .item{
+    background: white;
+    border-radius: 18rpx;    
+    margin-bottom: 18rpx;
+}
+.orderlist .item .tit{
+    border-bottom: 1px solid #DEDEDE;
+    padding: 24rpx;
+}
+.orderlist .item .tit .state{
+    float: left;    
+    font-size: 24rpx;
+}
+.orderlist .item .tit .state text:last-child{
+    color:#fc6931;
+}
+.orderlist .item .tit .show{
+    float: right;
+}
+.orderlist .item .tit .show text{
+    color: #666666;
+    font-size: 28rpx;
+}
+.orderlist .item .tit .show image{
+    width: 10rpx;
+    height: 17rpx;
+    margin-left: 7rpx;
+}
+.orderlist .item .matter{
+    padding: 24rpx;
+}
+.orderlist .item .matter .room_img{
+    width: 218rpx;
+    height: 156rpx;
+    margin-right: 23rpx;
+    border-radius: 12rpx;
+    background: #ececec;
+    float: left;
+}
+.orderlist .item .matter .text{
+    float: left;
+    width: 390rpx;
+}
+.orderlist .item .matter .text .title{
+    font-size: 28rpx;
+    font-weight: bold;
+    width: 100%;
+    overflow: hidden;
+    white-space:nowrap;/*不显示的地方用省略号...代替*/
+    text-overflow:ellipsis;
+}
+.orderlist .item .matter .text .type{
+    font-size: 22rpx;
+    color: #999999;
+    margin-top: 6rpx;
+}
+.orderlist .item .matter .text .money{
+    color: #EC4543;
+}
+.orderlist .item .matter .text .money text:first-child{
+    font-size: 22rpx;
+}
+.orderlist .item .matter .text .money text:last-child{
+    font-size: 36rpx;
+}

@@ -1,0 +1,227 @@
+<custom titleText="" background="" backIcon="" homeIcon="http://image.zhiding365.com/2020/9/4/a85003ba-3930-4e44-b746-5e97ac986a83.png" postion="" closeIcon=""></custom>
+
+
+
+<view class="head" style="margin-top: -{{status + navHeight}}px;{{!isIphoneX?'height: 360rpx;padding-top: 120rpx;':''}}">
+	<view class="head_top">
+		<view>
+			<view class="hotel_name">{{roomDetail.name}}</view>
+			<view class="vop_con">
+				<image wx:if="{{roomDetail.pms_only}}" src="http://image.zhiding365.com/2020/8/24/b8673175-37c8-421e-84c0-9f6b7a1976e6.png"></image>
+				<image class="vip" src="http://image.zhiding365.com/2020/9/6/f837c835-174c-4bd7-aab2-82072c1c8efa.png"></image>
+			</view>
+			<view class="head_fraction">
+				<view>{{roomDetail.score}}<view style="font-size:24rpx;font-weight: 500;">分</view></view>
+				<view>{{roomDetail.review.score}}满意度</view>
+			</view>
+		</view>
+		<view class="collection">
+			<image wx:if="{{shoucang}}" bindtap="sh_C" src="http://image.zhiding365.com/2020/9/6/1a608b7e-2631-4930-b81d-1325b2c3a405.png"></image>
+			<image wx:if="{{shoucang==false}}" bindtap="qx_C" src="http://image.zhiding365.com/2020/9/6/d7d7aa13-0060-4bb4-a0e8-fe8de868fb2f.png"></image>
+		</view>
+	</view>
+
+
+	<!-- tab -->
+	<view class="tab">
+		<view wx:for="{{tabs}}" wx:for-index="index" wx:key="index" class="tab_list {{tabAct==item.id?'tab_act':''}}" bindtap="tab" data-id="{{item.id}}">
+			<view class="tab_title">{{item.name}}</view>
+			<view class="tab_tip" wx:if="{{item.tips}}">{{item.tips}}</view>
+		</view>
+	</view>
+</view>
+
+
+	<view class="main_body" wx:if="{{tabAct!=2}}">
+		<view class="equipment">
+			<view class="equ_text">
+				<text>{{roomDetail.establishmentDate}}</text>
+				<text>{{roomDetail.roomTotalAmount}}</text>
+				<text>{{roomDetail.smokeFloor}}</text>
+				<text>{{roomDetail.frontDesk}}</text>
+			</view>
+			<view class="equ_btn" bindtap="to_facilityDetail">
+				<text class="ss-right">设施•详情</text>
+				<image class="ss-img" src="http://image.zhiding365.com/2020/9/6/f1c6efa9-50c6-4f8b-9c6f-7a1e7c9735ef.png"></image>
+			</view>
+		</view>
+		
+		<view class="hotel_address">
+			<view class="ad_left">
+				<view>{{roomDetail.address}}</view>
+				<view>
+					<image src="http://image.zhiding365.com/2020/9/6/b3f089f6-6621-4299-a3c5-18c9d6715a8f.png"></image>
+					<view>{{roomDetail.distance}}</view>
+				</view>
+			</view>
+			<view class="ad_rigth" bindtap="getLocation">
+				<image src="http://image.zhiding365.com/2020/9/6/14e16d69-547e-42d7-8d61-f254aa7ae479.png"></image>
+				<view>地址·周边</view>
+			</view>
+		</view>
+
+		<view class="hotel_tel">
+			<view>酒店电话：{{roomDetail.phone}}</view>
+			<image bindtap="call" src="http://image.zhiding365.com/2020/9/6/b63c2449-1ee6-4a6c-990f-fee1c936d04c.png"></image>
+		</view>
+
+		<view class="hotel_tips">
+			<image src="http://image.zhiding365.com/2020/8/24/b8673175-37c8-421e-84c0-9f6b7a1976e6.png"></image>
+			<view>直订签约酒店，为会员提供专享房费优惠和专属超值权益。</view>
+		</view>
+
+
+		<scroll-view class="hotel_coupon" scroll-x="true" style="width: 100%">
+			<view class="list" wx:for="{{4}}">
+				<view class="list_cont">
+					<view class="list_le">
+						<view>¥ <text style="font-size:50rpx;font-family: DIN Alternate;font-weight: bold;">4</text></view>
+						<view>满79.00可用</view>
+						<view>2020.09.01-2020.09.08</view>
+					</view>
+					<view class="list_ri">领取</view>
+				</view>
+			</view>
+		</scroll-view>
+
+	</view>
+
+
+	<block wx:if="{{tabAct==1}}">
+		<!-- 日期选择 -->
+		<view class="datecontainer" bindtap="handleChooseCalendar">
+			<view class="datec">
+				<text class="date">{{sdateText}}</text>
+				<text class="tc">{{sdateLabel}}</text>
+			</view>
+			<view class="dnum">
+				<text>{{num}}</text>
+				<label>晚</label>
+			</view>
+			<view class="datec">
+				<text class="date">{{edateText}}</text>
+				<text class="tc">{{edateLabel}}</text>
+			</view>
+		</view>
+		<!-- 酒店房型 -->
+		<view class="rpitem" style="display:''">
+			<view class="roomittext">
+				<view class="list" wx:for="{{roomList}}" wx:for-index="index" wx:key="index" data-item="{{item}}" catchtap="roomDetail" data-index="{{index}}">
+					<rpItem room="{{item}}" index="{{index}}" bind:myevent="switch"></rpItem>
+				</view>
+			</view>
+		</view>
+	</block>
+
+
+	<!-- 会员中心 -->
+	<view class="member" wx:if="{{tabAct==2}}">
+		<view class="member_top">
+			<view>{{vipDetail.title}}</view>
+			<view>{{vipDetail.desc}}</view>
+		</view>
+		<view class="coupon_list" wx:for="{{vipDetail.cardCoupons}}">
+			<view class="list_le">
+				<view>¥ <text style="font-size:50rpx;font-family: DIN Alternate;font-weight: bold;">{{item.price}}</text> <text style="font-size:24rpx;font-weight: 600;margin-left:20rpx">{{item.couponName}} x {{item.couponNum}}张</text></view>
+				<view>{{item.couponTypeName}} {{item.channel}}</view>
+				<view style="font-size:20rpx" wx:if="{{item.startTime && item.endTime}}">{{item.startTime}}-{{item.endTime}}</view>
+			</view>
+			<view class="list_ri">一键领取</view>
+		</view>
+		<view class="goods" wx:for="{{vipDetail.cardGoods}}" wx:for-index="index" wx:key="index">
+			<view class="goods_le">
+				<image mode="aspectFill" src="{{item.goodsImg}}"></image>
+				<view class="goods_name">
+					<view class="title">{{item.goodsName}}</view>
+					<view class="receive">
+						<view>{{item.getType}}</view>
+						<view>x {{item.specName}}</view>
+					</view>
+				</view>
+			</view>
+			<view class="goods_ri">
+				<view>总价值</view>
+				<view class="prices">
+					<text style="text-decoration:line-through;font-size:24rpx">¥</text>
+					<text style="text-decoration:line-through;">{{item.goodsTotalPrice}}</text>
+				</view>
+				<view class="free">免费送</view>
+			</view>
+		</view>
+		<view class="btn">
+			<view class="price">¥{{vipDetail.cardPrice}}</view>
+			<view class="buy">立即购买</view>
+		</view>
+	</view>
+
+
+	<!-- 热卖商品 -->
+	<view class="hot" wx:if="{{tabAct==3}}">
+		<list list="{{shopList}}"></list>
+	</view>
+
+	
+	<!-- 酒店介绍 -->
+	<view class="introduce" wx:if="{{tabAct==4}}">
+		<!-- 轮播 -->
+		<swiper class="swiper_cls">
+			<block wx:for="{{roomDetail.banner}}" wx:for-index="index" wx:key="index">
+				<swiper-item>
+					<image src="{{item}}"></image>
+					<view class="swiper_pageNum"><text>{{index+1}} / </text><text style="color:#9A9A9A"> {{roomDetail.banner.length}}</text></view>
+				</swiper-item>
+			</block>
+		</swiper>
+
+		<view class="usp">
+			<view class="title">
+				<image src="http://image.zhiding365.com/2020/9/7/b99af81c-53c5-4d2c-9b60-b97d9c01f38b.png"></image>
+				<view>酒店卖点</view>
+				<image src="http://image.zhiding365.com/2020/9/7/30657af6-3d7b-403c-84aa-8d7bc6315e57.png"></image>
+			</view>
+			<view>
+				<import src="../../../components/wxParse/wxParse.wxml"/> 
+			</view>
+		</view>
+	</view>
+
+
+
+
+<view class="hotel_con">
+	
+	
+
+
+	<view style="display:none;">
+		<calendar calendarConfig="{{calendarConfig}}"></calendar>
+	</view>
+	<view style="width:100%;text-align:center;line-height:100rpx;" wx:if="{{tabAct==2 && roomList.length == 0}}">
+		<text>暂无数据</text>
+	</view>
+
+	
+
+	<roomDetail roomDetailInfo="{{roomDetailInfo}}" isShow="{{isShow}}" bind:closeRoomDetail="closeRoomDetail"></roomDetail>
+
+
+	<selectTime isSelectTime="{{isSelectTime}}" bind:onLoadFun="onLoadFun"></selectTime>
+
+</view>
+
+<!-- 是否开通会员 -->
+<view class="accessMember" wx:if='{{accessMember}}'>
+	<view>
+		<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-31/15/yuelvhuikGbvzaEeSR1596179640.png" class="close" bindtap="switch"></image>
+		<view class="detail">
+			<view class="header">友情提示</view>
+			<view class="tip">尊敬的用户：</view>
+			<view class="desc">您还不是会员哦，只能全价预订酒店， 开通会员后立即享受会员价。</view>
+			<view class="note">直订联名卡会员享最低1元住酒店！</view>
+			<view class="button">
+				<view bindtap="handleBook" data-item="{{detailTarget}}">全价预订</view>
+				<view bindtap="goButVip">立即成为会员</view>
+			</view>
+		</view>
+	</view>
+</view>

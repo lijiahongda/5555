@@ -1,0 +1,11 @@
+var JSon= {
+  Jn: function (value) {
+    return JSON.parse(value)
+  }
+}
+
+module.exports = {
+  
+ JSON:JSon.Jn
+
+}

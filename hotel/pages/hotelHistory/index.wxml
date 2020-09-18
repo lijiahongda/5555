@@ -1,0 +1,42 @@
+<scroll-view>
+	<view wx:if="{{historyHotel}}" class="recommend-cot" wx:for="{{historyHotel}}" wx:key="index" bindtap="to_history" data-dealerId="{{item.dealerId}}">
+		<view class="hotel-pic">
+			<image wx:if="{{item.image}}" src="{{item.image}}"></image>
+			<image wx:else src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-03/15/yuelvhuisPsDaedxF41593760583.png"></image>
+		</view>
+		<view class="hotel-cot">
+			<view class="hotel-cot-title"> <text class="cot-title">{{item.dealerName}}</text></view>
+			<view class="hotel-cot-pic">
+			</view>
+			<view class="hotel-cot-adderss">
+				<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-17/15/yuelvhuigr2GaqOoow1594970403.png"></image>
+				<text>{{item.city}}</text>
+			</view>
+			<view>
+				<view class="hotel-cot-zdbt">
+					<text>直订补贴</text>
+				</view>
+				<!-- <view class="hotel-cot-lm_zj" wx:if="{{item.vipPrice<item.minPrice}}">
+					联名会员直降￥{{(item.minPrice-item.vipPrice)/100}}
+				</view> -->
+			</view>
+			<view class="hotel-cot-bottom">
+				<view class="min-price"> <text>￥{{item.bazaarAmount/100}}</text> </view>
+				<view class="price"> <text class="price-fh">￥</text><text class="price-num">{{item.minPrice/100}} <text class="qi">起</text> </text>
+				</view>
+
+			</view>
+			<view class="btm-hyzj" wx:if="{{item.minPrice<item.bazaarAmount}}">
+				<text>	↓会员直降￥{{(item.bazaarAmount-item.minPrice)/100}}</text>
+			</view>
+		</view>
+		
+	</view>
+<view class="history-zw" wx:if="{{TuijHotel.length==0}}">
+	<image class="history-zw-pic" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-06/09/yuelvhuiPKWzfJ8zNF1594000680.png"></image>
+</view>
+		
+
+</scroll-view>
+
+

@@ -1,0 +1,138 @@
+<!--my/pages/orderDetail/shopOrderDetail/shopOrderDetail.wxml-->
+<view class="TopContent">
+	<view class="status">
+		<block wx:if="{{status==0}}">
+			<view style="font-size: 44rpx;padding-bottom:15rpx">{{orderinfo.orderStatusDesc}}</view>
+			<view wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==15}}">商家已发货，请注意查收...</view>
+      <view wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==20}}">感谢您的信赖，我们将为您提供更优质的服务</view>
+      <view wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==10}}">商家正在准备中，请耐心等待</view>
+      <view wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==25}}">您的订单已取消</view>
+		</block>
+    <block wx:if="{{status==1}}">
+			<view style="font-size: 44rpx;padding-bottom:15rpx">{{orderinfo.payStatusName}}</view>
+			<view wx:if="{{orderinfo.payStatus==15}}">商家已发货，请注意查收...</view>
+      <view wx:if="{{orderinfo.payStatus==20}}">感谢您的信赖，我们将为您提供更优质的服务</view>
+      <view wx:if="{{orderinfo.payStatus==10}}">商家正在准备中，请耐心等待</view>
+      <view wx:if="{{orderinfo.payStatus==25}}">您的订单已取消</view>
+		</block>
+	</view>
+</view>
+<view class="orderDetails">
+<!-- 地址信息 -->
+	<view class="userInfo" wx:if="{{orderinfo.subInfoList[0].infoList[0].receiveInfo}}">
+    <view class="addressinfo">
+      <view class="address_detail">
+        <image src="http://image.zhiding365.com/2020/7/20/7e21ef27-d2e0-4b5d-a99b-3802bd04a22a.png"></image>
+        <view class="address_text">{{orderinfo.subInfoList[0].infoList[0].receiveInfo.addressFull}}</view>
+      </view>
+      <view class="address_pression">{{orderinfo.subInfoList[0].infoList[0].receiveInfo.contact}}   {{orderinfo.subInfoList[0].infoList[0].receiveInfo.telphone}}</view>
+    </view>
+    <view class="address_back">
+      <!-- <image src="http://image.zhiding365.com/2020/7/20/bbef08a3-8b5c-49cd-90ed-4563b3cbc782.png"></image> -->
+    </view>
+	</view>
+
+
+<!-- 酒店商城信息 -->
+<view class="hotelshop">
+  <view class="hotelshop_title" wx:if="{{status==0}}">{{orderinfo.subInfoList[0].supplierName}}</view>
+  <view class="hotelshop_title" wx:if="{{status==1}}">{{orderinfo.dealerName}}</view>
+  <view class="hotelshop_goodinfo">
+    <view class="goodinfo_image">
+      <image src="{{orderinfo.subInfoList[0].infoList[0].imageUrl}}" wx:if="{{status==0}}"></image>
+      <image src="{{orderinfo.coverImage}}" wx:if="{{status==1}}"></image>
+    </view>
+    <view class="goodinfo_text">
+      <view class="goodinfo_name">
+        <view class="goodinfo_tit" wx:if="{{status==0}}">{{orderinfo.subInfoList[0].infoList[0].goodsName}}</view>
+        <view class="goodinfo_tit" wx:if="{{status==1}}">{{orderinfo.name}}</view>
+        <view class="goodinfo_price" wx:if="{{status==0}}">¥{{orderinfo.subInfoList[0].infoList[0].goodsPrice/100}}</view>
+        <view class="goodinfo_price" wx:if="{{status==1}}">¥{{orderinfo.oriAmount/100}}</view>
+      </view>
+      <view class="goodinfo_sku" wx:if="{{status==0}}">{{orderinfo.subInfoList[0].infoList[0].skuName}}</view>
+      <view class="goodinfo_num" wx:if="{{status==0}}">x{{orderinfo.subInfoList[0].infoList[0].goodsNum}}</view>
+      <view class="goodinfo_num" wx:if="{{status==1}}">x{{orderinfo.quantity}}</view>
+    </view>
+  </view>
+  <view class="fright">
+    <view class="fright_text">商品总额</view>
+    <view class="fright_price" wx:if="{{status==0}}">¥{{orderinfo.subInfoList[0].infoList[0].goodsPrice/100}}</view>
+    <view class="fright_price" wx:if="{{status==1}}">¥{{orderinfo.oriAmount/100}}</view>
+  </view>
+  <view class="fright" wx:if="{{status==0}}">
+    <view class="fright_text">配送费用</view>
+    <view class="fright_price">¥{{orderinfo.logisticsAmount/100}}</view>
+  </view>
+  <view class="fright">
+    <view class="fright_text">优惠总额</view>
+    <view class="fright_price" wx:if="{{status==0}}">{{orderinfo.preferentialAmount==0?'未使用优惠券':orderinfo.preferentialAmount/100}}</view>
+    <view class="fright_price" wx:if="{{status==1}}">{{orderinfo.discountAmount==0?'未使用优惠券':orderinfo.discountAmount/100}}</view>
+  </view>
+  <view class="total">
+    <view class="total_text">合计</view>
+    <view class="total_price" wx:if="{{status==0}}">¥{{ orderinfo.totalAmount/100}}</view>
+    <view class="total_price" wx:if="{{status==1}}">¥{{ orderinfo.oriAmount/100}}</view>
+  </view>
+</view>
+
+
+<!-- 联系商家 -->
+<view class="shoper">
+<button class="kefu"  hover-class="none"  open-type="contact" bindcontact="handleContact">
+					<image src="http://image.zhiding365.com/2020/7/20/7d44fb8e-de95-4ba1-be70-982edf383ba2.png"></image>
+  <view class="shoptext">联系商家</view>
+			</button>
+  
+</view>
+
+
+<!-- 订单信息 -->
+<view class="orderdetail">
+  <view class="oDetail_title">订单信息</view>
+  <view class="oDetail_info info1">
+    <view>订单编号</view>
+    <view class="infos_clone">
+      <view class="clones" data-orderno="{{orderinfo.orderNo}}" bindtap="copyId">复制</view>
+      <view>{{orderinfo.orderNo}}</view>
+    </view>
+  </view>
+  <view class="oDetail_info info2">
+      <view>下单时间</view>
+      <view wx:if="{{status==0}}">{{orderinfo.createTime}}</view>
+      <view wx:if="{{status==1}}">{{orderinfo.orderTime}}</view>
+  </view>
+  <view class="oDetail_info info3" wx:if="{{status==0}}">
+      <view>配送方式</view>
+      <view>普通快递</view>
+  </view>
+</view>
+
+
+<!-- 底部按钮 -->
+<block wx:if="{{status==0}}">
+  <view class="btns" wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==5}}">
+    <!-- <view class="cancles" >取消订单</view> -->
+    <view class="pays" bindtap="gopay">去支付</view>
+  </view>
+
+  <view class="btns" wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==25||orderinfo.subInfoList[0].infoList[0].orderSubStatus==20}}">
+    <!-- <view class="cancles" >删除订单</view> -->
+    <view class="pays" bindtap="again">再次购买</view>
+  </view>
+
+  <view class="btns" wx:if="{{orderinfo.subInfoList[0].infoList[0].orderSubStatus==10}}">
+    <view class="cancles" bindtap="shopLogistics">查看物流</view>
+    <view class="pays" bindtap="orderConfirm">确认收货</view>
+  </view>
+</block>
+
+<block wx:if="{{status==1}}">
+  <view class="btns" wx:if="{{orderinfo.payStatus==1}}">
+    <view class="pays" bindtap="gopay">去支付</view>
+  </view>
+
+  <view class="btns" wx:if="{{orderinfo.payStatus==25||orderinfo.payStatus==5}}">
+    <view class="pays" bindtap="again">再次购买</view>
+  </view>
+</block>
+</view>

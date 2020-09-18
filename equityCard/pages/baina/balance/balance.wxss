@@ -1,0 +1,149 @@
+page{
+  background-size: 100%;
+  background-image: url(https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-04-30/02/yuelvhuiJ6eRLnmuRt1588184552.png);
+  background-repeat: no-repeat;
+
+}
+.content{
+  width: 690rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  padding: 36rpx 24rpx;
+  box-sizing: border-box;
+  border-radius: 18rpx;
+  background: #fff;
+}
+.goodsDetail{
+  width: 100%;
+  display: flex;
+}
+.goodsDetail > image{
+  width: 218rpx;
+  height: 218rpx;
+  display: block;
+  margin-right: 24rpx;
+  border-radius: 12rpx;
+}
+.goodsDetail .right{
+  width: 388rpx;
+}
+.goodsDetail .title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color: #242424;
+  font-size: 28rpx;
+  overflow: hidden;
+}
+.goodsDetail .desc{
+  color: #999999;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  margin-top: 10rpx;
+  line-height: 1;
+}
+.goodsDetail .price{
+  color: #EC4543;
+  font-size: 36rpx;
+  margin-top: 60rpx;
+}
+.freight{
+  width: 630rpx;
+  height: 78rpx;
+  color: #242424;
+  font-size: 24rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  margin-top: 42rpx;
+  background: #F9F8F8;
+}
+.freight > view:last-child{
+  color: #EC4543;
+}
+.freightTip{
+  color: #EC4543;
+  font-size: 20rpx;
+  margin-top: 18rpx;
+  line-height: 1;
+  padding-left: 32rpx;
+}
+.site{
+  width: 690rpx;
+  height: 132rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  background: #fff;
+  border-radius: 18rpx;
+  margin: 0 auto;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 18rpx;
+}
+.site > image{
+  width: 14rpx;
+  height: 20rpx;
+  position: absolute;
+  top: 50%;
+  margin-top: -10rpx;
+  right: 30rpx;
+}
+.site .top{
+  color: #242424;
+  font-size: 28rpx;
+  line-height: 1;
+  display: flex;
+  width:100%;
+}
+.site .top .name{
+  padding-right: 24rpx;
+}
+.site .phone{
+  color: #242424;
+  font-size: 24rpx;
+  line-height: 1;
+  margin-top: 14rpx;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24rpx 0 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.footer .detail{
+  height: 100rpx;
+  display: flex;
+  align-items: baseline;
+  color: #242424;
+  font-size: 22rpx;
+  line-height: 3;
+}
+.footer .detail text:nth-child(2){
+  color: #EC4543;
+  font-size: 36rpx;
+}
+.footer .buy{
+  width:262rpx;
+  height:66rpx;
+  background:rgba(236,69,67,1);
+  border-radius:33rpx;
+  color: #fff;
+  font-size: 30rpx;
+  line-height: 66rpx;
+  text-align: center;
+}

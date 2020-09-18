@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "shopItem": "/components/shopItem/index",
+    "poster":"/components/poster/index"
+  }
+}

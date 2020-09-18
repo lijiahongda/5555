@@ -1,0 +1,57 @@
+<view class="poster-main" wx:if="{{sonShowstatus == 1}}">
+    <view class="poster-mask" bindtap="handleBox"></view>
+    <view class="'poster-wrapper {{sonShowstatus == 1?'moveT':''}}">
+        <view class="btn-header"> 
+            <view class="btn-header-p">
+                配送至
+            </view>
+             <view bindtap="handleHideStatus" class="btn-header-p btn-header-p-ac">
+                <image class="" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-12/15/yuelvhuinoUVSPT5l51594538651.png" >
+                    
+                </image>
+            </view>
+        </view>
+        <view class="header">
+            <view class="header_tap">
+                <view bindtap="handleHeaderProvince" wx:if="{{pname}}">{{pname}}</view>
+                <view bindtap="handleHeaderCity" wx:if="{{cname}}">{{cname}}</view>
+                <view bindtap="handleHeaderArea" wx:if="{{aname}}">{{aname}}</view>
+                <view bindtap="handleHeaderTown" wx:if="{{tname}}">{{tname}}</view>
+                <block wx:if="{{xzStatus}}">
+                    <block wx:for="{{ldsatus}}" wx:key="index">
+                        <view style="color:#E80F1F" wx:if="{{item}}" wx:key="{{index}}" data-ins="{{index}}" bindtap="handleTabData">
+                            请选择
+                        </view>
+                    </block>
+                </block>
+            </view>
+            <scroll-view class="scroll-box" scroll-y="true">
+                <view hidden="{{!ldsatus[0]}}">
+                    <view style="color:{{item.id == pid ?'#E80F1F':'#333'}}" class="li-s" data-obj="{{item}}" data-ins="0" bindtap="handleProvince" wx:for="{{provinceData}}" wx:key="{{item.id}}">
+                        <view>{{item.name}}</view>
+                        <image wx:if="{{item.id == pid}}" class="li-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-10/16/yuelvhuipqgHmpShqX1594369121.png"></image>
+                    </view>
+                </view>
+                <!-- <!-- <view class="li-s" data-obj="{{item}}" bindtap="handleProvince" wx:for="{{provinceData}}">{{item.name}}</view> -->
+                <view hidden="{{!ldsatus[1]}}">
+                    <view style="color:{{item.id == cid ?'#E80F1F':'#333'}}" class="li-s" data-obj="{{item}}" data-ins="1" bindtap="handleCity" wx:for="{{cityData}}" wx:key="{{item.id}}">
+                        <view>{{item.name}}</view>
+                        <image wx:if="{{item.id == cid}}" class="li-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-10/16/yuelvhuipqgHmpShqX1594369121.png"></image>
+                    </view>
+                </view>
+                <view hidden="{{!ldsatus[2]}}">
+                    <view style="color:{{item.id == aid ?'#E80F1F':'#333'}}" class="li-s" data-obj="{{item}}" data-ins="1" bindtap="handleArea" wx:for="{{areaData}}" wx:key="{{item.id}}">
+                        <view>{{item.name}}</view>
+                        <image wx:if="{{item.id == aid}}" class="li-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-10/16/yuelvhuipqgHmpShqX1594369121.png"></image>
+                    </view>
+                </view>
+                <view hidden="{{!ldsatus[3]}}">
+                    <view style="color:{{item.id == tid ?'#E80F1F':'#333'}}" class="li-s" data-obj="{{item}}" data-ins="1" bindtap="handleTown" wx:for="{{townData}}" wx:key="{{item.id}}">
+                        <view>{{item.name}}</view>
+                        <image wx:if="{{item.id == tid}}" class="li-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-10/16/yuelvhuipqgHmpShqX1594369121.png"></image>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>

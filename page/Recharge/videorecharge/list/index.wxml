@@ -1,0 +1,20 @@
+<!--page/videorecharge/list/index.wxml-->
+<view>
+    <view>
+        <view class="list" wx:for="{{list}}">
+            <view class="status">{{item.order_status_name}}</view>
+            <view class="middle">
+                <view class="middleleft">
+                    <image src="{{item.goods_image}}" class="logo"></image>
+                    <view>
+                        <view class="cardname">{{item.goods_title}}</view>
+                        <view class="cardtype">{{item.goods_spec}}</view>
+                    </view>
+                </view>
+                <view class="currentprice">￥{{item.total_amount}}</view>
+            </view>
+            <view class="price">总计:￥110</view>
+            <!-- <view class="btn">已取消</view> -->
+        </view>
+    </view>
+</view>

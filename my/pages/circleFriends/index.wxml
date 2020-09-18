@@ -1,0 +1,27 @@
+<!--my/pages/circleFriends/index.wxml-->
+<view class="content">
+  <view class="details" wx:if="{{direct}}">
+    <view class="item" wx:for="{{applyList}}" wx:key="key" data-id="{{item.memberId}}" bindtap="indirectUser">
+      <view class="img">
+        <image src="{{item.headImg}}"></image>
+      </view>
+      <view class="info">
+        <view class="name clearfix">
+          <text class="left">{{item.nickName}}</text>
+          <view class="indirect_num exist">
+            <text>间推用户</text>
+            <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-20/10/yuelvhuijyzJNTZCde1595211562.png"></image>
+          </view>
+        </view>
+        <view class="num">{{item.mobile}}</view>
+        <view class="time">注册时间：{{item.createTime}}</view>
+      </view>
+    </view>   
+
+  </view>
+  <view class="details indirect" wx:if="{{indirect}}">
+     <image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+  </view>
+
+
+</view>

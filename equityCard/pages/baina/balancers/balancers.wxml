@@ -1,0 +1,141 @@
+<!-- <import src="../colorLine/colorLine.wxml" /> -->
+<view class="balance">
+  <scroll-view scroll-y>
+    <!-- <image wx:if='{{cardType==0}}' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-03-02/20/yuelvhuiqM5Xtj8FFt1583152297.png" bindtap="join" style="width:100%;height:100rpx;"></image> -->
+    <view>
+      <view class="userInfo" bindtap='addressAdministration' wx:if="{{address == null||address=='NaNundefined'}}">
+        <view class="userInfoContent">
+          <view class="info">
+            <view class="name">{{receiverName}}</view>
+            <view class="default" wx:if="{{isDefault == 1}}">默认</view>
+            <view class="phone">{{mobile}}</view>
+          </view>
+          <view class="location">
+            <view class="site">
+              <view class="address">暂无收货地址</view>
+              <view class="image">
+                <image style="width:100%;height:100%;" src="https://yuelvdaren-1300766538.cos.ap-beijing.myqcloud.com/daren/2020/06/23/5ef0d91831d521592842520.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="userInfo" wx:else bindtap='addressAdministration'>
+        <view class="userInfoContent">
+          <view class="info">
+            <view class="name">{{receiverName}}</view>
+            <view class="default" wx:if="{{isDefault == 1}}">默认</view>
+            <view class="phone">{{mobile}}</view>
+          </view>
+          <view class="location">
+            <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-03-02/14/yuelvhui5f005RDl7K1583131957.png"></image>
+            <view class="site">
+              <view class="address">{{address}}</view>
+              <view class="image">
+                <image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-03-02/14/yuelvhui6QlHcKzU4o1583132025.png"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <template is="colorLine" />
+    <view class="list">
+      <view>
+        <view class="borderBottom" >
+          <!-- <view class="first">
+            <image src="{{item.imgIcon}}"></image>
+            <text>{{item.name}}</text>
+          </view> -->
+          <view class="ItemRight">
+            <view class="image">
+              <image src="{{list.image}}"></image>
+            </view>
+            <view class="describe">
+              <view class="title">
+                <text>{{list.title}}</text>
+                <view>X{{list.number}}</view>
+              </view>
+              
+              <view style='flex:1;color:rgb(153,153,153)' wx:if="{{item.goodSpec != undefined}}" class="goodSpec">{{list.displayStr}}</view>
+              <view class="specifications">
+                <!-- <view class="money" wx:if="{{item.activityPrice}}">￥{{item.activityPrice}}</view>
+                <view class="money" wx:elif="{{cardType == 0}}">￥{{item.goodPrice}}</view>
+                <view class="money" wx:else>￥{{item.vipPrice}}
+                  <text style="text-decoration:line-through;font-xize:20rpx;margin-left:10rpx;color:#999">￥{{item.goodPrice}}</text>
+                </view> -->
+                <view class="money" >￥{{list.realVipPrice}}</view>
+
+              
+              </view>
+            </view>
+          </view>
+         
+        </view>
+      </view>
+    </view>
+    <view class="favourable">
+      <view class="item">
+        <view>商品总额</view>
+        <view style="flex:1"></view>
+        <view class="price">￥{{list.advancePayment}}</view>
+      </view>
+      <view class="item">
+        <view>运费
+          <span style='color:#999999;'>（暂不支持港澳台及武汉地区）</span>
+        </view>
+        <view style="flex:1"></view>
+        <view class="price">￥{{list.logisticsAmount}}</view>
+      </view>
+    </view>
+    
+  </scroll-view>
+
+  
+</view>
+
+
+<!-- 底部 -->
+<view class="footer">
+  <text>合计：</text>
+  <text class="price">￥{{list.advancePayment}}</text>
+  <view class="submit" bindtap='confirmSite'>提交订单</view>
+</view>
+
+
+
+<!-- 确认收货地址 -->
+<view class="confirmSite" wx:if='{{confirmSiteShow}}' bindtap="closeConfirm">
+  <view catchtap='addressAdministration'>
+    <template is='colorLine'></template>
+    <view class="header">请确认收货地址</view>
+    <view class="userInfo">
+      <text class="name">{{receiverName}}</text>
+      <text wx:if="{{isDefault == 1}}" class="default">默认</text>
+      <text>{{mobile}}</text>
+    </view>
+    <view class="site" catchtap='addressAdministration'>{{address=='NaNundefined'?'暂无收货地址':address}}</view>
+    <view class="button">
+      <view class="changeSite" catchtap='addressAdministration'>修改地址</view>
+      <view class="confirm" catchtap='payment' style="background-color:{{isgopay?'':'#ccc'}}">确定</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 弹窗组件 -->
+  <view class="alert" wx:if="{{alertShow}}" >
+    <!--page/payment/component/code/index.wxml-->
+    <view class="codeAlert">
+      <view class="close" bindtap="closeMyself">
+        <text class="iconfont icon-guanbi"></text>
+      </view>
+      <view class="text">输入余额密码</view>
+      <view class="inputCode">
+        <input type="number" placeholder="请输入6位密码" password="{{true}}" value="{{password}}" bindinput="setPsw"></input>
+      </view>
+      <view class="alertBt" style="{{password!=''?'':'background:rgba(153,153,153,1)'}}" bindtap="nextAlert">提交</view>
+    </view>
+  </view>
+
+   

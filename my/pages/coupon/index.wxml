@@ -1,0 +1,162 @@
+<!-- <view class="content">
+	<view class="nav_tab">
+		<view wx:for="{{list}}" class="{{selected==index?'hidden':'show'}}" data-index='{{index}}' bindtap="selected" wx:key="key">{{item}}
+			<view class="{{selected==index?'nav_underline':''}}"></view>
+		</view>
+	</view>
+	<view class="details" wx:if="{{!not}}">
+		<view class="ticket" wx:for="{{couponsList}}" wx:key="key">
+
+			<view class="title">{{item.dealerName}}</view>
+			<view  class="jindian" wx:if="{{item.dealerId!=0}}" bindtap="employ" data-dealerid="{{item.dealerId}}">进店</view>
+			<view class="item clearfix" wx:for="{{item.coupons}}" wx:for-item="items">
+				<view class="left {{ items.isUse ==3?'expiredleft':items.isUse ==0?'left':items.isUse ==1 || items.isUse ==2?'expiredleft':''}}">
+					<view class="tit">
+						<view class="couponsName" wx:if="{{items.couponType==1}}">折扣券</view>
+						<view class="couponsName" wx:if="{{items.couponType==2}}">现金券</view>
+						<view class="couponsName" wx:if="{{items.couponType==3}}">兑换券</view>
+						<view class="couponsName" wx:if="{{items.couponType==4}}">满减券</view>
+						<text class="tit-cot">{{items.couponName}}</text>
+					</view>
+
+					<view class="time">
+						<text>有效期至：</text>
+						<text>{{items.dueTime}}</text>
+					</view>
+					<view class="detail" data-id="{{items.customerCouponsId}}" bindtap="examine">详细信息</view>
+
+				</view>
+				<view class="right {{ items.isUse ==3?'expired':items.isUse ==0?'right':items.isUse ==1 || items.isUse ==2?'used':''}}">
+					<view class="discount" wx:if="{{items.couponType ==1}}">
+						<text>{{items.discount /10}}折</text>
+					</view>
+					<view class="money" wx:if="{{items.couponType ==2}}">
+						<text>¥</text>
+						<text>{{items.prefAmount /100}}</text>
+					</view>
+					<view class="discount" wx:if="{{items.couponType ==3}}">
+						<text>兑换券</text>
+					</view>
+					<view class="full" wx:if="{{items.couponType ==4}}">
+						<view class="full-title">
+							<text class="fh">¥</text>
+							<text class="price">{{items.prefAmount /100}}</text>
+						</view>
+						<text>满{{items.fullAmount/100}}元可用</text>
+					</view>
+					<view class="btns">
+						<view class="start" data-dealerid="{{items.dealerId}}" bindtap="{{items.isUse==0?'employ':''}}">立即使用</view>
+					</view>
+					<view class="usedimage">
+						<image src="http://image.zhiding365.com/2020/7/27/5a606cce-9016-4439-a5db-d7bd06cb2399.png" wx:if="{{items.isUse ==1 || items.isUse ==2}}"></image>
+						<image src="http://image.zhiding365.com/2020/7/27/74bdf828-4a13-4b34-882b-049efb10c778.png" wx:if="{{items.isUse ==3}}"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+
+	</view>
+
+	<view class="not" wx:if="{{not}}">
+		<image mode='widthFix' src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-07-11/17/yuelvhuipJ1EJXQ2Q71594459708.png"></image>
+	</view>
+
+
+	详情弹框
+	<view class="popUp" wx:if="{{pop}}">
+		<view class="pop">
+			<view class="title">
+				<text>详细信息</text>
+				<text bindtap="close">关闭</text>
+			</view>
+			<view class="matter">
+				<scroll-view scroll-y>
+					<view class="tit">{{title}}</view>
+					<view class="substance">
+						<view wx:for="{{contont}}">
+							<view>{{item}}</view>
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+		</view>
+
+	</view>
+
+
+
+
+
+
+
+	<view class="couponlist">
+
+		<view class="item" wx:for="{{couponData}}">
+			<image class="it-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-05-21/20/yuelvhui5ijsIwwqsW1590064486.png" wx:if="{{currtype==0}}" />
+			<image class="it-img" src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-05-21/20/yuelvhuiQsqSJZVxOW1590064575.png" wx:else />
+			<view class="worth" wx:if="{{item.couponType==1}}">
+				<view class="price">
+					<view>{{item.discount/10}}折</view>
+				</view>
+				<view class="req"></view>
+			</view>
+			<view class="worth" wx:if="{{item.couponType==2}}">
+				<view class="price"><em>￥</em><span>{{item.prefAmount/100}}</span></view>
+				<view class="req"></view>
+			</view>
+			<view class="desc">
+				<span class="name">{{item.couponName}}</span>
+				<span class="type" wx:if="{{item.couponType==1}}">折扣券</span>
+				<span class="type" wx:if="{{item.couponType==2}}">现金券</span>
+				<span class="date">有效期：{{item.dueTime1}}</span>
+			</view>
+		</view>
+
+
+
+	</view>
+	
+
+
+</view> -->
+
+<!--hotel/pages/couponCenter/couponCenter.wxml-->
+<view class="coupon"  wx:key="couponList">
+	<view class="couponCenter_top" >
+		<view class="dealer_img">
+			<image src="{{item.hotelImg}}"></image>
+		</view>
+		<view class="dealer_content">
+			<view class="dealer_title">酒店名称</view>
+			<view class="dealer_point">5.0分|99%满意度</view>
+		</view>
+		<view class="dealer_hotel">进店</view>
+	</view>
+	<view class="couponCenter">
+		<view class="coupon_left">
+			<view class="coupon_left_cent">
+				<view class="coupon_left_cent_type">酒店券</view>
+				<view class="coupon_left_text">仅限直订平台酒店使用</view>
+			</view>
+			<view class="coupon_left_top">
+				<view class="coupon_left_desc">2020.09.21-2020.09.30</view>
+			</view>
+			<view class="coupon_left_bot" bindtap="botDetails">
+				<view class="coupon_left_desc">详细信息</view>
+				<image src="{{isShow?'http://image.zhiding365.com/2020/9/10/2a2362e8-c015-432f-b8be-d285ce67cf47.png':'http://image.zhiding365.com/2020/9/10/aea7babf-32e0-431b-a080-a5303be5c80f.png'}}"></image>
+			</view>
+		</view>
+		<view class="coupon_right">立即领取</view>
+	</view>
+	
+	<view class="coupon_vip">
+		<image src="http://image.zhiding365.com/2020/9/10/33938824-f8af-419b-9bb8-2c75a5c55e0e.png"></image>
+		<view>直订会员</view>
+	</view>
+  <view class="getStatus">
+    <image src="http://image.zhiding365.com/2020/9/10/79502343-7fce-48df-a77b-ca73753abadf.png"></image>
+  </view>
+	<view class="coupon_details" wx:if="{{isShow}}">
+		<view class="coupon_details_text">为促进啊但是擦拭的afteriuu热i入温柔大方iv上档次让人惊愕</view>
+	</view>
+</view>

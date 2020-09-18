@@ -1,0 +1,71 @@
+/* hotel/pages/facilityDetail/index.wxss */
+.hotelitem {
+  padding: 0 76rpx 0 30rpx;
+  z-index: 2;
+  display: flex;
+}
+
+.hotelitem .text {
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: #333;
+  width: 590rpx;
+}
+.hotelitem1 {
+  padding: 0 30rpx 30rpx;
+  background-color: #fff;
+  color: #333;
+  font-size: 28rpx;
+}
+
+.hotelfac {
+  margin-bottom: 20rpx;
+}
+
+.hotelitem1 .title {
+  font-size: 30rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1px solid #efefef;
+  margin-bottom: 25rpx;
+}
+
+.ydian {
+  margin-right: 20rpx;
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background-color: #666;
+}
+
+.y-ul {
+
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 25rpx;
+  color: #666;
+}
+
+.itemname {
+  font-size: 26rpx;
+  margin-bottom: 25rpx;
+}
+
+.y-ul-li {
+  width: 33.33333%;
+
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 25rpx;
+}
+
+.yls-d {
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 25rpx;
+  color: #666;
+
+}

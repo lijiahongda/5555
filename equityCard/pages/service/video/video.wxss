@@ -1,0 +1,6 @@
+/* equityCard/pages/service/video/video.wxss */
+.main{
+  width:100%;
+  text-align: center;
+  margin: 0 auto;
+}

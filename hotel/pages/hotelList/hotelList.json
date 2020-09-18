@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "HotelHomeList":"/components/HotelHomeList/index",
+    "PriceStar":"/components/PriceStar/index",
+    "RecommendedSort":"/components/RecommendedSort/index",
+    "areaView":"/components/areaView/index",
+    "ComprehensiveScreening":"/components/ComprehensiveScreening/index",
+    "mapList":"/components/mapList/index",
+    "selectTime": "/components/selectTime/index"
+  },
+  "navigationStyle":"custom"
+}

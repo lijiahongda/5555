@@ -1,0 +1,38 @@
+<!-- 商品信息 -->
+<view class="content">
+	<view class="goodsDetail">
+		<image src="{{data.image}}"></image>
+		<view class="right">
+			<view class="title">{{data.title}}</view>
+			<view class="desc">{{data.displayStr}}</view>
+			<view class="price">¥{{data.realVipPrice}}</view>
+		</view>
+	</view>
+	<view class="freight">
+		<view>运费</view>
+		<view>￥{{data.logisticsAmount}}</view>
+	</view>
+	<view class="freightTip" wx:if="{{isSell !=1}}">白拿商品需支付10元运费</view>
+</view>
+<!-- 地址 -->
+<view class="site" bindtap="changeAddress">
+	<block wx:if='{{hasAddress}}'>
+		<view class="top">
+			<view class="name">{{receiver_name}}</view>
+			<view class="detail" style="width:80%">{{province_name}}{{city_name}}{{zone_name}}{{address}}</view>
+		</view>
+		<view class="phone">{{mobile}}</view>
+	</block>
+	<block wx:else>
+		<view class="top">请添加收货地址</view>
+	</block>
+	<image src="https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-04-30/00/yuelvhuigmWQEscU671588178366.png"></image>
+</view>
+<!-- 底部 -->
+<view class="footer">
+	<view class="detail">
+		<text>在线支付：</text>
+		<text>¥{{data.advancePayment*goodsNum}}</text>
+	</view>
+	<view class="buy" bindtap="goPay">立即预订</view>
+</view>

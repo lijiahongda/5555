@@ -1,0 +1,372 @@
+/* pages/home/hotel/selectCity/index.wxss */
+
+page {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-color: #f2f2f2;
+}
+
+/* 当前定位城市 */
+
+.Loc {
+  margin-left: 3.2%;
+  margin-right: 8.1%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20rpx;
+}
+
+.Loc .title {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  margin-bottom: 22rpx;
+}
+
+.Loc .Loc_Content {
+  background-color: #fff;
+  border-radius: 10rpx;
+  height: 129rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20rpx;
+  padding-left: 2.6%;
+}
+
+.Loc .Loc_Content view {
+  padding-left: 75rpx;
+  padding-right: 75rpx;
+  height: 60rpx;
+  background-color: #f3f3f5;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*搜索  */
+
+.searchView {
+  width: 100%;
+  height: 80rpx;
+  padding-top: 39rpx;
+}
+
+.searchView .searchBackgroundVIew {
+  width: 85.6%;
+  margin-left: 3.2%;
+  margin-right: 3.2%;
+  padding-left: 4%;
+  padding-right: 4%;
+  height: 68rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  display: flex;
+}
+
+.searchView .searchBackgroundVIew .searchViewImage {
+  margin: 15rpx 30rpx 0 30rpx;
+  height: 30rpx;
+  width: 29rpx;
+}
+
+.searchView .searchBackgroundVIew .searchViewInput {
+  width: 570rpx;
+  height: 68rpx;
+  font-size: 24rpx;
+}
+
+/*搜索  */
+
+.inlandForeignCityVIew {
+  width: 100%;
+  background-color: white;
+}
+
+.inlandForeignCityVIew .inlandForeignCityVIewTitle {
+  height: 50rpx;
+  line-height: 50rpx;
+  margin-left: 30rpx;
+  font-size: 32rpx;
+  color: #e76f55;
+  display: inline-block;
+  font-weight: 200;
+}
+
+/*城市tabView  */
+
+.cityTabVIew {
+  margin-left: 30rpx;
+  margin-top: 22rpx;
+  background-color: #fff;
+  padding-left: 2.6%;
+  padding-right: 2.6%;
+  margin-right: 8.1%;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cityTabVIew .cityTabVIewCell {
+  font-size: 28rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 1);
+  padding-left: 75rpx;
+  padding-right: 75rpx;
+  height: 60rpx;
+  margin-right: 15rpx;
+  margin-bottom: 12rpx;
+  margin-top: 12rpx;
+  background: rgba(242, 243, 245, 1);
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/*城市tabView  */
+
+.historyCityVIew {
+  width: 100%;
+  background-color: white;
+}
+
+.historyCityVIew .historyCityVIewTitle {
+  width: 100%;
+  height: 43rpx;
+  padding-left: 30rpx;
+  background-color: #fff;
+  font-size: 26rpx;
+  line-height: 43rpx;
+  color: #505050;
+  padding-top: 25rpx;
+}
+
+.hotCityVIew {
+  width: 100%;
+}
+
+.hotCityVIew .hotCityVIewTitle {
+  padding-left: 3.2%;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+/*字母列表  */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 30rpx;
+}
+
+.header .h-city {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 1.0;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #a8a8a8;
+}
+
+.header .h-city image {
+  width: 22rpx;
+  height: 27rpx;
+  margin-right: 16rpx;
+}
+
+.header .h-close image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.now-city {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f2f4f5;
+  font-size: 22rpx;
+  line-height: 1.0;
+  color: #a8a8a8;
+  padding: 18rpx 20rpx;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+
+.now-city .now-city-name {
+  display: flex;
+  background: white;
+  font-size: 30rpx;
+  line-height: 1.0;
+  letter-spacing: 0.4rpx;
+  color: #333;
+  padding: 13rpx 33rpx;
+  border: solid 1rpx #dbdbdb;
+  margin-top: 18rpx;
+}
+
+.alphabet-list .section-item .section-item-header {
+  display: flex;
+  background-color: #f2f3f5;
+  height: 50rpx;
+  font-size: 26rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  color: rgba(153, 153, 153, 1);
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 28rpx;
+}
+
+.alphabet-list .section-item .section-item-cells .section-item-cell {
+  font-size: 28rpx;
+  font-family: Hiragino Sans GB;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 1);
+  line-height: 1.0;
+  height: 79rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 22rpx;
+}
+
+.section-item-cell-hotel {
+  font-size: 30rpx;
+  line-height: 1.0;
+  color: #333;
+  padding: 29rpx 0;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  border-bottom: 1px solid #ebecee;
+}
+
+.section-item-cell-hotel .image {
+  width: 9%;
+}
+
+.section-item-cell-hotel .image image {
+  width: 30rpx;
+  height: 30rpx;
+  /* background-color: #e3c93c; */
+}
+
+.section-item-cell-hotel .QueryInformation {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.section-item-cell-hotel .QueryInformation .scoreName {
+  display: flex;
+  flex-direction: row;
+}
+
+.section-item-cell-hotel .QueryInformation .address {
+  width: 513rpx;
+  color: #999;
+  font-size: 24rpx;
+  margin-top: 17rpx;
+  height: 27rpx;
+}
+
+.section-item-cell-hotel .QueryInformation .address text {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* overflow:hidden;
+  white-space:nowrap !important;
+  text-overflow:ellipsis;
+  display:block; */
+}
+
+.section-item-cell-hotel .type {
+  color: #999;
+  font-size: 28rpx;
+  display: flex;
+  height: 72rpx;
+  width: 21%;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+
+.section-item-cell-hotel .QueryInformation .scoreName .name {
+  color: #333;
+  font-size: 28rpx;
+  width: 444rpx;
+}
+
+.section-item-cell-hotel .QueryInformation .scoreName .name text {
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.section-item-cell-hotel .QueryInformation .scoreName .score {
+  width: 59rpx;
+  height: 28rpx;
+  background-color: #ff6302;
+  color: #fff;
+  font-size: 18rpx;
+  border-radius: 3rpx;
+  text-align: center;
+  line-height: 28rpx;
+}
+
+.border-bottom {
+  border-bottom: 1rpx solid #ebecee;
+}
+
+.alphanet-selector {
+  position: fixed;
+  top: 301rpx;
+  right: 0;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.alphanet-selector .selector-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  padding: 8rpx 3px;
+  height: 12px;
+}
+
+.searchCityList {
+  font-size: 30rpx;
+  line-height: 1.0;
+  color: #333;
+  padding: 10rpx 0;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background-color: white;
+}

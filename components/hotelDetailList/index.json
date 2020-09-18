@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "roomDetail": "/components/fullRoomDetail/index"
+  },
+  "component": true
+}

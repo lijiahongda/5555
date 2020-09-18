@@ -1,0 +1,22 @@
+.content{
+  position: relative;
+  min-height: 100vh;
+}
+image{
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.next{
+  width: 500rpx;
+  height: 74rpx;
+  background: linear-gradient(#fcdecd 0%, #f3bd9a 100%);
+  border-radius: 35px;
+  text-align: center;
+  line-height: 74rpx;
+  color: #333333;
+  font-size: 34rpx;
+  position: absolute;
+  bottom: 40rpx;
+  left: 125rpx;
+}

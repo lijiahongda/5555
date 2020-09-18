@@ -1,0 +1,115 @@
+<view class="image_top">
+  <view class="title"><text>{{saveMoney.title}}</text><text style="font-size:50rpx">·</text><text>{{saveMoney.titleTwo}}</text></view>
+  <view class="saveMoney">
+    <view class="save_money">
+      <image src="http://image.zhiding365.com/2020/8/21/baa87d9d-44ea-4755-b189-de3cf7c1d740.png"></image>
+      <view>{{saveMoney.desc}}</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="equityCard_hot">
+  <view class="equity_text">
+    <view>{{hot.title}}</view>
+    <view>{{hot.subTitle}}</view>
+  </view>
+  <view class="equity_for">
+    <view wx:for="{{hot.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="gohot" style="{{hot.data.length==4?'width:25%':'width:20%'}}">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <image class="lockImg"  src="http://image.zhiding365.com/2020/8/24/356ed05f-573a-4576-8389-c459f40fdc98.png"  wx:if="{{isLevelState==0}}" ></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class="equityCard_hot">
+  <view class="equity_text">
+    <view>{{coupon.title}}</view>
+    <view>{{coupon.subTitle}}</view>
+  </view>
+  <view class="equity_for">
+    <view wx:for="{{coupon.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="gocoupon">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <image class="lockImg" src="http://image.zhiding365.com/2020/8/24/356ed05f-573a-4576-8389-c459f40fdc98.png"  wx:if="{{isLevelState==0}}" ></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class="equityCard_hot">
+  <view class="equity_text">
+    <view>{{travel.title}}</view>
+    <view>{{travel.subTitle}}</view>
+  </view>
+  <view class="equity_for">
+    <view wx:for="{{travel.data}}" class="equity_sanfang" data-item='{{item}}' bindtap="gotravel">
+      <image class="equity_img" src="{{item.icon}}"></image>
+      <image class="lockImg" src="http://image.zhiding365.com/2020/8/24/356ed05f-573a-4576-8389-c459f40fdc98.png"  wx:if="{{isLevelState==0}}" ></image>
+      <view class="equity_text">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 联名卡 兑换商品入口 -->
+<view class="card">
+  <view class="card_list" wx:for="{{card.data}}" wx:for-index="index" wx:key="index">
+    <view>{{item.title}}</view>
+    <view class="card_cont">
+      <view style="font-size:32rpx;margin-top:8rpx">¥</view>
+      <view style="font-size:50rpx">{{item.price}}</view>
+      <view style="margin-top: 8rpx;margin-left: 6rpx;">{{item.desc}}</view>
+    </view>
+    <view class="card_btn" data-id="{{item.id}}" bindtap="goCard">立即兑换</view>
+  </view>
+</view>
+
+
+<view class="wites">
+  <view class="wites_goods">
+    <view class="title">
+      <view>{{freeCont.title}}</view>
+      <view>{{freeCont.desc}}</view>
+    </view>
+    <view class="more" bindtap="freeMore">查看更多</view>
+  </view>
+  <view class="redbaglist">
+    <view wx:for="{{freeList}}" wx:key="{{item.mid}}"  class="scroll-view-item_H" data-item="{{item}}" bindtap="gowhith">
+      <view class="vidlist_image">
+        <image mode='aspectFill' src="{{item.path}}"></image>
+      </view>
+      <view class="price">{{item.name}}{{item.name}}{{item.name}}</view>
+      <view class="old_price">
+        <image src="http://image.zhiding365.com/2020/8/24/b9d27af8-fd2a-4431-a740-d4a95ae21979.png"></image>
+        <text class="price_num">{{item.vipPrice}}</text>
+        <text class="old_num">¥{{item.sku[0].price}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="wites">
+  <view class="wites_goods">
+    <view class="title">
+      <view>{{lineData.title}}</view>
+      <view>{{lineData.desc}}</view>
+    </view>
+    <view class="more" bindtap="gointeral">查看更多</view>
+  </view>
+  <view class="groups" bindtap="gointeral">
+    <image src="{{lineData.image}}"></image>
+  </view>
+</view>
+
+<!-- 加锁弹窗 -->
+<view class="lockBoxs" wx:if="{{show}}">
+  <view class="lockBoxBg"></view>
+  <view class="lockBox">
+      <image class="lockBox_X" src="http://image.zhiding365.com/2020/7/28/ab1aa0c1-a5e8-4b2d-9f0a-5da65f143f9f.png" bindtap="close"></image>
+      <view class="title">友情提示</view>
+      <view class="txts">
+          <view>友情提示:</view>
+          <view>您好，由于您尚未开通直订联名卡会员，暂时无法使用此项权益。</view>
+      </view>
+      <!-- <view bindtap="lockHotel" class="lockBtns">进入酒店会员页开通</view> -->
+  </view>
+</view>

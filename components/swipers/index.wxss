@@ -1,0 +1,39 @@
+@import '/app.wxss';
+
+.swiper {
+  width: 100%;
+  position: relative;
+}
+
+.swiper swiper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper swiper .slide-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+
+.swiper .dots {
+  position: absolute;
+  left: 46%;
+  bottom: 20rpx;
+  display: flex;
+}
+
+.swiper .dots .dot {
+  width: 20rpx;
+  height: 5rpx;
+  border: 2rpx solid #fff;
+  margin-right: 15rpx;
+}
+
+.swiper .dots .dot.active {
+  width: 20rpx;
+  height: 5rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5rpx;
+}

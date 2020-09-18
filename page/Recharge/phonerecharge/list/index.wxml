@@ -1,0 +1,13 @@
+<!--page/phonerecharge/list/index.wxml-->
+<view class="phoneOrder" wx:for="{{list}}">
+  <view class="phoneOrder_top">
+    <view>
+      <view>{{item.goodsName}}</view>
+    </view>
+    <view class="phone_active">{{item.orderStatusName}}</view>
+  </view>
+  <view class="phoneOrder_cont">{{item.orderSn}}</view>
+  <view class="phoneOrder_footer">
+    <view>{{item.totalAmount}}</view>
+  </view>
+</view>

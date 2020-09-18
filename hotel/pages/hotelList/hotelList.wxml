@@ -1,0 +1,52 @@
+<!--page/HotelOther/HotelList/HotelList.wxml-->
+<view style="position: fixed;background-color: {{showModalStatus || isSort || isArea || isScreening?'#fff':'rgba(249, 248, 248, 1)'}};width: 100%;z-index:111;">
+	<view class="titleHead" style="padding-top:{{navTop}}rpx;background-color:{{showModalStatus || isSort || isArea || isScreening?'#fff':''}};">
+	<view bindtap="navi">返回</view>
+	<view>直订酒店</view>
+</view>
+<view class="searchContent" style="padding-top:{{navTop+86}}rpx;background-color:{{showModalStatus || isSort || isArea || isScreening?'#fff':''}};">
+	<view class="search" style="background-color:{{showModalStatus || isSort || isArea || isScreening?'#eee':''}};">
+		<view class="city" bindtap="selectCity">
+			<view><text>{{gnCity}}</text></view>
+			<image src="{{loc}}"></image>
+		</view>
+		<view class="time" bindtap="selectTime">
+			<view class="titleN">
+				<view>住</view>
+				<view>{{CheckTime}}</view>
+			</view>
+			<view class="titleN">
+				<view>离</view>
+				<view>{{leaveTime}}</view>
+			</view>
+		</view>
+		<view class="address" bindtap="selectKey"><text>{{gnAddress}}</text></view>
+		<image wx:if="{{isgnAddress}}" bindtap="delAddress" src="{{del}}"></image>
+	</view>
+	<image src="{{ismap?listImage:map}}" bindtap="ToggleList"></image>
+</view>
+<view class="screen" style="background-color:{{showModalStatus || isSort || isArea || isScreening?'#fff':''}};">
+	<view class="item" style="color:{{item.isSelect?'#e4393c':''}}" wx:for="{{screen}}" wx:key="item" data-id="{{item.id}}" bindtap="Selsctscreen">
+		<text>{{item.name}}</text>
+		<image class="" src="{{screenImage}}"></image>
+	</view>
+</view>
+</view>
+<view class="contentList" style="padding-top:{{navTop +250}}rpx">
+	<view wx:if="{{ismap}}" class="{{ismap?'back':'front'}}">
+		<mapList bind:mapFun="mapFun" HotelList="{{HotelList}}" gnCity="{{gnCity}}"></mapList>
+		<map id="map" longitude="{{centerY}}" latitude="{{centerX}}" scale="12" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location bindtap="bindtap" bindcallouttap="bindcallouttap" style="height:{{mapHeight}}rpx;width:100%">
+		</map>
+	</view>
+	<HotelHomeList wx:else isHotelList="{{isHotelList}}" HotelList="{{HotelList}}" ismap="{{ismap}}" gnCity="{{gnCity}}"></HotelHomeList>
+</view>
+<!-- 星级价格组件 -->
+<PriceStar showModalStatus="{{showModalStatus}}" marginTop="{{marginTop}}" bind:PriceFun="PriceFun" bind:starFun="starFun" bind:empy="empy"></PriceStar>
+<!-- 推荐排序 -->
+<RecommendedSort recommendCell="{{recommendCell}}" bind:sortFun="sortFun" isSort="{{isSort}}" marginTop="{{marginTop}}"></RecommendedSort>
+<!-- 区域位置 -->
+<areaView marginTop="{{marginTop}}" isArea="{{isArea}}" areaView='{{areaView}}' bind:areaFun="areaFun" id="areaView"></areaView>
+<!-- 综合筛选 -->
+<ComprehensiveScreening isScreening="{{isScreening}}" bind:facilitiesFun="facilitiesFun" marginTop="{{marginTop}}" ComprehensiveScreening="{{ComprehensiveScreening}}" bind:ScreenFun="ScreenFun" bind:ScreenFunPopup="ScreenFunPopup"></ComprehensiveScreening>
+<!-- 选择日期 -->
+<selectTime isSelectTime="{{isSelectTime}}" bind:onLoadFun="onLoadFun"></selectTime>

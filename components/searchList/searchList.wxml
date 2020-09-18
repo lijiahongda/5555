@@ -1,0 +1,50 @@
+<!--components/searchList/searchList.wxml-->
+<view class="content" style="top:{{marginTop}}" wx:if="{{isShow}}">
+	<scroll-view scroll-y style="height:{{height}}px;width:100%;margin-left:0">
+	<block wx:if="{{searchType==1}}">
+			<view wx:for="{{citylist}}">
+			<view class="citykey">{{item.key}}</view>
+			<view class="searchCityList" wx:for="{{item.data}}" wx:key="searchCity" wx:for-item="resultList" wx:for-index="id" data-id='{{resultList.hotelId}}' bindtap='hotelBIndtap' data-tagname="{{resultList.tagName}}" data-item='{{resultList.city}}'>
+				<view class="section-item-cell-hotel">
+					<view class="image">
+						<image src="{{resultList.iconUrl}}"></image>
+					</view>
+					<view class="QueryInformation">
+						<view class="scoreName">
+							<view class="name">
+								<text>{{resultList.tagName}}</text>
+							</view>
+							<view class="score" wx:if="{{cell.regionType == 4}}">{{resultList.score}}</view>
+						</view>
+						<view class="address">
+							<text>{{resultList.subTagName}}</text>
+						</view>
+					</view>
+					<view class="type">{{resultList.tagTypeName}}</view>
+				</view>
+			</view>
+		</view>
+		</block>
+		<block wx:if="{{searchType==2}}">
+			<view class="searchCityList" wx:for="{{citylist}}" wx:key="searchCity" wx:for-index="id" data-id='{{item.hotelId}}' bindtap='hotelBIndtap' data-tagname="{{item.tagName}}" data-item='{{item.city}}'>
+	 		<view class="section-item-cell-hotel">
+				<view class="image">
+					<image src="{{item.iconUrl}}"></image>
+				</view>
+				<view class="QueryInformation">
+					<view class="scoreName">
+						<view class="name">
+							<text>{{item.tagName}}</text>
+						</view>
+						<view class="score" wx:if="{{cell.regionType == 4}}">{{item.score}}</view>
+					</view>
+					<view class="address">
+						<text>{{item.subTagName}}</text>
+					</view>
+				</view>
+				<view class="type">{{item.tagTypeName}}</view>
+			</view>
+		</view>
+		</block>
+	</scroll-view>
+</view>

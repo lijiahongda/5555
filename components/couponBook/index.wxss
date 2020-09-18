@@ -1,0 +1,117 @@
+/* components/couponBook/index.wxss */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 100;
+  color: #fff;
+}
+
+.coupon {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 111;
+  padding-left: 4%;
+  padding-right: 4%;
+  height: 899rpx;
+  padding-top: 35rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 18rpx 18rpx 0px 0px;
+}
+
+.coupon .title {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(36, 36, 36, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 45%;
+  width: 98%;
+  margin-bottom: 53rpx;
+}
+
+.coupon .title image {
+  width: 24rpx;
+  height: 24rpx;
+}
+
+.coupon .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(https://yuetao-1300766538.cos.ap-beijing.myqcloud.com/yuetao/image/2020-05-08/00/yuelvhuimfFkEin0IW1588869116.png);
+  background-size: 100%;
+  height: 160rpx;
+  margin-bottom: 18rpx;
+}
+
+.coupon .couponHeard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  width: 32%;
+}
+
+.coupon .couponHeard .itemtitle {
+  font-size: 36rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 1);
+  margin-bottom: 17rpx;
+  width: 82%;
+}
+.coupon .couponHeard .itemtitle text{
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coupon .couponInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(36, 36, 36, 1);
+  width: 63%;
+  padding-left: 3.5%;
+}
+
+.coupon .item image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.coupon .couponInfo .InfoTitle {
+  font-size: 30rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+  color: #242424;
+}
+
+.coupon .couponInfo .date {
+  font-size: 22rpx;
+  font-family: PingFang SC;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  margin-bottom: 20rpx;
+}

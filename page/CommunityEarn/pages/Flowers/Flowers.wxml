@@ -1,0 +1,21 @@
+<view class="">
+  <view class="order-tab bgw">
+    <view class="tab-list" wx:for="{{tabData}}" bindtap="handleTabMy" wx:key="{{item.id}}" data-id="{{item.id}}" data-status="{{item.status}}">
+      <view class="{{tabDataIndex == item.id?'active':''}}">{{item.name}}</view>
+      <view hidden="{{!tabDataIndex == item.id}}" class="border-active"></view>
+    </view>
+  </view>
+  <view class="main-box" wx:if="{{flowerData.length}}">
+    <view class="user-box" wx:for="{{flowerData}}" wx:key="{{index}}">
+      <view class="fl">
+        <image class="" src="{{item.avatar}}" mode="widthFix" lazy-load="false"></image>
+      </view>
+      <view class="fr">
+        <view class="">{{item.name}}</view>
+        <view class="c99">手机号：{{item.mobile}}</view>
+        <view class="c99">注册时间：{{item.joinTime}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="empty-box" wx:if="{{flowerData.length == 0}}">暂无数据</view>
+</view>

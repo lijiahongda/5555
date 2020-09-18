@@ -1,0 +1,56 @@
+.item {
+    border-bottom: 1px solid #f7f7f7;
+    padding: 0 30rpx 30rpx;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+}
+.item .orderno {
+    height: 72rpx;
+    line-height: 72rpx;
+    color: #333;
+}
+.item .goods {
+    display: flex;
+}
+.goods-img {
+    width: 120rpx;
+    height: 120rpx;
+    margin-right: 20rpx;
+}
+.goodsinfo {
+    position: relative;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+.goodsname {
+    color: #333;
+    font-size: 26rpx;
+
+}
+.orderdate {
+    color: #666;
+}
+.order {
+    display: flex;
+    width: 100%;
+}
+.order .orderprice {
+    /* -ms-flex-positive: 1;
+    flex-grow: 1; */
+ 
+    color: #f78210;
+}
+.order .orderstatus {
+    display: flex;
+    flex-direction: row-reverse;
+    color: #666;
+    flex: 1;
+    /* text-align: right;
+    -ms-flex-positive: 1;
+    flex-grow: 1; */
+}
+
+.btn-pay{
+    color: #3ad8f4;
+    margin-right: 10rpx;
+}
